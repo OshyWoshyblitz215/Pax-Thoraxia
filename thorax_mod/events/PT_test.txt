@@ -162,3 +162,16 @@ country_event = { # This balks CHN into its constituent queendoms plus commies. 
 		}
 	}
 }
+country_event = { # This adds Thorax's faction. Again, very placeholder.
+	id = PT_test.5
+	is_triggered_only = yes
+	option = {
+		CCN = {
+			transfer_state = 321
+			transfer_state = 320
+			transfer_state = 323
+			transfer_state = 322
+			transfer_state = 319
+		}
+	}
+}
