@@ -4,35 +4,38 @@ By He9
 The Queens:
 ######################################################################
 ######################################################################
-Chrysalis, of Vesalipolis   (a dumb dumb)
+Chrysalis, of Vesalipolis   [CHG] (a dumb dumb)
 POLITICS_CHRYSALIS_DESC:0  "Ruler and despot of the Changeling Hives, Queen Chrysalis was the first of her race to unite them under one banner. From her hatching in 930, she has proven to be an exceptional individual. Being the only child of the dead Queen of Vesalipolis, she was raised with extreme care and given best possible education, which made her spoiled and arrogant, but also intelligent, determined and firm. She was crowned in 945 and fended off an attack from Vraks with her army. Soon after, the Vesalipolis-Ditrysium axis was formed, and it would be the embryo for united Changeling Lands.\n\nUnder her leadership, other hive queens either joined her voluntarily or were forced into submission. She became the sole absolute ruler of her species in 988, but her ambitions only continued to grow. She plotted to coup and invade Equestria, and executed her plans in 1002. Chrysalis herself replaced Princess Cadence and had fooled nearly everyone, and had even bested Princess Celestia. It was by mere fluke that her victory was snatched away from her grasp and her people banished to the frozen North. Clearly infiltration alone is not enough to reclaim what is rightfully hers, and Chrysalis recognises the need of a powerful and modern military. Any opposition and protest to her despotic reign is swiftly crushed as she prepares to redeem her honour, or die trying."
 ######################################################################
-Helvia, of Ditrysium        (Youngest, and loves bote. Does not like Chrys as much as mommy.)
+Helvia, of Ditrysium        [DTR] (Youngest, and loves bote. Does not like Chrys as much as mommy.)
                             (Chrys also violated Ditrysium sovereignty once to deal with commies.)
                             (She keeps her muzzle clean though.)
                             (Not interested in territorial expension, she has her big port and big botes)
 chn_queen_helvia_desc:0 "The young queen of the thriving port hive of Ditrysium is interested in commercial expansion and increase of naval production. While Ditrysium was the first major hive to ally Vesalipolis, Helvia is not as fond of Chrysalis as her predecessor. The debacle of 1002 eventually led to communist sailors rioting in Ditrysium and Chrysalis crushed the resistance personally without asking Helvia. However, she is pragmatic and knows maintaining good relations with Vesalipolis is ultimately a positive thing."
 queen_helvia_admiral_tt:0 "Unlocks a §Ydecision§! to recall a §Gskilled admiral§!."
 ######################################################################
-Aurantia, of Lyctida        (Oldest, hates deers. Likes Chrys cause she dealt with deers earlier)
+Aurantia, of Lyctida        [LCD] (Oldest, hates deers. Likes Chrys cause she dealt with deers earlier)
                             (Big Industries, wants more mountain clay from deerlandia for metals)
                             (To Bergsliv and Trevlgvind)
                             (If she found crystals in her digs she would probably just sell it to Yaria)
 chn_queen_aurantia:0 "Queen Aurantia"
 chn_queen_aurantia_desc:0 "The aging queen of the industrial hive-city of Lyctida is able to provide resources and lumber for our railroads and military equipment. Ever since Chrysalis lead her alliance to save Lyctida from marauding deer zealots, she has been her most loyal supporter. She always strives to earn Chrysalis' favour, but she in turn sees Aurantia as a useful and reliable pawn until she eventually dies from old age."
 ######################################################################
-Argynnis, of Vraks          (Main Rival of Chrys, Mom was Buggo-Queen of Buggo-Austro-Hungary to Chrys's Buggo-Prussia)
+Argynnis, of Vraks          [VRK] (Main Rival of Chrys, Mom was Buggo-Queen of Buggo-Austro-Hungary to Chrys's Buggo-Prussia)
                             (Chrys basically killed her mom, she "holds no grudge" apparently)
                             (Best girl, don't at me)
                             (Wants to expand her land to Seaddle, Whinnypeg, Numuul, and Onlartir)
 chn_queen_argynnis:0 "Queen Argynnis"
 chn_queen_argynnis_desc:0 "The martial hive of Vraks has always had a tenuous relationship with Vesalipolis, at best. The two had for centuries engaged in skirmishes and raids before Vraks attacked the other hive with full force but was repelled by Chrysalis and her allies from Ditrysium. In 971 Chrysalis struck back with an expanded alliance and crushed Vraks, whose Queen committed suicide rather than face Chrysalis' wrath. Her oldest hatchling, Argynnis, thus became Queen. She holds no grudge against Chrysalis and recognizes her might, but never skips an opportunity to make a mocking, sarcastic comment if she fails."
 ######################################################################
-Yaria, of Soryth            (Magic Nerd Extraordinaire)
+Yaria, of Soryth            [SRT] (Magic Nerd Extraordinaire)
                             (Actually thinks Chrys is best for buggokind)
                             (Wants the ENTIRE shoreline of Keylake, the super special magical lake)
 chn_queen_yaria_desc:0 "Queen of the largest northern hive of Soryth, which lies on the shore of the Key Lake. The Key Lake is known for its concentration of magical energy. Magic helped changelings of Soryth to survive harsh northern weather for generations. Queen Yaria believes that thorough study of magical abilities of crystals is vital for future success of the changeling nation. She is one of the queens who joined Chrysalis voluntarily and genuinely believes she can lead their race to greatness. In her eyes, changelings have the same potential for magic abilities as unicorns, if they only develop it enough."
 ######################################################################
+Others:
+???, Northern Council [GRK]
+Ya Boi, Thoraxian Rebellion [CCN]
 ######################################################################
 The provinces and their capitols
 ######################################################################
