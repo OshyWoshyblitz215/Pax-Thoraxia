@@ -1,0 +1,118 @@
+#By He9
+
+add_namespace = PT_test
+
+country_event = { # This balks CHN into its constituent queendoms plus commies. Very placeholder, we need their tags and everything.
+	id = PT_test.1
+	is_triggered_only = yes
+	option = {
+		create_dynamic_country = {
+			original_tag = CHN
+			transfer_state = 262
+			transfer_state = 315
+		}
+		create_dynamic_country = {
+			original_tag = CHN
+			transfer_state = 264
+			transfer_state = 314
+			transfer_state = 312
+			transfer_state = 313
+		}
+		create_dynamic_country = {
+			original_tag = CHN
+			transfer_state = 252
+			transfer_state = 305
+			transfer_state = 306
+		}
+		create_dynamic_country = {
+			original_tag = CHN
+			transfer_state = 303
+			transfer_state = 304
+			transfer_state = 309
+			transfer_state = 260
+			transfer_state = 308
+		}
+		create_dynamic_country = {
+			original_tag = CHN
+			transfer_state = 307
+			transfer_state = 291
+			transfer_state = 258
+			transfer_state = 259
+			transfer_state = 250
+			transfer_state = 246
+			transfer_state = 247
+			transfer_state = 248
+			transfer_state = 249
+			transfer_state = 321
+			transfer_state = 320
+			transfer_state = 323
+			transfer_state = 322
+			transfer_state = 319
+			transfer_state = 316
+		}
+	}
+}
+country_event = { # This add thorax's faction. Again, very placeholder.
+	id = PT_test.2
+	is_triggered_only = yes
+	option = {
+		create_dynamic_country = {
+			original_tag = CHN
+			transfer_state = 321
+			transfer_state = 320
+			transfer_state = 323
+			transfer_state = 322
+			transfer_state = 319
+		}
+	}
+}
+country_event = { # This is more of a lore thing, this shows the claimed clay of the queens, chrys wants the whole nation so she isn't in this. Helvia builds tall, and she isn't interested either.
+	id = PT_test.3
+	is_triggered_only = yes
+	option = {
+		create_dynamic_country = {
+			original_tag = CHN
+			transfer_state = 262
+			transfer_state = 263
+			transfer_state = 315
+		}
+		create_dynamic_country = {
+			original_tag = CHN
+			transfer_state = 303
+			transfer_state = 304
+			transfer_state = 309
+			transfer_state = 260
+			transfer_state = 308
+			transfer_state = 292
+			transfer_state = 293
+			transfer_state = 300
+			transfer_state = 301
+			transfer_state = 302
+		}
+		create_dynamic_country = {
+			original_tag = CHN
+			transfer_state = 307
+			transfer_state = 291
+			transfer_state = 258
+			transfer_state = 259
+			transfer_state = 250
+			transfer_state = 246
+			transfer_state = 247
+			transfer_state = 248
+			transfer_state = 249
+			transfer_state = 321
+			transfer_state = 320
+			transfer_state = 323
+			transfer_state = 322
+			transfer_state = 319
+			transfer_state = 316
+			transfer_state = 139
+			transfer_state = 318
+			transfer_state = 224
+			transfer_state = 296
+			transfer_state = 218
+			transfer_state = 255
+			transfer_state = 289
+		}
+	}
+}
