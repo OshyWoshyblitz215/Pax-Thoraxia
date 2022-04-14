@@ -52,7 +52,7 @@ country_event = { # This balks CHN into its constituent queendoms plus commies. 
 		}
 	}
 }
-country_event = { # This add thorax's faction. Again, very placeholder.
+country_event = { # This adds Thorax's faction. Again, very placeholder.
 	id = PT_test.2
 	is_triggered_only = yes
 	option = {
