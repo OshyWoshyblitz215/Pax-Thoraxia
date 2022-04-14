@@ -116,3 +116,49 @@ country_event = { # This is more of a lore thing, this shows the claimed clay of
 		}
 	}
 }
+
+country_event = { # This balks CHN into its constituent queendoms plus commies. With TAGS!!!
+	id = PT_test.4
+	is_triggered_only = yes
+	option = {
+		SRT = {
+			transfer_state = 262
+			transfer_state = 315
+		}
+		GRK = {
+			transfer_state = 264
+			transfer_state = 314
+			transfer_state = 312
+			transfer_state = 313
+		}
+		DTR = {
+			transfer_state = 252
+			transfer_state = 305
+			transfer_state = 306
+		}
+		LCD = {
+			transfer_state = 303
+			transfer_state = 304
+			transfer_state = 309
+			transfer_state = 260
+			transfer_state = 308
+		}
+		VRK = {
+			transfer_state = 307
+			transfer_state = 291
+			transfer_state = 258
+			transfer_state = 259
+			transfer_state = 250
+			transfer_state = 246
+			transfer_state = 247
+			transfer_state = 248
+			transfer_state = 249
+			transfer_state = 321
+			transfer_state = 320
+			transfer_state = 323
+			transfer_state = 322
+			transfer_state = 319
+			transfer_state = 316
+		}
+	}
+}
