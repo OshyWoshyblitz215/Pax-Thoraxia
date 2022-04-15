@@ -1,0 +1,216 @@
+#By He9
+
+add_namespace = PT_CHN
+
+country_event = { # Ping event, fires 7 days into the CHN cheat focus
+	id = PT_CHN.1
+	fire_only_once = yes
+	trigger = {
+		CHN = {
+			focus_progress = {
+				focus = destroy_thoraxian_opposition
+				progress > 0.1
+			}
+		}
+	}
+	option = {
+		CHN = {
+			country_event = { id = PT_CHN.2 }
+		}
+	}
+}
+country_event = { # This balks CHN into its constituent queendoms plus commies. Very placeholder, we need to move charas around still.
+	id = PT_CHN.2
+	is_triggered_only = yes
+	option = {
+		every_owned_state = {
+			teleport_armies = {	} #Defaults to capital of country
+		}
+		transfer_navy = {
+			target = LCD
+		}
+		SRT = {
+			transfer_state = 262
+			transfer_state = 315
+			set_capital = {state = 262}
+		}
+		GRK = {
+			transfer_state = 264
+			transfer_state = 314
+			transfer_state = 312
+			transfer_state = 313
+			set_capital = {state = 312}
+			set_popularities = {
+				democratic = 0
+				neutrality = 0
+				fascism = 0
+				communism = 100
+			}
+			set_politics = {
+				ruling_party = communism
+			}
+		}
+		DTR = {
+			transfer_state = 252
+			transfer_state = 305
+			transfer_state = 306
+			set_capital = {state = 252}
+		}
+		LCD = {
+			transfer_state = 303
+			transfer_state = 304
+			transfer_state = 309
+			transfer_state = 260
+			transfer_state = 308
+			set_capital = {state = 309}
+		}
+		VRK = {
+			transfer_state = 307
+			transfer_state = 291
+			transfer_state = 258
+			transfer_state = 259
+			transfer_state = 250
+			transfer_state = 246
+			transfer_state = 247
+			transfer_state = 248
+			transfer_state = 249
+			transfer_state = 321
+			transfer_state = 320
+			transfer_state = 323
+			transfer_state = 322
+			transfer_state = 319
+			transfer_state = 316
+			set_capital = {state = 259}
+		}
+		add_to_array = { tag_array = SRT }
+		add_to_array = { tag_array = DTR }
+		add_to_array = { tag_array = LCD }
+		add_to_array = { tag_array = VRK }
+		for_each_scope_loop = {
+			array = tag_array
+			set_popularities = {
+				democratic = 0
+				neutrality = 0
+				fascism = 100
+				communism = 0
+			}
+			set_politics = {
+				ruling_party = fascism
+			}
+		}
+		add_to_array = { tag_array = GRK }
+		for_each_scope_loop = {
+			array = tag_array
+			every_owned_state = {
+				add_core_of = PREV
+			}
+			add_ideas = passive_hive_ai
+		}
+		country_lock_all_division_template = no
+		add_war_support = 0.25
+		add_stability = 0.25
+		remove_ideas = political_divisions
+		country_event = { id = PT_CHN.3 hours = 1 }
+	}
+}
+country_event = { #LCD bends the knee
+	id = PT_CHN.3
+	is_triggered_only = yes
+	option = {
+		puppet = LCD
+		set_autonomy = {
+					target = LCD
+					autonomy_state = autonomy_subjugated_vassal_hive
+				}
+		LCD = {
+			every_owned_state = {
+				remove_core_of = CHN
+			}
+		}
+		country_event = { id = PT_CHN.4 hours = 1 }
+	}
+}
+country_event = { #SRT is second
+	id = PT_CHN.4
+	is_triggered_only = yes
+	option = {
+		puppet = SRT
+		set_autonomy = {
+					target = SRT
+					autonomy_state = autonomy_vassal_hive
+				}
+		SRT = {
+			every_owned_state = {
+				remove_core_of = CHN
+			}
+		}
+		country_event = { id = PT_CHN.5 hours = 1 }
+	}
+}
+country_event = { #DTR follows
+	id = PT_CHN.5
+	is_triggered_only = yes
+	option = {
+		puppet = DTR
+		set_autonomy = {
+					target = DTR
+					autonomy_state = autonomy_autonomous_vassal_hive
+				}
+		DTR = {
+			every_owned_state = {
+				remove_core_of = CHN
+			}
+		}
+		country_event = { id = PT_CHN.6 hours = 1 }
+	}
+}
+country_event = { #VRK bends last
+	id = PT_CHN.6
+	is_triggered_only = yes
+	option = {
+		puppet = VRK
+		set_autonomy = {
+					target = VRK
+					autonomy_state = autonomy_nominal_vassal_hive
+				}
+		VRK = {
+			every_owned_state = {
+				remove_core_of = CHN
+			}
+		}
+		country_event = { id = PT_CHN.7 hours = 1 }
+	}
+}
+country_event = { #GRK defiant
+	id = PT_CHN.7
+	is_triggered_only = yes
+	option = {
+		add_popularity = {
+		    ideology = communism
+		    popularity = -1
+		}
+		country_event = { id = PT_CHN.8 hours = 1 } # edit the time <<<<<<<<<<
+	}
+}
+country_event = { #CCN established
+	id = PT_CHN.8
+	is_triggered_only = yes
+	option = {
+		add_popularity = {
+		    ideology = democratic
+		    popularity = -1
+		}
+		CCN = {
+			transfer_state = 321
+			transfer_state = 320
+			transfer_state = 323
+			transfer_state = 322
+			transfer_state = 319
+			set_capital = {state = 323}
+			every_owned_state = {
+				add_core_of = PREV
+				remove_core_of = VRK
+			}
+		}
+	}
+}

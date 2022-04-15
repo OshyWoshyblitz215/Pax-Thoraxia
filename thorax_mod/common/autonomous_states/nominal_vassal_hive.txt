@@ -1,0 +1,53 @@
+autonomy_state = {
+	id = autonomy_nominal_vassal_hive
+	use_overlord_color = yes
+
+	is_puppet = no
+	min_freedom_level = 0.75
+
+	manpower_influence = 0.1
+
+	rule = {
+		can_not_declare_war = no
+		can_decline_call_to_war = yes
+		can_be_spymaster = yes
+		contributes_operatives = no
+		can_create_collaboration_government = no
+	}
+
+	modifier = {
+		autonomy_manpower_share = 0.1
+		extra_trade_to_overlord_factor = 0.15
+		overlord_trade_cost_factor = -0.15
+		autonomy_gain_global_factor = -0.20
+		can_master_build_for_us = 1
+	}
+
+	ai_subject_wants_higher = {
+		factor = 1.0
+	}
+
+	ai_overlord_wants_lower = {
+		factor = 2.0
+	}
+
+	ai_overlord_wants_garrison = {
+		always = no
+	}
+
+	allowed = {
+		autonomy_states_hive = yes
+	}
+
+	can_take_level = {
+		#custom_trigger_tooltip = {
+		#	tooltip = puppet_can_become_free
+		#	has_country_flag = TT_can_become_free
+		#}
+		has_civil_war = no
+	}
+
+	can_lose_level = {
+		overlord = { has_civil_war = no }
+	}
+}
