@@ -1,5 +1,0 @@
-VRK = "countries/VRK.txt"
-LCD = "countries/LCD.txt"
-SRT = "countries/SRT.txt"
-GRK = "countries/GRK.txt"
-DTR = "countries/DTR.txt"
