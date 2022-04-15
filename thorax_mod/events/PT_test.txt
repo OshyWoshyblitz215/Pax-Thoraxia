@@ -124,17 +124,29 @@ country_event = { # This balks CHN into its constituent queendoms plus commies. 
 		SRT = {
 			transfer_state = 262
 			transfer_state = 315
+			set_capital = {state = 262}
 		}
 		GRK = {
 			transfer_state = 264
 			transfer_state = 314
 			transfer_state = 312
 			transfer_state = 313
+			set_capital = {state = 312}
+			set_popularities = {
+				democratic = 0
+				neutrality = 0
+				fascism = 0
+				communism = 100
+			}
+			set_politics = {
+				ruling_party = communism
+			}
 		}
 		DTR = {
 			transfer_state = 252
 			transfer_state = 305
 			transfer_state = 306
+			set_capital = {state = 252}
 		}
 		LCD = {
 			transfer_state = 303
@@ -142,6 +154,7 @@ country_event = { # This balks CHN into its constituent queendoms plus commies. 
 			transfer_state = 309
 			transfer_state = 260
 			transfer_state = 308
+			set_capital = {state = 309}
 		}
 		VRK = {
 			transfer_state = 307
@@ -159,6 +172,23 @@ country_event = { # This balks CHN into its constituent queendoms plus commies. 
 			transfer_state = 322
 			transfer_state = 319
 			transfer_state = 316
+			set_capital = {state = 259}
+		}
+		add_to_array = { fascist_states = SRT }
+		add_to_array = { fascist_states = DTR }
+		add_to_array = { fascist_states = LCD }
+		add_to_array = { fascist_states = VRK }
+		for_each_scope_loop = {
+			array = fascist_states
+			set_popularities = {
+				democratic = 0
+				neutrality = 0
+				fascism = 100
+				communism = 0
+			}
+			set_politics = {
+				ruling_party = fascism
+			}
 		}
 	}
 }
@@ -172,6 +202,17 @@ country_event = { # This adds Thorax's faction. With TAGS!
 			transfer_state = 323
 			transfer_state = 322
 			transfer_state = 319
+			set_capital = {state = 323}
 		}
 	}
 }
+
+country_event = { # This adds Thorax's faction. With TAGS!
+	id = PT_test.6
+	is_triggered_only = yes
+	option = {
+		retire_country_leader = yes
+	}
+}
+
+ 	
