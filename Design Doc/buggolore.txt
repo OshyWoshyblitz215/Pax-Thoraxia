@@ -70,7 +70,7 @@ Gorak, Tränenstrand         (lit. Shore of Tears) (From Air Region: Saddening S
 ######################################################################
 Aurantia's Demense
 
-Lyctida, Merkuzberg         (lit. Dark Mountains) (From Air Region:Morkaberg) 
+Lyctida, Dunkelberg         (lit. Dark Mountains) (From Air Region:Morkaberg) 
 (The Silent Hive)           (Coincidentally they have "Dim Garden")(Industrial/Mining/Wood)
 state_lore_text_container_state_name_short_309:0 "Lyctida"
 state_lore_text_container_state_name_309:0 "The §YSilent Hive§!:"
