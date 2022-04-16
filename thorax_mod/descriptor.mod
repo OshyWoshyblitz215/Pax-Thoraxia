@@ -1,13 +1,9 @@
-version="1.11"
+version="0.0.1"
 dependencies={
-    "Equestria at War"
+	"Equestria at War"
 }
 tags={
 	"Alternative History"
-	"Events"
-	"Ideologies"
-	"Gameplay"
-	"National Focuses"
 }
-name="Pax Thoraxia"
+name="EAW-PT"
 supported_version="1.11.10"

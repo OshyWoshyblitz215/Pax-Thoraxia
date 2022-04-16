@@ -1,6 +1,6 @@
 shared_focus = {
-	id = PT_the_country_stirs
-	icon = GFX_goal_chn_swords
+	id = PT_the_hives_stir
+	icon = GFX_goal_PT_the_hives_stir
 	cost = 3.00
 	x = 52
 	y = 0
@@ -10,18 +10,18 @@ shared_focus = {
 		factor = 200
 	}
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus PT_the_country_stirs"
+		log = "[GetDateText]: [Root.GetName]: Focus PT_the_hives_stir"
 	}
 }
 shared_focus = {
 	id = PT_hearts_and_minds
-	icon = GFX_goal_chn_man_lovetax
+	icon = GFX_goal_PT_hearts_and_minds
 	cost = 5
 	x = -1
 	y = 1
-	relative_position_id = PT_the_country_stirs
+	relative_position_id = PT_the_hives_stir
 	prerequisite = {
-		focus = PT_the_country_stirs
+		focus = PT_the_hives_stir
 	}
 	available = {
 	}
@@ -34,13 +34,13 @@ shared_focus = {
 }
 shared_focus = {
 	id = PT_the_north
-	icon = GFX_goal_chn_hives
+	icon = GFX_goal_PT_the_north
 	cost = 6
 	x = 1
 	y = 1
-	relative_position_id = PT_the_country_stirs
+	relative_position_id = PT_the_hives_stir
 	prerequisite = {
-		focus = PT_the_country_stirs
+		focus = PT_the_hives_stir
 	}
 	available = {
 	}
@@ -53,7 +53,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = PT_weapons_cache
-	icon = GFX_goal_chn_factory
+	icon = GFX_goal_PT_weapons_cache
 	cost = 7
 	x = 1
 	y = 1
@@ -72,7 +72,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = PT_war_preperations
-	icon = GFX_goal_chn_man_lovetax
+	icon = GFX_goal_PT_war_preperations
 	cost = 10
 	x = -1
 	y = 1
@@ -91,7 +91,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = PT_send_agents
-	icon = GFX_goal_chn_hives
+	icon = GFX_goal_PT_send_agents
 	cost = 7
 	x = 1
 	y = 1
@@ -110,7 +110,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = PT_for_harmony_and_freedom
-	icon = GFX_goal_chn_hives
+	icon = GFX_goal_PT_for_harmony_and_freedom
 	cost = 7
 	x = 1
 	y = 1

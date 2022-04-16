@@ -9,7 +9,7 @@ focus_tree = {
 	}
 	default = no
 	continuous_focus_position = { x = 1900 y = 0 }
-	shared_focus = PT_the_country_stirs
+	shared_focus = PT_the_hives_stir
 	focus = {
 		id = CCN_Fight_For_Whats_Right
 		icon = GFX_focus_generic_support_the_left_right

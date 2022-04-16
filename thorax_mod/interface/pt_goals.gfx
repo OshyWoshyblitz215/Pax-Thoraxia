@@ -1,0 +1,32 @@
+spriteTypes = {
+	#### Equestria At War
+	SpriteType = {
+		name = "GFX_goal_PT_the_hives_stir"
+		texturefile = "gfx/interface/goals/goal_PT_the_hives_stir.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_PT_hearts_and_minds"
+		texturefile = "gfx/interface/goals/goal_PT_hearts_and_minds.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_PT_the_north"
+		texturefile = "gfx/interface/goals/goal_PT_the_north.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_PT_weapons_cache"
+		texturefile = "gfx/interface/goals/goal_PT_weapons_cache.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_PT_war_preperations"
+		texturefile = "gfx/interface/goals/goal_PT_war_preperations.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_PT_send_agents"
+		texturefile = "gfx/interface/goals/goal_PT_send_agents.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_PT_for_harmony_and_freedom"
+		texturefile = "gfx/interface/goals/goal_PT_for_harmony_and_freedom.dds"
+	}
+}
+
