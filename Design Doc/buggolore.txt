@@ -11,6 +11,7 @@ Helvia, of Ditrysium        [DTR] (Youngest, and loves bote. Does not like Chrys
                             (Chrys also violated Ditrysium sovereignty once to deal with commies.)
                             (She keeps her muzzle clean though.)
                             (Not interested in territorial expension, she has her big port and big botes)
+                            (Used to have Saddening Shore)
 chn_queen_helvia_desc:0 "The young queen of the thriving port hive of Ditrysium is interested in commercial expansion and increase of naval production. While Ditrysium was the first major hive to ally Vesalipolis, Helvia is not as fond of Chrysalis as her predecessor. The debacle of 1002 eventually led to communist sailors rioting in Ditrysium and Chrysalis crushed the resistance personally without asking Helvia. However, she is pragmatic and knows maintaining good relations with Vesalipolis is ultimately a positive thing."
 queen_helvia_admiral_tt:0 "Unlocks a §Ydecision§! to recall a §Gskilled admiral§!."
 ######################################################################
@@ -22,6 +23,7 @@ chn_queen_aurantia:0 "Queen Aurantia"
 chn_queen_aurantia_desc:0 "The aging queen of the industrial hive-city of Lyctida is able to provide resources and lumber for our railroads and military equipment. Ever since Chrysalis lead her alliance to save Lyctida from marauding deer zealots, she has been her most loyal supporter. She always strives to earn Chrysalis' favour, but she in turn sees Aurantia as a useful and reliable pawn until she eventually dies from old age."
 ######################################################################
 Argynnis, of Vraks          [VRK] (Main Rival of Chrys, Mom was Buggo-Queen of Buggo-Austro-Hungary to Chrys's Buggo-Prussia)
+                            (Respecc Strength, Vraksian culture)
                             (Chrys basically killed her mom, she "holds no grudge" apparently)
                             (Best girl, don't at me)
                             (Wants to expand her land to Seaddle, Whinnypeg, Numuul, and Onlartir)
@@ -130,4 +132,7 @@ state_lore_text_container_state_name_short_262:0 "Soryth"
 state_lore_text_container_state_name_262:0 "The §YLady§! of the §YLake§!:"
 state_lore_text_container_state_description_262:0 "Far to the northeast, on the shores of the Key Lake, Soryth stretches out. The sprawling hive is built in what the changelings would consider a non-crowded way, but for other creatures, even Soryth might feel cramped still. Key Lake is the reason why so many changelings endure the cold winters of the north of Equus and it is the city's most valuable resource. For some unknown reason, the lake exhibits magical properties, making it a valued object for study and a source of clear drinking water.\n\nThe city itself straddles the coast of the lake and is way longer than it is wide, with most changelings preferring to live as close to the waterfront as possible. Luckily, waterborne transportation makes it easy to move from one side of the city to the other and the lake is always filled with boats of all shapes and sizes. Because of the northern climate and the relative lack of industry, the air is clear and the city itself feels clean and tidy, a reprieve from some of the more industrialised hives. The main point of interest is the Soryth University of Magic, an institution devoted to the study of the changelings' innate magical abilities, as well as the understanding of the properties of Key Lake. With the promise of increased funding and plenty of field testing for her magical research, Queen Yaria of Soryth joined Chrysalis without a fight."
 ######################################################################
-
+######################################################################
+Criteria For Helping CCN
+######################################################################
+######################################################################
