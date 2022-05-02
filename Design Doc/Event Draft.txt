@@ -41,53 +41,105 @@ Thorax nodded and gestured towards the map upon the table.
 
 We have friends in high places = Crystal Empire Volunteer Corps
 
-Prelude to Predicament
+Balk events starts here:
+######################### 1.d4 (Queen's Pawn Game)(+0.37) #########################
 
-"What do you mean you killed Agrynnis's favorite aide" -C
+In the middle of an inspection of the Queen's Tower, alarming news reached Queen Chrysalis
 
-"Well it seemed obvious that she was a Thora-" -V
+"What do you mean you killed Agrynnis's favorite aide", she is surrounded by idiots, the Queen thought.
 
-"And the people found out because?" -C
+"Well it seemed obvious that she was a Thora-" Vaspier meekly argued.
 
-"Forgive me, My-" -V
+"And the people found out because?" the Queen cuts him off.
 
-"GET OUT" -C
+"Forgive me, My-"
 
-"Gather the army... and the air force... get me everything" -C
+"GET OUT!" The queen turned to his Queen's Guard Captain
 
-"Everything? My Que-" -Trimmel
+"Lacin, interference"
 
-"EVERYTHING!" -C
+"Yes, my queen!" Said the captain as he round up a few of his unit to intercept the incoming trouble.
 
-#Moves all army and planes to vesali
+"Gather the army... and the air force... get me everything" The Hive Queen turns to her trusted Marshall.
 
-Peer Pressured
+"Everything? My Que-" Trimmel was in the middle of realizing the severity of the situation.
 
-A Door to Chrysalis’s throne room bursts open, as 4 queens form their great hives marching in unison looking angry in their eyes.
+"EVERYTHING!"
 
-Chrysalis was unsurprised at their entrance, though was a bit surprised at the sheer anger, She composed herself to be more regal than her peers, but it didn’t matter as one of the Queens, Helvia scolded her.
+The white pieces have the advantage. As they are the first to move.
 
-“Chrysalis you vile witch! How dare your VOPS violate my own bugs!?” She Scolded Chrysalis with disgust. The Warrior Queen, Argynnis chimed in.
+>>> And that is me
 
-“And how dare you attempt to violate my rights of Queen leadership?! Your little spy maggots have infiltrated my throne room uninvited!” Argynnis scolds with burning hatred.
+#Dev Note: Moves all army and planes to vesalia
 
-Seeing the two queens scolding at her, the other two stayed silent, reluctant to speak up. She saw it as an advantage to this confrontation, but it was interrupted by Argynnis, who she’s still ranting at. “Hey are you listening, you old hag?!” she insults her. Finally had enough she stood up and use her magic to create a little shockwave to shut their mouths.
+######################### 1...d5 (Closed Game)(+0.38) #########################
 
-‘E N O U G H!!” she shouted, her voice booming across her hive. She sat down at her throne again, fixing her crown so it doesn’t fall off, she clears her throat and speaks. “So… what is what you want, you ungrateful nymphs?” she asked the queens with a slight insult to their titles.
+A river of black chitin can be seen with a view high enough, and the highest place in Vesalipolis is the mid-construction Queen's Tower.
 
-Helvia came first and told her about their d-emands. “We demanded to give us more autonomy or we leave your so-called Hegemony!”
+It is on the boulevard directly leading to the tower.
 
-“And don’t play dumb with us Witch because we can crush you easily!” Arygnnis added.
+It is flowing, like all rivers should.
 
-Hearing their demands, she needs to keep her power long enough and unite her Queendom, but at her current state, she has to give way just to keep her power.
+From the tower's view, It is getting closer.
 
-“Fine! I shall give you all autonomy! But I'll give in one condition!” Chrysalis exclaimed, lifting her hoof, looking more benevolent. “That you still join my Hegemony to bring revenge to the ponies!”
+The black queen's pawn moved two squares foward.
 
-“Bah! You’re going to do more than that Queen i’m leaving” Argynnis left and Helvia left soon after. The only two queens left are Yaria, the Studious Queen and Aurantia, the Old Queen, who they simply nod at and leave…
+But you already moved yours thusly.
 
-Leaving Chrysalis in her Throne room alone, contemplating how she is going to fix this mess…
+A pawn moving two ranks is the norm in openings
 
-“Welp we better start doing our charm offensive!” = balkanise the buggoland.
+The two pawns now block eachother.
 
+>>> Book move, not the best one.
+
+######################### 2.c4 (Queen's Gambit)(+0.33) #########################
+
+The Door to Chrysalis's room is wide open, she was merely inspecting the construction, but it suffices as the chessboard for now.
+
+The four queens marched in, allowed by the queen's guard to pass, and stood still opposite Chrysalis, who was seated and confident.
+
+"I see my loyal subjects have came to me for a petition, and as your benevolent ruler, I would do whatever it is to solve, whatever issues you may be experiencing"
+
+The four Major queens, each ruling over their major hive, are each now uncertain as to what to do. Why is she not panicking? This is essentially a coup!
+
+"I understand that my... forgetful subordinate, Vaspier, has failed to educate his underlings about the concept of... boundaries."
+
+The Great Queen continued: "Rest assured all responsible will be punished. VASPIER!"
+
+Vaspier, the Great Imperial Nobody, troted in with a pistol obviously strapped, and a prisoner in hoof, bound in chains, gagged and blindfolded.
+
+"As your Great Queen, I have a suggestion about how to solve this current, unpleasantness..."
+
+A gunshot rang; the prisoner is now dead, right infront all of the major queens.
+
+"Of course justice is paramount, but we need to fix the root problem..." Three more gunshots rang.
+
+"So i suggest I devolve power and sovereignty, unto you all, my subjects." Four more shots, as Vasiper reloads
+
+"No, in fact, I can do better: Complete, independance! We will go back to the old borders! And you will no longer need to answer to me!" 
+
+Eight more shots, followed the sound of reloading. And then...
+
+Silence.
+
+"What do you say?"
+
+>>> Take the bait you imbeciles
+
+######################### 2...dxc4 (Queen's Gambit Accepted)(+0.67) #########################
+
+The four queens each are there on their own volition; but it is Major Queen Argynnis of Vraks, that has the strongest reason to show. 
+
+It is in fact her influence that swayed everyone to join. Her favorite aide, and a relatively close family member, died at the hooves of... this corpse.
+
+It is harder to argue her position now. Chrysalis's retirement is now completely out of the picture.
+
+The other three queens has lost all confidence. Most of them really weren't completely convinced about the plan to begin with.
+
+"Very well, I think this is exceedingly graceful of you" Said Argynnis.
+
+A total misplay.
+
+>>> Should have moved your knight
 
 
