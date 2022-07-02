@@ -1,0 +1,245 @@
+add_namespace = PT_CCN_allies
+
+country_event = {
+	id = PT_CCN_allies.1
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = PT_CCN_allies.1.a
+	}
+}
+country_event = {
+	id = PT_CCN_allies.2
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = PT_CCN_allies.2.a
+	}
+}
+country_event = {
+	id = PT_CCN_allies.3
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = PT_CCN_allies.3.a
+	}
+}
+country_event = {
+	id = PT_CCN_allies.4
+	fire_only_once = yes
+	is_triggered_only = yes
+	immediate = {
+		if = {
+			limit = {
+				CCN = {
+					is_in_faction = no
+				}
+			}
+			CCN = {
+				create_faction = THORAX_CIVIL_WAR_ALLIANCE
+			}
+		}
+		VRK = { leave_faction = yes }
+		every_country = {
+			limit = {
+				OR = {
+					is_in_faction_with = CCN
+					original_tag = CCN
+				}
+			}
+			white_peace = VRK
+		}
+		CCN = {
+			add_to_faction = VRK
+		}
+	}
+	option = {
+		name = PT_CCN_allies.4.a
+	}
+}
+country_event = { #test to ruin friendships
+	id = PT_CCN_allies.420
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = PT_CCN_allies.1.a
+		set_variable = {
+			var = CCN_VRK_relationship
+			value = 0
+		}
+	}
+}
+#copies for the various other countries:
+#order =VRK SRT LCD DTR
+country_event = {
+	id = PT_CCN_allies.5
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = PT_CCN_allies.5.a
+	}
+}
+country_event = {
+	id = PT_CCN_allies.6
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = PT_CCN_allies.6.a
+	}
+}
+country_event = {
+	id = PT_CCN_allies.7
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = PT_CCN_allies.7.a
+	}
+}
+country_event = {
+	id = PT_CCN_allies.8
+	fire_only_once = yes
+	is_triggered_only = yes
+	immediate = {
+		if = {
+			limit = {
+				CCN = {
+					is_in_faction = no
+				}
+			}
+			CCN = {
+				create_faction = THORAX_CIVIL_WAR_ALLIANCE
+			}
+		}
+		SRT = { leave_faction = yes }
+		every_country = {
+			limit = {
+				OR = {
+					is_in_faction_with = CCN
+					original_tag = CCN
+				}
+			}
+			white_peace = SRT
+		}
+		CCN = {
+			add_to_faction = SRT
+		}
+	}
+	option = {
+		name = PT_CCN_allies.8.a
+	}
+}
+
+country_event = {
+	id = PT_CCN_allies.9
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = PT_CCN_allies.9.a
+	}
+}
+country_event = {
+	id = PT_CCN_allies.10
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = PT_CCN_allies.10.a
+	}
+}
+country_event = {
+	id = PT_CCN_allies.11
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = PT_CCN_allies.11.a
+	}
+}
+country_event = {
+	id = PT_CCN_allies.12
+	fire_only_once = yes
+	is_triggered_only = yes
+	immediate = {
+		if = {
+			limit = {
+				CCN = {
+					is_in_faction = no
+				}
+			}
+			CCN = {
+				create_faction = THORAX_CIVIL_WAR_ALLIANCE
+			}
+		}
+		LCD = { leave_faction = yes }
+		every_country = {
+			limit = {
+				OR = {
+					is_in_faction_with = CCN
+					original_tag = CCN
+				}
+			}
+			white_peace = LCD
+		}
+		CCN = {
+			add_to_faction = LCD
+		}
+	}
+	option = {
+		name = PT_CCN_allies.12.a
+	}
+}
+country_event = {
+	id = PT_CCN_allies.13
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = PT_CCN_allies.13.a
+	}
+}
+country_event = {
+	id = PT_CCN_allies.14
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = PT_CCN_allies.14.a
+	}
+}
+country_event = {
+	id = PT_CCN_allies.15
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = PT_CCN_allies.15.a
+	}
+}
+country_event = {
+	id = PT_CCN_allies.16
+	fire_only_once = yes
+	is_triggered_only = yes
+	immediate = {
+		if = {
+			limit = {
+				CCN = {
+					is_in_faction = no
+				}
+			}
+			CCN = {
+				create_faction = THORAX_CIVIL_WAR_ALLIANCE
+			}
+		}
+		DTR = { leave_faction = yes }
+		every_country = {
+			limit = {
+				OR = {
+					is_in_faction_with = CCN
+					original_tag = CCN
+				}
+			}
+			white_peace = DTR
+		}
+		CCN = {
+			add_to_faction = DTR
+		}
+	}
+	option = {
+		name = PT_CCN_allies.16.a
+	}
+}

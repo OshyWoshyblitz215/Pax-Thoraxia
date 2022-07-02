@@ -1,0 +1,15 @@
+changeling_civil_war = {
+    #icon = rifles
+    priority = 120
+    allowed = {
+        OR = {
+            original_tag = VRK
+            original_tag = LCD
+            original_tag = DTR
+            original_tag = GRK
+            original_tag = SRT
+            original_tag = CCN
+            original_tag = CHN
+        }
+    }
+}
