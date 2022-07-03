@@ -1,0 +1,129 @@
+shared_focus = { #Service Office
+	id = PT_the_hives_have_stirred
+	icon = GFX_goal_PT_the_hives_stir
+	cost = 3.00
+	x = 4
+	y = 0
+	available = {
+	}
+	ai_will_do = {
+		factor = 200
+	}
+	mutually_exclusive = { focus = destroy_thoraxian_opposition }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus PT_the_hives_stir"
+	}
+}
+shared_focus = { #Foreign Office
+	id = PT_hearts_and_minds
+	icon = GFX_goal_PT_hearts_and_minds
+	cost = 5
+	x = -1
+	y = 1
+	relative_position_id = PT_the_hives_have_stirred
+	prerequisite = {
+		focus = PT_the_hives_have_stirred
+	}
+	available = {
+	}
+	ai_will_do = {
+		factor = 1000
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus PT_hearts_and_minds"
+	}
+}
+shared_focus = {
+	id = PT_the_north
+	icon = GFX_goal_PT_the_north
+	cost = 6
+	x = 1
+	y = 1
+	relative_position_id = PT_the_hives_have_stirred
+	prerequisite = {
+		focus = PT_the_hives_have_stirred
+	}
+	available = {
+	}
+	ai_will_do = {
+		factor = 1000
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus PT_the_country_stirs"
+	}
+}
+shared_focus = {
+	id = PT_weapons_cache
+	icon = GFX_goal_PT_weapons_cache
+	cost = 7
+	x = 0
+	y = 2
+	relative_position_id = PT_the_hives_have_stirred
+	prerequisite = { focus = PT_hearts_and_minds }
+	prerequisite = { focus = PT_the_north }
+	ai_will_do = {
+		factor = 1000
+	}
+	available = {
+		has_government = fascism
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus PT_weapons_cache"
+	}
+}
+shared_focus = { #Munitions Office
+	id = PT_war_preperations
+	icon = GFX_goal_PT_war_preperations
+	cost = 10
+	x = -1
+	y = 1
+	relative_position_id = PT_weapons_cache
+	prerequisite = {
+		focus = PT_weapons_cache
+	}
+	available = {
+	}
+	ai_will_do = {
+		factor = 1000
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus PT_war_preperations"
+	}
+}
+shared_focus = { #Intelligence Office
+	id = PT_send_agents
+	icon = GFX_goal_PT_send_agents
+	cost = 7
+	x = 1
+	y = 1
+	relative_position_id = PT_weapons_cache
+	prerequisite = {
+		focus = PT_weapons_cache
+	}
+	available = {
+	}
+	ai_will_do = {
+		factor = 1000
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus PT_send_agents"
+	}
+}
+shared_focus = {
+	id = PT_for_harmony_and_freedom
+	icon = GFX_goal_PT_for_harmony_and_freedom
+	cost = 7
+	x = 0
+	y = 2
+	relative_position_id = PT_weapons_cache
+	prerequisite = { focus = PT_war_preperations }
+	prerequisite = { focus = PT_send_agents }
+	available = {
+	}
+	ai_will_do = {
+		factor = 1000
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus PT_for_harmony_and_freedom"
+	}
+}
