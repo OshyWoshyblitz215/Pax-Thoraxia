@@ -1,79 +1,4 @@
 changeling_civil_war = {
-    decision_improve_relation_CCN_VRK_1 = {
-        cost = 25
-        visible = {
-            has_completed_focus = PT_hearts_and_minds
-        }
-        fire_only_once = yes
-        available = {
-            check_variable = {
-                var = CCN_VRK_relationship
-                value = 0
-                compare = equals
-            }
-        }
-        icon = rifles
-        days_remove = 30
-        remove_effect = {
-            set_variable = {
-                var = CCN_VRK_relationship
-                value = 1
-            }
-            country_event = {
-                id = PT_CCN_allies.1
-            }
-        }
-    }
-    decision_improve_relation_CCN_VRK_2 = {
-        cost = 25
-        visible = {
-            has_completed_focus = PT_hearts_and_minds
-        }
-        fire_only_once = yes
-        available = {
-            check_variable = {
-                var = CCN_VRK_relationship
-                value = 1
-                compare = equals
-            }
-        }
-        icon = rifles
-        days_remove = 30
-        remove_effect = {
-            add_to_variable = {
-                var = CCN_VRK_relationship
-                value = 1
-            }
-            country_event = {
-                id = PT_CCN_allies.2
-            }
-        }
-    }
-    decision_improve_relation_CCN_VRK_3 = {
-        cost = 25
-        visible = {
-            has_completed_focus = PT_hearts_and_minds
-        }
-        fire_only_once = yes
-        available = {
-            check_variable = {
-                var = CCN_VRK_relationship
-                value = 2
-                compare = equals
-            }
-        }
-        icon = rifles
-        days_remove = 30
-        remove_effect = {
-            add_to_variable = {
-                var = CCN_VRK_relationship
-                value = 1
-            }
-            country_event = {
-                id = PT_CCN_allies.3
-            }
-        }
-    }
     decision_improve_relation_CCN_VRK_4 = {
         cost = 25
         visible = {
@@ -81,102 +6,20 @@ changeling_civil_war = {
         }
         fire_only_once = yes
         available = {
-            check_variable = {
-                var = CCN_VRK_relationship
-                value = 3
-                compare = equals
-            }
+           
         }
         icon = rifles
         days_remove = 30
         remove_effect = {
-            add_to_variable = {
-                var = CCN_VRK_relationship
-                value = 1
-            }
+
             country_event = {
-                id = PT_CCN_allies.4
+                id = PT_CCN_allies.1
             }
         }
     }
     
 #copies 
 
-decision_improve_relation_CCN_SRT_1 = {
-	cost = 25
-	visible = {
-		has_completed_focus = PT_hearts_and_minds
-	}
-	fire_only_once = yes
-	available = {
-		check_variable = {
-			var = CCN_SRT_relationship
-			value = 0
-			compare = equals
-		}
-	}
-	icon = rifles
-	days_remove = 30
-	remove_effect = {
-		set_variable = {
-			var = CCN_SRT_relationship
-			value = 1
-		}
-		country_event = {
-			id = PT_CCN_allies.5
-		}
-	}
-}
-decision_improve_relation_CCN_SRT_2 = {
-	cost = 25
-	visible = {
-		has_completed_focus = PT_hearts_and_minds
-	}
-	fire_only_once = yes
-	available = {
-		check_variable = {
-			var = CCN_SRT_relationship
-			value = 1
-			compare = equals
-		}
-	}
-	icon = rifles
-	days_remove = 30
-	remove_effect = {
-		add_to_variable = {
-			var = CCN_SRT_relationship
-			value = 1
-		}
-		country_event = {
-			id = PT_CCN_allies.6
-		}
-	}
-}
-decision_improve_relation_CCN_SRT_3 = {
-	cost = 25
-	visible = {
-		has_completed_focus = PT_hearts_and_minds
-	}
-	fire_only_once = yes
-	available = {
-		check_variable = {
-			var = CCN_SRT_relationship
-			value = 2
-			compare = equals
-		}
-	}
-	icon = rifles
-	days_remove = 30
-	remove_effect = {
-		add_to_variable = {
-			var = CCN_SRT_relationship
-			value = 1
-		}
-		country_event = {
-			id = PT_CCN_allies.7
-		}
-	}
-}
 decision_improve_relation_CCN_SRT_4 = {
 	cost = 25
 	visible = {
@@ -184,96 +27,14 @@ decision_improve_relation_CCN_SRT_4 = {
 	}
 	fire_only_once = yes
 	available = {
-		check_variable = {
-			var = CCN_SRT_relationship
-			value = 3
-			compare = equals
-		}
+		
 	}
 	icon = rifles
 	days_remove = 30
 	remove_effect = {
-		add_to_variable = {
-			var = CCN_SRT_relationship
-			value = 1
-		}
+		
 		country_event = {
-			id = PT_CCN_allies.8
-		}
-	}
-}
-decision_improve_relation_CCN_LCD_1 = {
-	cost = 25
-	visible = {
-		has_completed_focus = PT_hearts_and_minds
-	}
-	fire_only_once = yes
-	available = {
-		check_variable = {
-			var = CCN_LCD_relationship
-			value = 0
-			compare = equals
-		}
-	}
-	icon = rifles
-	days_remove = 30
-	remove_effect = {
-		set_variable = {
-			var = CCN_LCD_relationship
-			value = 1
-		}
-		country_event = {
-			id = PT_CCN_allies.9
-		}
-	}
-}
-decision_improve_relation_CCN_LCD_2 = {
-	cost = 25
-	visible = {
-		has_completed_focus = PT_hearts_and_minds
-	}
-	fire_only_once = yes
-	available = {
-		check_variable = {
-			var = CCN_LCD_relationship
-			value = 1
-			compare = equals
-		}
-	}
-	icon = rifles
-	days_remove = 30
-	remove_effect = {
-		add_to_variable = {
-			var = CCN_LCD_relationship
-			value = 1
-		}
-		country_event = {
-			id = PT_CCN_allies.10
-		}
-	}
-}
-decision_improve_relation_CCN_LCD_3 = {
-	cost = 25
-	visible = {
-		has_completed_focus = PT_hearts_and_minds
-	}
-	fire_only_once = yes
-	available = {
-		check_variable = {
-			var = CCN_LCD_relationship
-			value = 2
-			compare = equals
-		}
-	}
-	icon = rifles
-	days_remove = 30
-	remove_effect = {
-		add_to_variable = {
-			var = CCN_LCD_relationship
-			value = 1
-		}
-		country_event = {
-			id = PT_CCN_allies.11
+			id = PT_CCN_allies.2
 		}
 	}
 }
@@ -284,96 +45,14 @@ decision_improve_relation_CCN_LCD_4 = {
 	}
 	fire_only_once = yes
 	available = {
-		check_variable = {
-			var = CCN_LCD_relationship
-			value = 3
-			compare = equals
-		}
+		
 	}
 	icon = rifles
 	days_remove = 30
 	remove_effect = {
-		add_to_variable = {
-			var = CCN_LCD_relationship
-			value = 1
-		}
+		
 		country_event = {
-			id = PT_CCN_allies.12
-		}
-	}
-}
-decision_improve_relation_CCN_DTR_1 = {
-	cost = 25
-	visible = {
-		has_completed_focus = PT_hearts_and_minds
-	}
-	fire_only_once = yes
-	available = {
-		check_variable = {
-			var = CCN_DTR_relationship
-			value = 0
-			compare = equals
-		}
-	}
-	icon = rifles
-	days_remove = 30
-	remove_effect = {
-		set_variable = {
-			var = CCN_DTR_relationship
-			value = 1
-		}
-		country_event = {
-			id = PT_CCN_allies.13
-		}
-	}
-}
-decision_improve_relation_CCN_DTR_2 = {
-	cost = 25
-	visible = {
-		has_completed_focus = PT_hearts_and_minds
-	}
-	fire_only_once = yes
-	available = {
-		check_variable = {
-			var = CCN_DTR_relationship
-			value = 1
-			compare = equals
-		}
-	}
-	icon = rifles
-	days_remove = 30
-	remove_effect = {
-		add_to_variable = {
-			var = CCN_DTR_relationship
-			value = 1
-		}
-		country_event = {
-			id = PT_CCN_allies.14
-		}
-	}
-}
-decision_improve_relation_CCN_DTR_3 = {
-	cost = 25
-	visible = {
-		has_completed_focus = PT_hearts_and_minds
-	}
-	fire_only_once = yes
-	available = {
-		check_variable = {
-			var = CCN_DTR_relationship
-			value = 2
-			compare = equals
-		}
-	}
-	icon = rifles
-	days_remove = 30
-	remove_effect = {
-		add_to_variable = {
-			var = CCN_DTR_relationship
-			value = 1
-		}
-		country_event = {
-			id = PT_CCN_allies.15
+			id = PT_CCN_allies.3
 		}
 	}
 }
@@ -384,21 +63,14 @@ decision_improve_relation_CCN_DTR_4 = {
 	}
 	fire_only_once = yes
 	available = {
-		check_variable = {
-			var = CCN_DTR_relationship
-			value = 3
-			compare = equals
-		}
+		
 	}
 	icon = rifles
 	days_remove = 30
 	remove_effect = {
-		add_to_variable = {
-			var = CCN_DTR_relationship
-			value = 1
-		}
+		
 		country_event = {
-			id = PT_CCN_allies.16
+			id = PT_CCN_allies.4
 		}
 	}
 }

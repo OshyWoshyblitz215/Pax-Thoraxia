@@ -2,7 +2,7 @@
 
 add_namespace = PT_CHN
 
-country_event = { # Ping event, fires 7 days into the CHN cheat focus
+country_event = { # Ping event, fires 7 days into the CHN cheat focus CURRENTLY UNNEEDED
 	id = PT_CHN.1
 	fire_only_once = yes
 	trigger = {
@@ -290,7 +290,7 @@ country_event = { # This balks CHN into its constituent queendoms plus commies. 
 		add_war_support = 0.25
 		add_stability = 0.25
 		remove_ideas = political_divisions
-		country_event = { id = PT_CHN.3 hours = 1 }
+#		country_event = { id = PT_CHN.3 hours = 1 }
 	}
 }
 country_event = { #LCD bends the knee
@@ -308,7 +308,7 @@ country_event = { #LCD bends the knee
 			}
 			add_to_tech_sharing_group = CHN_research
 		}
-		country_event = { id = PT_CHN.4 hours = 1 }
+#		country_event = { id = PT_CHN.4 hours = 1 }
 	}
 }
 country_event = { #SRT is second
@@ -326,7 +326,7 @@ country_event = { #SRT is second
 			}
 			add_to_tech_sharing_group = CHN_research
 		}
-		country_event = { id = PT_CHN.5 hours = 1 }
+#		country_event = { id = PT_CHN.5 hours = 1 }
 	}
 }
 country_event = { #DTR follows
@@ -344,7 +344,7 @@ country_event = { #DTR follows
 			}
 			add_to_tech_sharing_group = CHN_research
 		}
-		country_event = { id = PT_CHN.6 hours = 1 }
+#		country_event = { id = PT_CHN.6 hours = 1 }
 	}
 }
 country_event = { #VRK bends last
@@ -362,7 +362,7 @@ country_event = { #VRK bends last
 			}
 			add_to_tech_sharing_group = CHN_research
 		}
-		country_event = { id = PT_CHN.7 hours = 1 }
+#		country_event = { id = PT_CHN.7 hours = 1 }
 	}
 }
 country_event = { #GRK defiant
@@ -379,7 +379,7 @@ country_event = { #GRK defiant
 country_event = { #CCN established
 	id = PT_CHN.8
 	is_triggered_only = yes
-	option = {
+	immediate = {
 		add_popularity = {
 		    ideology = democratic
 		    popularity = -1
@@ -396,6 +396,15 @@ country_event = { #CCN established
 				remove_core_of = VRK
 			}
 		}
+	}
+	option = {
+		name=I_wanna_be_thorax
+		CCN = {
+			change_tag_from = CHN
+		}
+	}
+	option = {
+		name=Bruh
 	}
 }
 country_event = { # 

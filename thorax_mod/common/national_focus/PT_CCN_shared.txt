@@ -50,6 +50,7 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus PT_the_country_stirs"
+		country_event = { id = PT_CCN_allies.5 }
 	}
 }
 shared_focus = {
