@@ -1,5 +1,5 @@
 changeling_civil_war = {
-    decision_improve_relation_CCN_VRK_4 = {
+    decision_improve_relation_CCN_VRK = {
         cost = 25
         visible = {
             has_completed_focus = PT_hearts_and_minds
@@ -20,7 +20,7 @@ changeling_civil_war = {
     
 #copies 
 
-decision_improve_relation_CCN_SRT_4 = {
+decision_improve_relation_CCN_SRT = {
 	cost = 25
 	visible = {
 		has_completed_focus = PT_hearts_and_minds
@@ -38,7 +38,7 @@ decision_improve_relation_CCN_SRT_4 = {
 		}
 	}
 }
-decision_improve_relation_CCN_LCD_4 = {
+decision_improve_relation_CCN_LCD = {
 	cost = 25
 	visible = {
 		has_completed_focus = PT_hearts_and_minds
@@ -56,7 +56,7 @@ decision_improve_relation_CCN_LCD_4 = {
 		}
 	}
 }
-decision_improve_relation_CCN_DTR_4 = {
+decision_improve_relation_CCN_DTR = {
 	cost = 25
 	visible = {
 		has_completed_focus = PT_hearts_and_minds
