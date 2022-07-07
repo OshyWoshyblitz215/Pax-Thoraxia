@@ -25,6 +25,7 @@ country_event = {
 				target = CCN
 				modifier = PT_they_like_thorax
 			}
+			set_country_flag = PT_thorax_convinced_us
 		}
 		add_opinion_modifier = {
 				target = VRK
@@ -74,6 +75,7 @@ country_event = {
 				target = CCN
 				modifier = PT_they_like_thorax
 			}
+			set_country_flag = PT_thorax_convinced_us
 		}
 		add_opinion_modifier = {
 				target = SRT
@@ -131,18 +133,7 @@ country_event = {
 	fire_only_once = yes
 	is_triggered_only = yes
 	immediate = {
-		if = {
-			limit = {
-				CCN = {
-					is_in_faction = no
-				}
-			}
-			CCN = {
-				create_faction = THORAX_CIVIL_WAR_ALLIANCE
-			}
-		}
 		GRK = {
-			leave_faction = yes
 			add_country_leader_trait = PT_swayed_by_thorax
 			add_opinion_modifier = {
 				target = CCN
@@ -163,7 +154,11 @@ country_event = {
 			white_peace = GRK
 		}
 		CCN = {
-			add_to_faction = GRK
+			diplomatic_relation = {
+				country = GRK
+				relation = non_aggression_pact
+				active = yes
+			}
 		}
 	}
 	option = {

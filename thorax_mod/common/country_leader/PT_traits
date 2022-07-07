@@ -5,6 +5,6 @@
 leader_traits = {
 	PT_swayed_by_thorax = {
 		random = no
-		democratic_acceptance = 200
+		democratic_acceptance = 75
 	}
 }
