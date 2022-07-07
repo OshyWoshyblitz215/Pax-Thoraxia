@@ -9,7 +9,6 @@ shared_focus = { #Service Office
 	ai_will_do = {
 		factor = 200
 	}
-	mutually_exclusive = { focus = destroy_thoraxian_opposition }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus PT_the_hives_stir"
 	}

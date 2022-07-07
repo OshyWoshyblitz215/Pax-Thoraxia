@@ -1,0 +1,10 @@
+@tier1 = 30
+@tier2 = 20
+@tier3 = 10
+
+leader_traits = {
+	PT_swayed_by_thorax = {
+		random = no
+		democratic_acceptance = 200
+	}
+}
