@@ -67,6 +67,7 @@ focus_tree = {
 #		mutually_exclusive = { focus = PT_queen_unification }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus PT_pacify_the_northerners"
+			declare_war_on = { target = GRK type = annex_everything }
 		}
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
 	}
@@ -96,6 +97,9 @@ focus_tree = {
 		available = {
 			is_subject = no
 			has_government = fascism
+			VRK = {
+				NOT = { has_country_flag = PT_thorax_convinced_us }
+			}
 		}
 		ai_will_do = {
 			factor = 200
@@ -136,6 +140,9 @@ focus_tree = {
 		available = {
 			is_subject = no
 			has_government = fascism
+			SRT = {
+				NOT = { has_country_flag = PT_thorax_convinced_us }
+			}
 		}
 		ai_will_do = {
 			factor = 200

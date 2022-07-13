@@ -74,7 +74,54 @@ decision_improve_relation_CCN_DTR = {
 		}
 	}
 }
-    
+PT_get_manpower_decision = {
+	cost = 25
+	visible = {
+		has_completed_focus = PT_win_hearts_and_minds
+		CHN = {
+			exists = yes
+		}
+	}
+	available = {
+	}
+	icon = rifles
+	days_remove = 15
+	remove_effect = {
+		add_manpower = 5000
+	}
+}
+PT_get_infantry_decision = {
+	cost = 25
+	visible = {
+		has_completed_focus = PT_win_hearts_and_minds
+		CHN = {
+			exists = yes
+		}
+	}
+	available = {
+	}
+	icon = rifles
+	days_remove = 15
+	remove_effect = {
+		add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 3000 producer = CCN }
+	}
+}
+PT_get_support_decision = {
+	cost = 25
+	visible = {
+		has_completed_focus = PT_win_hearts_and_minds
+		CHN = {
+			exists = yes
+		}
+	}
+	available = {
+	}
+	icon = rifles
+	days_remove = 15
+	remove_effect = {
+		add_equipment_to_stockpile = { type = support_equipment amount = 500 producer = CCN }
+	}
+}
     
     
     
