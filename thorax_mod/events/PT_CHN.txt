@@ -395,6 +395,9 @@ country_event = { #CCN established
 				add_core_of = PREV
 				remove_core_of = VRK
 			}
+			CCN_thorax = {
+				set_portraits = { civilian = { large ="gfx/leaders/CCN/PT_Thorax.tga" } }
+			}
 		}
 	}
 	option = {

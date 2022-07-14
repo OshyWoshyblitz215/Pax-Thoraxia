@@ -210,14 +210,13 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus PT_pharynx_needs_assistance"
 		# DO THE ART STUFF WITH THAT AND PHARYNX CHANGING SIDES
 
-		set_nationality = {
-			target_country = CCN
-			character = CHN_pharynx
+		CHN = { CHN_pharynx = {	set_nationality = CCN } }
+		CHN_pharynx = {
+			set_portraits = { army = { large = "gfx/leaders/CCN/PT_Pharynx.tga" } }
 		}
-		set_portraits = {
-			character = CHN_pharynx
+		CCN_pharynx = {
+			set_portraits = { army = { large = "gfx/leaders/CCN/PT_Pharynx.tga" } }
 		}
-
 		if = {
 			limit = { NOT = { has_country_flag = unlocked_rebelling_troops_template } }
 			set_country_flag = unlocked_rebelling_troops_template
