@@ -410,7 +410,7 @@ country_event = { #CCN established
 		name=Bruh
 	}
 }
-country_event = { # 
+country_event = { # something?
 	id = PT_CHN.9
 	is_triggered_only = yes
 	option = {
@@ -448,5 +448,45 @@ country_event = { #
 		SRT = {
 			set_leader_description = chn_queen_argynnis_desc
 		}
+	}
+}
+country_event = { #opening: SRT angered
+	id = PT_CHN.10
+	title = PT_CHN.10.t
+	desc = PT_CHN.10.d
+	is_triggered_only = yes
+	option = {
+		name = PT_CHN.10.a
+		add_political_power = -5
+	}
+}
+country_event = { #opening: DTR angered
+	id = PT_CHN.11
+	title = PT_CHN.11.t
+	desc = PT_CHN.11.d
+	is_triggered_only = yes
+	option = {
+		name = PT_CHN.11.a
+		252 = { add_manpower = -2000 }
+	}
+}
+country_event = { #opening: VRK angered
+	id = PT_CHN.12
+	title = PT_CHN.12.t
+	desc = PT_CHN.12.d
+	is_triggered_only = yes
+	option = {
+		name = PT_CHN.12.a
+		add_political_power = -5
+	}
+}
+country_event = { #opening: LCD angered
+	id = PT_CHN.13
+	title = PT_CHN.13.t
+	desc = PT_CHN.13.d
+	is_triggered_only = yes
+	option = {
+		name = PT_CHN.13.a
+		add_political_power = -5
 	}
 }

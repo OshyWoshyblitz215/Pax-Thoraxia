@@ -13,7 +13,7 @@ focus_tree = {
 	focus = { #Service Office
 		id = PT_the_hives_stir 
 		icon = GFX_goal_PT_the_hives_stir
-		cost = 10.00
+		cost = 3.60
 		x = 7
 		y = 0
 		available = {
@@ -23,11 +23,15 @@ focus_tree = {
 		}
 		mutually_exclusive = { focus = destroy_thoraxian_opposition }
 		select_effect = {
-			country_event = { id = PT_CHN.2 days = 7 }
-			country_event = { id = PT_CHN.8 days = 10 }
+			country_event = { id = PT_CHN.10 days = 5 }
+			country_event = { id = PT_CHN.11 days = 10 }
+			country_event = { id = PT_CHN.12 days = 15 }
+			country_event = { id = PT_CHN.13 days = 20 }
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus PT_the_hives_stir"
+			country_event = { id = PT_CHN.2 days = 7 }
+			country_event = { id = PT_CHN.8 days = 10 }
 		}
 	}
 #	focus = {
