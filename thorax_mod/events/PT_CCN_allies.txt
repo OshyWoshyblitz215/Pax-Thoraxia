@@ -15,7 +15,7 @@ country_event = {
 				}
 			}
 			CCN = {
-				create_faction = Polaris Concordat
+				create_faction = THORAX_CIVIL_WAR_ALLIANCE
 			}
 		}
 		VRK = {
@@ -65,7 +65,7 @@ country_event = {
 				}
 			}
 			CCN = {
-				create_faction = Polaris Concordat
+				create_faction = THORAX_CIVIL_WAR_ALLIANCE
 			}
 		}
 		SRT = {
