@@ -520,13 +520,23 @@ country_event = { #opening: Chrysalis meetings 3
 		country_event = { id = PT_CHN.17  hours = 1}
 	}
 }
-country_event = { #opening: Chrysalis meetings 4?
+country_event = { #opening: Chrysalis meetings end?
 	id = PT_CHN.17
 	title = PT_CHN.17.t
 	desc = PT_CHN.17.d
 	is_triggered_only = yes
 	option = {
 		name = PT_CHN.17.a
+		add_political_power = -5
+	}
+}
+country_event = { #opening: Chrysalis meetings 4
+	id = PT_CHN.18
+	title = PT_CHN.18.t
+	desc = PT_CHN.18.d
+	is_triggered_only = yes
+	option = {
+		name = PT_CHN.18.a
 		add_political_power = -5
 	}
 }
