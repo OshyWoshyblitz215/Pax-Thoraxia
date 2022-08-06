@@ -1,4 +1,10 @@
 ﻿l_english:
-PT_unlocks_decisions_tooltip:0 "Unlocks decisions for getting Manpower and Equipment."
+PT_unlocks_decisions_tooltip:0 "Unlocks decisions."
 THORAX_CIVIL_WAR_ALLIANCE:0 "Polaris Concordat"
+
+#national spirits
+PT_insight_into_the_tower:0 "Insight Into the Tower"
+PT_insight_into_the_tower_desc:0 "The highest ranks of Chrysalis's government, known as The Tower, are not all entirely loyal to the Queen. Some just leak us information, others actively sabotage the tyrant to help our cause."
+PT_spies_within:0 "Spies Within"
+PT_spies_within_desc:0 "There are several harmonist traitors in The Tower, and they are making it harder for us to beat Thorax."
 

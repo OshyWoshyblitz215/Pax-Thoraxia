@@ -1,0 +1,38 @@
+ideas = {
+	country = {
+
+		PT_insight_into_the_tower = {
+			name = PT_insight_into_the_tower
+			allowed = { always = no	}
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+#			picture = jap_intervene_in_china #placeholder
+			
+			targeted_modifier = {
+				tag = CHN
+				attack_bonus_against = 0.05
+			}
+			modifier = {
+				planning_speed = 0.1
+			}
+		}
+		PT_spies_within = {
+			name = PT_spies_within
+			allowed = { always = no	}
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+#			picture = jap_intervene_in_china #placeholder
+			allowed = {
+				always = no # Triggered via event
+			}
+			targeted_modifier = {
+				tag = CHN
+				attack_bonus_against = 0.05
+			}
+			modifier = {
+				planning_speed = 0.1
+			}
+		}
+
+	}
+}

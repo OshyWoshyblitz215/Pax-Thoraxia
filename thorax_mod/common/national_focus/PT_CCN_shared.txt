@@ -5,6 +5,9 @@ shared_focus = { #Service Office
 	x = 4
 	y = 0
 	available = {
+		CHN = {
+			exists = yes
+		}
 	}
 	ai_will_do = {
 		factor = 200
@@ -24,12 +27,16 @@ shared_focus = { #Foreign Office
 		focus = PT_the_hives_have_stirred
 	}
 	available = {
+		CHN = {
+			exists = yes
+		}
 	}
 	ai_will_do = {
 		factor = 1000
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus PT_hearts_and_minds"
+		custom_effect_tooltip = PT_unlocks_decisions_tooltip
 	}
 }
 shared_focus = {
@@ -43,6 +50,9 @@ shared_focus = {
 		focus = PT_the_hives_have_stirred
 	}
 	available = {
+		CHN = {
+			exists = yes
+		}
 	}
 	ai_will_do = {
 		factor = 1000
@@ -65,9 +75,13 @@ shared_focus = {
 		factor = 1000
 	}
 	available = {
+		CHN = {
+			exists = yes
+		}
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus PT_weapons_cache"
+		custom_effect_tooltip = PT_unlocks_decisions_tooltip
 	}
 }
 shared_focus = { #Munitions Office
@@ -81,12 +95,20 @@ shared_focus = { #Munitions Office
 		focus = PT_weapons_cache
 	}
 	available = {
+		CHN = {
+			exists = yes
+		}
 	}
 	ai_will_do = {
 		factor = 1000
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus PT_war_preperations"
+		323 = {
+			add_extra_state_shared_building_slots = 4
+			add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
+			add_building_construction = { type = arms_factory level = 2 instant_build = yes }
+		}
 	}
 }
 shared_focus = { #Intelligence Office
@@ -100,12 +122,19 @@ shared_focus = { #Intelligence Office
 		focus = PT_weapons_cache
 	}
 	available = {
+		CHN = {
+			exists = yes
+		}
 	}
 	ai_will_do = {
 		factor = 1000
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus PT_send_agents"
+		add_ideas = { PT_insight_into_the_tower }
+		CHN = {
+			add_ideas = { PT_spies_within }
+		}
 	}
 }
 shared_focus = {
@@ -118,12 +147,19 @@ shared_focus = {
 	prerequisite = { focus = PT_war_preperations }
 	prerequisite = { focus = PT_send_agents }
 	available = {
+		CHN = {
+			exists = yes
+		}
 	}
 	ai_will_do = {
 		factor = 1000
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus PT_for_harmony_and_freedom"
+		declare_war_on = {
+			target = CHN
+			type = civil_war
+		}
 	}
 }
 
@@ -136,6 +172,9 @@ shared_focus = {
 	relative_position_id = PT_weapons_cache
 	prerequisite = { focus = PT_for_harmony_and_freedom }
 	available = {
+		CHN = {
+			exists = yes
+		}
 	}
 	ai_will_do = {
 		factor = 1000
@@ -153,6 +192,9 @@ shared_focus = {
 	relative_position_id = PT_fight_for_whats_right
 	prerequisite = { focus = PT_fight_for_whats_right }
 	available = {
+		CHN = {
+			exists = yes
+		}
 	}
 	ai_will_do = {
 		factor = 1000
@@ -202,6 +244,9 @@ shared_focus = {
 	relative_position_id = PT_fight_for_whats_right
 	prerequisite = { focus = PT_fight_for_whats_right }
 	available = {
+		CHN = {
+			exists = yes
+		}
 	}
 	ai_will_do = {
 		factor = 1000
@@ -265,6 +310,9 @@ shared_focus = {
 	relative_position_id = PT_fight_for_whats_right
 	prerequisite = { focus = PT_fight_for_whats_right }
 	available = {
+		CHN = {
+			exists = yes
+		}
 	}
 	ai_will_do = {
 		factor = 1000
@@ -287,6 +335,9 @@ shared_focus = {
 	relative_position_id = PT_fight_for_whats_right
 	prerequisite = { focus = PT_rising_of_the_northeast focus = PT_pharynx_needs_assistance focus = PT_request_more_foreign_aid }
 	available = {
+		CHN = {
+			exists = yes
+		}
 	}
 	ai_will_do = {
 		factor = 1000
@@ -308,6 +359,9 @@ shared_focus = {
 	relative_position_id = PT_fight_for_whats_right
 	prerequisite = { focus = PT_rising_of_the_northeast focus = PT_pharynx_needs_assistance focus = PT_request_more_foreign_aid }
 	available = {
+		CHN = {
+			exists = yes
+		}
 	}
 	ai_will_do = {
 		factor = 1000
@@ -456,6 +510,9 @@ shared_focus = {
 	prerequisite = { focus = PT_makeshift_factories }
 	prerequisite = { focus = PT_antax_industry }
 	available = {
+		CHN = {
+			exists = yes
+		}
 	}
 	ai_will_do = {
 		factor = 1000
@@ -478,6 +535,9 @@ shared_focus = {
 	prerequisite = { focus = PT_antax_industry }
 	prerequisite = { focus = PT_the_princess_revolt }
 	available = {
+		CHN = {
+			exists = yes
+		}
 	}
 	ai_will_do = {
 		factor = 1000
@@ -521,6 +581,9 @@ shared_focus = {
 	relative_position_id = PT_fight_for_whats_right
 	prerequisite = { focus = PT_hidden_airbases }
 	available = {
+		CHN = {
+			exists = yes
+		}
 	}
 	ai_will_do = {
 		factor = 1000
@@ -539,6 +602,9 @@ shared_focus = {
 	relative_position_id = PT_fight_for_whats_right
 	prerequisite = { focus = PT_restore_old_fortresses }
 	available = {
+		CHN = {
+			exists = yes
+		}
 	}
 	ai_will_do = {
 		factor = 1000
@@ -622,6 +688,9 @@ shared_focus = {
 	prerequisite = { focus = PT_the_sea_queens_rebellion }
 	prerequisite = { focus = PT_win_hearts_and_minds }
 	available = {
+		CHN = {
+			exists = yes
+		}
 	}
 	ai_will_do = {
 		factor = 1000
