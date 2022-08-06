@@ -204,7 +204,7 @@ shared_focus = {
 	icon = GFX_goal_ccn_revolution_harmony
 	cost = 5
 	x = 4
-	y = 6
+	y = 5
 	available = {
 		has_war_with = CHN
 		CHN = {
@@ -613,8 +613,7 @@ shared_focus = {
 	x = 2
 	y = 3
 	relative_position_id = PT_fight_for_whats_right
-	prerequisite = { focus = PT_antax_industry }
-	prerequisite = { focus = PT_the_princess_revolt }
+	prerequisite = { focus = PT_antax_industry focus = PT_the_princess_revolt focus = PT_makeshift_factories }
 	available = {
 		CHN = {
 			exists = yes
