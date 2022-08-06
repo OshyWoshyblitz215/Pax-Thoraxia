@@ -1,6 +1,6 @@
 shared_focus = { #Service Office
 	id = PT_the_hives_have_stirred
-	icon = GFX_goal_PT_the_hives_stir
+	icon = GFX_goal_chn_hive_stirs
 	cost = 3.00
 	x = 4
 	y = 0
@@ -129,7 +129,7 @@ shared_focus = {
 
 shared_focus = {
 	id = PT_fight_for_whats_right
-	icon = GFX_goal_PT_for_harmony_and_freedom #placeholder
+	icon = GFX_goal_ccn_revolution_harmony
 	cost = 5
 	x = 0
 	y = 3
@@ -146,7 +146,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = PT_rising_of_the_northeast
-	icon = GFX_goal_PT_for_harmony_and_freedom #placeholder
+	icon = GFX_goal_ccn_hive_militia
 	cost = 6.45
 	x = -2
 	y = 1
@@ -195,7 +195,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = PT_pharynx_needs_assistance
-	icon = GFX_goal_PT_for_harmony_and_freedom #placeholder
+	icon = GFX_goal_ccn_pharynx
 	cost = 5
 	x = 0
 	y = 1
@@ -258,7 +258,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = PT_request_more_foreign_aid
-	icon = GFX_goal_PT_for_harmony_and_freedom #placeholder
+	icon = GFX_goal_ccn_foreign_aid
 	cost = 7.2
 	x = 2
 	y = 1
@@ -280,7 +280,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = PT_makeshift_factories
-	icon = GFX_goal_PT_for_harmony_and_freedom #placeholder
+	icon = GFX_goal_chn_industry
 	cost = 7.2
 	x = -2
 	y = 2
@@ -301,7 +301,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = PT_antax_industry
-	icon = GFX_goal_PT_for_harmony_and_freedom #placeholder
+	icon = GFX_goal_chn_antax_industry
 	cost = 7.2
 	x = 0
 	y = 2
@@ -323,7 +323,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = PT_the_princess_revolt
-	icon = GFX_goal_PT_for_harmony_and_freedom #placeholder
+	icon = GFX_goal_chn_princess_revolt
 	cost = 5
 	x = 2
 	y = 2
@@ -448,7 +448,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = PT_hidden_airbases
-	icon = GFX_goal_PT_for_harmony_and_freedom #placeholder
+	icon = GFX_goal_chn_airbase
 	cost = 7.2
 	x = -2
 	y = 3
@@ -470,7 +470,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = PT_restore_old_fortresses
-	icon = GFX_goal_PT_for_harmony_and_freedom #placeholder
+	icon = GFX_goal_chn_fortress
 	cost = 8.6
 	x = 2
 	y = 3
@@ -514,7 +514,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = PT_win_hearts_and_minds
-	icon = GFX_goal_PT_for_harmony_and_freedom #placeholder
+	icon = GFX_goal_chn_hearts_and_mind
 	cost = 6.45
 	x = -1
 	y = 4
@@ -532,7 +532,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = PT_the_sea_queens_rebellion
-	icon = GFX_goal_PT_for_harmony_and_freedom #placeholder
+	icon = GFX_goal_chn_sea_queen
 	cost = 5
 	x = 1
 	y = 4
@@ -614,7 +614,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = PT_for_thorax_and_harmony
-	icon = GFX_goal_PT_for_harmony_and_freedom #placeholder
+	icon = GFX_goal_chn_thorax_and_harmony
 	cost = 5
 	x = 0
 	y = 5

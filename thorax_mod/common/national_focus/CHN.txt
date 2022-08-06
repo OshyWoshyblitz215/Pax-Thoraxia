@@ -12,7 +12,7 @@ focus_tree = {
 	
 	focus = { #Service Office
 		id = PT_the_hives_stir 
-		icon = GFX_goal_PT_the_hives_stir
+		icon = GFX_goal_chn_hive_stirs
 		cost = 3.60
 		x = 7
 		y = 0
@@ -61,7 +61,7 @@ focus_tree = {
 #	}
 	focus = {
 		id = PT_pacify_the_northerners
-		icon = GFX_goal_chn_swords
+		icon = GFX_goal_chn_crush_north
 		cost = 25.80
 		available = {
 			is_subject = no
@@ -82,7 +82,7 @@ focus_tree = {
 	}
 	focus = {
 		id = PT_chrys_sends_diplomats_out
-		icon = GFX_goal_chn_swords
+		icon = GFX_goal_chn_man_queen_pissed
 		cost = 7.15
 		available = {
 			is_subject = no
@@ -101,7 +101,7 @@ focus_tree = {
 	}
 	focus = {
 		id = PT_get_VRK_loyalty
-		icon = GFX_goal_chn_swords
+		icon = GFX_goal_chn_vraks_aid
 		cost = 10.00
 		available = {
 			is_subject = no
@@ -124,7 +124,7 @@ focus_tree = {
 	}
 	focus = {
 		id = PT_get_DTR_loyalty
-		icon = GFX_goal_chn_swords
+		icon = GFX_goal_chn_ditrysium_aid
 		cost = 10.00
 		available = {
 			is_subject = no
@@ -144,7 +144,7 @@ focus_tree = {
 	}
 	focus = {
 		id = PT_get_SRT_loyalty
-		icon = GFX_goal_chn_swords
+		icon = GFX_goal_chn_soryth_aid
 		cost = 10.00
 		available = {
 			is_subject = no
@@ -167,7 +167,7 @@ focus_tree = {
 	}
 	focus = {
 		id = PT_get_LCD_loyalty
-		icon = GFX_goal_chn_swords
+		icon = GFX_goal_chn_lycitda_aid
 		cost = 10.00
 		available = {
 			is_subject = no
@@ -187,7 +187,7 @@ focus_tree = {
 	}
 	focus = {
 		id = PT_chryssie_attack_thorax
-		icon = GFX_goal_chn_swords
+		icon = GFX_goal_chn_harmony_crushed
 		cost = 7.15
 		available = {
 			is_subject = no
@@ -200,7 +200,7 @@ focus_tree = {
 		y = 5
 		prerequisite = { focus = PT_get_LCD_loyalty }
 		prerequisite = { focus = PT_get_SRT_loyalty }
-		prerequisite = { focus = PT_get_VRT_loyalty }
+		prerequisite = { focus = PT_get_VRK_loyalty }
 		prerequisite = { focus = PT_get_DTR_loyalty }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus PT_chryssie_attack_thorax"

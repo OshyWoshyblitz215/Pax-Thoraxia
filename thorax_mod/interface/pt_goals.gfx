@@ -2,31 +2,111 @@ spriteTypes = {
 	#### Equestria At War
 	SpriteType = {
 		name = "GFX_goal_PT_the_hives_stir"
-		texturefile = "gfx/interface/goals/goal_PT_the_hives_stir.dds"
+		texturefile = "gfx/interface/goals/civil_war/goal_PT_the_hives_stir.dds"
 	}
 	SpriteType = {
 		name = "GFX_goal_PT_hearts_and_minds"
-		texturefile = "gfx/interface/goals/goal_PT_hearts_and_minds.dds"
+		texturefile = "gfx/interface/goals/civil_war/goal_PT_hearts_and_minds.dds"
 	}
 	SpriteType = {
 		name = "GFX_goal_PT_the_north"
-		texturefile = "gfx/interface/goals/goal_PT_the_north.dds"
+		texturefile = "gfx/interface/goals/civil_war/goal_PT_the_north.dds"
 	}
 	SpriteType = {
 		name = "GFX_goal_PT_weapons_cache"
-		texturefile = "gfx/interface/goals/goal_PT_weapons_cache.dds"
+		texturefile = "gfx/interface/goals/civil_war/goal_PT_weapons_cache.dds"
 	}
 	SpriteType = {
 		name = "GFX_goal_PT_war_preperations"
-		texturefile = "gfx/interface/goals/goal_PT_war_preperations.dds"
+		texturefile = "gfx/interface/goals/civil_war/goal_PT_war_preperations.dds"
 	}
 	SpriteType = {
 		name = "GFX_goal_PT_send_agents"
-		texturefile = "gfx/interface/goals/goal_PT_send_agents.dds"
+		texturefile = "gfx/interface/goals/civil_war/goal_PT_send_agents.dds"
 	}
 	SpriteType = {
 		name = "GFX_goal_PT_for_harmony_and_freedom"
-		texturefile = "gfx/interface/goals/goal_PT_for_harmony_and_freedom.dds"
+		texturefile = "gfx/interface/goals/civil_war/goal_PT_for_harmony_and_freedom.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_ccn_foreign_aid"
+		texturefile = "gfx/interface/goals/civil_war/goal_ccn_foreign_aid.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_ccn_hive_militia"
+		texturefile = "gfx/interface/goals/civil_war/goal_ccn_hive_militia.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_ccn_pharynx"
+		texturefile = "gfx/interface/goals/civil_war/goal_ccn_pharynx.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_ccn_revolution_harmony"
+		texturefile = "gfx/interface/goals/civil_war/goal_ccn_revolution_harmony.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_chn_airbase"
+		texturefile = "gfx/interface/goals/civil_war/goal_chn_airbase.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_chn_antax_industry"
+		texturefile = "gfx/interface/goals/civil_war/goal_chn_antax_industry.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_chn_crush_north"
+		texturefile = "gfx/interface/goals/civil_war/goal_chn_crush_north.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_chn_ditrysium_aid"
+		texturefile = "gfx/interface/goals/civil_war/goal_chn_ditrysium_aid.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_chn_fortress"
+		texturefile = "gfx/interface/goals/civil_war/goal_chn_fortress.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_chn_harmony_crushed"
+		texturefile = "gfx/interface/goals/civil_war/goal_chn_harmony_crushed.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_chn_hearts_and_mind"
+		texturefile = "gfx/interface/goals/civil_war/goal_chn_hearts_and_mind.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_chn_hive_stirs"
+		texturefile = "gfx/interface/goals/civil_war/goal_chn_hive_stirs.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_chn_industry"
+		texturefile = "gfx/interface/goals/civil_war/goal_chn_industry.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_chn_lycitda_aid"
+		texturefile = "gfx/interface/goals/civil_war/goal_chn_lycitda_aid.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_chn_man_queen_pissed"
+		texturefile = "gfx/interface/goals/civil_war/goal_chn_man_queen_pissed.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_chn_princess_revolt"
+		texturefile = "gfx/interface/goals/civil_war/goal_chn_princess_revolt.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_chn_sea_queen"
+		texturefile = "gfx/interface/goals/civil_war/goal_chn_sea_queen.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_chn_soryth_aid"
+		texturefile = "gfx/interface/goals/civil_war/goal_chn_soryth_aid.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_chn_thorax_and_harmony"
+		texturefile = "gfx/interface/goals/civil_war/goal_chn_thorax_and_harmony.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_chn_vraks_aid"
+		texturefile = "gfx/interface/goals/civil_war/goal_chn_vraks_aid.dds"
 	}
 }
 
