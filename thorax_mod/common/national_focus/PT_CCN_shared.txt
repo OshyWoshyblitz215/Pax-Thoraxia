@@ -9,6 +9,11 @@ shared_focus = { #Service Office
 			exists = yes
 		}
 	}
+	bypass = {
+		CHN = {
+			exists = no
+		}
+	}
 	ai_will_do = {
 		factor = 200
 	}
@@ -29,6 +34,11 @@ shared_focus = { #Foreign Office
 	available = {
 		CHN = {
 			exists = yes
+		}
+	}
+	bypass = {
+		CHN = {
+			exists = no
 		}
 	}
 	ai_will_do = {
@@ -54,6 +64,11 @@ shared_focus = {
 			exists = yes
 		}
 	}
+	bypass = {
+		CHN = {
+			exists = no
+		}
+	}
 	ai_will_do = {
 		factor = 1000
 	}
@@ -71,6 +86,11 @@ shared_focus = {
 	relative_position_id = PT_the_hives_have_stirred
 	prerequisite = { focus = PT_hearts_and_minds }
 	prerequisite = { focus = PT_the_north }
+	bypass = {
+		CHN = {
+			exists = no
+		}
+	}
 	ai_will_do = {
 		factor = 1000
 	}
@@ -81,7 +101,8 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus PT_weapons_cache"
-		custom_effect_tooltip = PT_unlocks_decisions_tooltip
+		add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 1000 producer = CCN }
+		add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 250 producer = CCN }
 	}
 }
 shared_focus = { #Munitions Office
@@ -97,6 +118,11 @@ shared_focus = { #Munitions Office
 	available = {
 		CHN = {
 			exists = yes
+		}
+	}
+	bypass = {
+		CHN = {
+			exists = no
 		}
 	}
 	ai_will_do = {
@@ -126,6 +152,11 @@ shared_focus = { #Intelligence Office
 			exists = yes
 		}
 	}
+	bypass = {
+		CHN = {
+			exists = no
+		}
+	}
 	ai_will_do = {
 		factor = 1000
 	}
@@ -151,6 +182,11 @@ shared_focus = {
 			exists = yes
 		}
 	}
+	bypass = {
+		CHN = {
+			exists = no
+		}
+	}
 	ai_will_do = {
 		factor = 1000
 	}
@@ -170,10 +206,15 @@ shared_focus = {
 	x = 0
 	y = 3
 	relative_position_id = PT_weapons_cache
-	prerequisite = { focus = PT_for_harmony_and_freedom }
 	available = {
+		has_war_with = CHN
 		CHN = {
 			exists = yes
+		}
+	}
+	bypass = {
+		CHN = {
+			exists = no
 		}
 	}
 	ai_will_do = {
@@ -181,6 +222,12 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus PT_fight_for_whats_right"
+		add_manpower = 250000
+		add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 2000 producer = CCN }
+		add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 1000 producer = CCN }
+		add_equipment_to_stockpile = { type = support_equipment_1 amount = 1500 producer = CCN }
+		add_equipment_to_stockpile = { type = fighter_equipment_0 amount = 150 producer = CCN }
+		add_equipment_to_stockpile = { type = tac_bomber_equipment_0 amount = 50 producer = CCN }
 	}
 }
 shared_focus = {
@@ -194,6 +241,11 @@ shared_focus = {
 	available = {
 		CHN = {
 			exists = yes
+		}
+	}
+	bypass = {
+		CHN = {
+			exists = no
 		}
 	}
 	ai_will_do = {
@@ -246,6 +298,11 @@ shared_focus = {
 	available = {
 		CHN = {
 			exists = yes
+		}
+	}
+	bypass = {
+		CHN = {
+			exists = no
 		}
 	}
 	ai_will_do = {
@@ -314,6 +371,11 @@ shared_focus = {
 			exists = yes
 		}
 	}
+	bypass = {
+		CHN = {
+			exists = no
+		}
+	}
 	ai_will_do = {
 		factor = 1000
 	}
@@ -337,6 +399,11 @@ shared_focus = {
 	available = {
 		CHN = {
 			exists = yes
+		}
+	}
+	bypass = {
+		CHN = {
+			exists = no
 		}
 	}
 	ai_will_do = {
@@ -363,6 +430,11 @@ shared_focus = {
 			exists = yes
 		}
 	}
+	bypass = {
+		CHN = {
+			exists = no
+		}
+	}
 	ai_will_do = {
 		factor = 1000
 	}
@@ -385,6 +457,11 @@ shared_focus = {
 	prerequisite = { focus = PT_rising_of_the_northeast focus = PT_pharynx_needs_assistance focus = PT_request_more_foreign_aid }
 	available = {
 		has_war_with = LCD
+	}
+	bypass = {
+		CHN = {
+			exists = no
+		}
 	}
 	ai_will_do = {
 		factor = 1000
@@ -514,6 +591,11 @@ shared_focus = {
 			exists = yes
 		}
 	}
+	bypass = {
+		CHN = {
+			exists = no
+		}
+	}
 	ai_will_do = {
 		factor = 1000
 	}
@@ -537,6 +619,11 @@ shared_focus = {
 	available = {
 		CHN = {
 			exists = yes
+		}
+	}
+	bypass = {
+		CHN = {
+			exists = no
 		}
 	}
 	ai_will_do = {
@@ -585,6 +672,11 @@ shared_focus = {
 			exists = yes
 		}
 	}
+	bypass = {
+		CHN = {
+			exists = no
+		}
+	}
 	ai_will_do = {
 		factor = 1000
 	}
@@ -604,6 +696,11 @@ shared_focus = {
 	available = {
 		CHN = {
 			exists = yes
+		}
+	}
+	bypass = {
+		CHN = {
+			exists = no
 		}
 	}
 	ai_will_do = {
@@ -690,6 +787,11 @@ shared_focus = {
 	available = {
 		CHN = {
 			exists = yes
+		}
+	}
+	bypass = {
+		CHN = {
+			exists = no
 		}
 	}
 	ai_will_do = {
