@@ -517,7 +517,7 @@ country_event = { #opening: Chrysalis meetings 3
 	is_triggered_only = yes
 	option = {
 		name = PT_CHN.16.a
-		country_event = { id = PT_CHN.17  hours = 1}
+		country_event = { id = PT_CHN.18  hours = 1}
 	}
 }
 country_event = { #opening: Chrysalis meetings end?
@@ -538,5 +538,6 @@ country_event = { #opening: Chrysalis meetings 4
 	option = {
 		name = PT_CHN.18.a
 		add_political_power = -5
+		country_event = { id = PT_CHN.17 hours = 1}
 	}
 }
