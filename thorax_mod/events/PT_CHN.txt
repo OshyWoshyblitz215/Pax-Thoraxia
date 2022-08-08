@@ -20,7 +20,7 @@ country_event = { # Ping event, fires 7 days into the CHN cheat focus CURRENTLY 
 	}
 }
 country_event = { # This balks CHN into its constituent queendoms plus commies. Very placeholder, we need to move charas around still.
-	id = PT_CHN.2
+	id = PT_CHN.2 # for dev use only
 	is_triggered_only = yes
 	option = {
 		every_owned_state = {
@@ -379,7 +379,8 @@ country_event = { #GRK defiant
 country_event = { #CCN established
 	id = PT_CHN.8
 	is_triggered_only = yes
-	immediate = {
+	option = {
+		name=I_wanna_be_thorax
 		add_popularity = {
 		    ideology = democratic
 		    popularity = -1
@@ -399,15 +400,31 @@ country_event = { #CCN established
 				set_portraits = { civilian = { large ="gfx/leaders/CCN/PT_Thorax.tga" } }
 			}
 		}
-	}
-	option = {
-		name=I_wanna_be_thorax
 		CCN = {
 			change_tag_from = CHN
 		}
 	}
 	option = {
 		name=Bruh
+		add_popularity = {
+		    ideology = democratic
+		    popularity = -1
+		}
+		CCN = {
+			transfer_state = 321
+			transfer_state = 320
+			transfer_state = 323
+			transfer_state = 322
+			transfer_state = 319
+			set_capital = {state = 323}
+			every_owned_state = {
+				add_core_of = PREV
+				remove_core_of = VRK
+			}
+			CCN_thorax = {
+				set_portraits = { civilian = { large ="gfx/leaders/CCN/PT_Thorax.tga" } }
+			}
+		}
 	}
 }
 country_event = { # something?
@@ -517,7 +534,7 @@ country_event = { #opening: Chrysalis meetings 3
 	is_triggered_only = yes
 	option = {
 		name = PT_CHN.16.a
-		country_event = { id = PT_CHN.18  hours = 1}
+		country_event = { id = PT_CHN.17  hours = 1}
 	}
 }
 country_event = { #opening: Chrysalis meetings end?
@@ -527,17 +544,353 @@ country_event = { #opening: Chrysalis meetings end?
 	is_triggered_only = yes
 	option = {
 		name = PT_CHN.17.a
-		add_political_power = -5
+		country_event = { id = PT_CHN.19  days = 4}
+		every_owned_state = {
+			teleport_armies = {	} #Defaults to capital of country
+		}
+		transfer_navy = {
+			target = LCD
+		}
+		CHN_queen_yaria = {
+			set_nationality = SRT
+		}
+		SRT = {
+			set_country_leader_description = chn_queen_argynnis_desc
+			transfer_state = 262
+			transfer_state = 315
+			set_capital = {state = 262}
+			CHN_queen_yaria = {
+				add_country_leader_role = {
+					country_leader = {
+						expire = "1965.1.1"
+						ideology = nazism
+					}
+					promote_leader = yes
+				}
+				add_country_leader_role = {
+					country_leader = {
+						expire = "1965.1.1"
+						ideology = juche
+					}
+					promote_leader = yes
+				}
+				add_country_leader_role = {
+					country_leader = {
+						expire = "1965.1.1"
+						ideology = conservatism
+					}
+					promote_leader = yes
+				}
+				add_country_leader_role = {
+					country_leader = {
+						expire = "1965.1.1"
+						ideology = despotism
+					}
+					promote_leader = yes
+				}
+				set_portraits = { civilian = { large ="gfx/leaders/CHN/Yaria.tga" } }
+				set_country_leader_description = { desc = chn_queen_yaria_desc }
+			}
+		}
+		CHN_queen_helvia = {
+			set_nationality = DTR
+		}
+		DTR = {
+			transfer_state = 252
+			transfer_state = 305
+			transfer_state = 306
+			set_capital = {state = 252}
+			CHN_queen_helvia = {
+				add_country_leader_role = {
+					country_leader = {
+						expire = "1965.1.1"
+						ideology = nazism
+					}
+					promote_leader = yes
+				}
+				add_country_leader_role = {
+					country_leader = {
+						expire = "1965.1.1"
+						ideology = juche
+					}
+					promote_leader = yes
+				}
+				add_country_leader_role = {
+					country_leader = {
+						expire = "1965.1.1"
+						ideology = conservatism
+					}
+					promote_leader = yes
+				}
+				add_country_leader_role = {
+					country_leader = {
+						expire = "1965.1.1"
+						ideology = despotism
+					}
+					promote_leader = yes
+				}
+				set_portraits = { civilian = { large ="gfx/leaders/CHN/Helvia.tga" } }
+				set_country_leader_description = { desc = chn_queen_helvia_desc }
+			}
+		}
+		CHN_queen_aurantia = {
+			set_nationality = LCD
+		}
+		LCD = {
+			transfer_state = 303
+			transfer_state = 304
+			transfer_state = 309
+			transfer_state = 260
+			transfer_state = 308
+			set_capital = {state = 309}
+			CHN_queen_aurantia = {
+				add_country_leader_role = {
+					country_leader = {
+						expire = "1965.1.1"
+						ideology = nazism
+					}
+					promote_leader = yes
+				}
+				add_country_leader_role = {
+					country_leader = {
+						expire = "1965.1.1"
+						ideology = juche
+					}
+					promote_leader = yes
+				}
+				add_country_leader_role = {
+					country_leader = {
+						expire = "1965.1.1"
+						ideology = conservatism
+					}
+					promote_leader = yes
+				}
+				add_country_leader_role = {
+					country_leader = {
+						expire = "1965.1.1"
+						ideology = despotism
+					}
+					promote_leader = yes
+				}
+				set_portraits = { civilian = { large ="gfx/leaders/CHN/Aurantia.tga" } }
+				set_country_leader_description = { desc = chn_queen_aurantia_desc }
+			}
+		}
+		CHN_queen_argynnis = {
+			set_nationality = VRK
+		}
+		VRK = {
+			transfer_state = 307
+			transfer_state = 291
+			transfer_state = 258
+			transfer_state = 259
+			transfer_state = 250
+			transfer_state = 246
+			transfer_state = 247
+			transfer_state = 248
+			transfer_state = 249
+			transfer_state = 321
+			transfer_state = 320
+			transfer_state = 323
+			transfer_state = 322
+			transfer_state = 319
+			transfer_state = 316
+			set_capital = {state = 259}
+			CHN_queen_argynnis = {
+				add_country_leader_role = {
+					country_leader = {
+						expire = "1965.1.1"
+						ideology = nazism
+					}
+					promote_leader = yes
+				}
+				add_country_leader_role = {
+					country_leader = {
+						expire = "1965.1.1"
+						ideology = juche
+					}
+					promote_leader = yes
+				}
+				add_country_leader_role = {
+					country_leader = {
+						expire = "1965.1.1"
+						ideology = conservatism
+					}
+					promote_leader = yes
+				}
+				add_country_leader_role = {
+					country_leader = {
+						expire = "1965.1.1"
+						ideology = despotism
+					}
+					promote_leader = yes
+				}
+				set_portraits = { civilian = { large ="gfx/leaders/CHN/Argynnis.tga" } }
+				set_country_leader_description = { desc = chn_queen_argynnis_desc }
+			}
+		}
+		add_to_array = { tag_array = SRT }
+		add_to_array = { tag_array = DTR }
+		add_to_array = { tag_array = LCD }
+		add_to_array = { tag_array = VRK }
+		for_each_scope_loop = {
+			array = tag_array
+			set_popularities = {
+				democratic = 0
+				neutrality = 0
+				fascism = 100
+				communism = 0
+			}
+			set_politics = {
+				ruling_party = fascism
+			}
+		}
+		for_each_scope_loop = {
+			array = tag_array
+			every_owned_state = {
+				add_core_of = PREV
+			}
+		}
+		add_ideas = {
+			proper_science_base
+			modern_society
+			no_lack_of_scientists
+			no_poverty
+		}
+			add_ideas = passive_hive_ai
+		}
+		country_lock_all_division_template = no
+		add_war_support = 0.25
+		add_stability = 0.25
+		remove_ideas = political_divisions
+		}
 	}
 }
-country_event = { #opening: Chrysalis meetings 4
-	id = PT_CHN.18
-	title = PT_CHN.18.t
-	desc = PT_CHN.18.d
+#country_event = { #opening: Chrysalis meetings 4
+#	id = PT_CHN.18
+#	title = PT_CHN.18.t
+#	desc = PT_CHN.18.d
+#	is_triggered_only = yes
+#	option = {
+#		name = PT_CHN.18.a
+#		add_political_power = -5
+#		country_event = { id = PT_CHN.17 hours = 1}
+#	}
+#}
+country_event = { #opening: Chrysalis meetings epilogue: free commies
+	id = PT_CHN.19
+	title = PT_CHN.19.t
+	desc = PT_CHN.19.d
 	is_triggered_only = yes
 	option = {
-		name = PT_CHN.18.a
-		add_political_power = -5
-		country_event = { id = PT_CHN.17 hours = 1}
+		name = PT_CHN.19.a
+		country_event = { id = PT_CHN.20  days = 4}
+		CHN_gold_muffin = {
+			set_nationality = GRK
+		}
+		GRK = {
+			transfer_state = 264
+			transfer_state = 314
+			transfer_state = 312
+			transfer_state = 313
+			set_capital = {state = 312}
+			set_popularities = {
+				democratic = 0
+				neutrality = 0
+				fascism = 0
+				communism = 100
+			}
+			set_politics = {
+				ruling_party = communism
+			}
+			CHN_gold_muffin = {
+				add_country_leader_role = {
+					country_leader = {
+						expire = "1965.1.1"
+						ideology = national_communism
+					}
+					promote_leader = yes
+				}
+				add_country_leader_role = {
+					country_leader = {
+						expire = "1965.1.1"
+						ideology = syndicalism
+					}
+					promote_leader = yes
+				}
+				add_country_leader_role = {
+					country_leader = {
+						expire = "1965.1.1"
+						ideology = socialism
+					}
+					promote_leader = yes
+				}
+				add_country_leader_role = {
+					country_leader = {
+						expire = "1965.1.1"
+						ideology = anarchism
+					}
+					promote_leader = yes
+				}
+			}
+		}
+		GRK = {
+			every_owned_state = {
+				add_core_of = PREV
+			}
+		}
+	}
+}
+country_event = { #opening: Chrysalis meetings epilogue: free thorax
+	id = PT_CHN.20
+	title = PT_CHN.20.t
+	desc = PT_CHN.20.d
+	is_triggered_only = yes
+	option = {
+		name = PT_CHN.20.a
+		add_popularity = {
+		    ideology = democratic
+		    popularity = -1
+		}
+		CCN = {
+			transfer_state = 321
+			transfer_state = 320
+			transfer_state = 323
+			transfer_state = 322
+			transfer_state = 319
+			set_capital = {state = 323}
+			every_owned_state = {
+				add_core_of = PREV
+				remove_core_of = VRK
+			}
+			CCN_thorax = {
+				set_portraits = { civilian = { large ="gfx/leaders/CCN/PT_Thorax.tga" } }
+			}
+		}
+		CCN = {
+			change_tag_from = CHN
+		}
+	}
+	option = {
+		name=Bruh
+		add_popularity = {
+		    ideology = democratic
+		    popularity = -1
+		}
+		CCN = {
+			transfer_state = 321
+			transfer_state = 320
+			transfer_state = 323
+			transfer_state = 322
+			transfer_state = 319
+			set_capital = {state = 323}
+			every_owned_state = {
+				add_core_of = PREV
+				remove_core_of = VRK
+			}
+			CCN_thorax = {
+				set_portraits = { civilian = { large ="gfx/leaders/CCN/PT_Thorax.tga" } }
+			}
+		}
 	}
 }
