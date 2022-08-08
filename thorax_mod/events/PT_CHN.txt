@@ -784,7 +784,7 @@ country_event = { #opening: Chrysalis meetings epilogue: free commies
 	is_triggered_only = yes
 	option = {
 		name = PT_CHN.19.a
-		country_event = { id = PT_CHN.20  days = 4}
+#		country_event = { id = PT_CHN.20  days = 4}
 		CHN_gold_muffin = {
 			set_nationality = GRK
 		}

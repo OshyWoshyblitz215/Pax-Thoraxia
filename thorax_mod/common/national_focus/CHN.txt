@@ -23,18 +23,16 @@ focus_tree = {
 		}
 		mutually_exclusive = { focus = destroy_thoraxian_opposition }
 		select_effect = {
-			country_event = { id = PT_CHN.10 days = 7 }
-			country_event = { id = PT_CHN.11 days = 14 }
-			country_event = { id = PT_CHN.12 days = 21 }
-			country_event = { id = PT_CHN.13 days = 28 }
-			country_event = { id = PT_CHN.14 days = 35 }
-#			country_event = { id = PT_CHN.15 days = 42 }
-#			country_event = { id = PT_CHN.16 days = 49 }
-#			country_event = { id = PT_CHN.18 days = 56 }
+			country_event = { id = PT_CHN.10 days = 7 } #SRT angered
+			country_event = { id = PT_CHN.11 days = 14 } #DTR angered
+			country_event = { id = PT_CHN.12 days = 21 } #VRK angered
+			country_event = { id = PT_CHN.13 days = 28 } #LCD angered
+			country_event = { id = PT_CHN.14 days = 35 } #meeting will happen 30 days after this event
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus PT_the_hives_stir"
-			country_event = { id = PT_CHN.19 }
+			country_event = { id = PT_CHN.19 } #communists rise up
+			country_event = { id = PT_CHN.20  days = 4} #thorax
 		}
 	}
 #	focus = {
