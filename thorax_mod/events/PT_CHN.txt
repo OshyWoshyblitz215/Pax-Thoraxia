@@ -544,7 +544,6 @@ country_event = { #opening: Chrysalis meetings end?
 	is_triggered_only = yes
 	option = {
 		name = PT_CHN.17.a
-		country_event = { id = PT_CHN.19  days = 4}
 		every_owned_state = {
 			teleport_armies = {	} #Defaults to capital of country
 		}
