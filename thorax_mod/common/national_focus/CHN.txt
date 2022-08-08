@@ -28,14 +28,13 @@ focus_tree = {
 			country_event = { id = PT_CHN.12 days = 21 }
 			country_event = { id = PT_CHN.13 days = 28 }
 			country_event = { id = PT_CHN.14 days = 35 }
-			country_event = { id = PT_CHN.19 days = 49 }
 #			country_event = { id = PT_CHN.15 days = 42 }
 #			country_event = { id = PT_CHN.16 days = 49 }
 #			country_event = { id = PT_CHN.18 days = 56 }
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus PT_the_hives_stir"
-#			country_event = { id = PT_CHN.19 }
+			country_event = { id = PT_CHN.19 }
 		}
 	}
 #	focus = {
