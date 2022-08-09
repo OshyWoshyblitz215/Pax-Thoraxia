@@ -845,6 +845,7 @@ country_event = { #opening: Chrysalis meetings epilogue: free thorax
 	title = PT_CHN.20.t
 	desc = PT_CHN.20.d
 	is_triggered_only = yes
+	immediate = { country_event = { id = PT_CHN.23 }} #we will wget rid of this once that event is unneded
 	option = {
 		name = PT_CHN.20.a
 		add_popularity = {
@@ -890,6 +891,77 @@ country_event = { #opening: Chrysalis meetings epilogue: free thorax
 			CCN_thorax = {
 				set_portraits = { civilian = { large ="gfx/leaders/CCN/PT_Thorax.tga" } }
 			}
+		}
+	}
+}
+country_event = { #chrysalis demands communists surrender
+	id = PT_CHN.21
+	title = PT_CHN.21.t
+	desc = PT_CHN.21.d
+	is_triggered_only = yes
+	option = {
+		name = PT_CHN.21.a
+		ai_chance = {
+			base = 0
+		}
+		CHN = {
+			annex_country = {
+				target = ROOT
+				transfer_troops = no
+			}
+		}
+	}
+	option = {
+		name=PT_CHN.21.b
+		CHN = { country_event = { id = PT_CHN.22 days = 1 } }
+		ai_chance = {
+			base = 100
+		}
+	}
+}
+country_event = { #communists refuse surrender
+	id = PT_CHN.22
+	title = PT_CHN.22.t
+	desc = PT_CHN.22.d
+	is_triggered_only = yes
+	option = {
+		name = PT_CHN.22.a
+		create_wargoal = {
+			type = annex_everything
+			target = GRK
+		}
+	}
+}
+country_event = { #does things that we will later outsource to the queens n commies focus trees
+	id = PT_CHN.23
+	title = PT_CHN.23.t
+	desc = PT_CHN.23.d
+	is_triggered_only = yes
+	option = {
+		name = PT_CHN.23.a
+		add_to_array = { contris_that_get_chn_cw_help = SRT }
+		add_to_array = { contris_that_get_chn_cw_help = DTR }
+		add_to_array = { contris_that_get_chn_cw_help = LCD }
+		add_to_array = { contris_that_get_chn_cw_help = VRK }
+		add_to_array = { contris_that_get_chn_cw_help = GRK }
+		for_each_scope_loop = {
+			array = contris_that_get_chn_cw_help
+			division_template = { name = "Civil War Brigade" is_locked = yes priority = 0 template_counter = 24 regiments = { infantry = { x = 0 y = 0} infantry = { x = 0 y = 1} infantry = { x = 0 y = 2} infantry = { x = 0 y = 3} } }
+			capital_scope = {
+				create_unit = { division = "name = \"Local Vollunteers\" division_template = \"Civil War Brigade\" start_experience_factor = 0.3" owner = PREV }
+				create_unit = { division = "name = \"Local Vollunteers\" division_template = \"Civil War Brigade\" start_experience_factor = 0.3" owner = PREV }
+				create_unit = { division = "name = \"Local Vollunteers\" division_template = \"Civil War Brigade\" start_experience_factor = 0.3" owner = PREV }
+				create_unit = { division = "name = \"Local Vollunteers\" division_template = \"Civil War Brigade\" start_experience_factor = 0.3" owner = PREV }
+				create_unit = { division = "name = \"Local Vollunteers\" division_template = \"Civil War Brigade\" start_experience_factor = 0.3" owner = PREV }
+				create_unit = { division = "name = \"Local Vollunteers\" division_template = \"Civil War Brigade\" start_experience_factor = 0.3" owner = PREV }
+				create_unit = { division = "name = \"Local Vollunteers\" division_template = \"Civil War Brigade\" start_experience_factor = 0.3" owner = PREV }
+				create_unit = { division = "name = \"Local Vollunteers\" division_template = \"Civil War Brigade\" start_experience_factor = 0.3" owner = PREV }
+				create_unit = { division = "name = \"Local Vollunteers\" division_template = \"Civil War Brigade\" start_experience_factor = 0.3" owner = PREV }
+				create_unit = { division = "name = \"Local Vollunteers\" division_template = \"Civil War Brigade\" start_experience_factor = 0.3" owner = PREV }
+			}
+		}
+		GRK = {
+			add_ideas = { PT_communist_holdout }
 		}
 	}
 }

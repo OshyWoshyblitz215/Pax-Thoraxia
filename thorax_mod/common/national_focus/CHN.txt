@@ -72,7 +72,7 @@ focus_tree = {
 #		mutually_exclusive = { focus = PT_queen_unification }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus PT_pacify_the_northerners"
-			declare_war_on = { target = GRK type = annex_everything }
+			GRK = { country_event = { id = PT_CHN.21 days = 3 } }
 		}
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
 	}

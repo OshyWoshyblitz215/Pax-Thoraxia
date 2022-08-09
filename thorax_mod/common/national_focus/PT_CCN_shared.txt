@@ -8,6 +8,9 @@ shared_focus = { #Service Office
 		CHN = {
 			exists = yes
 		}
+		NOT = {
+			has_war_with = CHN
+		}
 	}
 	bypass = {
 		CHN = {
@@ -34,6 +37,9 @@ shared_focus = { #Foreign Office
 	available = {
 		CHN = {
 			exists = yes
+		}
+		NOT = {
+			has_war_with = CHN
 		}
 	}
 	bypass = {
@@ -62,6 +68,9 @@ shared_focus = {
 	available = {
 		CHN = {
 			exists = yes
+		}
+		NOT = {
+			has_war_with = CHN
 		}
 	}
 	bypass = {
@@ -98,6 +107,9 @@ shared_focus = {
 		CHN = {
 			exists = yes
 		}
+		NOT = {
+			has_war_with = CHN
+		}
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus PT_weapons_cache"
@@ -118,6 +130,9 @@ shared_focus = { #Munitions Office
 	available = {
 		CHN = {
 			exists = yes
+		}
+		NOT = {
+			has_war_with = CHN
 		}
 	}
 	bypass = {
@@ -151,6 +166,9 @@ shared_focus = { #Intelligence Office
 		CHN = {
 			exists = yes
 		}
+		NOT = {
+			has_war_with = CHN
+		}
 	}
 	bypass = {
 		CHN = {
@@ -180,6 +198,9 @@ shared_focus = {
 	available = {
 		CHN = {
 			exists = yes
+		}
+		NOT = {
+			has_war_with = CHN
 		}
 	}
 	bypass = {
