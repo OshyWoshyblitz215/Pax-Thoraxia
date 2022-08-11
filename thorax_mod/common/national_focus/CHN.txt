@@ -161,6 +161,10 @@ focus_tree = {
 			}
 			is_subject = no
 			has_country_leader = { ruling_only = yes character = CHN_queen_chrysalis }
+			OR = {
+				has_completed_focus = destroy_thoraxian_opposition
+				has_completed_focus = PT_chryssie_attack_thorax
+			}
 		}
 		bypass = {
 			NOT = { has_country_leader = { ruling_only = yes character = CHN_queen_chrysalis } }

@@ -366,7 +366,7 @@ country_event = { #VRK follows thorax
 		}
 	}
 }
-country_event = { #GRK revolts
+country_event = { #GRK revolts UNuSED?
 	id = PT_CHN.7
 	title = PT_CHN.7.t
 	desc = PT_CHN.7.d
@@ -380,7 +380,7 @@ country_event = { #GRK revolts
 		country_event = { id = PT_CHN.8 hours = 1 } # edit the time <<<<<<<<<<
 	}
 }
-country_event = { #CCN established
+country_event = { #CCN established UNuSED?
 	id = PT_CHN.8
 	title = PT_CHN.8.t
 	desc = PT_CHN.8.d
