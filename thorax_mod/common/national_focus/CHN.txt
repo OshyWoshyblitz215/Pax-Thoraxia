@@ -116,10 +116,7 @@ focus_tree = {
 		}
 		x = 5
 		y = 5
-		prerequisite = { focus = PT_get_LCD_loyalty }
-		prerequisite = { focus = PT_get_SRT_loyalty }
-		prerequisite = { focus = PT_get_VRK_loyalty }
-		prerequisite = { focus = PT_get_DTR_loyalty }
+		prerequisite = { focus = PT_chrys_sends_diplomats_out }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus PT_chryssie_attack_thorax"
 			declare_war_on = { target = CCN type = civil_war }
