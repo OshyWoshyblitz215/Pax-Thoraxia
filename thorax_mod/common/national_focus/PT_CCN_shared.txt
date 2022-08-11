@@ -13,8 +13,11 @@ shared_focus = { #Service Office
 		}
 	}
 	bypass = {
-		CHN = {
-			exists = no
+		OR = {
+			CHN = {
+				exists = no
+			}
+			has_war_with = CHN
 		}
 	}
 	ai_will_do = {
@@ -43,8 +46,11 @@ shared_focus = { #Foreign Office
 		}
 	}
 	bypass = {
-		CHN = {
-			exists = no
+		OR = {
+			CHN = {
+				exists = no
+			}
+			has_war_with = CHN
 		}
 	}
 	ai_will_do = {
@@ -74,8 +80,11 @@ shared_focus = {
 		}
 	}
 	bypass = {
-		CHN = {
-			exists = no
+		OR = {
+			CHN = {
+				exists = no
+			}
+			has_war_with = CHN
 		}
 	}
 	ai_will_do = {
@@ -96,8 +105,11 @@ shared_focus = {
 	prerequisite = { focus = PT_hearts_and_minds }
 	prerequisite = { focus = PT_the_north }
 	bypass = {
-		CHN = {
-			exists = no
+		OR = {
+			CHN = {
+				exists = no
+			}
+			has_war_with = CHN
 		}
 	}
 	ai_will_do = {
@@ -136,8 +148,11 @@ shared_focus = { #Munitions Office
 		}
 	}
 	bypass = {
-		CHN = {
-			exists = no
+		OR = {
+			CHN = {
+				exists = no
+			}
+			has_war_with = CHN
 		}
 	}
 	ai_will_do = {
@@ -171,8 +186,11 @@ shared_focus = { #Intelligence Office
 		}
 	}
 	bypass = {
-		CHN = {
-			exists = no
+		OR = {
+			CHN = {
+				exists = no
+			}
+			has_war_with = CHN
 		}
 	}
 	ai_will_do = {
@@ -204,8 +222,11 @@ shared_focus = {
 		}
 	}
 	bypass = {
-		CHN = {
-			exists = no
+		OR = {
+			CHN = {
+				exists = no
+			}
+			has_war_with = CHN
 		}
 	}
 	ai_will_do = {
@@ -233,8 +254,11 @@ shared_focus = {
 		}
 	}
 	bypass = {
-		CHN = {
-			exists = no
+		OR = {
+			CHN = {
+				exists = no
+			}
+			has_war_with = CHN
 		}
 	}
 	ai_will_do = {
@@ -264,8 +288,11 @@ shared_focus = {
 		}
 	}
 	bypass = {
-		CHN = {
-			exists = no
+		OR = {
+			CHN = {
+				exists = no
+			}
+			has_war_with = CHN
 		}
 	}
 	ai_will_do = {
@@ -321,8 +348,11 @@ shared_focus = {
 		}
 	}
 	bypass = {
-		CHN = {
-			exists = no
+		OR = {
+			CHN = {
+				exists = no
+			}
+			has_war_with = CHN
 		}
 	}
 	ai_will_do = {
@@ -392,8 +422,11 @@ shared_focus = {
 		}
 	}
 	bypass = {
-		CHN = {
-			exists = no
+		OR = {
+			CHN = {
+				exists = no
+			}
+			has_war_with = CHN
 		}
 	}
 	ai_will_do = {
@@ -422,8 +455,11 @@ shared_focus = {
 		}
 	}
 	bypass = {
-		CHN = {
-			exists = no
+		OR = {
+			CHN = {
+				exists = no
+			}
+			has_war_with = CHN
 		}
 	}
 	ai_will_do = {
@@ -451,8 +487,11 @@ shared_focus = {
 		}
 	}
 	bypass = {
-		CHN = {
-			exists = no
+		OR = {
+			CHN = {
+				exists = no
+			}
+			has_war_with = CHN
 		}
 	}
 	ai_will_do = {
@@ -479,8 +518,11 @@ shared_focus = {
 		has_war_with = LCD
 	}
 	bypass = {
-		CHN = {
-			exists = no
+		OR = {
+			CHN = {
+				exists = no
+			}
+			has_war_with = CHN
 		}
 	}
 	ai_will_do = {
@@ -612,8 +654,11 @@ shared_focus = {
 		}
 	}
 	bypass = {
-		CHN = {
-			exists = no
+		OR = {
+			CHN = {
+				exists = no
+			}
+			has_war_with = CHN
 		}
 	}
 	ai_will_do = {
@@ -641,8 +686,11 @@ shared_focus = {
 		}
 	}
 	bypass = {
-		CHN = {
-			exists = no
+		OR = {
+			CHN = {
+				exists = no
+			}
+			has_war_with = CHN
 		}
 	}
 	ai_will_do = {
@@ -692,8 +740,11 @@ shared_focus = {
 		}
 	}
 	bypass = {
-		CHN = {
-			exists = no
+		OR = {
+			CHN = {
+				exists = no
+			}
+			has_war_with = CHN
 		}
 	}
 	ai_will_do = {
@@ -718,8 +769,11 @@ shared_focus = {
 		}
 	}
 	bypass = {
-		CHN = {
-			exists = no
+		OR = {
+			CHN = {
+				exists = no
+			}
+			has_war_with = CHN
 		}
 	}
 	ai_will_do = {
@@ -809,8 +863,11 @@ shared_focus = {
 		}
 	}
 	bypass = {
-		CHN = {
-			exists = no
+		OR = {
+			CHN = {
+				exists = no
+			}
+			has_war_with = CHN
 		}
 	}
 	ai_will_do = {

@@ -290,85 +290,89 @@ country_event = { # This balks CHN into its constituent queendoms plus commies. 
 		add_war_support = 0.25
 		add_stability = 0.25
 		remove_ideas = political_divisions
-#		country_event = { id = PT_CHN.3 hours = 1 }
 	}
 }
-country_event = { #LCD bends the knee
+country_event = { #LCD bends
 	id = PT_CHN.3
+	title = PT_CHN.3.t
+	desc = PT_CHN.3.d
 	is_triggered_only = yes
 	option = {
-		puppet = LCD
-		set_autonomy = {
-					target = LCD
-					autonomy_state = autonomy_subjugated_vassal_hive
-				}
-		LCD = {
-			every_owned_state = {
-				remove_core_of = CHN
+		name = PT_CHN.3.a
+		CHN = {
+			puppet = LCD
+			set_autonomy = {
+				target = LCD
+				autonomy_state = autonomy_nominal_vassal_hive
 			}
-			add_to_tech_sharing_group = CHN_research
 		}
-#		country_event = { id = PT_CHN.4 hours = 1 }
 	}
 }
-country_event = { #SRT is second
+country_event = { #DTR bends
 	id = PT_CHN.4
+	title = PT_CHN.4.t
+	desc = PT_CHN.4.d
 	is_triggered_only = yes
 	option = {
-		puppet = SRT
-		set_autonomy = {
-					target = SRT
-					autonomy_state = autonomy_vassal_hive
-				}
-		SRT = {
-			every_owned_state = {
-				remove_core_of = CHN
+		CHN = {
+			name = PT_CHN.4.a
+			puppet = DTR
+			set_autonomy = {
+				target = DTR
+				autonomy_state = autonomy_nominal_vassal_hive
 			}
-			add_to_tech_sharing_group = CHN_research
 		}
-#		country_event = { id = PT_CHN.5 hours = 1 }
 	}
 }
-country_event = { #DTR follows
+country_event = { #SRT follows thorax
 	id = PT_CHN.5
+	title = PT_CHN.5.t
+	desc = PT_CHN.5.d
 	is_triggered_only = yes
 	option = {
-		puppet = DTR
-		set_autonomy = {
-					target = DTR
-					autonomy_state = autonomy_autonomous_vassal_hive
-				}
-		DTR = {
-			every_owned_state = {
-				remove_core_of = CHN
+		name = PT_CHN.5.a
+		CHN = {
+			add_opinion_modifier = {
+				target = SRT
+				modifier = PT_love_vs_hate_thorax
 			}
-			add_to_tech_sharing_group = CHN_research
+			SRT = {
+				add_opinion_modifier = {
+					target = CHN
+					modifier = PT_love_vs_hate_thorax
+				}
+			}
 		}
-#		country_event = { id = PT_CHN.6 hours = 1 }
 	}
 }
-country_event = { #VRK bends last
+country_event = { #VRK follows thorax
 	id = PT_CHN.6
+	title = PT_CHN.6.t
+	desc = PT_CHN.6.d
 	is_triggered_only = yes
 	option = {
-		puppet = VRK
-		set_autonomy = {
-					target = VRK
-					autonomy_state = autonomy_nominal_vassal_hive
-				}
-		VRK = {
-			every_owned_state = {
-				remove_core_of = CHN
+		name = PT_CHN.6.a
+		CHN = {
+			add_opinion_modifier = {
+				target = VRK
+				modifier = PT_love_vs_hate_thorax
 			}
-			add_to_tech_sharing_group = CHN_research
+			VRK = {
+				add_opinion_modifier = {
+					target = CHN
+					modifier = PT_love_vs_hate_thorax
+				}
+			}
 		}
-#		country_event = { id = PT_CHN.7 hours = 1 }
 	}
 }
-country_event = { #GRK defiant
+country_event = { #GRK revolts
 	id = PT_CHN.7
+	title = PT_CHN.7.t
+	desc = PT_CHN.7.d
 	is_triggered_only = yes
 	option = {
+		name = PT_CHN.7.a
 		add_popularity = {
 		    ideology = communism
 		    popularity = -1
@@ -378,9 +382,11 @@ country_event = { #GRK defiant
 }
 country_event = { #CCN established
 	id = PT_CHN.8
+	title = PT_CHN.8.t
+	desc = PT_CHN.8.d
 	is_triggered_only = yes
 	option = {
-		name=I_wanna_be_thorax
+		name = PT_CHN.8.a # be thorax
 		add_popularity = {
 		    ideology = democratic
 		    popularity = -1
@@ -405,7 +411,7 @@ country_event = { #CCN established
 		}
 	}
 	option = {
-		name=Bruh
+		name = PT_CHN.8.b #stay chrysalis
 		add_popularity = {
 		    ideology = democratic
 		    popularity = -1
