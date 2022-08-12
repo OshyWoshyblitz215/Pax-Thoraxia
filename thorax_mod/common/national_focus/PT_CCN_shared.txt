@@ -254,11 +254,8 @@ shared_focus = {
 		}
 	}
 	bypass = {
-		OR = {
-			CHN = {
-				exists = no
-			}
-			has_war_with = CHN
+		CHN = {
+			exists = no
 		}
 	}
 	ai_will_do = {
@@ -288,11 +285,8 @@ shared_focus = {
 		}
 	}
 	bypass = {
-		OR = {
-			CHN = {
-				exists = no
-			}
-			has_war_with = CHN
+		CHN = {
+			exists = no
 		}
 	}
 	ai_will_do = {
@@ -348,11 +342,8 @@ shared_focus = {
 		}
 	}
 	bypass = {
-		OR = {
-			CHN = {
-				exists = no
-			}
-			has_war_with = CHN
+		CHN = {
+			exists = no
 		}
 	}
 	ai_will_do = {
@@ -422,11 +413,8 @@ shared_focus = {
 		}
 	}
 	bypass = {
-		OR = {
-			CHN = {
-				exists = no
-			}
-			has_war_with = CHN
+		CHN = {
+			exists = no
 		}
 	}
 	ai_will_do = {
@@ -455,11 +443,8 @@ shared_focus = {
 		}
 	}
 	bypass = {
-		OR = {
-			CHN = {
-				exists = no
-			}
-			has_war_with = CHN
+		CHN = {
+			exists = no
 		}
 	}
 	ai_will_do = {
@@ -487,11 +472,8 @@ shared_focus = {
 		}
 	}
 	bypass = {
-		OR = {
-			CHN = {
-				exists = no
-			}
-			has_war_with = CHN
+		CHN = {
+			exists = no
 		}
 	}
 	ai_will_do = {
@@ -518,11 +500,8 @@ shared_focus = {
 		has_war_with = LCD
 	}
 	bypass = {
-		OR = {
-			CHN = {
-				exists = no
-			}
-			has_war_with = CHN
+		CHN = {
+			exists = no
 		}
 	}
 	ai_will_do = {
@@ -654,11 +633,8 @@ shared_focus = {
 		}
 	}
 	bypass = {
-		OR = {
-			CHN = {
-				exists = no
-			}
-			has_war_with = CHN
+		CHN = {
+			exists = no
 		}
 	}
 	ai_will_do = {
@@ -686,11 +662,8 @@ shared_focus = {
 		}
 	}
 	bypass = {
-		OR = {
-			CHN = {
-				exists = no
-			}
-			has_war_with = CHN
+		CHN = {
+			exists = no
 		}
 	}
 	ai_will_do = {
@@ -740,11 +713,8 @@ shared_focus = {
 		}
 	}
 	bypass = {
-		OR = {
-			CHN = {
-				exists = no
-			}
-			has_war_with = CHN
+		CHN = {
+			exists = no
 		}
 	}
 	ai_will_do = {
@@ -769,11 +739,8 @@ shared_focus = {
 		}
 	}
 	bypass = {
-		OR = {
-			CHN = {
-				exists = no
-			}
-			has_war_with = CHN
+		CHN = {
+			exists = no
 		}
 	}
 	ai_will_do = {
@@ -799,6 +766,16 @@ shared_focus = {
 				modifier = PT_they_like_thorax
 			}
 			set_country_flag = PT_thorax_convinced_us
+			add_ai_strategy = {
+				type = alliance
+				id = CCN
+				value = 500
+			}
+			add_ai_strategy = {
+				type = befriend
+				id = CCN
+				value = 500
+			}
 		}
 		add_opinion_modifier = {
 				target = DTR
@@ -863,11 +840,8 @@ shared_focus = {
 		}
 	}
 	bypass = {
-		OR = {
-			CHN = {
-				exists = no
-			}
-			has_war_with = CHN
+		CHN = {
+			exists = no
 		}
 	}
 	ai_will_do = {

@@ -25,7 +25,16 @@ country_event = {
 				target = CCN
 				modifier = PT_they_like_thorax
 			}
-			set_country_flag = PT_thorax_convinced_us
+			add_ai_strategy = {
+				type = alliance
+				id = CCN
+				value = 500
+			}
+			add_ai_strategy = {
+				type = befriend
+				id = CCN
+				value = 500
+			}
 		}
 		add_opinion_modifier = {
 				target = VRK
@@ -75,7 +84,16 @@ country_event = {
 				target = CCN
 				modifier = PT_they_like_thorax
 			}
-			set_country_flag = PT_thorax_convinced_us
+			add_ai_strategy = {
+				type = alliance
+				id = CCN
+				value = 500
+			}
+			add_ai_strategy = {
+				type = befriend
+				id = CCN
+				value = 500
+			}
 		}
 		add_opinion_modifier = {
 				target = SRT
@@ -159,6 +177,16 @@ country_event = {
 				relation = non_aggression_pact
 				active = yes
 			}
+		}
+		add_ai_strategy = {
+			type = alliance
+			id = CCN
+			value = 50
+		}
+		add_ai_strategy = {
+			type = befriend
+			id = CCN
+			value = 50
 		}
 	}
 	option = {

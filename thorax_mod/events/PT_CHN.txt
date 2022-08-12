@@ -305,6 +305,7 @@ country_event = { #LCD bends
 				target = LCD
 				autonomy_state = autonomy_nominal_vassal_hive
 			}
+			country_event = { id = PT_CHN.24 }
 		}
 	}
 }
@@ -321,6 +322,7 @@ country_event = { #DTR bends
 				target = DTR
 				autonomy_state = autonomy_nominal_vassal_hive
 			}
+			country_event = { id = PT_CHN.25 }
 		}
 	}
 }
@@ -336,11 +338,12 @@ country_event = { #SRT follows thorax
 				target = SRT
 				modifier = PT_love_vs_hate_thorax
 			}
-			SRT = {
-				add_opinion_modifier = {
-					target = CHN
-					modifier = PT_love_vs_hate_thorax
-				}
+			country_event = { id = PT_CHN.26 }
+		}
+		SRT = {
+			add_opinion_modifier = {
+				target = CHN
+				modifier = PT_love_vs_hate_thorax
 			}
 		}
 	}
@@ -357,11 +360,12 @@ country_event = { #VRK follows thorax
 				target = VRK
 				modifier = PT_love_vs_hate_thorax
 			}
-			VRK = {
-				add_opinion_modifier = {
-					target = CHN
-					modifier = PT_love_vs_hate_thorax
-				}
+			country_event = { id = PT_CHN.27 }
+		}
+		VRK = {
+			add_opinion_modifier = {
+				target = CHN
+				modifier = PT_love_vs_hate_thorax
 			}
 		}
 	}
@@ -969,5 +973,41 @@ country_event = { #does things that we will later outsource to the queens n comm
 		GRK = {
 			add_ideas = { PT_communist_holdout }
 		}
+	}
+}
+country_event = { # LCD bends chrys gets told
+	id = PT_CHN.24
+	title = PT_CHN.24.t
+	desc = PT_CHN.24.d
+	is_triggered_only = yes
+	option = {
+		name = PT_CHN.24.a
+	}
+}
+country_event = { # DTR bends chrys gets told
+	id = PT_CHN.25
+	title = PT_CHN.25.t
+	desc = PT_CHN.25.d
+	is_triggered_only = yes
+	option = {
+		name = PT_CHN.25.a
+	}
+}
+country_event = { # SRT loves thorax chrys gets told
+	id = PT_CHN.26
+	title = PT_CHN.26.t
+	desc = PT_CHN.26.d
+	is_triggered_only = yes
+	option = {
+		name = PT_CHN.26.a
+	}
+}
+country_event = { # VRK loves thorax chrys gets told
+	id = PT_CHN.27
+	title = PT_CHN.27.t
+	desc = PT_CHN.27.d
+	is_triggered_only = yes
+	option = {
+		name = PT_CHN.27.a
 	}
 }
