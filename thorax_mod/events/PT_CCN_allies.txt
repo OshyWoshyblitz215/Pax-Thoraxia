@@ -35,6 +35,12 @@ country_event = {
 				id = CCN
 				value = 500
 			}
+			add_ai_strategy = {
+ 				type = diplo_action_acceptance
+				id = CCN
+ 				value = 100
+ 				target = join_allies
+			}
 		}
 		add_opinion_modifier = {
 				target = VRK
@@ -93,6 +99,12 @@ country_event = {
 				type = befriend
 				id = CCN
 				value = 500
+			}
+			add_ai_strategy = {
+ 				type = diplo_action_acceptance
+				id = CCN
+ 				value = 100
+ 				target = join_allies
 			}
 		}
 		add_opinion_modifier = {
@@ -157,6 +169,22 @@ country_event = {
 				target = CCN
 				modifier = PT_they_like_thorax
 			}
+			add_ai_strategy = {
+				type = alliance
+				id = CCN
+				value = 50
+			}
+			add_ai_strategy = {
+				type = befriend
+				id = CCN
+				value = 50
+			}
+			add_ai_strategy = {
+ 				type = diplo_action_acceptance
+				id = CCN
+ 				value = 100
+ 				target = join_allies
+			}
 		}
 		add_opinion_modifier = {
 				target = GRK
@@ -177,16 +205,6 @@ country_event = {
 				relation = non_aggression_pact
 				active = yes
 			}
-		}
-		add_ai_strategy = {
-			type = alliance
-			id = CCN
-			value = 50
-		}
-		add_ai_strategy = {
-			type = befriend
-			id = CCN
-			value = 50
 		}
 	}
 	option = {
