@@ -357,9 +357,6 @@ shared_focus = {
 		CHN_pharynx = {
 			set_portraits = { army = { large = "gfx/leaders/CCN/PT_Pharynx.tga" } }
 		}
-		CCN_pharynx = {
-			set_portraits = { army = { large = "gfx/leaders/CCN/PT_Pharynx.tga" } }
-		}
 		if = {
 			limit = { NOT = { has_country_flag = unlocked_rebelling_troops_template } }
 			set_country_flag = unlocked_rebelling_troops_template
