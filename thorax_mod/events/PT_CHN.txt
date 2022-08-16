@@ -876,6 +876,7 @@ country_event = { #opening: Chrysalis meetings epilogue: free thorax
 			CCN_thorax = {
 				set_portraits = { civilian = { large ="gfx/leaders/CCN/PT_Thorax.tga" } }
 			}
+			load_focus_tree = { tree = PT_thorax_focus_tree keep_completed = yes }
 		}
 		CCN = {
 			change_tag_from = CHN
@@ -901,6 +902,7 @@ country_event = { #opening: Chrysalis meetings epilogue: free thorax
 			CCN_thorax = {
 				set_portraits = { civilian = { large ="gfx/leaders/CCN/PT_Thorax.tga" } }
 			}
+			load_focus_tree = { tree = PT_thorax_focus_tree keep_completed = yes }
 		}
 	}
 }
