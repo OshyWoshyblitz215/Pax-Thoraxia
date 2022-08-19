@@ -161,7 +161,7 @@ shared_focus = { #Intelligence Office
 	cost = 7
 	x = 1
 	y = 1
-	relative_position_id = PT_weapons_cacheannex_
+	relative_position_id = PT_weapons_cache
 	prerequisite = {
 		focus = PT_weapons_cache
 	}
@@ -215,12 +215,7 @@ shared_focus = {
 		}
 	}
 }
-
-
-
-
-
-
+#the civil war
 shared_focus = {
 	id = PT_fight_for_whats_right
 	icon = GFX_goal_ccn_revolution_harmony
