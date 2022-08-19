@@ -5,12 +5,6 @@ shared_focus = { #Service Office
 	x = 4
 	y = 0
 	available = {
-		CHN = {
-			exists = yes
-		}
-		NOT = {
-			has_war_with = CHN
-		}
 	}
 	bypass = {
 		OR = {
@@ -27,6 +21,7 @@ shared_focus = { #Service Office
 		log = "[GetDateText]: [Root.GetName]: Focus PT_the_hives_stir"
 	}
 }
+
 shared_focus = { #Foreign Office
 	id = PT_hearts_and_minds
 	icon = GFX_goal_PT_hearts_and_minds
@@ -38,12 +33,6 @@ shared_focus = { #Foreign Office
 		focus = PT_the_hives_have_stirred
 	}
 	available = {
-		CHN = {
-			exists = yes
-		}
-		NOT = {
-			has_war_with = CHN
-		}
 	}
 	bypass = {
 		OR = {
@@ -73,12 +62,6 @@ shared_focus = {
 		focus = PT_the_hives_have_stirred
 	}
 	available = {
-		CHN = {
-			exists = yes
-		}
-		NOT = {
-			has_war_with = CHN
-		}
 	}
 	bypass = {
 		OR = {
@@ -117,12 +100,6 @@ shared_focus = {
 		factor = 1000
 	}
 	available = {
-		CHN = {
-			exists = yes
-		}
-		NOT = {
-			has_war_with = CHN
-		}
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus PT_weapons_cache"
@@ -130,6 +107,8 @@ shared_focus = {
 		add_equipment_to_stockpile = { type = support_equipment_1 amount = 250 producer = CCN }
 	}
 }
+
+
 shared_focus = { #Munitions Office
 	id = PT_war_preperations
 	icon = GFX_goal_PT_war_preperations
@@ -141,12 +120,6 @@ shared_focus = { #Munitions Office
 		focus = PT_weapons_cache
 	}
 	available = {
-		CHN = {
-			exists = yes
-		}
-		NOT = {
-			has_war_with = CHN
-		}
 	}
 	bypass = {
 		OR = {
@@ -166,8 +139,10 @@ shared_focus = { #Munitions Office
 #			add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
 #			add_building_construction = { type = arms_factory level = 2 instant_build = yes }
 #		}
-		division_template = { name = "Minutelings" priority = 1 template_counter = 3 regiments = { infantry = { x = 0 y = 0} infantry = { x = 0 y = 1} infantry = { x = 0 y = 2} infantry = { x = 1 y = 0} infantry = { x = 1 y = 1} infantry = { x = 1 y = 2} support = { engineer = {x = 0 y = 0} } }
-		capital_scope = {
+		division_template = { name = "Minutelings" priority = 1 template_counter = 14 regiments = { infantry = { x = 0 y = 0 } infantry = { x = 0 y = 1 } infantry = { x = 0 y = 2 } infantry = { x = 1 y = 0 } infantry = { x = 1 y = 1 } infantry = { x = 1 y = 2 } } support = { engineer = { x = 0 y = 0 } } }
+		random_controlled_state = {
+			limit = { ROOT = { has_full_control_of_state = PREV } }
+			prioritize = { 323 }
 			create_unit = { division = "name = \"Harmonist Soldiers I.\" division_template = \"Minutelings\" start_experience_factor = 0.1" owner = CCN }
 			create_unit = { division = "name = \"Harmonist Soldiers II.\" division_template = \"Minutelings\" start_experience_factor = 0.1" owner = CCN }
 			create_unit = { division = "name = \"Harmonist Soldiers III.\" division_template = \"Minutelings\" start_experience_factor = 0.1" owner = CCN }
@@ -179,24 +154,18 @@ shared_focus = { #Munitions Office
 
 	}
 }
+
 shared_focus = { #Intelligence Office
 	id = PT_send_agents
 	icon = GFX_goal_PT_send_agents
 	cost = 7
 	x = 1
 	y = 1
-	relative_position_id = PT_weapons_cache
+	relative_position_id = PT_weapons_cacheannex_
 	prerequisite = {
 		focus = PT_weapons_cache
 	}
-	available = {
-		CHN = {
-			exists = yes
-		}
-		NOT = {
-			has_war_with = CHN
-		}
-	}
+	available = { }
 	bypass = {
 		OR = {
 			CHN = {
@@ -225,14 +194,7 @@ shared_focus = {
 	relative_position_id = PT_weapons_cache
 	prerequisite = { focus = PT_war_preperations }
 	prerequisite = { focus = PT_send_agents }
-	available = {
-		CHN = {
-			exists = yes
-		}
-		NOT = {
-			has_war_with = CHN
-		}
-	}
+	available = { }
 	bypass = {
 		OR = {
 			CHN = {
@@ -244,14 +206,20 @@ shared_focus = {
 	ai_will_do = {
 		factor = 1000
 	}
+	will_lead_to_war_with = CHN
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus PT_for_harmony_and_freedom"
 		declare_war_on = {
-			target = CHN
 			type = civil_war
+			target = CHN
 		}
 	}
 }
+
+
+
+
+
 
 shared_focus = {
 	id = PT_fight_for_whats_right
@@ -259,12 +227,7 @@ shared_focus = {
 	cost = 5
 	x = 4
 	y = 5
-	available = {
-		has_war_with = CHN
-		CHN = {
-			exists = yes
-		}
-	}
+	available = { has_war_with = CHN }
 	bypass = {
 		CHN = {
 			exists = no
@@ -292,11 +255,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = PT_fight_for_whats_right
 	prerequisite = { focus = PT_fight_for_whats_right }
-	available = {
-		CHN = {
-			exists = yes
-		}
-	}
+	available = { has_war_with = CHN }
 	bypass = {
 		CHN = {
 			exists = no
@@ -349,11 +308,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = PT_fight_for_whats_right
 	prerequisite = { focus = PT_fight_for_whats_right }
-	available = {
-		CHN = {
-			exists = yes
-		}
-	}
+	available = { has_war_with = CHN }
 	bypass = {
 		CHN = {
 			exists = no
@@ -373,8 +328,6 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus PT_pharynx_needs_assistance"
-		# DO THE ART STUFF WITH THAT AND PHARYNX CHANGING SIDES
-
 		CHN = { CHN_pharynx = {	set_nationality = CCN } }
 		CHN_pharynx = {
 			set_portraits = { army = { large = "gfx/leaders/CCN/PT_Pharynx.tga" } }
@@ -426,11 +379,7 @@ shared_focus = {
 	y = 1
 	relative_position_id = PT_fight_for_whats_right
 	prerequisite = { focus = PT_fight_for_whats_right }
-	available = {
-		CHN = {
-			exists = yes
-		}
-	}
+	available = { has_war_with = CHN }
 	bypass = {
 		CHN = {
 			exists = no
@@ -456,11 +405,7 @@ shared_focus = {
 	y = 2
 	relative_position_id = PT_fight_for_whats_right
 	prerequisite = { focus = PT_rising_of_the_northeast focus = PT_pharynx_needs_assistance focus = PT_request_more_foreign_aid }
-	available = {
-		CHN = {
-			exists = yes
-		}
-	}
+	available = { has_war_with = CHN }
 	bypass = {
 		CHN = {
 			exists = no
@@ -485,11 +430,7 @@ shared_focus = {
 	y = 2
 	relative_position_id = PT_fight_for_whats_right
 	prerequisite = { focus = PT_rising_of_the_northeast focus = PT_pharynx_needs_assistance focus = PT_request_more_foreign_aid }
-	available = {
-		CHN = {
-			exists = yes
-		}
-	}
+	available = { has_war_with = CHN }
 	bypass = {
 		CHN = {
 			exists = no
@@ -525,9 +466,7 @@ shared_focus = {
 	y = 2
 	relative_position_id = PT_fight_for_whats_right
 	prerequisite = { focus = PT_rising_of_the_northeast focus = PT_pharynx_needs_assistance focus = PT_request_more_foreign_aid }
-	available = {
-		has_war_with = LCD
-	}
+	available = { has_war_with = LCD }
 	bypass = {
 		CHN = {
 			exists = no
@@ -656,11 +595,7 @@ shared_focus = {
 	relative_position_id = PT_fight_for_whats_right
 	prerequisite = { focus = PT_makeshift_factories }
 	prerequisite = { focus = PT_antax_industry }
-	available = {
-		CHN = {
-			exists = yes
-		}
-	}
+	available = { has_war_with = CHN }
 	bypass = {
 		CHN = {
 			exists = no
@@ -685,11 +620,7 @@ shared_focus = {
 	y = 3
 	relative_position_id = PT_fight_for_whats_right
 	prerequisite = { focus = PT_antax_industry focus = PT_the_princess_revolt focus = PT_makeshift_factories }
-	available = {
-		CHN = {
-			exists = yes
-		}
-	}
+	available = { has_war_with = CHN }
 	bypass = {
 		CHN = {
 			exists = no
@@ -725,7 +656,6 @@ shared_focus = {
 		if = { limit = { controls_province = 4342 } 311 = { add_building_construction = { type = bunker level = 2 instant_build = yes province = { id = 4342 } } } }
 		if = { limit = { controls_province = 722 } 259 = { add_building_construction = { type = bunker level = 2 instant_build = yes province = { id = 722 } } } }
 		if = { limit = { controls_province = 722 } 259 = { add_building_construction = { type = bunker level = 2 instant_build = yes province = { id = 722 } } } }
-
 	}
 }
 shared_focus = {
@@ -736,11 +666,7 @@ shared_focus = {
 	y = 4
 	relative_position_id = PT_fight_for_whats_right
 	prerequisite = { focus = PT_hidden_airbases }
-	available = {
-		CHN = {
-			exists = yes
-		}
-	}
+	available = { has_war_with = CHN }
 	bypass = {
 		CHN = {
 			exists = no
@@ -770,11 +696,7 @@ shared_focus = {
 	y = 4
 	relative_position_id = PT_fight_for_whats_right
 	prerequisite = { focus = PT_restore_old_fortresses }
-	available = {
-		CHN = {
-			exists = yes
-		}
-	}
+	available = { has_war_with = CHN }
 	bypass = {
 		CHN = {
 			exists = no
@@ -877,11 +799,7 @@ shared_focus = {
 	relative_position_id = PT_fight_for_whats_right
 	prerequisite = { focus = PT_the_sea_queens_rebellion }
 	prerequisite = { focus = PT_win_hearts_and_minds }
-	available = {
-		CHN = {
-			exists = yes
-		}
-	}
+	available = { has_war_with = CHN }
 	bypass = {
 		CHN = {
 			exists = no
@@ -892,6 +810,5 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus PT_for_thorax_and_harmony"
-		clr_country_flag = unlocked_rebelling_troops_template
 	}
 }

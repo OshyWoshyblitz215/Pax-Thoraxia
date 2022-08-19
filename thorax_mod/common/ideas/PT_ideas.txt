@@ -26,11 +26,11 @@ ideas = {
 				always = no # Triggered via event
 			}
 			targeted_modifier = {
-				tag = CHN
-				attack_bonus_against = 0.05
+				tag = CCN
+				attack_bonus_against = -0.05
 			}
 			modifier = {
-				planning_speed = 0.1
+				planning_speed = -0.1
 			}
 		}
 		PT_communist_holdout = {
