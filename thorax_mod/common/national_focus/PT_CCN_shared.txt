@@ -362,6 +362,15 @@ shared_focus = {
 	ai_will_do = {
 		factor = 1000
 	}
+	select_effect = {
+		country_event = { id = PT_CCN_allies.6 days = 3 }
+		country_event = { id = PT_CCN_allies.7 days = 7 }
+		country_event = { id = PT_CCN_allies.8 days = 10 }
+		country_event = { id = PT_CCN_allies.9 days = 15 }
+		country_event = { id = PT_CCN_allies.10 days = 20 }
+		country_event = { id = PT_CCN_allies.11 days = 25 }
+		country_event = { id = PT_CCN_allies.12 days = 30 }
+	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus PT_pharynx_needs_assistance"
 		# DO THE ART STUFF WITH THAT AND PHARYNX CHANGING SIDES

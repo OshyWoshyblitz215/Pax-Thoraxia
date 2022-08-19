@@ -207,7 +207,83 @@ country_event = {
 		}
 	}
 }
-
+country_event = {
+	id = PT_CCN_allies.6
+	title = PT_CCN_allies.6.t
+	desc = PT_CCN_allies.6.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = PT_CCN_allies.6.a
+		CHN = { CHN_azure_lore = { set_nationality = CCN } }
+	}
+}
+country_event = {
+	id = PT_CCN_allies.7
+	title = PT_CCN_allies.7.t
+	desc = PT_CCN_allies.7.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = PT_CCN_allies.7.a
+		CHN = { CHN_carolina_phymata = { set_nationality = CCN } }
+	}
+}
+country_event = {
+	id = PT_CCN_allies.8
+	title = PT_CCN_allies.8.t
+	desc = PT_CCN_allies.8.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = PT_CCN_allies.8.a
+		CHN = { CHN_manti_ligiosa = { set_nationality = CCN } }
+	}
+}
+country_event = {
+	id = PT_CCN_allies.9
+	title = PT_CCN_allies.9.t
+	desc = PT_CCN_allies.9.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = PT_CCN_allies.9.a
+		CHN = { CHN_opteris = {	set_nationality = CCN } }
+	}
+}
+country_event = {
+	id = PT_CCN_allies.10
+	title = PT_CCN_allies.10.t
+	desc = PT_CCN_allies.10.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = PT_CCN_allies.10.a
+		CHN = { CHN_osteitis = { set_nationality = CCN } }
+	}
+}
+country_event = {
+	id = PT_CCN_allies.11
+	title = PT_CCN_allies.11.t
+	desc = PT_CCN_allies.11.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = PT_CCN_allies.11.a
+		CHN = { CHN_sooty = { set_nationality = CCN } }
+	}
+}
+country_event = {
+	id = PT_CCN_allies.12
+	title = PT_CCN_allies.12.t
+	desc = PT_CCN_allies.12.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = PT_CCN_allies.12.a
+		CHN = { CHN_tetti_rhombi = { set_nationality = CCN } }
+	}
+}
 country_event = { #test to ruin friendships
 	id = PT_CCN_allies.420
 	fire_only_once = yes
