@@ -441,16 +441,8 @@ shared_focus = {
 			add_building_construction = { type = arms_factory level = 3 instant_build = yes }
 			add_building_construction = { type = industrial_complex level = 3 instant_build = yes }
 		}
-		add_resource = {
-			type = steel
-			amount = 10
-			state = 323
-		}
-		add_resource = {
-			type = aluminum
-			amount = 12
-			state = 323
-		}
+		add_resource = { type = steel amount = 10 state = 323 }
+		add_resource = { type = aluminum amount = 12 state = 323 }
 	}
 }
 shared_focus = {
