@@ -59,6 +59,7 @@ shared_focus = { #Foreign Office
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus PT_hearts_and_minds"
 		custom_effect_tooltip = PT_unlocks_decisions_tooltip
+		add_political_power = 50
 	}
 }
 shared_focus = {
@@ -126,7 +127,7 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus PT_weapons_cache"
 		add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 1000 producer = CCN }
-		add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 250 producer = CCN }
+		add_equipment_to_stockpile = { type = support_equipment_1 amount = 250 producer = CCN }
 	}
 }
 shared_focus = { #Munitions Office
@@ -160,11 +161,22 @@ shared_focus = { #Munitions Office
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus PT_war_preperations"
-		323 = {
-			add_extra_state_shared_building_slots = 4
-			add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
-			add_building_construction = { type = arms_factory level = 2 instant_build = yes }
+#		323 = {
+#			add_extra_state_shared_building_slots = 4
+#			add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
+#			add_building_construction = { type = arms_factory level = 2 instant_build = yes }
+#		}
+		division_template = { name = "Minutelings" priority = 1 template_counter = 3 regiments = { infantry = { x = 0 y = 0} infantry = { x = 0 y = 1} infantry = { x = 0 y = 2} infantry = { x = 1 y = 0} infantry = { x = 1 y = 1} infantry = { x = 1 y = 2} support = { engineer = {x = 0 y = 0} } }
+		capital_scope = {
+			create_unit = { division = "name = \"Harmonist Soldiers I.\" division_template = \"Minutelings\" start_experience_factor = 0.1" owner = CCN }
+			create_unit = { division = "name = \"Harmonist Soldiers II.\" division_template = \"Minutelings\" start_experience_factor = 0.1" owner = CCN }
+			create_unit = { division = "name = \"Harmonist Soldiers III.\" division_template = \"Minutelings\" start_experience_factor = 0.1" owner = CCN }
+			create_unit = { division = "name = \"Harmonist Soldiers IV.\" division_template = \"Minutelings\" start_experience_factor = 0.1" owner = CCN }
+			create_unit = { division = "name = \"Harmonist Soldiers V.\" division_template = \"Minutelings\" start_experience_factor = 0.1" owner = CCN }
+			create_unit = { division = "name = \"Harmonist Soldiers VI.\" division_template = \"Minutelings\" start_experience_factor = 0.1" owner = CCN }
+			create_unit = { division = "name = \"Harmonist Soldiers VII.\" division_template = \"Minutelings\" start_experience_factor = 0.1" owner = CCN }
 		}
+
 	}
 }
 shared_focus = { #Intelligence Office
@@ -361,11 +373,11 @@ shared_focus = {
 		if = {
 			limit = { NOT = { has_country_flag = unlocked_rebelling_troops_template } }
 			set_country_flag = unlocked_rebelling_troops_template
-			division_template = { name = "Rebelling Troops" is_locked = yes priority = 1 template_counter = 21 regiments = { infantry = { x = 0 y = 0} infantry = { x = 0 y = 1} infantry = { x = 0 y = 2} infantry = { x = 0 y = 3} infantry = { x = 1 y = 0} infantry = { x = 1 y = 1} infantry = { x = 1 y = 2} infantry = { x = 1 y = 3} } support = { engineer = {x = 0 y = 0} artillery = {x = 0 y = 0} } }
+			division_template = { name = "Rebelling Troops" is_locked = yes priority = 1 template_counter = 21 regiments = { infantry = { x = 0 y = 0} infantry = { x = 0 y = 1} infantry = { x = 0 y = 2} infantry = { x = 0 y = 3} infantry = { x = 1 y = 0} infantry = { x = 1 y = 1} infantry = { x = 1 y = 2} infantry = { x = 1 y = 3} } support = { engineer = {x = 0 y = 0} artillery = {x = 0 y = 1} } }
 		}
 		random_controlled_state = {
 			limit = { ROOT = { has_full_control_of_state = PREV } }
-			prioritize = { 323 }
+			prioritize = { 321 }
 			create_unit = {
 				division = "name = \"Pharynxs Rebels\" division_template = \"Rebelling Troops\" start_experience_factor = 0.3" 
 				owner = CCN
@@ -484,6 +496,16 @@ shared_focus = {
 			add_building_construction = { type = arms_factory level = 3 instant_build = yes }
 			add_building_construction = { type = industrial_complex level = 3 instant_build = yes }
 		}
+		add_resource = {
+			type = steel
+			amount = 10
+			state = 323
+		}
+		add_resource = {
+			type = aluminum
+			amount = 12
+			state = 323
+		}
 	}
 }
 shared_focus = {
@@ -510,7 +532,7 @@ shared_focus = {
 		if = {
 			limit = { NOT = { has_country_flag = unlocked_rebelling_troops_template } }
 			set_country_flag = unlocked_rebelling_troops_template
-			division_template = { name = "Rebelling Troops" is_locked = yes priority = 1 template_counter = 21 regiments = { infantry = { x = 0 y = 0} infantry = { x = 0 y = 1} infantry = { x = 0 y = 2} infantry = { x = 0 y = 3} infantry = { x = 1 y = 0} infantry = { x = 1 y = 1} infantry = { x = 1 y = 2} infantry = { x = 1 y = 3} } support = { engineer = {x = 0 y = 0} artillery = {x = 0 y = 0} } }
+			division_template = { name = "Rebelling Troops" is_locked = yes priority = 1 template_counter = 21 regiments = { infantry = { x = 0 y = 0} infantry = { x = 0 y = 1} infantry = { x = 0 y = 2} infantry = { x = 0 y = 3} infantry = { x = 1 y = 0} infantry = { x = 1 y = 1} infantry = { x = 1 y = 2} infantry = { x = 1 y = 3} } support = { engineer = {x = 0 y = 0} artillery = {x = 0 y = 1} } }
 		}
 		if = {
 			limit = { divisions_in_state = {
@@ -698,7 +720,7 @@ shared_focus = {
 	}
 }
 shared_focus = {
-	id = PT_win_hearts_and_minds
+	id = PT_win_hearts_and_minds #International Harmonist Volunteers
 	icon = GFX_goal_chn_hearts_and_mind
 	cost = 6.45
 	x = -1
@@ -720,7 +742,14 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus PT_win_hearts_and_minds"
-		custom_effect_tooltip = PT_unlocks_decisions_tooltip
+		division_template = { name = "Foreign Legion" priority = 1 template_counter = 15 regiments = { infantry = { x = 0 y = 0} infantry = { x = 0 y = 1} infantry = { x = 0 y = 2} infantry = { x = 0 y = 3} infantry = { x = 0 y = 4} infantry = { x = 1 y = 0} infantry = { x = 1 y = 1} infantry = { x = 1 y = 2} infantry = { x = 1 y = 3} } infantry = { x = 1 y = 4} support = { engineer = {x = 0 y = 0} artillery = {x = 0 y = 1} } }
+		capital_scope = {
+			create_unit = { division = "name = \"'Liberation' Stalliongrad Legion\" division_template = \"Foreign Legion\" start_experience_factor = 0.3" owner = CCN }
+			create_unit = { division = "name = \"'Friendship' Equestrian Legion\" division_template = \"Foreign Legion\" start_experience_factor = 0.3" owner = CCN }
+			create_unit = { division = "name = \"'Loyalty' Crystal Empire Legion\" division_template = \"Foreign Legion\" start_experience_factor = 0.3" owner = CCN }
+			create_unit = { division = "name = \"'Solidarity' Stalliongrad Legion\" division_template = \"Foreign Legion\" start_experience_factor = 0.3" owner = CCN }
+			create_unit = { division = "name = \"'Freedom' Equestrian Legion\" division_template = \"Foreign Legion\" start_experience_factor = 0.3" owner = CCN }
+		}
 	}
 }
 

@@ -7,7 +7,9 @@ country_event = {
 	desc = PT_CCN_allies.1.d
 	fire_only_once = yes
 	is_triggered_only = yes
-	immediate = {
+	option = {
+		name = PT_CCN_allies.4.a
+		
 		if = {
 			limit = {
 				CCN = {
@@ -59,8 +61,6 @@ country_event = {
 			add_to_faction = VRK
 		}
 	}
-	option = {
-		name = PT_CCN_allies.4.a
 	}
 }
 #copies for the various other countries:
@@ -72,7 +72,8 @@ country_event = {
 	desc = PT_CCN_allies.2.d
 	fire_only_once = yes
 	is_triggered_only = yes
-	immediate = {
+	option = {
+		name = PT_CCN_allies.2.a
 		if = {
 			limit = {
 				CCN = {
@@ -124,9 +125,6 @@ country_event = {
 			add_to_faction = SRT
 		}
 	}
-	option = {
-		name = PT_CCN_allies.2.a
-	}
 }
 
 country_event = {
@@ -162,7 +160,8 @@ country_event = {
 	desc = PT_CCN_allies.5.d
 	fire_only_once = yes
 	is_triggered_only = yes
-	immediate = {
+	option = {
+		name = PT_CCN_allies.5.a
 		GRK = {
 			add_country_leader_trait = PT_swayed_by_thorax
 			add_opinion_modifier = {
@@ -206,9 +205,6 @@ country_event = {
 				active = yes
 			}
 		}
-	}
-	option = {
-		name = PT_CCN_allies.5.a
 	}
 }
 
