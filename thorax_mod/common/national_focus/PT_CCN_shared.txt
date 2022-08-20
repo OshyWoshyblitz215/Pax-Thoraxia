@@ -463,112 +463,23 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus PT_the_princess_revolt"
-		if = {
-			limit = { NOT = { has_country_flag = unlocked_rebelling_troops_template } }
-			set_country_flag = unlocked_rebelling_troops_template
-			division_template = { name = "Rebelling Troops" is_locked = yes priority = 1 template_counter = 21 regiments = { infantry = { x = 0 y = 0} infantry = { x = 0 y = 1} infantry = { x = 0 y = 2} infantry = { x = 0 y = 3} infantry = { x = 1 y = 0} infantry = { x = 1 y = 1} infantry = { x = 1 y = 2} infantry = { x = 1 y = 3} } support = { engineer = {x = 0 y = 0} artillery = {x = 0 y = 1} } }
+		PHA = {
+			division_template = { name = "Harmonist Rebels" is_locked = yes priority = 0 template_counter = 17 regiments = { infantry = { x = 0 y = 0} infantry = { x = 0 y = 1} } }
+			division_template = { name = "Rebelling Troops" is_locked = yes priority = 1 template_counter = 37 regiments = { infantry = { x = 0 y = 0} infantry = { x = 0 y = 1} infantry = { x = 0 y = 2} infantry = { x = 0 y = 3} infantry = { x = 1 y = 0} infantry = { x = 1 y = 1} infantry = { x = 1 y = 2} infantry = { x = 1 y = 3} } support = { engineer = {x = 0 y = 0} artillery = {x = 0 y = 1} } }
 		}
-		if = {
-			limit = { divisions_in_state = {
-					size > 0
-					state = 304
-				}
-			}
-			304 = {
-				create_unit = {
-					division = "name = \"Neverwarm Harmonists\" division_template = \"Rebelling Troops\" start_experience_factor = 0.3" 
-					owner = CCN allow_spawning_on_enemy_provs = yes prioritize_location = 6098
-				}
-			}
-		}
-		else = {
-			304 = {
-				create_unit = {
-					division = "name = \"Neverwarm Harmonists\" division_template = \"Rebelling Troops\" start_experience_factor = 0.3" 
-					owner = CCN allow_spawning_on_enemy_provs = yes prioritize_location = 1547
-				}
-			}
-		}
-		if = {
-			limit = { divisions_in_state = {
-					size > 0
-					state = 303
-				}
-			}
-			303 = {
-				create_unit = {
-					division = "name = \"Apsychos Harmonists\" division_template = \"Rebelling Troops\" start_experience_factor = 0.3" 
-					owner = CCN allow_spawning_on_enemy_provs = yes prioritize_location = 7643
-				}
-			}
-		}
-		else = {
-			303 = {
-				create_unit = {
-					division = "name = \"Apsychos Harmonists\" division_template = \"Rebelling Troops\" start_experience_factor = 0.3" 
-					owner = CCN allow_spawning_on_enemy_provs = yes prioritize_location = 11144
-				}
-			}
-		}
-		if = {
-			limit = { divisions_in_state = {
-					size > 0
-					state = 308
-				}
-			}
-			308 = {
-				create_unit = {
-					division = "name = \"Tainaholm Harmonist Troops\" division_template = \"Rebelling Troops\" start_experience_factor = 0.3" 
-					owner = CCN allow_spawning_on_enemy_provs = yes prioritize_location = 11024
-				}
-			}
-		}
-		else = {
-			308 = {
-				create_unit = {
-					division = "name = \"Tainaholm Harmonist Troops\" division_template = \"Rebelling Troops\" start_experience_factor = 0.3" 
-					owner = CCN allow_spawning_on_enemy_provs = yes prioritize_location = 6081
-				}
-			}
-		}
-		if = {
-			limit = { divisions_in_state = {
-					size > 0
-					state = 260
-				}
-			}
-			260 = {
-				create_unit = {
-					division = "name = \"Gardis Harmonist Division\" division_template = \"Rebelling Troops\" start_experience_factor = 0.3" 
-					owner = CCN allow_spawning_on_enemy_provs = yes prioritize_location = 3115
-				}
-			}
-		}
-		else = {
-			260 = {
-				create_unit = {
-					division = "name = \"Gardis Harmonist Division\" division_template = \"Rebelling Troops\" start_experience_factor = 0.3" 
-					owner = CCN allow_spawning_on_enemy_provs = yes prioritize_location = 176
-				}
-			}
-		}
-		309 = { 
-			create_unit = {
-				division = "name = \"Lyctida Harmonist Division\" division_template = \"Rebelling Troops\" start_experience_factor = 0.3" 
-				owner = CCN allow_spawning_on_enemy_provs = yes prioritize_location = 195
-			}
-		}
-		309 = {
-			create_unit = {
-				division = "name = \"The 'Aurantia II.' Division\" division_template = \"Rebelling Troops\" start_experience_factor = 0.3" 
-				owner = CCN allow_spawning_on_enemy_provs = yes prioritize_location = 1338
-			}
-		}
-		309 = {
-			create_unit = {
-				division = "name = \"'Aurantia II.s Claim' Division\" division_template = \"Rebelling Troops\" start_experience_factor = 0.3" 
-				owner = CCN allow_spawning_on_enemy_provs = yes prioritize_location = 9119
-			}
+		308 = {
+			add_core_of = PHA
+			transfer_state_to = PHA
+			create_unit = {	division = "name = \"Lyctidan New Army Unit I\" division_template = \"Rebelling Troops\" start_experience_factor = 0.3" owner = PHA prioritize_location = 6081 }
+			create_unit = { division = "name = \"'Aurantia II.s Claim' Division\" division_template = \"Rebelling Troops\" start_experience_factor = 0.3" owner = PHA prioritize_location = 11132 }
+			create_unit = { division = "name = \"Lyctidan New Army Unit II\" division_template = \"Rebelling Troops\" start_experience_factor = 0.3" owner = PHA prioritize_location = 6212 }
+			create_unit = { division = "name = \"Lyctidan New Army Unit III\" division_template = \"Rebelling Troops\" start_experience_factor = 0.3" owner = PHA prioritize_location = 120 }
+			create_unit = { division = "name = \"Harmonist Brigade\" division_template = \"Harmonist Rebels\" start_experience_factor = 0.1" owner = PHA prioritize_location = 13118 }
+			create_unit = { division = "name = \"Lyctidan Volunteers\" division_template = \"Harmonist Rebels\" start_experience_factor = 0.1" owner = PHA prioritize_location = 9166 }
+			create_unit = { division = "name = \"Lyctidan Harmonist Cell\" division_template = \"Harmonist Rebels\" start_experience_factor = 0.1" owner = PHA prioritize_location = 11024 }
+			create_unit = { division = "name = \"Liberators of the East\" division_template = \"Harmonist Rebels\" start_experience_factor = 0.1" owner = PHA prioritize_location = 11121 }
+			create_unit = { division = "name = \"Aurantia IIs Bodyguard\" division_template = \"Harmonist Rebels\" start_experience_factor = 0.1" owner = PHA prioritize_location = 11041 }
+			create_unit = { division = "name = \"Phantine Harmonist Brigade\" division_template = \"Harmonist Rebels\" start_experience_factor = 0.1" owner = PHA prioritize_location = 6081 }
 		}
 	}
 }
