@@ -392,7 +392,7 @@ shared_focus = {
 		add_equipment_to_stockpile = { type = infantry_equipment_0 amount = 100 producer = GRF }
 	}
 }
-#shared_focus = {
+shared_focus = {
 	id = PT_makeshift_factories
 	icon = GFX_goal_chn_industry
 	cost = 7.2
