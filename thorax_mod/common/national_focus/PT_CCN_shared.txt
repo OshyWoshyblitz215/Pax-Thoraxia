@@ -441,7 +441,7 @@ shared_focus = {
 			add_building_construction = { type = industrial_complex level = 3 instant_build = yes }
 		}
 		add_resource = { type = steel amount = 10 state = 323 }
-		add_resource = { type = aluminum amount = 12 state = 323 }
+		add_resource = { type = aluminium amount = 12 state = 323 }
 	}
 }
 shared_focus = {
@@ -481,6 +481,23 @@ shared_focus = {
 			create_unit = { division = "name = \"Aurantia IIs Bodyguard\" division_template = \"Harmonist Rebels\" start_experience_factor = 0.1" owner = PHA prioritize_location = 11041 }
 			create_unit = { division = "name = \"Phantine Harmonist Brigade\" division_template = \"Harmonist Rebels\" start_experience_factor = 0.1" owner = PHA prioritize_location = 6081 }
 		}
+		if = {
+			limit = { is_in_faction = no }
+			create_faction = THORAX_CIVIL_WAR_ALLIANCE
+		}
+		PHA = {
+			add_country_leader_trait = PT_swayed_by_thorax
+			add_opinion_modifier = { target = CCN modifier = PT_they_like_thorax }
+#			add_ai_strategy = { type = alliance id = CCN value = 500 }
+#			add_ai_strategy = { type = befriend id = CCN value = 500 }
+#			add_ai_strategy = { type = diplo_action_acceptance id = CCN value = 100 target = join_allies }
+			declare_war_on = { type = civil_war target = LCD }
+		}
+		add_opinion_modifier = {
+			target = PHA
+			modifier = PT_they_like_thorax
+		}
+		add_to_faction = PHA
 	}
 }
 shared_focus = {
@@ -553,6 +570,30 @@ shared_focus = {
 		if = { limit = { controls_province = 4342 } 311 = { add_building_construction = { type = bunker level = 2 instant_build = yes province = { id = 4342 } } } }
 		if = { limit = { controls_province = 722 } 259 = { add_building_construction = { type = bunker level = 2 instant_build = yes province = { id = 722 } } } }
 		if = { limit = { controls_province = 722 } 259 = { add_building_construction = { type = bunker level = 2 instant_build = yes province = { id = 722 } } } }
+	}
+}
+shared_focus = {
+	id = PT_sabotage_chrys_focus
+	icon = GFX_goal_chn_fortress #placeholder
+	cost = 8.6
+	x = 0
+	y = 1
+	relative_position_id = PT_restore_old_fortresses
+	prerequisite = { focus = PT_restore_old_fortresses }
+	available = { has_war_with = CHN }
+	bypass = {
+		CHN = {
+			exists = no
+		}
+	}
+	ai_will_do = {
+		factor = 1000
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus PT_sabotage_chrys_focus"
+		number = {
+			damage_building = { type = infrastructure damage = 1}
+		}
 	}
 }
 
