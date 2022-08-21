@@ -8,59 +8,22 @@ country_event = {
 	fire_only_once = yes
 	is_triggered_only = yes
 	option = {
-		name = PT_CCN_allies.4.a
-		
+		name = PT_CCN_allies.1.a
 		if = {
 			limit = {
-				CCN = {
-					is_in_faction = no
-				}
+				is_in_faction = no
 			}
-			CCN = {
-				create_faction = THORAX_CIVIL_WAR_ALLIANCE
-			}
+			create_faction = THORAX_CIVIL_WAR_ALLIANCE
 		}
 		VRK = {
-			leave_faction = yes
 			add_country_leader_trait = PT_swayed_by_thorax
-			add_opinion_modifier = {
-				target = CCN
-				modifier = PT_they_like_thorax
-			}
-			add_ai_strategy = {
-				type = alliance
-				id = CCN
-				value = 500
-			}
-			add_ai_strategy = {
-				type = befriend
-				id = CCN
-				value = 500
-			}
-			add_ai_strategy = {
- 				type = diplo_action_acceptance
-				id = CCN
- 				value = 100
- 				target = join_allies
-			}
+			add_opinion_modifier = { target = CCN modifier = PT_they_like_thorax }
+			add_ai_strategy = { type = alliance id = CCN value = 500 }
+			add_ai_strategy = { type = befriend id = CCN value = 500 }
+			add_ai_strategy = { type = diplo_action_acceptance id = CCN value = 100 target = join_allies }
 		}
-		add_opinion_modifier = {
-				target = VRK
-				modifier = PT_they_like_thorax
-			}
-		every_country = {
-			limit = {
-				OR = {
-					is_in_faction_with = CCN
-					original_tag = CCN
-				}
-			}
-			white_peace = VRK
-		}
-		CCN = {
-			add_to_faction = VRK
-		}
-	}
+		add_opinion_modifier = { target = VRK modifier = PT_they_like_thorax }
+		add_to_faction = VRK
 	}
 }
 #copies for the various other countries:
@@ -76,54 +39,19 @@ country_event = {
 		name = PT_CCN_allies.2.a
 		if = {
 			limit = {
-				CCN = {
-					is_in_faction = no
-				}
+				is_in_faction = no
 			}
-			CCN = {
-				create_faction = THORAX_CIVIL_WAR_ALLIANCE
-			}
+			create_faction = THORAX_CIVIL_WAR_ALLIANCE
 		}
 		SRT = {
-			leave_faction = yes
 			add_country_leader_trait = PT_swayed_by_thorax
-			add_opinion_modifier = {
-				target = CCN
-				modifier = PT_they_like_thorax
-			}
-			add_ai_strategy = {
-				type = alliance
-				id = CCN
-				value = 500
-			}
-			add_ai_strategy = {
-				type = befriend
-				id = CCN
-				value = 500
-			}
-			add_ai_strategy = {
- 				type = diplo_action_acceptance
-				id = CCN
- 				value = 100
- 				target = join_allies
-			}
+			add_opinion_modifier = { target = CCN modifier = PT_they_like_thorax }
+			add_ai_strategy = { type = alliance id = CCN value = 500 }
+			add_ai_strategy = { type = befriend id = CCN value = 500 }
+			add_ai_strategy = { type = diplo_action_acceptance id = CCN value = 100 target = join_allies }
 		}
-		add_opinion_modifier = {
-				target = SRT
-				modifier = PT_they_like_thorax
-			}
-		every_country = {
-			limit = {
-				OR = {
-					is_in_faction_with = CCN
-					original_tag = CCN
-				}
-			}
-			white_peace = SRT
-		}
-		CCN = {
-			add_to_faction = SRT
-		}
+		add_opinion_modifier = { target = SRT modifier = PT_they_like_thorax }
+		add_to_faction = SRT
 	}
 }
 

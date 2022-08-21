@@ -2,9 +2,14 @@ characters = {
 	PT_Aurantia_II = {
 		name = PT_Aurantia_II
 		female = yes
+		portraits={
+			civilian={
+				large="gfx/leaders/CCN/PT_Aurantia_II.tga"
+			}
+		}
 		country_leader = {
-			desc = "PT_Aurantia_II_DESC"
 			ideology=harmonic_constitutionalism
+			expire="1965.1.1.1"
 			id=-1
 		}
 	}

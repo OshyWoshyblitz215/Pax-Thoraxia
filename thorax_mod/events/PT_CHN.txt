@@ -514,7 +514,9 @@ country_event = { #opening: LCD angered
 	is_triggered_only = yes
 	option = {
 		name = PT_CHN.13.a
-		add_political_power = -5
+		309 = {
+			add_manpower = -1
+		}
 	}
 }
 country_event = { #opening: Chrysalis meetings 1
@@ -949,7 +951,8 @@ country_event = { #does things that we will later outsource to the queens n comm
 	title = PT_CHN.23.t
 	desc = PT_CHN.23.d
 	is_triggered_only = yes
-	option = {
+	hidden = yes
+	immediate = {
 		name = PT_CHN.23.a
 		add_to_array = { contris_that_get_chn_cw_help = SRT }
 		add_to_array = { contris_that_get_chn_cw_help = DTR }
@@ -976,6 +979,7 @@ country_event = { #does things that we will later outsource to the queens n comm
 			add_ideas = { PT_communist_holdout }
 		}
 	}
+	option = {}
 }
 country_event = { # LCD bends chrys gets told
 	id = PT_CHN.24
