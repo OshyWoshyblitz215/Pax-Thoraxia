@@ -35,26 +35,6 @@ focus_tree = {
 			country_event = { id = PT_CHN.20  days = 4} #thorax
 		}
 	}
-#	focus = {
-#		id = PT_queen_unification
-#		icon = GFX_goal_chn_swords
-#		cost = 4.00
-#		available = {
-#			is_subject = no
-#			has_government = fascism
-#		}
-#		ai_will_do = {
-#			factor = 200
-#		}
-#		x = 4
-#		y = 1
-#		prerequisite = { focus = PT_the_hives_stir }
-#		mutually_exclusive = { focus = PT_pacify_the_northerners }
-#		completion_reward = {
-#			log = "[GetDateText]: [Root.GetName]: Focus PT_queen_unification"
-#		}
-#		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
-#	}
 	focus = {
 		id = PT_pacify_the_northerners
 		icon = GFX_goal_chn_crush_north
@@ -69,7 +49,6 @@ focus_tree = {
 		x = 6
 		y = 1
 		prerequisite = { focus = PT_the_hives_stir }
-#		mutually_exclusive = { focus = PT_queen_unification }
 		will_lead_to_war_with = GRK
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus PT_pacify_the_northerners"
@@ -123,6 +102,7 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus PT_chryssie_attack_thorax"
 			declare_war_on = { type = civil_war target = CCN }
 			set_country_flag = thorax_battle
+			news_event = { id = PT_CHN.30 }
 		}
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
 	}

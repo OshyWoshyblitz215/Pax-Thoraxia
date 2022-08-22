@@ -928,6 +928,7 @@ country_event = { #chrysalis demands communists surrender
 	option = {
 		name=PT_CHN.21.b
 		CHN = { country_event = { id = PT_CHN.22 days = 1 } }
+		add_ideas = { CCN_Civil_War }
 		ai_chance = {
 			base = 100
 		}
@@ -1015,5 +1016,57 @@ country_event = { # VRK loves thorax chrys gets told
 	is_triggered_only = yes
 	option = {
 		name = PT_CHN.27.a
+	}
+}
+country_event = { # sabotage, CCN does
+	id = PT_CHN.28
+	title = PT_CHN.28.t
+	desc = PT_CHN.28.d
+	is_triggered_only = yes
+	option = {
+		name = PT_CHN.28.a
+		CHN = {
+			every_owned_state = {
+				damage_building = {
+					type = infrastructure damage = 0.5
+				}
+			}
+		}
+		251 = {
+			damage_building = { type = industrial_complex damage = 3 }
+			damage_building = { type = arms_factory damage = 2 }
+			damage_building = { type = rail_way damage = 2 province = 6128 }
+			damage_building = { type = rail_way damage = 2 province = 6134 }
+			damage_building = { type = rail_way damage = 2 province = 36 }
+			damage_building = { type = rail_way damage = 2 province = 9678 }
+		}
+	}
+}
+country_event = { # sabotage, CHN told
+	id = PT_CHN.29
+	title = PT_CHN.29.t
+	desc = PT_CHN.29.d
+	is_triggered_only = yes
+	option = {
+		name = PT_CHN.29.a
+	}
+}
+news_event = { # CIVIL WAR
+	id = PT_CHN.30
+	title = PT_CHN.30.t
+	desc = PT_CHN.30.d
+	picture = GFX_event_PT_buggo_cw
+	is_triggered_only = yes
+	major = yes
+	hidden_effect = {
+		CHN = { add_ideas = { CCN_Civil_War } }
+		CCN = { add_ideas = { CCN_Civil_War } }
+		DTR = { add_ideas = { CCN_Civil_War } }
+		SRT = { add_ideas = { CCN_Civil_War } }
+		VRK = { add_ideas = { CCN_Civil_War } }
+		LCD = { add_ideas = { CCN_Civil_War } }
+	}
+	option = {
+		name = PT_CHN.30.a
 	}
 }

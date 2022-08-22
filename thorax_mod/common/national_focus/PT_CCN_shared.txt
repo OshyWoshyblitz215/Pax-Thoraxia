@@ -312,20 +312,11 @@ shared_focus = {
 		factor = 1000
 	}
 	select_effect = {
-		country_event = { id = PT_CCN_allies.6 days = 3 }
-		country_event = { id = PT_CCN_allies.7 days = 7 }
-		country_event = { id = PT_CCN_allies.8 days = 10 }
-		country_event = { id = PT_CCN_allies.9 days = 15 }
-		country_event = { id = PT_CCN_allies.10 days = 20 }
-		country_event = { id = PT_CCN_allies.11 days = 25 }
-		country_event = { id = PT_CCN_allies.12 days = 30 }
+		country_event = { id = PT_CCN_allies.6 days = 20 } #
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus PT_pharynx_needs_assistance"
-		CHN = { CHN_pharynx = {	set_nationality = CCN } }
-		CHN_pharynx = {
-			set_portraits = { army = { large = "gfx/leaders/CCN/PT_Pharynx.tga" } }
-		}
+		country_event = { id = PT_CCN_allies.13 }
 		if = {
 			limit = { NOT = { has_country_flag = unlocked_rebelling_troops_template } }
 			set_country_flag = unlocked_rebelling_troops_template
@@ -488,10 +479,12 @@ shared_focus = {
 		PHA = {
 			add_country_leader_trait = PT_swayed_by_thorax
 			add_opinion_modifier = { target = CCN modifier = PT_they_like_thorax }
+			PT_Aurantia_II = { set_country_leader_description = { desc = chn_queen_argynnis_desc } }
 #			add_ai_strategy = { type = alliance id = CCN value = 500 }
 #			add_ai_strategy = { type = befriend id = CCN value = 500 }
 #			add_ai_strategy = { type = diplo_action_acceptance id = CCN value = 100 target = join_allies }
 			declare_war_on = { type = civil_war target = LCD }
+			add_ideas = { CCN_Civil_War }
 		}
 		add_opinion_modifier = {
 			target = PHA
@@ -576,7 +569,7 @@ shared_focus = {
 	id = PT_sabotage_chrys_focus
 	icon = GFX_goal_chn_fortress #placeholder
 	cost = 8.6
-	x = 0
+	x = -1
 	y = 1
 	relative_position_id = PT_restore_old_fortresses
 	prerequisite = { focus = PT_restore_old_fortresses }
@@ -591,13 +584,10 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus PT_sabotage_chrys_focus"
-		number = {
-			damage_building = { type = infrastructure damage = 1}
-		}
+		country_event = { id = PT_CHN.28 }
+		CHN = { country_event = { id = PT_CHN.29 } }
 	}
 }
-
-
 shared_focus = {
 	id = PT_win_hearts_and_minds #International Harmonist Volunteers
 	icon = GFX_goal_chn_hearts_and_mind
@@ -627,8 +617,6 @@ shared_focus = {
 		}
 	}
 }
-
-
 shared_focus = {
 	id = PT_for_thorax_and_harmony
 	icon = GFX_goal_chn_thorax_and_harmony
@@ -636,7 +624,7 @@ shared_focus = {
 	x = 0
 	y = 5
 	relative_position_id = PT_fight_for_whats_right
-	prerequisite = { focus = PT_the_sea_queens_rebellion }
+	prerequisite = { focus = PT_sabotage_chrys_focus }
 	prerequisite = { focus = PT_win_hearts_and_minds }
 	available = { has_war_with = CHN }
 	bypass = {
@@ -649,5 +637,6 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus PT_for_thorax_and_harmony"
+		add_country_leader_trait = PT_rebel_leader
 	}
 }

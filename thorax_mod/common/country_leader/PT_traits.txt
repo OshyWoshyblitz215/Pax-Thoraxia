@@ -7,4 +7,16 @@ leader_traits = {
 		random = no
 		democratic_acceptance = 75
 	}
+	PT_rebel_leader = {
+		random = no
+		war_support_factor = 0.1
+		war_stability_factor = 0.1
+		democratic_drift = 0.05
+		port_strike = 100
+		targeted_modifier = {
+			tag = CHN
+			attack_bonus_against = 0.1
+			defense_bonus_against = 0.1
+		}
+	}
 }

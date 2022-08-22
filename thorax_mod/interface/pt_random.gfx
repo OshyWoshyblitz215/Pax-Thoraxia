@@ -1,0 +1,7 @@
+spriteTypes = {
+	SpriteType = {
+		name = "GFX_event_PT_buggo_cw"
+		texturefile = "gfx/event_pics/buggo_cw.dds"
+	}
+}
+

@@ -1,6 +1,6 @@
 characters = {
 	PT_Aurantia_II = {
-		name = PT_Aurantia_II
+		name = "Aurantia II"
 		female = yes
 		portraits={
 			civilian={
