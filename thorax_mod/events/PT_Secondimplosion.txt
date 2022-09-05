@@ -1,0 +1,273 @@
+add_namespace = PT_Collapse
+
+country_event = {
+	id = PT_Collapse.1
+	title = PT_Collapse.1.t
+	desc = PT_Collapse.1.d
+option = {
+name = PT_collapse.1.a
+CHN = {
+	kill_country_leader = yes
+	CHN_trimmel = {
+				add_country_leader_role = {
+					country_leader = {
+						expire = "1965.1.1"
+						ideology = stratocracy
+					}
+					promote_leader = yes
+				}
+				add_country_leader_role = {
+					country_leader = {
+						expire = "1965.1.1"
+						ideology = despotism
+					}
+					promote_leader = yes
+				}
+				set_portraits = { civilian = { large ="gfx/leaders/CHN/Trimmel.tga" } }
+				set_country_leader_description = { desc = CHN_DESC_TRIMMEL }
+			}
+	}
+
+CHN = {
+	CHN_dieter_heinrich = {
+		set_nationality = GWZ
+		}
+	}
+	GWZ = {
+			set_capital = {state = 262}
+			add_state_core = 264
+			add_state_core = 314
+			transfer_state = 264
+			transfer_state = 314
+			
+			CHN_dieter_heinrich = {
+				add_country_leader_role = {
+					country_leader = {
+						expire = "1965.1.1"
+						ideology = esotericism
+						traits={ changeling_fuhrer }
+					}
+					promote_leader = yes
+				}
+				add_country_leader_role = {
+					country_leader = {
+						expire = "1965.1.1"
+						ideology = despotism
+					}
+					promote_leader = yes
+				}
+				set_portraits = { civilian = { large ="gfx/leaders/CHN/Dieter.tga" } }
+				set_country_leader_description = { desc = CHN_DESC_LACIN }
+			}
+			declare_war_on = {
+					target = SRT
+					type = annex_everything
+				}
+		}
+CHN = {
+	CHN_mimic = {
+		set_nationality = CNJ
+		}
+	}
+	CNJ = {
+			set_capital = {state = 305}
+			add_state_core = 305
+			add_state_core = 312
+			add_state_core = 313
+			add_state_core = 306
+			transfer_state = 312
+			transfer_state = 305
+			transfer_state = 306
+			transfer_state = 313
+			
+			CHN_mimic = {
+				add_country_leader_role = {
+					country_leader = {
+						expire = "1965.1.1"
+						ideology = bandit
+					}
+					promote_leader = yes
+				}
+			}
+				set_portraits = { civilian = { large ="gfx/leaders/CHN/Mimic.tga" } }
+				set_country_leader_description = { desc = CHN_DESC_MIMIC }
+	
+			
+		}
+CHN = {
+	CHN_actia_pagala = {
+		set_nationality = VOP
+		}
+	CHN_spymaster = {
+		set_nationality = VOP
+		}
+	}
+	VOP = {
+			set_capital = {state = 261}
+			add_state_core = 261
+			add_state_core = 311
+			transfer_state = 261
+			transfer_state = 311
+
+			CHN_actia_pagala = {
+				add_country_leader_role = {
+					country_leader = {
+						expire = "1965.1.1"
+						ideology = plutocracy
+					}
+					promote_leader = yes
+				}
+			}
+				set_portraits = { civilian = { large ="gfx/leaders/CHN/Default.tga" } }
+				set_country_leader_description = { desc = CHN_DESC_ACTIA }
+	
+			declare_war_on = {
+					target = CHN
+					type = annex_everything
+				}
+		}
+		
+CHN = {
+	CHN_chnwarindustrialist = {
+		set_nationality = AIT
+		}
+	CHN_chnindustrialist = {
+		set_nationality = AIT
+		}
+	}
+	AIT = {
+			set_capital = {state = 303}
+			add_state_core = 303
+			add_state_core = 304
+			transfer_state = 303
+			transfer_state = 304
+
+			CHN_chnwarindustrialist = {
+				add_country_leader_role = {
+					country_leader = {
+						expire = "1965.1.1"
+						ideology = corporatocracy
+						traits={ rich_industrialist }
+					}
+					promote_leader = yes
+				}
+			}
+				set_portraits = { civilian = { large ="gfx/leaders/CHN/Default.tga" } }
+				set_country_leader_description = { desc = CHN_DESC_COMORAUGH }
+		}
+	CLW = {
+			set_capital = {state = 308}
+			add_state_core = 308
+			transfer_state = 308
+
+
+		}
+CHN = {
+	CHN_vect = {
+		set_nationality = CRF
+		}
+	}
+	CRF = {
+			set_capital = {state = 247}
+			add_state_core = 247
+			transfer_state = 247
+			
+			CHN_vect = {
+				add_country_leader_role = {
+					country_leader = {
+						expire = "1965.1.1"
+						ideology = stalinism
+						traits={ revolutionary_general anti_democrat }
+					}
+					promote_leader = yes
+				}
+			}
+				
+		}
+	COP = {
+			set_capital = {state = 247}
+			add_state_core = 319
+			transfer_state = 319
+		
+
+		}
+	FEH = {
+			set_capital = {state = 321}
+			add_state_core = 321
+			transfer_state = 321
+			add_state_core = 320
+			transfer_state = 320
+		
+
+		}
+	CFU = {
+			set_capital = {state = 323}
+			add_state_core = 322
+			transfer_state = 322
+			add_state_core = 323
+			transfer_state = 323
+		
+
+		}
+CHN = {
+	CHN_hivesmarschall_synovial = {
+		set_nationality = NSG
+		}
+	}
+	NSG = {
+			set_capital = {state = 248}
+			add_state_core = 246
+			add_state_core = 248
+			add_state_core = 291
+			transfer_state = 246
+			transfer_state = 248
+			transfer_state = 291
+			
+			CHN_hivesmarschall_synovial = {
+				add_country_leader_role = {
+					country_leader = {
+						expire = "1965.1.1"
+						ideology = despotism
+						traits={  }
+					}
+					promote_leader = yes
+				}
+			}		
+		}
+CHN = {
+	CHN_pharynx = {
+		set_nationality = PLP
+		}
+	}
+	PLP = {
+			set_capital = {state = 258}
+			add_state_core = 258
+			add_state_core = 307
+			transfer_state = 258
+			transfer_state = 307
+			
+			CHN_pharynx = {
+				add_country_leader_role = {
+					country_leader = {
+						expire = "1965.1.1"
+						ideology = centrism
+						traits={  }
+					}
+					promote_leader = yes
+				}
+			}		
+		}
+	}
+}
+#
+country_event = {
+	id = PT_Collapse.2
+	title = PT_Collapse.2.t
+	desc = PT_Collapse.2.d
+option = {
+name = PT_collapse.2.a
+kill_country_leader = yes
+add_stability = -0.5
+set_political_power = 0
+	}
+}

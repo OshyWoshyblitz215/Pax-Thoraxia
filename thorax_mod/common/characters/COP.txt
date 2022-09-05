@@ -1,0 +1,34 @@
+characters={
+	COP_phasma={
+		name="The Hive Eternal"
+		portraits={
+			civilian={
+				large="gfx/leaders/CHN/Default.tga"
+			}
+		}
+		country_leader={
+			ideology=theocracy_subideology
+			traits={ chosen_one }
+			expire="1965.1.1.1"
+			id=-1
+		}
+		country_leader={
+			ideology=religious_socialism
+			traits={ chosen_one }
+			expire="1965.1.1.1"
+			id=-1
+		}
+		country_leader={
+			ideology=harmonic_theocracy
+			traits={ chosen_one }
+			expire="1965.1.1.1"
+			id=-1
+		}
+		country_leader={
+			ideology=falangism
+			traits={ chosen_one }
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+}

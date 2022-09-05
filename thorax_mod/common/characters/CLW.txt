@@ -1,0 +1,16 @@
+characters={
+	CLW_slipad_vinge={
+		name="Slipad Vinge"
+		portraits={
+			civilian={
+				large="gfx/leaders/CHN/Default.tga"
+			}
+		}
+		country_leader={
+			ideology=kratokracy
+			traits={ famous_aviator }
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+}

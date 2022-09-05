@@ -1,0 +1,43 @@
+characters={
+	FEH_council={
+		name="Council of Free Hives"
+		portraits={
+			civilian={
+				large="gfx/leaders/CHN/Default.tga"
+			}
+		}
+		country_leader={
+			ideology=libertarianism
+			expire="1965.1.1.1"
+			id=-1
+		}
+		country_leader={
+			ideology=anarchist_communism
+			expire="1965.1.1.1"
+			id=-1
+		}
+		country_leader={
+			ideology=harmonic_libertarianism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+	CFU_council={
+		name="United Changeling Unions"
+		portraits={
+			civilian={
+				large="gfx/leaders/CHN/Default.tga"
+			}
+		}
+		country_leader={
+			ideology=syndicalism
+			expire="1965.1.1.1"
+			id=-1
+		}
+		country_leader={
+			ideology=socialism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+}
