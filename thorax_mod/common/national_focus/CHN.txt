@@ -95,7 +95,7 @@ focus_tree = {
 			factor = 2000
 		}
 		x = 5
-		y = 5
+		y = 3
 		prerequisite = { focus = PT_chrys_sends_diplomats_out }
 		will_lead_to_war_with = CCN
 		completion_reward = {
