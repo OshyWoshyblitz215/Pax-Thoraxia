@@ -13,3 +13,10 @@ changeling_civil_war = {
         }
     }
 }
+PT_the_queens = {
+    priority = 120
+    allowed = {
+        original_tag = CCN
+        has_country_flag = won_th_cw
+    }
+}

@@ -150,6 +150,18 @@ country_event = {
 		CHN = { CHN_osteitis = { set_nationality = CCN } }
 		CHN = { CHN_sooty = { set_nationality = CCN } }
 		CHN = { CHN_tetti_rhombi = { set_nationality = CCN } }
+		generate_character = {
+			token_base = PT_added_general
+			name = dont_remember
+			corps_commander = {
+				traits = { panzer_leader promising_general }
+				skill = 2
+				attack_skill = 3
+				defense_skill = 2
+				planning_skill = 3
+				logistics_skill = 2
+			}
+		}
 	}
 }
 country_event = {
@@ -195,7 +207,7 @@ country_event = {
 		}
 	}
 }
-country_event = {
+country_event = { #CHN told aobut PHA
 	id = PT_CCN_allies.8
 	title = PT_CCN_allies.8.t
 	desc = PT_CCN_allies.8.d
@@ -206,7 +218,7 @@ country_event = {
 		
 	}
 }
-country_event = {
+country_event = { CCN told aobut PHA
 	id = PT_CCN_allies.9
 	title = PT_CCN_allies.9.t
 	desc = PT_CCN_allies.9.d
@@ -262,6 +274,81 @@ country_event = {
 		CHN_pharynx = {
 			set_portraits = { army = { large = "gfx/leaders/CCN/PT_Pharynx.tga" } }
 			promote_leader = yes
+		}
+	}
+}
+country_event = {
+	id = PT_CCN_allies.14
+	title = PT_CCN_allies.14.t
+	desc = PT_CCN_allies.14.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = PT_CCN_allies.14.a
+		diplomatic_relation = {
+			country = DTR
+			relation = puppet
+			active = yes
+		}
+	}
+}
+country_event = {
+	id = PT_CCN_allies.15
+	title = PT_CCN_allies.15.t
+	desc = PT_CCN_allies.15.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = PT_CCN_allies.15.a
+		diplomatic_relation = {
+			country = SRT
+			relation = puppet
+			active = yes
+		}
+	}
+}
+country_event = {
+	id = PT_CCN_allies.16
+	title = PT_CCN_allies.16.t
+	desc = PT_CCN_allies.16.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = PT_CCN_allies.16.a
+		diplomatic_relation = {
+			country = VRK
+			relation = puppet
+			active = yes
+		}
+	}
+}
+country_event = {
+	id = PT_CCN_allies.17
+	title = PT_CCN_allies.17.t
+	desc = PT_CCN_allies.17.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = PT_CCN_allies.17.a
+		diplomatic_relation = {
+			country = PHA
+			relation = puppet
+			active = yes
+		}
+	}
+}
+country_event = {
+	id = PT_CCN_allies.18
+	title = PT_CCN_allies.18.t
+	desc = PT_CCN_allies.18.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = PT_CCN_allies.18.a
+		diplomatic_relation = {
+			country = GRK
+			relation = puppet
+			active = yes
 		}
 	}
 }
