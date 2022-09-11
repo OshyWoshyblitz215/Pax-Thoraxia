@@ -1,0 +1,35 @@
+add_namespace = PT_events
+
+country_event = { #we've won the civil war
+	id = PT_event.1
+	fire_only_once = yes
+	hidden = yes
+	trigger = {
+		CHN = {
+			exists = no
+		}
+		CCN = {
+			exists = yes
+		}
+	}
+	immediate = {
+		news_event = { id = PT_CHN.31 }
+	}
+}
+#country_event = {
+#	id = PT_event.2
+#	fire_only_once = yes
+#	trigger = {
+#		CHN = {
+#			focus_progress = {
+#				focus = destroy_thoraxian_opposition
+#				progress > 0.1
+#			}
+#		}
+#	}
+#	option = {
+#		CHN = {
+#			country_event = { id = PT_CHN.2 }
+#		}
+#	}
+#}

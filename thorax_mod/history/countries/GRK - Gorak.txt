@@ -151,7 +151,7 @@ if = {
 		has_dlc = "Together for Victory"
 	}
 }
-nization
+
 }
 if = {
 	limit = {

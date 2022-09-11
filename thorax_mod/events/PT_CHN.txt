@@ -1065,12 +1065,12 @@ news_event = { # CIVIL WAR
 	is_triggered_only = yes
 	major = yes
 	hidden_effect = {
-		CHN = { add_ideas = { CCN_Civil_War } }
-		CCN = { add_ideas = { CCN_Civil_War } }
-		DTR = { add_ideas = { CCN_Civil_War } }
-		SRT = { add_ideas = { CCN_Civil_War } }
-		VRK = { add_ideas = { CCN_Civil_War } }
-		LCD = { add_ideas = { CCN_Civil_War } }
+		CHN = { add_ideas = { PT_bug_cw } }
+		CCN = { swap_ideas = { remove_idea = PT_temporary_government add_idea = PT_bug_cw } }
+		DTR = { add_ideas = { PT_bug_cw } }
+		SRT = { add_ideas = { PT_bug_cw } }
+		VRK = { add_ideas = { PT_bug_cw } }
+		LCD = { add_ideas = { PT_bug_cw } }
 		add_threat = 4
 	}
 	option = {
@@ -1129,6 +1129,7 @@ news_event = { # CIVIL WAR THORAX WON
 	hidden_effect = {
 		CCN = {
 			set_country_flag = won_th_cw
+			load_focus_tree = { tree = PT_thorax_postcw_focus_tree keep_completed = yes }
 		}
 		add_threat = -4
 	}

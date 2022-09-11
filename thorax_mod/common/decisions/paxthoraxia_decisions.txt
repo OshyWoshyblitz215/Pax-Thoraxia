@@ -127,6 +127,7 @@ PT_DTR_betrayal = {
 	cost = 25
 	visible = {
 		DTR = { has_country_flag = CCN_offered_friendship }
+		has_completed_focus = PT_the_princess_revolt
 	}
 	available = {
 		CHN = { 
