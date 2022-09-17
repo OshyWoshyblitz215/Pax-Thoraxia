@@ -134,11 +134,6 @@ shared_focus = { #Munitions Office
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus PT_war_preperations"
-#		323 = {
-#			add_extra_state_shared_building_slots = 4
-#			add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
-#			add_building_construction = { type = arms_factory level = 2 instant_build = yes }
-#		}
 		division_template = { name = "Minutelings" priority = 1 template_counter = 14 regiments = { infantry = { x = 0 y = 0 } infantry = { x = 0 y = 1 } infantry = { x = 0 y = 2 } infantry = { x = 1 y = 0 } infantry = { x = 1 y = 1 } infantry = { x = 1 y = 2 } } support = { engineer = { x = 0 y = 0 } } }
 		random_controlled_state = {
 			limit = { ROOT = { has_full_control_of_state = PREV } }
@@ -404,6 +399,7 @@ shared_focus = {
 		322 = {
 			add_extra_state_shared_building_slots = 3
 			add_building_construction = { type = arms_factory level = 3 instant_build = yes }
+			add_to_variable = { PT_war_factories = 3 }
 		}
 	}
 }
@@ -430,6 +426,8 @@ shared_focus = {
 			add_extra_state_shared_building_slots = 6
 			add_building_construction = { type = arms_factory level = 3 instant_build = yes }
 			add_building_construction = { type = industrial_complex level = 3 instant_build = yes }
+			add_to_variable = { PT_war_factories = 3 }
+			add_to_variable = { PT_war_civs = 3 }
 		}
 		add_resource = { type = steel amount = 10 state = 323 }
 		add_resource = { type = aluminium amount = 12 state = 323 }
@@ -653,19 +651,40 @@ shared_focus = {
 		factor = 1000
 	}
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus PT_bitersweet_victory"
+		log = "[GetDateText]: [Root.GetName]: Focus PT_bittersweet_victory"
 #		set_country_flag = thorax_won_the_war
 #		news_event = { id = PT_CHN.31 }
+		activate_mission = PT_demilitarise_mission
+		hidden_effect = {
+			add_to_array = { PT_should_demilitarise_countries = SRT }
+			add_to_array = { PT_should_demilitarise_countries = VRK }
+			add_to_array = { PT_should_demilitarise_countries = DTR }
+			add_to_array = { PT_should_demilitarise_countries = PHA }
+			add_to_array = { PT_should_demilitarise_countries = GRK }
+			add_to_array = { PT_should_demilitarise_countries = CCN }
+			for_each_scope_loop = {
+				array = PT_should_demilitarise_countries
+				every_owned_state = {
+					limit = {
+						check_variable = { PT_war_factories > 0 }
+					}
+					set_variable = { var = PT_optimal_war_factory_number value = building_level@arms_factory }
+					subtract_from_variable = { var = PT_optimal_war_factory_number = PT_war_factories }
+				}
+			}
+			add_ideas = { PT_overmilitarised }
+		}
 	}
 }
+
 shared_focus = {
 	id = PT_asses_haha_funny_focus
 	icon = GFX_goal_chn_thorax_and_harmony
-	cost = 4.4
+	cost = 4.40
 	x = 0
 	y = 1
-	relative_position_id = PT_bitersweet_victory
-	prerequisite = { focus = PT_bitersweet_victory }
+	relative_position_id = PT_bittersweet_victory
+	prerequisite = { focus = PT_bittersweet_victory }
 	ai_will_do = {
 		factor = 1000
 	}

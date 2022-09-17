@@ -6,7 +6,7 @@ ideas = {
 			allowed = { always = no	}
 			allowed_civil_war = { always = yes }
 			removal_cost = -1
-			picture = GFX_goal_PT_spying_tower
+			picture = GFX_PT_CCN_spying_tower
 			
 			targeted_modifier = {
 				tag = CHN
@@ -105,6 +105,19 @@ ideas = {
 			}
 			on_remove = {
 				country_lock_all_division_template = no
+			}
+			removal_cost = -1
+			picture = CHN_political_divisions
+		}
+		PT_overmilitarised = {
+			allowed = {
+				always = no
+			}
+			available = {
+			}
+			modifier = {
+				stability_factor = -0.10
+				production_factory_max_efficiency_factor = -0.1
 			}
 			removal_cost = -1
 			picture = CHN_political_divisions

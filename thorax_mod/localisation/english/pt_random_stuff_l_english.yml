@@ -8,9 +8,18 @@ PT_insight_into_the_tower_desc:0 "The highest ranks of Chrysalis's government, k
 PT_spies_within:0 "Spies Within"
 PT_spies_within_desc:0 "There are several harmonist traitors in The Tower, and they are making it harder for us to beat Thorax."
 PT_temporary_government:0 "Temporary Government"
-PT_temporary_government:0 "Ever since the collapse of the Chrysalis's rule, Thorax and his loyal cohorts made it to the otherside and retake as many strongholds as possible in the obscure parts of the queendom... however the sudden change of government and our inexperienced in our governance, will hard for us to do anything political changes as easy... we have to do something about this before we go to civil war."
-
-
-#kings council
-PT_the_queens:0 ""
+PT_temporary_government_desc:0 "Ever since the collapse of the Chrysalis's rule, Thorax and his loyal cohorts made it to the otherside and retake as many strongholds as possible in the obscure parts of the queendom... however the sudden change of government and our inexperienced in our governance, will hard for us to do anything political changes as easy... we have to do something about this before we go to civil war."
+PT_overmilitarised:0 "Overmilitarisation"
+PT_overmilitarised_desc:0 "though the war is over... the effects of rapid militarization have drain us of our ability to repair what we have lost and resources"
+#decisions
+PT_the_queens:0 "The kings council"
 PT_the_queens_desc:0 "Although the Queens have become subject to Thoraxs rule, they still hold lots of influence on politics. It'd be best to keep them all on our side.\n       Vraksian Loyalty: §Y[?PT_CCN_VRK_relation]§!\n       Dytrisian Loyalty:§Y[?PT_CCN_DTR_relation]§!\n       Sorythian Loyalty:§Y[?PT_CCN_SRT_relation]§!\n       Lyctidan Loyalty:§Y[?PT_CCN_PHA_relation]§!"
+#custom tooltips
+PT_improves_PHA_opinion:0 "Increases Aurantia IIs loyalty"
+PT_improves_VRK_opinion:0 "Increases Argynniss loyalty"
+PT_improves_SRT_opinion:0 "Increases Yarias loyalty"
+PT_improves_DTR_opinion:0 "Increases Helvias loyalty"
+PT_worsens_PHA_opinion:0 "Lowers Aurantia IIs loyalty"
+PT_worsens_VRK_opinion:0 "Lowers Argynniss loyalty"
+PT_worsens_SRT_opinion:0 "Lowers Yarias loyalty"
+PT_worsens_DTR_opinion:0 "Lowers Helvias loyalty"
