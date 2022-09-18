@@ -205,6 +205,7 @@ country_event = {
 		CCN = {
 			add_to_faction = DTR
 		}
+		CHN = { country_event = { PT_CCN_allies.10 } }
 	}
 }
 country_event = { #CHN told aobut PHA
@@ -229,7 +230,7 @@ country_event = { CCN told aobut PHA
 		
 	}
 }
-country_event = {
+country_event = { #CHN told about DTR rebellion
 	id = PT_CCN_allies.10
 	title = PT_CCN_allies.10.t
 	desc = PT_CCN_allies.10.d
@@ -237,7 +238,6 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = PT_CCN_allies.10.a
-		
 	}
 }
 country_event = {

@@ -477,7 +477,8 @@ shared_focus = {
 		PHA = {
 			add_country_leader_trait = PT_swayed_by_thorax
 			add_opinion_modifier = { target = CCN modifier = PT_they_like_thorax }
-			PT_Aurantia_II = { set_country_leader_description = { desc = chn_queen_argynnis_desc } }
+#			PT_Aurantia_II = { }
+			set_country_leader_description = { ideology = harmonic_constitutionalism desc = chn_queen_argynnis_desc }
 #			add_ai_strategy = { type = alliance id = CCN value = 500 }
 #			add_ai_strategy = { type = befriend id = CCN value = 500 }
 #			add_ai_strategy = { type = diplo_action_acceptance id = CCN value = 100 target = join_allies }
@@ -489,14 +490,14 @@ shared_focus = {
 			modifier = PT_they_like_thorax
 		}
 		add_to_faction = PHA
-		country_event = { PT_CCN_allies.9 }
+		country_event = { id = PT_CCN_allies.9 }
 		CHN = { country_event = { PT_CCN_allies.8 } }
 	}
 }
 shared_focus = {
 	id = PT_hidden_airbases
 	icon = GFX_goal_chn_airbase
-	cost = 7.2
+	cost = 7.20
 	x = -2
 	y = 3
 	relative_position_id = PT_fight_for_whats_right
@@ -522,7 +523,7 @@ shared_focus = {
 shared_focus = {
 	id = PT_restore_old_fortresses
 	icon = GFX_goal_chn_fortress
-	cost = 8.6
+	cost = 8.60
 	x = 2
 	y = 3
 	relative_position_id = PT_fight_for_whats_right
@@ -568,7 +569,7 @@ shared_focus = {
 shared_focus = {
 	id = PT_sabotage_chrys_focus
 	icon = GFX_goal_chn_fortress #placeholder
-	cost = 8.6
+	cost = 8.60
 	x = -1
 	y = 1
 	relative_position_id = PT_restore_old_fortresses
@@ -620,7 +621,7 @@ shared_focus = {
 shared_focus = {
 	id = PT_for_thorax_and_harmony
 	icon = GFX_goal_chn_thorax_and_harmony
-	cost = 5
+	cost = 5.00
 	x = 0
 	y = 5
 	relative_position_id = PT_fight_for_whats_right
@@ -695,7 +696,7 @@ shared_focus = {
 shared_focus = {
 	id = PT_the_young_queens_allegiance
 	icon = GFX_goal_chn_thorax_and_harmony
-	cost = 5
+	cost = 5.00
 	x = -3
 	y = 1
 	relative_position_id = PT_asses_haha_funny_focus
@@ -711,7 +712,7 @@ shared_focus = {
 shared_focus = {
 	id = PT_the_sea_queen
 	icon = GFX_goal_chn_thorax_and_harmony
-	cost = 5
+	cost = 5.00
 	x = -1
 	y = 1
 	relative_position_id = PT_asses_haha_funny_focus
@@ -725,7 +726,7 @@ shared_focus = {
 shared_focus = {
 	id = PT_the_warrior_queen
 	icon = GFX_goal_chn_thorax_and_harmony
-	cost = 5
+	cost = 5.00
 	x = 1
 	y = 1
 	relative_position_id = PT_asses_haha_funny_focus
@@ -739,7 +740,7 @@ shared_focus = {
 shared_focus = {
 	id = PT_the_ice_queen
 	icon = GFX_goal_chn_thorax_and_harmony
-	cost = 5
+	cost = 5.00
 	x = 3
 	y = 1
 	relative_position_id = PT_asses_haha_funny_focus
@@ -753,7 +754,7 @@ shared_focus = {
 shared_focus = {
 	id = PT_the_red_north
 	icon = GFX_goal_chn_thorax_and_harmony
-	cost = 5.7
+	cost = 5.70
 	x = 0
 	y = 2
 	relative_position_id = PT_asses_haha_funny_focus
@@ -767,7 +768,7 @@ shared_focus = {
 shared_focus = {
 	id = PT_the_changeling_king
 	icon = GFX_goal_chn_thorax_and_harmony
-	cost = 7.2
+	cost = 7.20
 	x = 0
 	y = 2
 	relative_position_id = PT_the_red_north
