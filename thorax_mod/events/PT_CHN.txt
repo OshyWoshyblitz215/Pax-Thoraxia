@@ -579,6 +579,7 @@ country_event = { #opening: Chrysalis meetings end?
 					country_leader = {
 						expire = "1965.1.1"
 						ideology = nazism
+						desc = chn_queen_yaria_desc
 					}
 					promote_leader = yes
 				}
@@ -586,6 +587,7 @@ country_event = { #opening: Chrysalis meetings end?
 					country_leader = {
 						expire = "1965.1.1"
 						ideology = juche
+						desc = chn_queen_yaria_desc
 					}
 					promote_leader = yes
 				}
@@ -593,6 +595,7 @@ country_event = { #opening: Chrysalis meetings end?
 					country_leader = {
 						expire = "1965.1.1"
 						ideology = conservatism
+						desc = chn_queen_yaria_desc
 					}
 					promote_leader = yes
 				}
@@ -600,6 +603,7 @@ country_event = { #opening: Chrysalis meetings end?
 					country_leader = {
 						expire = "1965.1.1"
 						ideology = despotism
+						desc = chn_queen_yaria_desc
 					}
 					promote_leader = yes
 				}
@@ -620,6 +624,7 @@ country_event = { #opening: Chrysalis meetings end?
 					country_leader = {
 						expire = "1965.1.1"
 						ideology = nazism
+						desc = chn_queen_helvia_desc
 					}
 					promote_leader = yes
 				}
@@ -627,6 +632,7 @@ country_event = { #opening: Chrysalis meetings end?
 					country_leader = {
 						expire = "1965.1.1"
 						ideology = juche
+						desc = chn_queen_helvia_desc
 					}
 					promote_leader = yes
 				}
@@ -634,6 +640,7 @@ country_event = { #opening: Chrysalis meetings end?
 					country_leader = {
 						expire = "1965.1.1"
 						ideology = conservatism
+						desc = chn_queen_helvia_desc
 					}
 					promote_leader = yes
 				}
@@ -641,13 +648,13 @@ country_event = { #opening: Chrysalis meetings end?
 					country_leader = {
 						expire = "1965.1.1"
 						ideology = despotism
+						desc = chn_queen_helvia_desc
 					}
 					promote_leader = yes
 				}
 				set_portraits = { civilian = { large ="gfx/leaders/CHN/Helvia.tga" } }
 			}
 		}
-		set_country_leader_description = { ideology = nazism desc = chn_queen_helvia_desc }
 		CHN_queen_aurantia = {
 			set_nationality = LCD
 		}
@@ -663,6 +670,7 @@ country_event = { #opening: Chrysalis meetings end?
 					country_leader = {
 						expire = "1965.1.1"
 						ideology = nazism
+						desc = chn_queen_aurantia_desc
 					}
 					promote_leader = yes
 				}
@@ -670,6 +678,7 @@ country_event = { #opening: Chrysalis meetings end?
 					country_leader = {
 						expire = "1965.1.1"
 						ideology = juche
+						desc = chn_queen_aurantia_desc
 					}
 					promote_leader = yes
 				}
@@ -677,6 +686,7 @@ country_event = { #opening: Chrysalis meetings end?
 					country_leader = {
 						expire = "1965.1.1"
 						ideology = conservatism
+						desc = chn_queen_aurantia_desc
 					}
 					promote_leader = yes
 				}
@@ -684,12 +694,12 @@ country_event = { #opening: Chrysalis meetings end?
 					country_leader = {
 						expire = "1965.1.1"
 						ideology = despotism
+						desc = chn_queen_aurantia_desc
 					}
 					promote_leader = yes
 				}
 				set_portraits = { civilian = { large ="gfx/leaders/CHN/Aurantia.tga" } }
 			}
-			set_country_leader_description = { ideology = nazism desc = chn_queen_aurantia_desc }
 		}
 		CHN_queen_argynnis = {
 			set_nationality = VRK
@@ -716,6 +726,7 @@ country_event = { #opening: Chrysalis meetings end?
 					country_leader = {
 						expire = "1965.1.1"
 						ideology = nazism
+						desc = chn_queen_argynnis_desc
 					}
 					promote_leader = yes
 				}
@@ -723,6 +734,7 @@ country_event = { #opening: Chrysalis meetings end?
 					country_leader = {
 						expire = "1965.1.1"
 						ideology = juche
+						desc = chn_queen_argynnis_desc
 					}
 					promote_leader = yes
 				}
@@ -730,6 +742,7 @@ country_event = { #opening: Chrysalis meetings end?
 					country_leader = {
 						expire = "1965.1.1"
 						ideology = conservatism
+						desc = chn_queen_argynnis_desc
 					}
 					promote_leader = yes
 				}
@@ -737,12 +750,12 @@ country_event = { #opening: Chrysalis meetings end?
 					country_leader = {
 						expire = "1965.1.1"
 						ideology = despotism
+						desc = chn_queen_argynnis_desc
 					}
 					promote_leader = yes
 				}
 				set_portraits = { civilian = { large ="gfx/leaders/CHN/Argynnis.tga" } }
 			}
-			set_country_leader_description = { ideology = nazism desc = chn_queen_argynnis_desc }
 		}
 		add_to_array = { tag_array = SRT }
 		add_to_array = { tag_array = DTR }
@@ -1135,7 +1148,6 @@ news_event = { # CIVIL WAR THORAX WON
 	immediate = { hidden_effect = {
 		CCN = {
 			set_country_flag = won_th_cw
-			load_focus_tree = { tree = PT_thorax_postcw_focus_tree keep_completed = yes }
 		}
 		add_threat = -4
 	} }
