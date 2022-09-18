@@ -315,8 +315,8 @@ country_event = { #DTR bends
 	desc = PT_CHN.4.d
 	is_triggered_only = yes
 	option = {
+		name = PT_CHN.4.a
 		CHN = {
-			name = PT_CHN.4.a
 			puppet = DTR
 			set_autonomy = {
 				target = DTR
@@ -604,8 +604,8 @@ country_event = { #opening: Chrysalis meetings end?
 					promote_leader = yes
 				}
 				set_portraits = { civilian = { large ="gfx/leaders/CHN/Yaria.tga" } }
-				set_country_leader_description = { desc = chn_queen_yaria_desc }
 			}
+			set_country_leader_description = { ideology = nazism desc = chn_queen_yaria_desc }
 		}
 		CHN_queen_helvia = {
 			set_nationality = DTR
@@ -645,9 +645,9 @@ country_event = { #opening: Chrysalis meetings end?
 					promote_leader = yes
 				}
 				set_portraits = { civilian = { large ="gfx/leaders/CHN/Helvia.tga" } }
-				set_country_leader_description = { desc = chn_queen_helvia_desc }
 			}
 		}
+		set_country_leader_description = { ideology = nazism desc = chn_queen_helvia_desc }
 		CHN_queen_aurantia = {
 			set_nationality = LCD
 		}
@@ -688,8 +688,8 @@ country_event = { #opening: Chrysalis meetings end?
 					promote_leader = yes
 				}
 				set_portraits = { civilian = { large ="gfx/leaders/CHN/Aurantia.tga" } }
-				set_country_leader_description = { desc = chn_queen_aurantia_desc }
 			}
+			set_country_leader_description = { ideology = nazism desc = chn_queen_aurantia_desc }
 		}
 		CHN_queen_argynnis = {
 			set_nationality = VRK
@@ -741,8 +741,8 @@ country_event = { #opening: Chrysalis meetings end?
 					promote_leader = yes
 				}
 				set_portraits = { civilian = { large ="gfx/leaders/CHN/Argynnis.tga" } }
-				set_country_leader_description = { desc = chn_queen_argynnis_desc }
 			}
+			set_country_leader_description = { ideology = nazism desc = chn_queen_argynnis_desc }
 		}
 		add_to_array = { tag_array = SRT }
 		add_to_array = { tag_array = DTR }
@@ -771,13 +771,12 @@ country_event = { #opening: Chrysalis meetings end?
 			modern_society
 			no_lack_of_scientists
 			no_poverty
-		}
-			add_ideas = passive_hive_ai
+			passive_hive_ai
 		}
 		country_lock_all_division_template = no
 		add_war_support = 0.25
 		add_stability = 0.25
-		remove_ideas = political_divisions
+		remove_ideas = { political_divisions }
 		}
 	}
 }
@@ -863,7 +862,10 @@ country_event = { #opening: Chrysalis meetings epilogue: free thorax
 	desc = PT_CHN.20.d
 	is_triggered_only = yes
 	timeout_days = 5
-	immediate = { country_event = { id = PT_CHN.23 }} #we will wget rid of this once that event is unneded
+	immediate = {
+		hidden_effect = { 
+			country_event = { id = PT_CHN.23 }} #we will wget rid of this once that event is unneded
+		}
 	option = {
 		name = PT_CHN.20.a
 		add_popularity = {
@@ -885,6 +887,8 @@ country_event = { #opening: Chrysalis meetings epilogue: free thorax
 				set_portraits = { civilian = { large ="gfx/leaders/CCN/PT_Thorax.tga" } }
 			}
 			load_focus_tree = { tree = PT_thorax_focus_tree keep_completed = yes }
+			remove_ideas = { CCN_Civil_War }
+			add_ideas = { PT_bug_cw }
 		}
 		CCN = {
 			change_tag_from = CHN
@@ -911,6 +915,8 @@ country_event = { #opening: Chrysalis meetings epilogue: free thorax
 				set_portraits = { civilian = { large ="gfx/leaders/CCN/PT_Thorax.tga" } }
 			}
 			load_focus_tree = { tree = PT_thorax_focus_tree keep_completed = yes }
+			remove_ideas = { CCN_Civil_War }
+			add_ideas = { PT_bug_cw }
 		}
 	}
 }
@@ -934,7 +940,6 @@ country_event = { #chrysalis demands communists surrender
 	option = {
 		name=PT_CHN.21.b
 		CHN = { country_event = { id = PT_CHN.22 days = 1 } }
-		add_ideas = { CCN_Civil_War }
 		ai_chance = {
 			base = 100
 		}
@@ -981,6 +986,7 @@ country_event = { #does things that we will later outsource to the queens n comm
 				create_unit = { division = "name = \"Local Vollunteers\" division_template = \"Civil War Brigade\" start_experience_factor = 0.3" owner = PREV }
 				create_unit = { division = "name = \"Local Vollunteers\" division_template = \"Civil War Brigade\" start_experience_factor = 0.3" owner = PREV }
 			}
+			add_ideas = { PT_bug_cw }
 		}
 		GRK = {
 			add_ideas = { PT_communist_holdout }
@@ -1064,7 +1070,7 @@ news_event = { # CIVIL WAR
 	picture = GFX_event_PT_buggo_cw
 	is_triggered_only = yes
 	major = yes
-	hidden_effect = {
+	immediate = { hidden_effect = {
 		CHN = { add_ideas = { PT_bug_cw } }
 		CCN = { swap_ideas = { remove_idea = PT_temporary_government add_idea = PT_bug_cw } }
 		DTR = { add_ideas = { PT_bug_cw } }
@@ -1072,10 +1078,10 @@ news_event = { # CIVIL WAR
 		VRK = { add_ideas = { PT_bug_cw } }
 		LCD = { add_ideas = { PT_bug_cw } }
 		add_threat = 4
-	}
+	} }
 	option = {
 		name = PT_CHN.30.a
-		available = {
+		trigger = {
 			NOT = { OR = {
 				original_tag = DTR
 				original_tag = VRK
@@ -1091,7 +1097,7 @@ news_event = { # CIVIL WAR
 	}
 	option = {
 		name = PT_CHN.30.b
-		available = {
+		trigger = {
 			OR = {
 				original_tag = DTR
 				original_tag = VRK
@@ -1102,15 +1108,15 @@ news_event = { # CIVIL WAR
 	}
 	option = {
 		name = PT_CHN.30.c
-		available = { original_tag = CHN }
+		trigger = { original_tag = CHN }
 	}
 	option = {
 		name = PT_CHN.30.d
-		available = { original_tag = CCN }
+		trigger = { original_tag = CCN }
 	}
 	option = {
 		name = PT_CHN.30.e
-		available = {
+		trigger = {
 			OR = {
 				original_tag = CRY
 				original_tag = EQS
@@ -1126,16 +1132,16 @@ news_event = { # CIVIL WAR THORAX WON
 	picture = GFX_event_PT_buggo_cw
 	is_triggered_only = yes
 	major = yes
-	hidden_effect = {
+	immediate = { hidden_effect = {
 		CCN = {
 			set_country_flag = won_th_cw
 			load_focus_tree = { tree = PT_thorax_postcw_focus_tree keep_completed = yes }
 		}
 		add_threat = -4
-	}
+	} }
 	option = {
 		name = PT_CHN.31.a
-		available = {
+		trigger = {
 			NOT = { OR = {
 				original_tag = DTR
 				original_tag = VRK
@@ -1150,7 +1156,7 @@ news_event = { # CIVIL WAR THORAX WON
 	}
 	option = {
 		name = PT_CHN.31.b
-		available = {
+		trigger = {
 			OR = {
 				original_tag = DTR
 				original_tag = VRK
@@ -1161,11 +1167,11 @@ news_event = { # CIVIL WAR THORAX WON
 	}
 	option = {
 		name = PT_CHN.31.c
-		available = { original_tag = CCN }
+		trigger = { original_tag = CCN }
 	}
 	option = {
 		name = PT_CHN.31.d
-		available = {
+		trigger = {
 			OR = {
 				original_tag = CRY
 				original_tag = EQS

@@ -13,13 +13,21 @@ changeling_civil_war = {
         }
     }
 }
+PT_demilitarise = {
+    #icon = rifles
+    priority = 140
+    allowed = {
+        original_tag = CCN
+       has_completed_focus = PT_bittersweet_victory
+        is_debug = yes
+    }
+}
 PT_the_queens = {
     priority = 120
-    visible_when_empty = yes
 #    picture =
     allowed = {
-#        original_tag = CCN
-#        has_country_flag = won_th_cw
+        original_tag = CCN
+        has_country_flag = won_th_cw
         is_debug = yes
     }
 }

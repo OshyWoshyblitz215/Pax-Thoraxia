@@ -162,4 +162,43 @@ PT_befriend_queen_DTR = {
 
 
 }#end of the queens
+PT_demilitarise = {
+PT_demilitarise_state_mission = {
+	allowed = { always = no }
+#	icon = mission_icon
+	days_mission_timeout = 180
+	timeout_effect = {
+		add_stability = -0.2
+		add_war_support = -0.2
+		custom_effect_tooltip = PT_worsens_PHA_opinion
+		custom_effect_tooltip = PT_worsens_SRT_opinion
+		custom_effect_tooltip = PT_worsens_DTR_opinion
+		subtract_from_variable = { PT_CCN_SRT_relation = 2 }
+		subtract_from_variable = { PT_CCN_DTR_relation = 2 }
+		subtract_from_variable = { PT_CCN_PHA_relation = 2 }
+	}
+	available = {
+		all_owned_state = {
+			limit = {
+				check_variable = { PT_war_factories >0 }
+			}
+		}
+	}
+}
+PT_demilitarise_decision = {
+	visible = { has_completed_focus = PT_bittersweet_victory }
+	available = {
+		all_owned_state = {
+			limit = {
+				check_variable = { PT_war_factories > 0 }
+			}
+			check_variable = { var = PT_optimal_war_factory_number value = building_level@arms_factory }
+		}
+	}
+	select_effect = { remove_mission = PT_demilitarise_mission remove_ideas = { PT_overmilitarised } }
+}
 
+
+
+
+}#end of demilitarise
