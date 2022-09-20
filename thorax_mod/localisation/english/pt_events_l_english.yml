@@ -18,22 +18,28 @@ PT_CCN_allies.5.a:0 ""Thorax may not be that bad.""
 PT_CCN_allies.6.t:0 "Wehrmacht Defections"
 PT_CCN_allies.6.d:0 "Thorax sat in his makeshift bedroom/office. Laid out on his desk were various reports.\nA map sat in the middle of his desk displaying troop movements. So far, the lines were holding, much to his surprise. If he could get more troops. \nThorax wasn’t a military bug. These decisions were better served in the hooves of his commanders. His job was everything else. He briefly wondered what he could do about Lycitda; its’ fall would put his right on Chrysalis’ doorstep and make her divert troops away from Vraks and towards protecting the capital.\nA knock resounded through the makeshift office that was once a bedroom disrupting his thought process.\n“Enter,” Thorax looked up as a Changeling, one of his advisors.\n“Sir, we have received word from various generals from the Wehrmacht. They are rallying to our cause,” the advisor said.\nThorax smiled. “Well, there’s some good news,” he replied, getting up and coming around his desk.\n“When will they arrive?” Thorax asked.\n“A few delivered their defection in person, sir. They are waiting in the meeting room.”"
 PT_CCN_allies.6.a:0 "But where is my brother?"
+PT_CCN_allies.7.t:0 "The Sea Queen switched sides!"
+PT_CCN_allies.7.d:0 "We heard message via letter. Its from Queen Helvia of Ditrysium! She told us she no longer thinks Chrysalis has much of a chance to win the war. Therefore, she has decided to join our side, to preserve her hive and at least get some concessions from the defeated queen if possible..."
+PT_CCN_allies.7.a:0 "The more the merrier"
+PT_CCN_allies.10.t:0 "The Sea Queen switched sides!"
+PT_CCN_allies.10.d:0 "More terrible news! It appears Queen Helvia of Ditrysium is doubting our chances of success! She has decided to side with Thorax! We have lost a significant ally in this war, and lost our control over the sea. We hope we can recover from this…"
+PT_CCN_allies.10.a:0 "By gods! Why has she betrayed me?"
 PT_CCN_allies.13.t:0 "A Brotherly Reunion"
-PT_CCN_allies.13.d:0 "\nThorax was reading the files of the defected generals at his desk when all of a sudden, a knock came at the door.\nIt's instinct that makes him hold his pistol and speak up. “Greetings, I'm a little busy here... talk to me later.” Thorax replied with a firm tone.\n“Awwww…. Is there no time to see his little brother?” He heard a familiar voice, which made him turn around, open the door immediately, and saw Pharynx, his big brother.\nThorax couldn’t hold back his tears and hugs him tightly. “Oh Pharynx! You’re here! I couldn’t believe that you're here!” \nPharynx rolled his eyes and chuckles. “Well when i come to choose either the bitchy queen or my caring brother… the answer is obvious…” Pharynx smirks, hiding his pain and whiplashes behind his brother…\nThorax wipes his tears away. “I’m very gald youre here!” he looks behind and saw a shy yellow eyed Changeling officer wearing a reading glasses. “And who is she?” he asked.\nPharynx wraps his hoof to officer’s back which made her face red. “This beautiful butterfly is Yanna Chitin! My liutenant and my no.1 assistant” Yanna fixed her glasses and nods, not a single word coming from her.\n“So um only you two came to assist our war effort?” Thorax asked, he remembered that the war is still not yet over. Pharynx laughs. “Of course not! I brought my entire legion that are loyal to me and ready to fight for your course!”\nWith this Thorax smiled at his brother, with these new troops coming to fight for his struggle, their fortunes may finally change the course of the war."
+PT_CCN_allies.13.d:0 "Thorax was reading the files of the defected generals at his desk when all of a sudden, a knock came at the door.\nIt's instinct that makes him hold his pistol and speak up. “Greetings, I'm a little busy here... talk to me later.” Thorax replied with a firm tone.\n“Awwww…. Is there no time to see his little brother?” He heard a familiar voice, which made him turn around, open the door immediately, and saw Pharynx, his big brother.\nThorax couldn’t hold back his tears and hugs him tightly. “Oh Pharynx! You’re here! I couldn’t believe that you're here!” \nPharynx rolled his eyes and chuckles. “Well when i come to choose either the bitchy queen or my caring brother… the answer is obvious…” Pharynx smirks, hiding his pain and whiplashes behind his brother…\nThorax wipes his tears away. “I’m very gald youre here!” he looks behind and saw a shy yellow eyed Changeling officer wearing a reading glasses. “And who is she?” he asked.\nPharynx wraps his hoof to officer’s back which made her face red. “This beautiful butterfly is Yanna Chitin! My liutenant and my no.1 assistant” Yanna fixed her glasses and nods, not a single word coming from her.\n“So um only you two came to assist our war effort?” Thorax asked, he remembered that the war is still not yet over. Pharynx laughs. “Of course not! I brought my entire legion that are loyal to me and ready to fight for your course!”\nWith this Thorax smiled at his brother, with these new troops coming to fight for his struggle, their fortunes may finally change the course of the war."
 PT_CCN_allies.13.a:0 "I’m just glad you’re here brother"
 #not friends
 PT_CHN.3.t:0 "Lyctida accepts Vesapolian pressure"
-PT_CHN.3.d:0 "Well, at least we know who's on whos' side."
+PT_CHN.3.d:0 "A transmission just came in from Lyctida. The queen of Lyctida went on air to announce their return to the Changeling Hegemony. Chrysalis has stated that their integration will commence at a later date, but they are officially under the protection of Vesapolis as of today. This information is disheartening, but at least we know who not to trust in the future."
 PT_CHN.3.a:0 "One fewer ally and one more enemy."
 PT_CHN.4.t:0 "Dytrisium accepts Vesapolian pressure"
-PT_CHN.4.d:0 "Well, at least we know who's on whos' side."
+PT_CHN.4.d:0 "A transmission just came in from Dytrisium. The queen of Dytrisium went on air to announce their return to the Changeling Hegemony. Chrysalis has stated that their integration will commence at a later date, but they are officially under the protection of Vesapolis as of today. This information is disheartening, but at least we know who not to trust in the future."
 PT_CHN.4.a:0 "One fewer ally and one more enemy."
 PT_CHN.5.t:0 "Soryth resists Vesapolian pressure"
-PT_CHN.5.d:0 "Soryth has been offered peace under the condition of subservience to Chrysalis!\n\nLuckily for us, they refused. True friends really do always stick together."
-PT_CHN.5.a:0 "That IS the foundation of harmony after all."
+PT_CHN.5.d:0 "It’s been a while since Chrysalis issued the call back to the hegemony. She promised that if Soryth took the offer, it would be protected and no harm would be done to it. The days of waiting have been insufferable, but today we finally got a letter back from Soryth. They assured us that they weren’t taking the offer. Now we know we have a true friend we can count on!"
+PT_CHN.5.a:0 "Hopefully the others will follow this example of harmony!"
 PT_CHN.6.t:0 "Vraks resists Vesapolian pressure"
-PT_CHN.6.d:0 "Vraks has been offered peace under the condition of subservience to Chrysalis!\n\nLuckily for us, they refused. True friends really do always stick together."
-PT_CHN.6.a:0 "That IS the foundation of harmony after all."
+PT_CHN.6.d:0 "It’s been a while since Chrysalis issued the call back to the hegemony. She promised that if Soryth took the offer, it would be protected and no harm would be done to it. The days of waiting have been insufferable, but today we finally got a letter back from Soryth. They assured us that they weren’t taking the offer. Now we know we have a true friend we can count on!"
+PT_CHN.6.a:0 "Hopefully the others will follow this example of harmony!"
 PT_CHN.7.t:0 "Rise of the Communists"
 PT_CHN.7.d:0 "VOPS has reported that a union of various organisations that have communist, socialist and similar sympathies have seized the hive city of Gorak and have made it their base of operations! It seems that a large number of their sympathizers in the rest of the country have chosen to follow them north\n The Queen of Gorak was brutally killed and Gold Muffin has conducted a speech proclaiming the so-called 'liberation' of the north, as well as calling for all changeling workers to unite against the Queen!"
 PT_CHN.7.a:0 "The speech had a frighteningly large audience..."
@@ -74,6 +80,18 @@ PT_CHN.19.a:0 "The speech had a frighteningly large audience..."
 PT_CHN.20.t:0 "Rise of the Thoraxians"
 PT_CHN.20.d:0 "Control over the hive city of Antax and several areas sorrounding it has entirely been lost.\nIn a surprise attack that not even VOPS knew about, harmonists rose up in nearly all parts of the hive city at once and simultaneously attacked all nearby armed government installations.\n Having totally overwhelmed the officials in the city, the harmonists quickly seized as much as they could of the sorrounding countryside before running out of enthusiasm.\nMeasures have been taken to stop any further harmonist advances, although Chrysalis is still too mentally distraught from losing her empire to launch any counterattacks.\nVOPS has also discovered that Thorax has come out of hiding in the Crystal Empire to personally lead the harmonists."
 PT_CHN.20.a:0 "For Harmony!"
+PT_CHN.24.t:0 "Reply from Lyctida"
+PT_CHN.24.d:0 "Times have been hard these recent months since your rule collapsed. Many of your lands have been taken by enemies and traitors from within our very own changeling race. It’s an absolute travesty! Do you remember those old times when you and I stood together and fought together for a united changeling homeland? That is the dream of every changeling who believes in the heritage of our great race – like worship of our strength, elegant traditions, and much more! I still believe in that dream, this nation. Though currently disunited, it will inevitably be united by the unstoppable tide of fate.\nThis is our shared homeland Chrysalis – and I won't just wait and see this once great nation fall into the hooves of those harmonists and red plebs and becomes an Equestrian puppet. Let’s work together like in the good old days, like when we were still young. Let’s unite this great country once again and once and for all!"
+PT_CHN.24.a:0 "The days of glorious conquest are back!"
+PT_CHN.25.t:0 "Reply from Dytrisium"
+PT_CHN.25.d:0 "\nDear Chrysalis:\nIt seems like your little "Empire" is collapsing, doesn't it? And you know you can't beat all the traitors alone, so you come to seek my help? Look what you have done Chrysalis, the disunited nation which you united has collapsed again, all by your own design. United by you, collapsed by you. How Ironic.\nAlas, you call me and I’ll answer the call. Although I can assure you that Ditrysium will stand with you until the civil war finishes just like in the old times, but  you must assure me that after everything comes to an end, you will offer me a reward instead of a knife from the back.\nSo in this letter, let’s make everything clear before all start: my condition is that, after the civil war, Ditrysium should be provided more autonomy. Promise me this, and you will have my support and the support of all of Ditrysium. Understood? It’s not about stirring up any  opposition or meaning revenge – but at least now you will learn that the sons and daughters of Ditrysium will never do anything costing them their lives for nothing.\nRemember that you arrogant Queen.\nAnd undestand that the Changeling Lands aren't just city named Vesalipolis. "
+PT_CHN.25.a:0 "I'll make any promise, just help me in this war."
+PT_CHN.26.t:0 "Reply from SRT"
+PT_CHN.26.d:0 "VOPS has reported that a union of various communist, socialist and similar organisations have seized the hive city of Gorak and have made it their base of operations! It seems that a large number of their sympathizers in the rest of the country have chosen to follow them north\n The Queen of Gorak was brutally killed and Gold Muffin has conducted a speech proclaiming the so-called 'liberation' of the north, as well as calling for all changeling workers to unite against the Queen!"
+PT_CHN.26.a:0 "The speech had a frighteningly large audience..."
+PT_CHN.27.t:0 "Reply from VRK"
+PT_CHN.27.d:0 "VOPS has reported that a union of various communist, socialist and similar organisations have seized the hive city of Gorak and have made it their base of operations! It seems that a large number of their sympathizers in the rest of the country have chosen to follow them north\n The Queen of Gorak was brutally killed and Gold Muffin has conducted a speech proclaiming the so-called 'liberation' of the north, as well as calling for all changeling workers to unite against the Queen!"
+PT_CHN.27.a:0 "The speech had a frighteningly large audience..."
 PT_CHN.30.t:0 "Changeling Civil War"
 PT_CHN.30.d:0 "The Unthinkable has happened!\nChrysalis after gathering her troops at the border near major Forest has finally commenced the attack upon Thoraxian area. Little does she know, that Thorax has gathered allies from Vraks and Soryth and soon attack the Changeling lands. Queen Chrysalis herself called upon her allies to support her war effort, and soon the Civil war escaltes from a local skirmish to the north to a full blown war across the Changeling lands… the Conclusion of this battle is unknown"
 PT_CHN.30.a:0 "The Shapeshifters have torn their veil apart"
@@ -87,3 +105,31 @@ PT_CHN.31.a:0 "Finally, a light shines on this dark land..."
 PT_CHN.31.b:0 "Another victory for harmony!"
 PT_CHN.31.c:0 "We'll see if this 'king' is any better than Chrysalis."
 PT_CHN.31.d:0 "The flower blooms over iron helm."
+
+#Letter from Soryth
+#
+#To Chrysalis:
+#
+#The days of old have returned, and the states have been divided. Chrysalis, you know what, the queens’ age has been finished, it will be another part of changeling’s history soon. Or in other words: your time is been finished.
+#
+#Do you still think you can find a friend from an old ally just by telling the lie and playing tricks on them over and over again? Yes, I trusted you once, I simply considered that you will bring great and prosperity to the changeling race. But just look at today’s nation now, the fires of war has returns, gunshot and endless dying returns, and tell me Chrysalis - do you still regard this as the ‘glorious Conquest’? After watching so many lives die for nothing?
+#
+#Now the choice is upon my head. I am just simply not interested to join your stupid war and put you back to the highest throne. As long as I am still alive, the Key Lake and its people will never support you again!
+#
+#
+#So-called ‘Old-Golden-Time’ is just a stupid and merciless joke 
+#
+#
+
+
+#Letter from Vraks
+
+#To the Chryunt:
+
+#Ha, you fucking asshole worm, look what are you doing now? Bagging help from a “traitor queen?!”
+
+#Honestly, I don’t give a fuck for the bullshit you told me. I just enjoy seeing your fail, little queen. Your helpless cry when you find every ally has gone – I even can’t wait to see you in exile! I have to stand to your stupid rule for a long time, and now finally I don’t have to! Fuck off you liar, stand up, stop licking my hooves! Call me ‘mommy’ and cry but it will never do any effect but increase my hate on you. Sick worm, just continue bagging and crying – I’ll never offer my help with you and you know what? I gonna join the harmonists and push you back to the ocean. You’d better learn how to swim now. If I catch you on the land, I’ll cut every part of your body down and throw your remains to the street.
+
+#Fuck you cunt, may you have an awful and short life.
+
+#Chrysalis tears the letter apart in anger after reading... 
