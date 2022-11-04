@@ -180,7 +180,16 @@ country_event = {
 			}
 			CCN = { create_faction = THORAX_CIVIL_WAR_ALLIANCE }
 		}
+		CHN = {
+			country_event = { id = PT_CCN_allies.10 } 
+			diplomatic_relation = {
+				country = DTR
+				relation = puppet
+				active = no
+			}
+		}
 		DTR = {
+			declare_war_on = { type = civil_war target = CHN }
 			leave_faction = yes
 			add_country_leader_trait = PT_swayed_by_thorax
 			add_opinion_modifier = { target = CCN modifier = PT_they_like_thorax }
@@ -205,7 +214,7 @@ country_event = {
 		CCN = {
 			add_to_faction = DTR
 		}
-		CHN = { country_event = { PT_CCN_allies.10 } }
+		
 	}
 }
 country_event = { #CHN told aobut PHA
@@ -219,7 +228,7 @@ country_event = { #CHN told aobut PHA
 		
 	}
 }
-country_event = { CCN told aobut PHA
+country_event = { #CCN told aobut PHA
 	id = PT_CCN_allies.9
 	title = PT_CCN_allies.9.t
 	desc = PT_CCN_allies.9.d

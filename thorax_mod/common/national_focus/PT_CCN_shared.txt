@@ -478,7 +478,7 @@ shared_focus = {
 			add_country_leader_trait = PT_swayed_by_thorax
 			add_opinion_modifier = { target = CCN modifier = PT_they_like_thorax }
 #			PT_Aurantia_II = { }
-			set_country_leader_description = { ideology = conservatism desc = chn_queen_argynnis_desc }
+			set_country_leader_description = { desc = chn_queen_aurantia_ii_desc }
 #			add_ai_strategy = { type = alliance id = CCN value = 500 }
 #			add_ai_strategy = { type = befriend id = CCN value = 500 }
 #			add_ai_strategy = { type = diplo_action_acceptance id = CCN value = 100 target = join_allies }
@@ -670,7 +670,7 @@ shared_focus = {
 						check_variable = { PT_war_factories > 0 }
 					}
 					set_variable = { var = PT_optimal_war_factory_number value = building_level@arms_factory }
-					subtract_from_variable = { var = PT_optimal_war_factory_number = PT_war_factories }
+					subtract_from_variable = { var = PT_optimal_war_factory_number value= PT_war_factories }
 				}
 			}
 			add_ideas = { PT_overmilitarised }

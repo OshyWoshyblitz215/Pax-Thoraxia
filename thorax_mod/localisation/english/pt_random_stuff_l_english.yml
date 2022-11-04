@@ -10,7 +10,9 @@ PT_spies_within_desc:0 "There are several harmonist traitors in The Tower, and t
 PT_temporary_government:0 "Temporary Government"
 PT_temporary_government_desc:0 "Ever since the collapse of the Chrysalis's rule, Thorax and his loyal cohorts made it to the otherside and retake as many strongholds as possible in the obscure parts of the queendom... however the sudden change of government and our inexperienced in our governance, will hard for us to do anything political changes as easy... we have to do something about this before we go to civil war."
 PT_overmilitarised:0 "Overmilitarisation"
-PT_overmilitarised_desc:0 "though the war is over... the effects of rapid militarization have drain us of our ability to repair what we have lost and resources"
+PT_overmilitarised_desc:0 "though the war is over... the effects of rapid militarization have drained us of our ability to repair what we have lost and resources"
+PT_temporary_government:0 "Temporary Government"
+PT_bug_cw:0 "Changeling Civil War"
 #decisions
 PT_the_queens:0 "The kings council"
 PT_the_queens_desc:0 "Although the Queens have become subject to Thoraxs rule, they still hold lots of influence on politics. It'd be best to keep them all on our side.\n       Vraksian Loyalty: §Y[?PT_CCN_VRK_relation]§!\n       Dytrisian Loyalty:§Y[?PT_CCN_DTR_relation]§!\n       Sorythian Loyalty:§Y[?PT_CCN_SRT_relation]§!\n       Lyctidan Loyalty:§Y[?PT_CCN_PHA_relation]§!"

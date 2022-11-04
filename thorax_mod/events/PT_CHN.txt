@@ -67,7 +67,6 @@ country_event = { # This balks CHN into its constituent queendoms plus commies. 
 					promote_leader = yes
 				}
 				set_portraits = { civilian = { large ="gfx/leaders/CHN/Yaria.tga" } }
-				set_country_leader_description = { desc = chn_queen_yaria_desc }
 			}
 		}
 		CHN_gold_muffin = {
@@ -123,6 +122,7 @@ country_event = { # This balks CHN into its constituent queendoms plus commies. 
 			set_nationality = DTR
 		}
 		DTR = {
+			set_country_leader_description = { desc = chn_queen_helvia_desc }
 			transfer_state = 252
 			transfer_state = 305
 			transfer_state = 306
@@ -157,13 +157,13 @@ country_event = { # This balks CHN into its constituent queendoms plus commies. 
 					promote_leader = yes
 				}
 				set_portraits = { civilian = { large ="gfx/leaders/CHN/Helvia.tga" } }
-				set_country_leader_description = { desc = chn_queen_helvia_desc }
 			}
 		}
 		CHN_queen_aurantia = {
 			set_nationality = LCD
 		}
 		LCD = {
+			set_country_leader_description = { desc = chn_queen_aurantia_desc }
 			transfer_state = 303
 			transfer_state = 304
 			transfer_state = 309
@@ -200,13 +200,13 @@ country_event = { # This balks CHN into its constituent queendoms plus commies. 
 					promote_leader = yes
 				}
 				set_portraits = { civilian = { large ="gfx/leaders/CHN/Aurantia.tga" } }
-				set_country_leader_description = { desc = chn_queen_aurantia_desc }
 			}
 		}
 		CHN_queen_argynnis = {
 			set_nationality = VRK
 		}
 		VRK = {
+			set_country_leader_description = { desc = chn_queen_argynnis_desc }
 			transfer_state = 307
 			transfer_state = 291
 			transfer_state = 258
@@ -253,7 +253,6 @@ country_event = { # This balks CHN into its constituent queendoms plus commies. 
 					promote_leader = yes
 				}
 				set_portraits = { civilian = { large ="gfx/leaders/CHN/Argynnis.tga" } }
-				set_country_leader_description = { desc = chn_queen_argynnis_desc }
 			}
 		}
 		add_to_array = { tag_array = SRT }
@@ -570,7 +569,6 @@ country_event = { #opening: Chrysalis meetings end?
 			set_nationality = SRT
 		}
 		SRT = {
-			set_country_leader_description = chn_queen_argynnis_desc
 			transfer_state = 262
 			transfer_state = 315
 			set_capital = {state = 262}
@@ -609,7 +607,6 @@ country_event = { #opening: Chrysalis meetings end?
 				}
 				set_portraits = { civilian = { large ="gfx/leaders/CHN/Yaria.tga" } }
 			}
-			set_country_leader_description = { ideology = nazism desc = chn_queen_yaria_desc }
 		}
 		CHN_queen_helvia = {
 			set_nationality = DTR
@@ -790,7 +787,6 @@ country_event = { #opening: Chrysalis meetings end?
 		add_war_support = 0.25
 		add_stability = 0.25
 		remove_ideas = { political_divisions }
-		}
 	}
 }
 #country_event = { #opening: Chrysalis meetings 4
