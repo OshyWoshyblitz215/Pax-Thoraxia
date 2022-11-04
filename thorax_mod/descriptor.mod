@@ -6,4 +6,4 @@ tags={
 	"Alternative History"
 }
 name="EAW-PT"
-supported_version="1.11.*"
+supported_version="1.12.*"

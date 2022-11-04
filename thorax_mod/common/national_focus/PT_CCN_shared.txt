@@ -478,7 +478,7 @@ shared_focus = {
 			add_country_leader_trait = PT_swayed_by_thorax
 			add_opinion_modifier = { target = CCN modifier = PT_they_like_thorax }
 #			PT_Aurantia_II = { }
-			set_country_leader_description = { ideology = harmonic_constitutionalism desc = chn_queen_argynnis_desc }
+			set_country_leader_description = { ideology = conservatism desc = chn_queen_argynnis_desc }
 #			add_ai_strategy = { type = alliance id = CCN value = 500 }
 #			add_ai_strategy = { type = befriend id = CCN value = 500 }
 #			add_ai_strategy = { type = diplo_action_acceptance id = CCN value = 100 target = join_allies }
@@ -491,7 +491,7 @@ shared_focus = {
 		}
 		add_to_faction = PHA
 		country_event = { id = PT_CCN_allies.9 }
-		CHN = { country_event = { PT_CCN_allies.8 } }
+		CHN = { country_event = { id = PT_CCN_allies.8 } }
 	}
 }
 shared_focus = {
