@@ -19,12 +19,8 @@ ideas = {
 		PT_spies_within = {
 			name = PT_spies_within
 			allowed = { always = no	}
-			allowed_civil_war = { always = yes }
 			removal_cost = -1
 			picture = GFX_PT_CHN_spying_tower
-			allowed = {
-				always = no # Triggered via event
-			}
 			targeted_modifier = {
 				tag = CCN
 				attack_bonus_against = -0.05
@@ -36,12 +32,8 @@ ideas = {
 		PT_communist_holdout = {
 			name = PT_communist_holdout
 			allowed = { always = no	}
-			allowed_civil_war = { always = yes }
 			removal_cost = -1
 			picture = GFX_PT_communist_holdout
-			allowed = {
-				always = no # Triggered via event
-			}
 			modifier = {
 				supply_combat_penalties_on_core_factor = -0.75
 				army_core_attack_factor = 0.5

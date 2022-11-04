@@ -5,15 +5,15 @@ spriteTypes = {
 	}
 	SpriteType = {
 		name = "GFX_PT_communist_holdout"
-		texturefile = "gfx/event_pics/goals/GRK_holdout_hegemony.dds"
+		texturefile = "gfx/interface/ideas/GRK_holdout_hegemony.dds"
 	}
 	SpriteType = {
 		name = "GFX_PT_CCN_spying_tower"
-		texturefile = "gfx/event_pics/goals/CCN_queens_tower_spying.dds"
+		texturefile = "gfx/interface/ideas/CCN_queens_tower_spying.dds"
 	}
 	SpriteType = {
 		name = "GFX_PT_CHN_spying_tower"
-		texturefile = "gfx/event_pics/goals/CHN_queens_tower_spying.dds"
+		texturefile = "gfx/interface/ideas/CHN_queens_tower_spying.dds"
 	}
 }
 
