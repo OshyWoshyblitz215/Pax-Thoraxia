@@ -526,7 +526,7 @@ country_event = { #opening: Chrysalis meetings 1
 	timeout_days = 5
 	option = {
 		name = PT_CHN.14.a
-		country_event = { id = PT_CHN.15 days = 30}
+#		country_event = { id = PT_CHN.15 days = 30}
 	}
 }
 country_event = { #opening: Chrysalis meetings 2
@@ -545,7 +545,7 @@ country_event = { #opening: Chrysalis meetings 3
 	title = PT_CHN.16.t
 	desc = PT_CHN.16.d
 	is_triggered_only = yes
-	timeout_days = 5
+	timeout_days = 2
 	option = {
 		name = PT_CHN.16.a
 		country_event = { id = PT_CHN.17  hours = 1}
@@ -556,7 +556,7 @@ country_event = { #opening: Chrysalis meetings end?
 	title = PT_CHN.17.t
 	desc = PT_CHN.17.d
 	is_triggered_only = yes
-	timeout_days = 5
+	timeout_days = 2
 	option = {
 		name = PT_CHN.17.a
 		every_owned_state = {
