@@ -1,4 +1,4 @@
-add_namespace = PT_events
+add_namespace = PT_event
 
 country_event = { #we've won the civil war
 	id = PT_event.1

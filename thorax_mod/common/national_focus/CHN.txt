@@ -92,6 +92,7 @@ focus_tree = {
 			is_subject = no
 			has_government = fascism
 		}
+		bypass={ has_war_with = CCN }
 		ai_will_do = {
 			factor = 2000
 		}
@@ -102,8 +103,11 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus PT_chryssie_attack_thorax"
 			declare_war_on = { type = civil_war target = CCN }
+			if = {
+				limit = { NOT = { has_country_flag = thorax_battle } }
+				news_event = { id = PT_CHN.30 }
+			}
 			set_country_flag = thorax_battle
-			news_event = { id = PT_CHN.30 }
 		}
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
 	}

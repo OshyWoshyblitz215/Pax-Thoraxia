@@ -208,6 +208,11 @@ shared_focus = {
 			type = civil_war
 			target = CHN
 		}
+		if = {
+			limit = { NOT = { CHN = { has_country_flag = thorax_battle } } }
+			news_event = { id = PT_CHN.30 }
+		}
+		CHN = { set_country_flag = thorax_battle }
 	}
 }
 #the civil war

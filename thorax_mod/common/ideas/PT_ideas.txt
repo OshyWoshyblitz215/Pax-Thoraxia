@@ -101,6 +101,54 @@ ideas = {
 			removal_cost = -1
 			picture = CHN_political_divisions
 		}
+		PT_bug_cw_for_thorax = {
+			allowed = {
+				always = no
+			}
+			available = {
+			}
+			rule = {
+				can_join_factions = no
+				can_not_declare_war = yes
+			}
+			modifier = {
+				war_support_factor = 0.10
+				stability_factor = -0.10
+				training_time_army_factor = 0.1
+				army_morale_factor = -0.25
+				industrial_capacity_factory = -0.5
+				production_factory_max_efficiency_factor = -0.2
+				production_speed_buildings_factor = -0.3
+				ai_focus_aggressive_factor = 0.3
+				custom_modifier_tooltip = ZES_military_blocked_tp
+			}
+			removal_cost = -1
+			picture = CHN_political_divisions
+		}
+		PT_temporary_government_for_thorax = {
+			allowed = {
+				always = no
+			}
+			available = {
+			}
+			rule = {
+				can_join_factions = no
+				can_not_declare_war = yes
+			}
+			modifier = {
+				war_support_factor = 0.10
+				stability_factor = -0.10
+				training_time_army_factor = 0.1
+				army_morale_factor = -0.25
+				industrial_capacity_factory = -0.5
+				production_factory_max_efficiency_factor = -0.2
+				production_speed_buildings_factor = -0.3
+				ai_focus_aggressive_factor = 0.3
+				custom_modifier_tooltip = ZES_military_blocked_tp
+			}
+			removal_cost = -1
+			picture = CHN_political_divisions
+		}
 		PT_overmilitarised = {
 			allowed = {
 				always = no

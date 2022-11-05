@@ -2,295 +2,6 @@
 
 add_namespace = PT_CHN
 
-country_event = { # Ping event, fires 7 days into the CHN cheat focus CURRENTLY UNNEEDED
-	id = PT_CHN.1
-	fire_only_once = yes
-	trigger = {
-		CHN = {
-			focus_progress = {
-				focus = destroy_thoraxian_opposition
-				progress > 0.1
-			}
-		}
-	}
-	option = {
-		CHN = {
-			country_event = { id = PT_CHN.2 }
-		}
-	}
-}
-country_event = { # This balks CHN into its constituent queendoms plus commies. Very placeholder, we need to move charas around still.
-	id = PT_CHN.2 # for dev use only
-	is_triggered_only = yes
-	option = {
-		every_owned_state = {
-			teleport_armies = {	} #Defaults to capital of country
-		}
-		transfer_navy = {
-			target = LCD
-		}
-		CHN_queen_yaria = {
-			set_nationality = SRT
-		}
-		SRT = {
-			set_country_leader_description = chn_queen_argynnis_desc
-			transfer_state = 262
-			transfer_state = 315
-			set_capital = {state = 262}
-			CHN_queen_yaria = {
-				add_country_leader_role = {
-					country_leader = {
-						expire = "1965.1.1"
-						ideology = nazism
-					}
-					promote_leader = yes
-				}
-				add_country_leader_role = {
-					country_leader = {
-						expire = "1965.1.1"
-						ideology = juche
-					}
-					promote_leader = yes
-				}
-				add_country_leader_role = {
-					country_leader = {
-						expire = "1965.1.1"
-						ideology = conservatism
-					}
-					promote_leader = yes
-				}
-				add_country_leader_role = {
-					country_leader = {
-						expire = "1965.1.1"
-						ideology = despotism
-					}
-					promote_leader = yes
-				}
-				set_portraits = { civilian = { large ="gfx/leaders/CHN/Yaria.tga" } }
-			}
-		}
-		CHN_gold_muffin = {
-			set_nationality = GRK
-		}
-		GRK = {
-			transfer_state = 264
-			transfer_state = 314
-			transfer_state = 312
-			transfer_state = 313
-			set_capital = {state = 312}
-			set_popularities = {
-				democratic = 0
-				neutrality = 0
-				fascism = 0
-				communism = 100
-			}
-			set_politics = {
-				ruling_party = communism
-			}
-			CHN_gold_muffin = {
-				add_country_leader_role = {
-					country_leader = {
-						expire = "1965.1.1"
-						ideology = national_communism
-					}
-					promote_leader = yes
-				}
-				add_country_leader_role = {
-					country_leader = {
-						expire = "1965.1.1"
-						ideology = syndicalism
-					}
-					promote_leader = yes
-				}
-				add_country_leader_role = {
-					country_leader = {
-						expire = "1965.1.1"
-						ideology = socialism
-					}
-					promote_leader = yes
-				}
-				add_country_leader_role = {
-					country_leader = {
-						expire = "1965.1.1"
-						ideology = anarchism
-					}
-					promote_leader = yes
-				}
-			}
-		}
-		CHN_queen_helvia = {
-			set_nationality = DTR
-		}
-		DTR = {
-			set_country_leader_description = { desc = chn_queen_helvia_desc }
-			transfer_state = 252
-			transfer_state = 305
-			transfer_state = 306
-			set_capital = {state = 252}
-			CHN_queen_helvia = {
-				add_country_leader_role = {
-					country_leader = {
-						expire = "1965.1.1"
-						ideology = nazism
-					}
-					promote_leader = yes
-				}
-				add_country_leader_role = {
-					country_leader = {
-						expire = "1965.1.1"
-						ideology = juche
-					}
-					promote_leader = yes
-				}
-				add_country_leader_role = {
-					country_leader = {
-						expire = "1965.1.1"
-						ideology = conservatism
-					}
-					promote_leader = yes
-				}
-				add_country_leader_role = {
-					country_leader = {
-						expire = "1965.1.1"
-						ideology = despotism
-					}
-					promote_leader = yes
-				}
-				set_portraits = { civilian = { large ="gfx/leaders/CHN/Helvia.tga" } }
-			}
-		}
-		CHN_queen_aurantia = {
-			set_nationality = LCD
-		}
-		LCD = {
-			set_country_leader_description = { desc = chn_queen_aurantia_desc }
-			transfer_state = 303
-			transfer_state = 304
-			transfer_state = 309
-			transfer_state = 260
-			transfer_state = 308
-			set_capital = {state = 309}
-			CHN_queen_aurantia = {
-				add_country_leader_role = {
-					country_leader = {
-						expire = "1965.1.1"
-						ideology = nazism
-					}
-					promote_leader = yes
-				}
-				add_country_leader_role = {
-					country_leader = {
-						expire = "1965.1.1"
-						ideology = juche
-					}
-					promote_leader = yes
-				}
-				add_country_leader_role = {
-					country_leader = {
-						expire = "1965.1.1"
-						ideology = conservatism
-					}
-					promote_leader = yes
-				}
-				add_country_leader_role = {
-					country_leader = {
-						expire = "1965.1.1"
-						ideology = despotism
-					}
-					promote_leader = yes
-				}
-				set_portraits = { civilian = { large ="gfx/leaders/CHN/Aurantia.tga" } }
-			}
-		}
-		CHN_queen_argynnis = {
-			set_nationality = VRK
-		}
-		VRK = {
-			set_country_leader_description = { desc = chn_queen_argynnis_desc }
-			transfer_state = 307
-			transfer_state = 291
-			transfer_state = 258
-			transfer_state = 259
-			transfer_state = 250
-			transfer_state = 246
-			transfer_state = 247
-			transfer_state = 248
-			transfer_state = 249
-			transfer_state = 321
-			transfer_state = 320
-			transfer_state = 323
-			transfer_state = 322
-			transfer_state = 319
-			transfer_state = 316
-			set_capital = {state = 259}
-			CHN_queen_argynnis = {
-				add_country_leader_role = {
-					country_leader = {
-						expire = "1965.1.1"
-						ideology = nazism
-					}
-					promote_leader = yes
-				}
-				add_country_leader_role = {
-					country_leader = {
-						expire = "1965.1.1"
-						ideology = juche
-					}
-					promote_leader = yes
-				}
-				add_country_leader_role = {
-					country_leader = {
-						expire = "1965.1.1"
-						ideology = conservatism
-					}
-					promote_leader = yes
-				}
-				add_country_leader_role = {
-					country_leader = {
-						expire = "1965.1.1"
-						ideology = despotism
-					}
-					promote_leader = yes
-				}
-				set_portraits = { civilian = { large ="gfx/leaders/CHN/Argynnis.tga" } }
-			}
-		}
-		add_to_array = { tag_array = SRT }
-		add_to_array = { tag_array = DTR }
-		add_to_array = { tag_array = LCD }
-		add_to_array = { tag_array = VRK }
-		for_each_scope_loop = {
-			array = tag_array
-			set_popularities = {
-				democratic = 0
-				neutrality = 0
-				fascism = 100
-				communism = 0
-			}
-			set_politics = {
-				ruling_party = fascism
-			}
-		}
-		add_to_array = { tag_array = GRK }
-		for_each_scope_loop = {
-			array = tag_array
-			every_owned_state = {
-				add_core_of = PREV
-			}
-		add_ideas = {
-			proper_science_base
-			modern_society
-			no_lack_of_scientists
-			no_poverty
-		}
-			add_ideas = passive_hive_ai
-		}
-		country_lock_all_division_template = no
-		add_war_support = 0.25
-		add_stability = 0.25
-		remove_ideas = political_divisions
-	}
-}
 country_event = { #LCD bends
 	id = PT_CHN.3
 	title = PT_CHN.3.t
@@ -366,113 +77,6 @@ country_event = { #VRK follows thorax
 				target = CHN
 				modifier = PT_love_vs_hate_thorax
 			}
-		}
-	}
-}
-country_event = { #GRK revolts UNuSED?
-	id = PT_CHN.7
-	title = PT_CHN.7.t
-	desc = PT_CHN.7.d
-	is_triggered_only = yes
-	option = {
-		name = PT_CHN.7.a
-		add_popularity = {
-		    ideology = communism
-		    popularity = -1
-		}
-		country_event = { id = PT_CHN.8 hours = 1 } # edit the time <<<<<<<<<<
-	}
-}
-country_event = { #CCN established UNuSED?
-	id = PT_CHN.8
-	title = PT_CHN.8.t
-	desc = PT_CHN.8.d
-	is_triggered_only = yes
-	option = {
-		name = PT_CHN.8.a # be thorax
-		add_popularity = {
-		    ideology = democratic
-		    popularity = -1
-		}
-		CCN = {
-			transfer_state = 321
-			transfer_state = 320
-			transfer_state = 323
-			transfer_state = 322
-			transfer_state = 319
-			set_capital = {state = 323}
-			every_owned_state = {
-				add_core_of = PREV
-				remove_core_of = VRK
-			}
-			CCN_thorax = {
-				set_portraits = { civilian = { large ="gfx/leaders/CCN/PT_Thorax.tga" } }
-			}
-		}
-		CCN = {
-			change_tag_from = CHN
-		}
-	}
-	option = {
-		name = PT_CHN.8.b #stay chrysalis
-		add_popularity = {
-		    ideology = democratic
-		    popularity = -1
-		}
-		CCN = {
-			transfer_state = 321
-			transfer_state = 320
-			transfer_state = 323
-			transfer_state = 322
-			transfer_state = 319
-			set_capital = {state = 323}
-			every_owned_state = {
-				add_core_of = PREV
-				remove_core_of = VRK
-			}
-			CCN_thorax = {
-				set_portraits = { civilian = { large ="gfx/leaders/CCN/PT_Thorax.tga" } }
-			}
-		}
-	}
-}
-country_event = { # something?
-	id = PT_CHN.9
-	is_triggered_only = yes
-	option = {
-		#CHN_gold_muffin = {
-		#	set_nationality = GRK
-		#	add_country_leader_role = {
-		#		country_leader = {
-		#			expire = "1965.1.1"
-		#			ideology = national_communism
-		#		}
-		#	}
-		#	add_country_leader_role = {
-		#		country_leader = {
-		#			expire = "1965.1.1"
-		#			ideology = syndicalism
-		#		}
-		#	}
-		#	add_country_leader_role = {
-		#		country_leader = {
-		#			expire = "1965.1.1"
-		#			ideology = socialism
-		#		}
-		#	}
-		#	add_country_leader_role = {
-		#		country_leader = {
-		#			expire = "1965.1.1"
-		#			ideology = anarchism
-		#		}
-		#	}
-		#	promote_character = national_communism
-		#	promote_character = syndicalism
-		#	promote_character = socialism
-		#	promote_character = anarchism
-		#}
-		SRT = {
-			set_leader_description = chn_queen_argynnis_desc
 		}
 	}
 }
@@ -781,7 +385,7 @@ country_event = { #opening: Chrysalis meetings end?
 			modern_society
 			no_lack_of_scientists
 			no_poverty
-			passive_hive_ai
+			PT_temporary_government
 		}
 		country_lock_all_division_template = no
 		add_war_support = 0.25
@@ -897,7 +501,7 @@ country_event = { #opening: Chrysalis meetings epilogue: free thorax
 			}
 			load_focus_tree = { tree = PT_thorax_focus_tree keep_completed = yes }
 			remove_ideas = { CCN_Civil_War }
-			add_ideas = { PT_bug_cw }
+			add_ideas = { PT_temporary_government_for_thorax}
 		}
 		CCN = {
 			change_tag_from = CHN
@@ -925,7 +529,7 @@ country_event = { #opening: Chrysalis meetings epilogue: free thorax
 			}
 			load_focus_tree = { tree = PT_thorax_focus_tree keep_completed = yes }
 			remove_ideas = { CCN_Civil_War }
-			add_ideas = { PT_bug_cw }
+			add_ideas = { PT_temporary_government_for_thorax }
 		}
 	}
 }
@@ -995,7 +599,6 @@ country_event = { #does things that we will later outsource to the queens n comm
 				create_unit = { division = "name = \"Local Vollunteers\" division_template = \"Civil War Brigade\" start_experience_factor = 0.3" owner = PREV }
 				create_unit = { division = "name = \"Local Vollunteers\" division_template = \"Civil War Brigade\" start_experience_factor = 0.3" owner = PREV }
 			}
-			add_ideas = { PT_bug_cw }
 		}
 		GRK = {
 			add_ideas = { PT_communist_holdout }
@@ -1080,12 +683,12 @@ news_event = { # CIVIL WAR
 	is_triggered_only = yes
 	major = yes
 	immediate = { hidden_effect = {
-		CHN = { add_ideas = { PT_bug_cw } }
-		CCN = { swap_ideas = { remove_idea = PT_temporary_government add_idea = PT_bug_cw } }
-		DTR = { add_ideas = { PT_bug_cw } }
-		SRT = { add_ideas = { PT_bug_cw } }
-		VRK = { add_ideas = { PT_bug_cw } }
-		LCD = { add_ideas = { PT_bug_cw } }
+		CHN = { swap_ideas = { remove_idea = PT_temporary_government add_idea = PT_bug_cw } }
+		CCN = { swap_ideas = { remove_idea = PT_temporary_government_for_thorax add_idea = PT_bug_cw_for_thorax } }
+		DTR = { swap_ideas = { remove_idea = PT_temporary_government add_idea = PT_bug_cw } }
+		SRT = { swap_ideas = { remove_idea = PT_temporary_government add_idea = PT_bug_cw } }
+		VRK = { swap_ideas = { remove_idea = PT_temporary_government add_idea = PT_bug_cw } }
+		LCD = { swap_ideas = { remove_idea = PT_temporary_government add_idea = PT_bug_cw } }
 		add_threat = 4
 	} }
 	option = {

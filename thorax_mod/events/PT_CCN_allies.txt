@@ -236,7 +236,6 @@ country_event = { #CCN told aobut PHA
 	is_triggered_only = yes
 	option = {
 		name = PT_CCN_allies.9.a
-		
 	}
 }
 country_event = { #CHN told about DTR rebellion
