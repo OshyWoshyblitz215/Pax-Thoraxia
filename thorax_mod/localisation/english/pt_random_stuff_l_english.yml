@@ -17,6 +17,11 @@ PT_bug_cw:0 "Changeling Civil War"
 PT_bug_cw_for_thorax:0 "Changeling Civil War"
 PT_communist_holdout:0 "Communist Holdout"
 #decisions
+PT_DTR_betrayal:0 "Sway Ditrysium"
+decision_improve_relation_CCN_DTR:0 "Contact Ditrysium"
+decision_improve_relation_CCN_SRT:0 "Contact Soryth"
+decision_improve_relation_CCN_VRK:0 "Contact Vraks"
+decision_improve_relation_CCN_LCD:0 "Contact Lyctida"
 PT_the_queens:0 "The kings council"
 PT_the_queens_desc:0 "Although the Queens have become subject to Thoraxs rule, they still hold lots of influence on politics. It'd be best to keep them all on our side.\n       Vraksian Loyalty: §Y[?PT_CCN_VRK_relation]§!\n       Dytrisian Loyalty:§Y[?PT_CCN_DTR_relation]§!\n       Sorythian Loyalty:§Y[?PT_CCN_SRT_relation]§!\n       Lyctidan Loyalty:§Y[?PT_CCN_PHA_relation]§!"
 #custom tooltips
