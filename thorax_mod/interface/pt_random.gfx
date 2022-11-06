@@ -4,15 +4,15 @@ spriteTypes = {
 		texturefile = "gfx/event_pics/buggo_cw.dds"
 	}
 	SpriteType = {
-		name = "GFX_PT_communist_holdout"
+		name = "GFX_idea_PT_communist_holdout"
 		texturefile = "gfx/interface/ideas/GRK_holdout_hegemony.dds"
 	}
 	SpriteType = {
-		name = "GFX_PT_CCN_spying_tower"
+		name = "GFX_idea_PT_CCN_spying_tower"
 		texturefile = "gfx/interface/ideas/CCN_queens_tower_spying.dds"
 	}
 	SpriteType = {
-		name = "GFX_PT_CHN_spying_tower"
+		name = "GFX_idea_PT_CHN_spying_tower"
 		texturefile = "gfx/interface/ideas/CHN_queens_tower_spying.dds"
 	}
 }
