@@ -523,6 +523,14 @@ shared_focus = {
 			if = { limit = { air_base < 8 } add_building_construction = { type = air_base level = 2 instant_build = yes } }
 			else = { set_building_level = { type = air_base level = 10 instant_build = yes } }
 		}
+		if = {
+			limit = { has_dlc = "By Blood Alone" }
+			load_oob = CCN_hidden_airbases_planes_bba
+		}
+		if = {
+			limit = { NOT = { has_dlc = "By Blood Alone" } }
+			load_oob = CCN_hidden_airbases_planes
+		}
 	}
 }
 shared_focus = {
