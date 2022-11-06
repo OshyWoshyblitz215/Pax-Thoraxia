@@ -28,7 +28,8 @@ focus_tree = {
 			country_event = { id = PT_CHN.12 days = 21 } #VRK angered
 			country_event = { id = PT_CHN.13 days = 28 } #LCD angered
 			country_event = { id = PT_CHN.14 days = 35 } #meeting will happen 30 days after this event
-			country_event = { id = PT_CHN.15 days = 65} # meeting
+			if = { limit = {is_debug = no} country_event = { id = PT_CHN.15 days = 65} }# meeting
+			
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus PT_the_hives_stir"

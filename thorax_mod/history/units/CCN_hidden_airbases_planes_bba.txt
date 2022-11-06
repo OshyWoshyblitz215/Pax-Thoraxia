@@ -1,0 +1,14 @@
+air_wings = {
+	320 = {
+		small_plane_airframe_0 = {
+			owner = "CCN"
+			amount = 120
+			version_name = "Sv.51"
+		}
+		medium_plane_airframe_0 = {
+			owner = "CCN"
+			amount = 20
+			version_name = "UWA.23"
+		}
+	}
+}
