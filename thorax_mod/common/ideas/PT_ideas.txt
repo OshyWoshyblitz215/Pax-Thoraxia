@@ -117,7 +117,6 @@ ideas = {
 				production_factory_max_efficiency_factor = -0.2
 				production_speed_buildings_factor = -0.3
 				ai_focus_aggressive_factor = 0.3
-				custom_modifier_tooltip = ZES_military_blocked_tp
 			}
 			removal_cost = -1
 			picture = CHN_political_divisions
@@ -140,7 +139,6 @@ ideas = {
 				production_factory_max_efficiency_factor = -0.2
 				production_speed_buildings_factor = -0.3
 				ai_focus_aggressive_factor = 0.3
-				custom_modifier_tooltip = ZES_military_blocked_tp
 			}
 			removal_cost = -1
 			picture = CHN_political_divisions

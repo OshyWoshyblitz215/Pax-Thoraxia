@@ -17,6 +17,7 @@ PT_bug_cw:0 "Changeling Civil War"
 PT_bug_cw_for_thorax:0 "Changeling Civil War"
 PT_communist_holdout:0 "Communist Holdout"
 #decisions
+changeling_civil_war:0 "Changeling Civil War"
 PT_DTR_betrayal:0 "Sway Ditrysium"
 decision_improve_relation_CCN_DTR:0 "Contact Ditrysium"
 decision_improve_relation_CCN_SRT:0 "Contact Soryth"

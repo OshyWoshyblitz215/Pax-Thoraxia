@@ -101,9 +101,13 @@ focus_tree = {
 		y = 3
 		prerequisite = { focus = PT_chrys_sends_diplomats_out }
 		will_lead_to_war_with = CCN
+		will_lead_to_war_with = VRK
+		will_lead_to_war_with = SRT
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus PT_chryssie_attack_thorax"
 			declare_war_on = { type = civil_war target = CCN }
+			declare_war_on = { type = civil_war target = VRK }
+			declare_war_on = { type = civil_war target = SRT }
 			if = {
 				limit = { NOT = { has_country_flag = thorax_battle } }
 				news_event = { id = PT_CHN.30 }

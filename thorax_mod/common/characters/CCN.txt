@@ -1,0 +1,10 @@
+characters = {
+	PT_Yanna_Chitin = {
+		name = "Yanna Chitin"
+		portraits = {
+			army = {
+				large="gfx/leaders/CCN/PT_Yanna_Chitin.tga"
+			}
+		}
+	}
+}

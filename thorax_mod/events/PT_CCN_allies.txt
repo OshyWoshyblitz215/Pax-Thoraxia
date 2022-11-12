@@ -150,18 +150,14 @@ country_event = {
 		CHN = { CHN_osteitis = { set_nationality = CCN } }
 		CHN = { CHN_sooty = { set_nationality = CCN } }
 		CHN = { CHN_tetti_rhombi = { set_nationality = CCN } }
-		generate_character = {
-			token_base = PT_Yanna_Chitin
-			name = "Yanna Chitin"
-			picture = "gfx/leaders/CCN/PT_Yanna_Chitin.tga"
-			corps_commander = {
-				traits = { panzer_leader promising_general }
-				skill = 2
-				attack_skill = 3
-				defense_skill = 2
-				planning_skill = 4
-				logistics_skill = 1
-			}
+		add_corps_commander_role = {
+			character = PT_Yanna_Chitin
+			traits = { panzer_leader promising_general }
+			skill = 2
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 4
+			logistics_skill = 1
 		}
 	}
 }
