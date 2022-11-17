@@ -496,7 +496,7 @@ country_event = { #opening: Chrysalis meetings epilogue: free thorax
 				add_core_of = PREV
 				remove_core_of = VRK
 			}
-			CCN_thorax = {
+			CHN_thorax = {
 				set_portraits = { civilian = { large ="gfx/leaders/CCN/PT_Thorax.tga" } }
 			}
 			load_focus_tree = { tree = PT_thorax_focus_tree keep_completed = yes }
@@ -524,7 +524,7 @@ country_event = { #opening: Chrysalis meetings epilogue: free thorax
 				add_core_of = PREV
 				remove_core_of = VRK
 			}
-			CCN_thorax = {
+			CHN_thorax = {
 				set_portraits = { civilian = { large ="gfx/leaders/CCN/PT_Thorax.tga" } }
 			}
 			load_focus_tree = { tree = PT_thorax_focus_tree keep_completed = yes }
@@ -584,21 +584,32 @@ country_event = { #does things that we will later outsource to the queens n comm
 		add_to_array = { contris_that_get_chn_cw_help = LCD }
 		add_to_array = { contris_that_get_chn_cw_help = VRK }
 		add_to_array = { contris_that_get_chn_cw_help = GRK }
+		add_to_array = { contris_that_get_chn_cw_help = CCN }
 		for_each_scope_loop = {
 			array = contris_that_get_chn_cw_help
 			division_template = { name = "Civil War Brigade" is_locked = yes priority = 0 template_counter = 24 regiments = { infantry = { x = 0 y = 0} infantry = { x = 0 y = 1} infantry = { x = 0 y = 2} infantry = { x = 0 y = 3} } }
 			capital_scope = {
-				create_unit = { division = "name = \"Local Vollunteers\" division_template = \"Civil War Brigade\" start_experience_factor = 0.3" owner = PREV }
-				create_unit = { division = "name = \"Local Vollunteers\" division_template = \"Civil War Brigade\" start_experience_factor = 0.3" owner = PREV }
-				create_unit = { division = "name = \"Local Vollunteers\" division_template = \"Civil War Brigade\" start_experience_factor = 0.3" owner = PREV }
-				create_unit = { division = "name = \"Local Vollunteers\" division_template = \"Civil War Brigade\" start_experience_factor = 0.3" owner = PREV }
-				create_unit = { division = "name = \"Local Vollunteers\" division_template = \"Civil War Brigade\" start_experience_factor = 0.3" owner = PREV }
-				create_unit = { division = "name = \"Local Vollunteers\" division_template = \"Civil War Brigade\" start_experience_factor = 0.3" owner = PREV }
-				create_unit = { division = "name = \"Local Vollunteers\" division_template = \"Civil War Brigade\" start_experience_factor = 0.3" owner = PREV }
-				create_unit = { division = "name = \"Local Vollunteers\" division_template = \"Civil War Brigade\" start_experience_factor = 0.3" owner = PREV }
-				create_unit = { division = "name = \"Local Vollunteers\" division_template = \"Civil War Brigade\" start_experience_factor = 0.3" owner = PREV }
-				create_unit = { division = "name = \"Local Vollunteers\" division_template = \"Civil War Brigade\" start_experience_factor = 0.3" owner = PREV }
+				create_unit = { division = "name = \"Local Volunteers\" division_template = \"Civil War Brigade\" start_experience_factor = 0.3" owner = PREV }
+				create_unit = { division = "name = \"Local Volunteers\" division_template = \"Civil War Brigade\" start_experience_factor = 0.3" owner = PREV }
+				create_unit = { division = "name = \"Local Volunteers\" division_template = \"Civil War Brigade\" start_experience_factor = 0.3" owner = PREV }
+				create_unit = { division = "name = \"Local Volunteers\" division_template = \"Civil War Brigade\" start_experience_factor = 0.3" owner = PREV }
+				create_unit = { division = "name = \"Local Volunteers\" division_template = \"Civil War Brigade\" start_experience_factor = 0.3" owner = PREV }
+				create_unit = { division = "name = \"Local Volunteers\" division_template = \"Civil War Brigade\" start_experience_factor = 0.3" owner = PREV }
+				create_unit = { division = "name = \"Local Volunteers\" division_template = \"Civil War Brigade\" start_experience_factor = 0.3" owner = PREV }
+				create_unit = { division = "name = \"Local Volunteers\" division_template = \"Civil War Brigade\" start_experience_factor = 0.3" owner = PREV }
+				create_unit = { division = "name = \"Local Volunteers\" division_template = \"Civil War Brigade\" start_experience_factor = 0.3" owner = PREV }
+				create_unit = { division = "name = \"Local Volunteers\" division_template = \"Civil War Brigade\" start_experience_factor = 0.3" owner = PREV }
 			}
+		}
+		VRK = {
+			division_template = { name = "Vraksian Levy" is_locked = yes priority = 0 template_counter = 24 regiments = { infantry = { x = 0 y = 0} infantry = { x = 0 y = 1} } }
+			create_unit = { division = "name = \"Levy\" division_template = \"Vraksian Levy\" start_experience_factor = 0.3" owner = VRK }
+			create_unit = { division = "name = \"Levy\" division_template = \"Vraksian Levy\" start_experience_factor = 0.3" owner = VRK }
+			create_unit = { division = "name = \"Levy\" division_template = \"Vraksian Levy\" start_experience_factor = 0.3" owner = VRK }
+			create_unit = { division = "name = \"Levy\" division_template = \"Vraksian Levy\" start_experience_factor = 0.3" owner = VRK }
+			create_unit = { division = "name = \"Levy\" division_template = \"Vraksian Levy\" start_experience_factor = 0.3" owner = VRK }
+			create_unit = { division = "name = \"Levy\" division_template = \"Vraksian Levy\" start_experience_factor = 0.3" owner = VRK }
+			create_unit = { division = "name = \"Levy\" division_template = \"Vraksian Levy\" start_experience_factor = 0.3" owner = VRK }
 		}
 		GRK = {
 			add_ideas = { PT_communist_holdout }
