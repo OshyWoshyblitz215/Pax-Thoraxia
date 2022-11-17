@@ -1,5 +1,3 @@
-#By He9
-
 add_namespace = PT_CHN
 
 country_event = { #LCD bends
@@ -496,9 +494,6 @@ country_event = { #opening: Chrysalis meetings epilogue: free thorax
 				add_core_of = PREV
 				remove_core_of = VRK
 			}
-			CHN_thorax = {
-				set_portraits = { civilian = { large ="gfx/leaders/CCN/PT_Thorax.tga" } }
-			}
 			load_focus_tree = { tree = PT_thorax_focus_tree keep_completed = yes }
 			remove_ideas = { CCN_Civil_War }
 			add_ideas = { PT_temporary_government_for_thorax}
@@ -523,9 +518,6 @@ country_event = { #opening: Chrysalis meetings epilogue: free thorax
 			every_owned_state = {
 				add_core_of = PREV
 				remove_core_of = VRK
-			}
-			CHN_thorax = {
-				set_portraits = { civilian = { large ="gfx/leaders/CCN/PT_Thorax.tga" } }
 			}
 			load_focus_tree = { tree = PT_thorax_focus_tree keep_completed = yes }
 			remove_ideas = { CCN_Civil_War }
@@ -700,7 +692,10 @@ news_event = { # CIVIL WAR
 		SRT = { swap_ideas = { remove_idea = PT_temporary_government add_idea = PT_bug_cw } }
 		VRK = { swap_ideas = { remove_idea = PT_temporary_government add_idea = PT_bug_cw } }
 		LCD = { swap_ideas = { remove_idea = PT_temporary_government add_idea = PT_bug_cw } }
-		add_threat = 4
+		add_named_threat = {
+			threat = 4
+			name = PT_CHN.30.t
+		}
 	} }
 	option = {
 		name = PT_CHN.30.a
