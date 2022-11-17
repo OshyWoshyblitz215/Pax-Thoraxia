@@ -21,6 +21,9 @@ focus_tree = {
 		ai_will_do = {
 			factor = 0 #Only for the player
 		}
+		bypass = {
+			CHN = { exists = yes }
+		}
 		mutually_exclusive = { focus = destroy_thoraxian_opposition }
 		select_effect = {
 			country_event = { id = PT_CHN.10 days = 7 } #SRT angered
@@ -125,6 +128,7 @@ focus_tree = {
 		available = {
 			is_subject = no
 			has_government = fascism
+			CCN = { exists = no }
 		}
 		mutually_exclusive = { focus = PT_the_hives_stir }
 		ai_will_do = {

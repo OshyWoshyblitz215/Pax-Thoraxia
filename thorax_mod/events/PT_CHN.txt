@@ -377,6 +377,7 @@ country_event = { #opening: Chrysalis meetings end?
 			every_owned_state = {
 				add_core_of = PREV
 			}
+			add_ideas = { PT_temporary_government }
 		}
 		add_ideas = {
 			proper_science_base
@@ -464,6 +465,9 @@ country_event = { #opening: Chrysalis meetings epilogue: free commies
 			every_owned_state = {
 				add_core_of = PREV
 			}
+			add_ideas = {
+				PT_temporary_government
+			}
 		}
 	}
 }
@@ -473,10 +477,6 @@ country_event = { #opening: Chrysalis meetings epilogue: free thorax
 	desc = PT_CHN.20.d
 	is_triggered_only = yes
 	timeout_days = 5
-	immediate = {
-		hidden_effect = { 
-			country_event = { id = PT_CHN.23 }} #we will wget rid of this once that event is unneded
-		}
 	option = {
 		name = PT_CHN.20.a
 		add_popularity = {
@@ -501,6 +501,7 @@ country_event = { #opening: Chrysalis meetings epilogue: free thorax
 		CCN = {
 			change_tag_from = CHN
 		}
+		hidden_effect = { country_event = { id = PT_CHN.23 hours = 1 }} #we will wget rid of this once that event is unneded
 	}
 	option = {
 		name=Bruh
@@ -520,9 +521,10 @@ country_event = { #opening: Chrysalis meetings epilogue: free thorax
 				remove_core_of = VRK
 			}
 			load_focus_tree = { tree = PT_thorax_focus_tree keep_completed = yes }
-			remove_ideas = { CCN_Civil_War }
+			remove_ideas = { CCN_Civil_War PT_bug_cw_for_thorax }
 			add_ideas = { PT_temporary_government_for_thorax }
 		}
+		hidden_effect = { country_event = { id = PT_CHN.23 hours = 1 }} #we will wget rid of this once that event is unneded
 	}
 }
 country_event = { #chrysalis demands communists surrender
@@ -592,9 +594,14 @@ country_event = { #does things that we will later outsource to the queens n comm
 				create_unit = { division = "name = \"Local Volunteers\" division_template = \"Civil War Brigade\" start_experience_factor = 0.3" owner = PREV }
 				create_unit = { division = "name = \"Local Volunteers\" division_template = \"Civil War Brigade\" start_experience_factor = 0.3" owner = PREV }
 			}
+			add_equipment_to_stockpile = {
+				type = train_equipment
+				amount = 10
+			}
 		}
 		VRK = {
-			division_template = { name = "Vraksian Levy" is_locked = yes priority = 0 template_counter = 24 regiments = { infantry = { x = 0 y = 0} infantry = { x = 0 y = 1} } }
+			division_template = { name = "Vraksian Levy" is_locked = yes priority = 0 template_counter = 14 regiments = { infantry = { x = 0 y = 0} infantry = { x = 0 y = 1} } }
+			capital_scope = { create_unit = { division = "name = \"Levy\" division_template = \"Vraksian Levy\" start_experience_factor = 0.3" owner = VRK }
 			create_unit = { division = "name = \"Levy\" division_template = \"Vraksian Levy\" start_experience_factor = 0.3" owner = VRK }
 			create_unit = { division = "name = \"Levy\" division_template = \"Vraksian Levy\" start_experience_factor = 0.3" owner = VRK }
 			create_unit = { division = "name = \"Levy\" division_template = \"Vraksian Levy\" start_experience_factor = 0.3" owner = VRK }
@@ -602,7 +609,14 @@ country_event = { #does things that we will later outsource to the queens n comm
 			create_unit = { division = "name = \"Levy\" division_template = \"Vraksian Levy\" start_experience_factor = 0.3" owner = VRK }
 			create_unit = { division = "name = \"Levy\" division_template = \"Vraksian Levy\" start_experience_factor = 0.3" owner = VRK }
 			create_unit = { division = "name = \"Levy\" division_template = \"Vraksian Levy\" start_experience_factor = 0.3" owner = VRK }
-		}
+			create_unit = { division = "name = \"Levy\" division_template = \"Vraksian Levy\" start_experience_factor = 0.3" owner = VRK }
+			create_unit = { division = "name = \"Levy\" division_template = \"Vraksian Levy\" start_experience_factor = 0.3" owner = VRK }
+			create_unit = { division = "name = \"Levy\" division_template = \"Vraksian Levy\" start_experience_factor = 0.3" owner = VRK }
+			create_unit = { division = "name = \"Levy\" division_template = \"Vraksian Levy\" start_experience_factor = 0.3" owner = VRK }
+			create_unit = { division = "name = \"Levy\" division_template = \"Vraksian Levy\" start_experience_factor = 0.3" owner = VRK }
+			create_unit = { division = "name = \"Levy\" division_template = \"Vraksian Levy\" start_experience_factor = 0.3" owner = VRK }
+			create_unit = { division = "name = \"Levy\" division_template = \"Vraksian Levy\" start_experience_factor = 0.3" owner = VRK }
+		} }
 		GRK = {
 			add_ideas = { PT_communist_holdout }
 		}
@@ -681,36 +695,40 @@ country_event = { # sabotage, CHN told
 news_event = { # CIVIL WAR
 	id = PT_CHN.30
 	title = PT_CHN.30.t
-	desc = PT_CHN.30.d
+	desc = PT_CHN.30.desc
 	picture = GFX_event_PT_buggo_cw
 	is_triggered_only = yes
 	major = yes
-	immediate = { hidden_effect = {
-		CHN = { swap_ideas = { remove_idea = PT_temporary_government add_idea = PT_bug_cw } }
-		CCN = { swap_ideas = { remove_idea = PT_temporary_government_for_thorax add_idea = PT_bug_cw_for_thorax } }
-		DTR = { swap_ideas = { remove_idea = PT_temporary_government add_idea = PT_bug_cw } }
-		SRT = { swap_ideas = { remove_idea = PT_temporary_government add_idea = PT_bug_cw } }
-		VRK = { swap_ideas = { remove_idea = PT_temporary_government add_idea = PT_bug_cw } }
-		LCD = { swap_ideas = { remove_idea = PT_temporary_government add_idea = PT_bug_cw } }
-		add_named_threat = {
-			threat = 4
-			name = PT_CHN.30.t
+	immediate = {
+		hidden_effect = {
+			CHN = { swap_ideas = { remove_idea = PT_temporary_government add_idea = PT_bug_cw } }
+			CCN = { swap_ideas = { remove_idea = PT_temporary_government_for_thorax add_idea = PT_bug_cw_for_thorax } }
+			DTR = { swap_ideas = { remove_idea = PT_temporary_government add_idea = PT_bug_cw } }
+			SRT = { swap_ideas = { remove_idea = PT_temporary_government add_idea = PT_bug_cw } }
+			VRK = { swap_ideas = { remove_idea = PT_temporary_government add_idea = PT_bug_cw } }
+			LCD = { swap_ideas = { remove_idea = PT_temporary_government add_idea = PT_bug_cw } }
+			add_named_threat = {
+				threat = 4
+				name = PT_CHN.30.t
+			}
 		}
-	} }
+	}
 	option = {
 		name = PT_CHN.30.a
 		trigger = {
-			NOT = { OR = {
-				original_tag = DTR
-				original_tag = VRK
-				original_tag = LCD
-				original_tag = SRT
-				original_tag = CHN
-				original_tag = CCN
-				original_tag = CRY
-				original_tag = EQS
-				original_tag = OLE
-			} }
+			NOT = {
+				OR = {
+					original_tag = DTR
+					original_tag = VRK
+					original_tag = LCD
+					original_tag = SRT
+					original_tag = CHN
+					original_tag = CCN
+					original_tag = CRY
+					original_tag = EQS
+					original_tag = OLE
+				}
+			}
 		}
 	}
 	option = {
@@ -746,7 +764,7 @@ news_event = { # CIVIL WAR
 news_event = { # CIVIL WAR THORAX WON
 	id = PT_CHN.31
 	title = PT_CHN.31.t
-	desc = PT_CHN.31.d
+	desc = PT_CHN.31.desc
 	picture = GFX_event_PT_buggo_cw
 	is_triggered_only = yes
 	major = yes
