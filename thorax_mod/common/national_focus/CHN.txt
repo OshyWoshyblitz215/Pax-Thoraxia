@@ -22,7 +22,7 @@ focus_tree = {
 			factor = 0 #Only for the player
 		}
 		bypass = {
-			CHN = { exists = yes }
+			CCN = { exists = yes }
 		}
 		mutually_exclusive = { focus = destroy_thoraxian_opposition }
 		select_effect = {
