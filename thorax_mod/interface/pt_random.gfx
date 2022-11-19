@@ -15,8 +15,4 @@ spriteTypes = {
 		name = "GFX_idea_PT_CHN_spying_tower"
 		texturefile = "gfx/interface/ideas/CHN_queens_tower_spying.dds"
 	}
-	SpriteType = {
-		name = "GFX_pt_morbing_times"
-		texturefile = "gfx/interface/news_headers/CCN_newspaper.dds"
-	}
 }

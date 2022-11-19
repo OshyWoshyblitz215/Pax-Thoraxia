@@ -1,9 +1,0 @@
-defined_text = { # Country
-	name = GetNewspaperHeader
-	text = {
-		trigger = {
-			original_tag = CCN
-		}
-		localization_key = CCN_news_header
-	}
-}
