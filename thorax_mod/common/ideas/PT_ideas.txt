@@ -143,7 +143,7 @@ ideas = {
 			removal_cost = -1
 			picture = CHN_political_divisions
 		}
-		PT_overmilitarised = {
+		PT_aftermath_of_the_civil_war = {
 			allowed = {
 				always = no
 			}
@@ -151,10 +151,79 @@ ideas = {
 			}
 			modifier = {
 				stability_factor = -0.10
-				production_factory_max_efficiency_factor = -0.1
+				production_factory_max_efficiency_factor = -0.3
+				consumer_goods_factor = 0.1
+				production_speed_buildings_factor = -0.3
+				communism_drift = 0.06
+				democratic_drift = 0.02
 			}
 			removal_cost = -1
 			picture = CHN_political_divisions
+		}
+		PT_aftermath_of_the_civil_war_2 = {
+			allowed = {
+				always = no
+			}
+			available = {
+			}
+			modifier = {
+				stability_factor = -0.09
+				production_factory_max_efficiency_factor = -0.27
+				consumer_goods_factor = 0.09
+				production_speed_buildings_factor = -0.27
+				communism_drift = 0.05
+				democratic_drift = 0.02
+			}
+			removal_cost = -1
+			picture = CHN_political_divisions
+		}
+		PT_aftermath_of_the_civil_war_3 = {
+			allowed = {
+				always = no
+			}
+			available = {
+			}
+			modifier = {
+				stability_factor = -0.08
+				production_factory_max_efficiency_factor = -0.24
+				consumer_goods_factor = 0.08
+				production_speed_buildings_factor = -0.24
+				communism_drift = 0.04
+				democratic_drift = 0.02
+			}
+			removal_cost = -1
+			picture = CHN_political_divisions
+		}
+		PT_recovery = {
+			allowed = {
+				always = no
+			}
+			available = {
+			}
+			modifier = {
+#				free_re
+			}
+			removal_cost = -1
+			picture = CHN_political_divisions
+		}
+		PT_empty_throne = {
+			allowed = {
+				always = no
+			}
+			available = {
+			}
+			modifier = {
+				stability_factor = -0.1
+				war_support_factor = -0.2
+			}
+			removal_cost = -1
+			picture = CHN_political_divisions
+			on_add = {
+				country_lock_all_division_template = yes
+			}
+			on_remove = {
+				country_lock_all_division_template = no
+			}
 		}
 
 	}

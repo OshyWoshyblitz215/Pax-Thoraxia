@@ -678,6 +678,8 @@ shared_focus = {
 			add_to_array = { PT_should_demilitarise_countries = CCN }
 			for_each_scope_loop = {
 				array = PT_should_demilitarise_countries
+				remove_ideas = {PT_bug_cw_for_thorax PT_temporary_government_for_thorax PT_bug_cw PT_temporary_government}
+				add_ideas = { PT_aftermath_of_the_civil_war }
 				every_owned_state = {
 					limit = {
 						check_variable = { PT_war_factories > 0 }
@@ -686,7 +688,6 @@ shared_focus = {
 					subtract_from_variable = { var = PT_optimal_war_factory_number value= PT_war_factories }
 				}
 			}
-			add_ideas = { PT_overmilitarised }
 		}
 	}
 }
@@ -801,5 +802,52 @@ shared_focus = {
 		set_variable = { PT_CCN_DTR_relation = 5 }
 		set_variable = { PT_CCN_VRK_relation = 5 }
 		set_variable = { PT_CCN_PHA_relation = 5 }
+		remove_ideas = {PT_empty_throne}
+	}
+}
+#shared_focus = {
+#	id = PT_begin_demilitarisation
+#	icon = GFX_goal_chn_thorax_and_harmony
+#	cost = 7.20
+#	x = 0
+#	y = 2
+#	ai_will_do = { factor = 1000 }
+#	completion_reward = {
+#		log = "[GetDateText]: [Root.GetName]: Focus PT_for_thorax_and_harmony"
+#		activate_mission = PT_demilitarise_country_misison
+#		add_to_variable = { PT_CCN_SRT_relation = 1 }
+#		add_to_variable = { PT_CCN_DTR_relation = 1 }
+#		add_to_variable = { PT_CCN_VRK_relation = 1 }
+#		add_to_variable = { PT_CCN_PHA_relation = 1 }
+#	}
+#}
+#industry!!!!
+shared_focus = {
+	id = PT_our_economic_prospects
+	icon = GFX_goal_chn_thorax_and_harmony
+	cost = 5
+	x = 0
+	y = 2
+	ai_will_do = { factor = 1000 }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus PT_our_economic_prospects"
+		swap_ideas = {remove_idea = PT_aftermath_of_the_civil_war add_idea = PT_aftermath_of_the_civil_war_2}
+	}
+}
+shared_focus = {
+	id = PT_begin_revitalisation
+	icon = GFX_goal_chn_thorax_and_harmony
+	cost = 5
+	x = 0
+	y = 1
+	prerequisite = { focus = PT_our_economic_prospects }
+	relative_position_id = PT_our_economic_prospects
+	ai_will_do = { factor = 1000 }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus PT_for_thorax_and_harmony"
+		swap_ideas = {remove_idea = PT_aftermath_of_the_civil_war_2 add_idea = PT_aftermath_of_the_civil_war_3}
+#		add_timed_idea = {
+#			idea
+#		}
 	}
 }

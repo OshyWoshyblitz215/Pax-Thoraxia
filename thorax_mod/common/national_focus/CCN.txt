@@ -17,3 +17,22 @@ focus_tree = {
 #	shared_focus = PT_bittersweet_victory
 
 }
+focus_tree = {
+	id = PT_thorax_postcw_focus_tree
+
+	country = {
+		factor = 0
+
+		modifier = {
+			add = 10
+			tag = CCN
+		}
+	}
+	default = no
+	continuous_focus_position = { x = 0 y = 2400 }
+
+	shared_focus = PT_bittersweet_victory
+#	shared_focus = PT_begin_demilitarisation
+	shared_focus = PT_our_economic_prospects
+
+}
