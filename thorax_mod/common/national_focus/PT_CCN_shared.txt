@@ -150,6 +150,8 @@ shared_focus = { #Munitions Office
 	}
 }
 
+#Civil War
+
 shared_focus = { #Intelligence Office
 	id = PT_send_agents
 	icon = GFX_goal_PT_send_agents
@@ -581,7 +583,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = PT_sabotage_chrys_focus
-	icon = GFX_goal_chn_fortress #placeholder
+	icon = GFX_goal_ccn_queens_tower_broken
 	cost = 8.60
 	x = -1
 	y = 1
