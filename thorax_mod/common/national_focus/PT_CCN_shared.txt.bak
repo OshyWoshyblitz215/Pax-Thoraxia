@@ -583,7 +583,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = PT_sabotage_chrys_focus
-	icon = GFX_goal_ccn_broken_tower
+	icon = GFX_goal_ccn_queens_tower_broken
 	cost = 8.60
 	x = -1
 	y = 1
