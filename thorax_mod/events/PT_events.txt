@@ -10,6 +10,8 @@ country_event = { #we've won the civil war
 		}
 		CCN = {
 			exists = yes
+			owns_state = 251
+			
 		}
 	}
 	immediate = {
