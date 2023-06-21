@@ -14,7 +14,7 @@ country_event = { #we've won the civil war
 	}
 	immediate = {
 		news_event = { id = PT_CHN.31 }
-		load_focus_tree = { tree = PT_thorax_postcw_focus_tree keep_completed = yes }
+		mark_focus_tree_layout_dirty = yes
 	}
 }
 #country_event = {
