@@ -1,3 +1,31 @@
+
+#	focus = {
+#		id = PT_CCN_
+#		icon = GFX_goal_news
+#		x = -1
+#		y = 0
+#		relative_position_id = PT_CCN_
+#
+#		available = { }
+#		bypass = { }
+#
+#		cost = 10
+#		prerequisite = { focus = }
+#		#mutually_exclusive = { focus =  }
+#
+#		cancel_if_invalid = yes
+#		continue_if_invalid = no
+#		available_if_capitulated = no
+#
+#		completion_reward = { 
+#			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_after_war"
+#		}
+#		#complete_tooltip = { }
+#
+#		ai_will_do = { factor = 1000 }
+#	}
+
+
 focus_tree = {
 	id = PT_thorax_focus_tree
 
@@ -743,7 +771,7 @@ focus_tree = {
 	focus = {
 		id = PT_CCN_prepare_for_anything
 		icon = GFX_goal_news
-		x = 20
+		x = 10
 		y = 1
 		relative_position_id = PT_CCN_future_of_changling_lands
 
@@ -1580,4 +1608,1170 @@ focus_tree = {
 		ai_will_do = { factor = 1000 }
 	}
 	
+##########################
+#####Military Branch######
+##########################
+	
+	focus = {
+		id = PT_CCN_reform_the_military
+		icon = GFX_goal_news
+		x = 36
+		y = 1
+		relative_position_id = PT_CCN_new_age
+
+		available = { }
+		bypass = { }
+
+		cost = 10
+		prerequisite = { focus = PT_CCN_new_age }
+		#mutually_exclusive = { focus =  }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_reform_the_military"
+		}
+		#complete_tooltip = { }
+
+		ai_will_do = { factor = 1000 }
+	}	
+	focus = {
+		id = PT_CCN_establish_the_royal_protection_agency
+		icon = GFX_goal_news
+		x = -3
+		y = 1
+		relative_position_id = PT_CCN_reform_the_military
+
+		available = { }
+		bypass = { }
+
+		cost = 10
+		prerequisite = { focus = PT_CCN_reform_the_military }
+		#mutually_exclusive = { focus =  }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_establish_the_royal_protection_agency"
+		}
+		#complete_tooltip = { }
+
+		ai_will_do = { factor = 1000 }
+	}	
+	focus = {
+		id = PT_CCN_hire_new_agents
+		icon = GFX_goal_news
+		x = -1
+		y = 1
+		relative_position_id = PT_CCN_establish_the_royal_protection_agency
+
+		available = { }
+		bypass = { }
+
+		cost = 10
+		prerequisite = { focus = PT_CCN_establish_the_royal_protection_agency }
+		mutually_exclusive = { focus = PT_CCN_pardon_former_vops_agents }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_hire_new_agents"
+		}
+		#complete_tooltip = { }
+
+		ai_will_do = { factor = 1000 }
+	}	
+	focus = {
+		id = PT_CCN_pardon_former_vops_agents
+		icon = GFX_goal_news
+		x = 1
+		y = 1
+		relative_position_id = PT_CCN_establish_the_royal_protection_agency
+
+		available = { }
+		bypass = { }
+
+		cost = 10
+		prerequisite = { focus = PT_CCN_establish_the_royal_protection_agency }
+		mutually_exclusive = { focus = PT_CCN_hire_new_agents }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_pardon_former_vops_agents"
+		}
+		#complete_tooltip = { }
+
+		ai_will_do = { factor = 1000 }
+	}	
+	focus = {
+		id = PT_CCN_release_helvias_admiral_sister
+		icon = GFX_goal_news
+		x = -1
+		y = 1
+		relative_position_id = PT_CCN_reform_the_military
+
+		available = { }
+		bypass = { }
+
+		cost = 10
+		prerequisite = { focus = PT_CCN_reform_the_military }
+		#mutually_exclusive = { focus =  }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_release_helvias_admiral_sister"
+		}
+		#complete_tooltip = { }
+
+		ai_will_do = { factor = 1000 }
+	}	
+	focus = {
+		id = PT_CCN_new_officers_for_the_army
+		icon = GFX_goal_news
+		x = 1
+		y = 1
+		relative_position_id = PT_CCN_reform_the_military
+
+		available = { }
+		bypass = { }
+
+		cost = 10
+		prerequisite = { focus = PT_CCN_reform_the_military }
+		#mutually_exclusive = { focus =  }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_new_officers_for_the_army"
+		}
+		#complete_tooltip = { }
+
+		ai_will_do = { factor = 1000 }
+	}	
+	focus = {
+		id = PT_CCN_hunt_down_the_loyalists
+		icon = GFX_goal_news
+		x = 3
+		y = 1
+		relative_position_id = PT_CCN_reform_the_military
+
+		available = { }
+		bypass = { }
+
+		cost = 10
+		prerequisite = { focus = PT_CCN_reform_the_military }
+		#mutually_exclusive = { focus =  }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_hunt_down_the_loyalists"
+		}
+		#complete_tooltip = { }
+
+		ai_will_do = { factor = 1000 }
+	}	
+	focus = {
+		id = PT_CCN_imprison_chrysalian_generals
+		icon = GFX_goal_news
+		x = -1
+		y = 1
+		relative_position_id = PT_CCN_hunt_down_the_loyalists
+
+		available = { }
+		bypass = { }
+
+		cost = 10
+		prerequisite = { focus = PT_CCN_hunt_down_the_loyalists }
+		mutually_exclusive = { focus = PT_CCN_hang_them_for_their_crimes }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_imprison_chrysalian_generals"
+		}
+		#complete_tooltip = { }
+
+		ai_will_do = { factor = 1000 }
+	}	
+	focus = {
+		id = PT_CCN_hang_them_for_their_crimes
+		icon = GFX_goal_news
+		x = 1
+		y = 1
+		relative_position_id = PT_CCN_hunt_down_the_loyalists
+
+		available = { }
+		bypass = { }
+
+		cost = 10
+		prerequisite = { focus = PT_CCN_hunt_down_the_loyalists }
+		mutually_exclusive = { focus = PT_CCN_imprison_chrysalian_generals }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_hang_them_for_their_crimes"
+		}
+		#complete_tooltip = { }
+
+		ai_will_do = { factor = 1000 }
+	}	
+	focus = {
+		id = PT_CCN_expand_the_military_reforms
+		icon = GFX_goal_news
+		x = 0
+		y = 3
+		relative_position_id = PT_CCN_reform_the_military
+
+		available = { }
+		bypass = { }
+
+		cost = 10
+		prerequisite = { focus = PT_CCN_reform_the_military }
+		#mutually_exclusive = { focus =  }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_expand_the_military_reforms"
+		}
+		#complete_tooltip = { }
+
+		ai_will_do = { factor = 1000 }
+	}	
+	focus = {
+		id = PT_CCN_reform_the_changeling_army
+		icon = GFX_goal_news
+		x = -14
+		y = 1
+		relative_position_id = PT_CCN_expand_the_military_reforms
+
+		available = { }
+		bypass = { }
+
+		cost = 10
+		prerequisite = { focus = PT_CCN_expand_the_military_reforms }
+		#mutually_exclusive = { focus =  }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_reform_the_changeling_army"
+		}
+		#complete_tooltip = { }
+
+		ai_will_do = { factor = 1000 }
+	}	
+	focus = {
+		id = PT_CCN_establish_rcamicd
+		icon = GFX_goal_news
+		x = 6
+		y = 1
+		relative_position_id = PT_CCN_reform_the_changeling_army
+
+		available = { }
+		bypass = { }
+
+		cost = 10
+		prerequisite = { focus = PT_CCN_reform_the_changeling_army }
+		#mutually_exclusive = { focus =  }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_establish_rcamicd"
+		}
+		#complete_tooltip = { }
+
+		ai_will_do = { factor = 1000 }
+	}	
+	focus = {
+		id = PT_CCN_establish_sorythian_agical_corp
+		icon = GFX_goal_news
+		x = -1
+		y = 1
+		relative_position_id = PT_CCN_establish_rcamicd
+
+		available = { }
+		bypass = { }
+
+		cost = 10
+		prerequisite = { focus = PT_CCN_establish_rcamicd }
+		#mutually_exclusive = { focus =  }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_establish_sorythian_agical_corp"
+		}
+		#complete_tooltip = { }
+
+		ai_will_do = { factor = 1000 }
+	}	
+	focus = {
+		id = PT_CCN_reopen_ancient_tunnels
+		icon = GFX_goal_news
+		x = 0
+		y = 1
+		relative_position_id = PT_CCN_establish_sorythian_agical_corp
+
+		available = { }
+		bypass = { }
+
+		cost = 10
+		prerequisite = { focus = PT_CCN_establish_sorythian_agical_corp }
+		#mutually_exclusive = { focus =  }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_reopen_ancient_tunnels"
+		}
+		#complete_tooltip = { }
+
+		ai_will_do = { factor = 1000 }
+	}	
+	focus = {
+		id = PT_CCN_chemical_weapons_research
+		icon = GFX_goal_news
+		x = 1
+		y = 1
+		relative_position_id = PT_CCN_establish_rcamicd
+
+		available = { }
+		bypass = { }
+
+		cost = 10
+		prerequisite = { focus = PT_CCN_establish_rcamicd }
+		#mutually_exclusive = { focus =  }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_chemical_weapons_research"
+		}
+		#complete_tooltip = { }
+
+		ai_will_do = { factor = 1000 }
+	}	
+	focus = {
+		id = PT_CCN_perfect_anti_chemical_tactics
+		icon = GFX_goal_news
+		x = 0
+		y = 1
+		relative_position_id = PT_CCN_chemical_weapons_research
+
+		available = { }
+		bypass = { }
+
+		cost = 10
+		prerequisite = { focus = PT_CCN_chemical_weapons_research }
+		#mutually_exclusive = { focus =  }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_perfect_anti_chemical_tactics"
+		}
+		#complete_tooltip = { }
+
+		ai_will_do = { factor = 1000 }
+	}	
+	focus = {
+		id = PT_CCN_combining_science_and_magic
+		icon = GFX_goal_news
+		x = 0
+		y = 3
+		relative_position_id = PT_CCN_establish_rcamicd
+
+		available = { }
+		bypass = { }
+
+		cost = 10
+		prerequisite = { focus = PT_CCN_reopen_ancient_tunnels }
+		prerequisite = { focus = PT_CCN_perfect_anti_chemical_tactics }
+		#mutually_exclusive = { focus =  }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_combining_science_and_magic"
+		}
+		#complete_tooltip = { }
+
+		ai_will_do = { factor = 1000 }
+	}	
+	focus = {
+		id = PT_CCN_pharynxs_return_to_traditional_tactics
+		icon = GFX_goal_news
+		x = -2
+		y = 1
+		relative_position_id = PT_CCN_reform_the_changeling_army
+
+		available = { }
+		bypass = { }
+
+		cost = 10
+		prerequisite = { focus = PT_CCN_reform_the_changeling_army }
+		mutually_exclusive = { focus = PT_CCN_dalzollenes_warfare_modernization_plan }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_pharynxs_return_to_traditional_tactics"
+		}
+		#complete_tooltip = { }
+
+		ai_will_do = { factor = 1000 }
+	}	
+	focus = {
+		id = PT_CCN_swarm_tactics
+		icon = GFX_goal_news
+		x = 0
+		y = 1
+		relative_position_id = PT_CCN_pharynxs_return_to_traditional_tactics
+
+		available = { }
+		bypass = { }
+
+		cost = 10
+		prerequisite = { focus = PT_CCN_pharynxs_return_to_traditional_tactics }
+		#mutually_exclusive = { focus =  }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_swarm_tactics"
+		}
+		#complete_tooltip = { }
+
+		ai_will_do = { factor = 1000 }
+	}	
+	focus = {
+		id = PT_CCN_the_wall_of_chitin_and_bullets
+		icon = GFX_goal_news
+		x = -1
+		y = 1
+		relative_position_id = PT_CCN_swarm_tactics
+
+		available = { }
+		bypass = { }
+
+		cost = 10
+		prerequisite = { focus = PT_CCN_swarm_tactics }
+		#mutually_exclusive = { focus =  }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_the_wall_of_chitin_and_bullets"
+		}
+		#complete_tooltip = { }
+
+		ai_will_do = { factor = 1000 }
+	}	
+	focus = {
+		id = PT_CCN_jaeger_shocktroops
+		icon = GFX_goal_news
+		x = 0
+		y = 1
+		relative_position_id = PT_CCN_the_wall_of_chitin_and_bullets
+
+		available = { }
+		bypass = { }
+
+		cost = 10
+		prerequisite = { focus = PT_CCN_the_wall_of_chitin_and_bullets }
+		#mutually_exclusive = { focus =  }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_jaeger_shocktroops"
+		}
+		#complete_tooltip = { }
+
+		ai_will_do = { factor = 1000 }
+	}	
+	focus = {
+		id = PT_CCN_squad_tactics
+		icon = GFX_goal_news
+		x = 0
+		y = 1
+		relative_position_id = PT_CCN_jaeger_shocktroops
+
+		available = { }
+		bypass = { }
+
+		cost = 10
+		prerequisite = { focus = PT_CCN_jaeger_shocktroops }
+		#mutually_exclusive = { focus =  }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_squad_tactics"
+		}
+		#complete_tooltip = { }
+
+		ai_will_do = { factor = 1000 }
+	}	
+	focus = {
+		id = PT_CCN_adapt_to_all_terrains
+		icon = GFX_goal_news
+		x = 0
+		y = 1
+		relative_position_id = PT_CCN_squad_tactics
+
+		available = { }
+		bypass = { }
+
+		cost = 10
+		prerequisite = { focus = PT_CCN_squad_tactics }
+		#mutually_exclusive = { focus =  }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_adapt_to_all_terrains"
+		}
+		#complete_tooltip = { }
+
+		ai_will_do = { factor = 1000 }
+	}	
+	focus = {
+		id = PT_CCN_mass_infiltration
+		icon = GFX_goal_news
+		x = 1
+		y = 1
+		relative_position_id = PT_CCN_swarm_tactics
+
+		available = { }
+		bypass = { }
+
+		cost = 10
+		prerequisite = { focus = PT_CCN_swarm_tactics }
+		#mutually_exclusive = { focus =  }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_mass_infiltration"
+		}
+		#complete_tooltip = { }
+
+		ai_will_do = { factor = 1000 }
+	}	
+	focus = {
+		id = PT_CCN_night_raids
+		icon = GFX_goal_news
+		x = 0
+		y = 1
+		relative_position_id = PT_CCN_mass_infiltration
+
+		available = { }
+		bypass = { }
+
+		cost = 10
+		prerequisite = { focus = PT_CCN_mass_infiltration }
+		#mutually_exclusive = { focus =  }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_night_raids"
+		}
+		#complete_tooltip = { }
+
+		ai_will_do = { factor = 1000 }
+	}	
+	focus = {
+		id = PT_CCN_solution_to_tanks
+		icon = GFX_goal_news
+		x = 0
+		y = 1
+		relative_position_id = PT_CCN_night_raids
+
+		available = { }
+		bypass = { }
+
+		cost = 10
+		prerequisite = { focus = PT_CCN_night_raids }
+		#mutually_exclusive = { focus =  }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_solution_to_tanks"
+		}
+		#complete_tooltip = { }
+
+		ai_will_do = { factor = 1000 }
+	}	
+	focus = {
+		id = PT_CCN_solution_to_tanks
+		icon = GFX_goal_news
+		x = 0
+		y = 1
+		relative_position_id = PT_CCN_night_raids
+
+		available = { }
+		bypass = { }
+
+		cost = 10
+		prerequisite = { focus = PT_CCN_night_raids }
+		#mutually_exclusive = { focus =  }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_solution_to_tanks"
+		}
+		#complete_tooltip = { }
+
+		ai_will_do = { factor = 1000 }
+	}	
+	focus = {
+		id = PT_CCN_air_camoflague
+		icon = GFX_goal_news
+		x = 0
+		y = 1
+		relative_position_id = PT_CCN_solution_to_tanks
+
+		available = { }
+		bypass = { }
+
+		cost = 10
+		prerequisite = { focus = PT_CCN_solution_to_tanks }
+		#mutually_exclusive = { focus =  }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_air_camoflague"
+		}
+		#complete_tooltip = { }
+
+		ai_will_do = { factor = 1000 }
+	}	
+	focus = {
+		id = PT_CCN_the_spirit_of_the_soldier
+		icon = GFX_goal_news
+		x = 0
+		y = 5
+		relative_position_id = PT_CCN_swarm_tactics
+
+		available = { }
+		bypass = { }
+
+		cost = 10
+		prerequisite = { focus = PT_CCN_adapt_to_all_terrains }
+		prerequisite = { focus = PT_CCN_air_camoflague }
+		#mutually_exclusive = { focus =  }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_the_spirit_of_the_soldier"
+		}
+		#complete_tooltip = { }
+
+		ai_will_do = { factor = 1000 }
+	}	
+	focus = {
+		id = PT_CCN_dalzollenes_warfare_modernization_plan
+		icon = GFX_goal_news
+		x = 2
+		y = 1
+		relative_position_id = PT_CCN_reform_the_changeling_army
+
+		available = { }
+		bypass = { }
+
+		cost = 10
+		prerequisite = { focus = PT_CCN_reform_the_changeling_army }
+		mutually_exclusive = { focus = PT_CCN_pharynxs_return_to_traditional_tactics }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_dalzollenes_warfare_modernization_plan"
+		}
+		#complete_tooltip = { }
+
+		ai_will_do = { factor = 1000 }
+	}	
+	focus = {
+		id = PT_CCN_primacy_of_technology
+		icon = GFX_goal_news
+		x = 0
+		y = 1
+		relative_position_id = PT_CCN_dalzollenes_warfare_modernization_plan
+
+		available = { }
+		bypass = { }
+
+		cost = 10
+		prerequisite = { focus = PT_CCN_dalzollenes_warfare_modernization_plan }
+		#mutually_exclusive = { focus =  }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_primacy_of_technology"
+		}
+		#complete_tooltip = { }
+
+		ai_will_do = { factor = 1000 }
+	}	
+	focus = {
+		id = PT_CCN_artillery_is_the_new_backbone
+		icon = GFX_goal_news
+		x = -1
+		y = 1
+		relative_position_id = PT_CCN_primacy_of_technology
+
+		available = { }
+		bypass = { }
+
+		cost = 10
+		prerequisite = { focus = PT_CCN_primacy_of_technology }
+		#mutually_exclusive = { focus =  }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_artillery_is_the_new_backbone"
+		}
+		#complete_tooltip = { }
+
+		ai_will_do = { factor = 1000 }
+	}	
+	focus = {
+		id = PT_CCN_return_of_the_panzer
+		icon = GFX_goal_news
+		x = 0
+		y = 1
+		relative_position_id = PT_CCN_artillery_is_the_new_backbone
+
+		available = { }
+		bypass = { }
+
+		cost = 10
+		prerequisite = { focus = PT_CCN_artillery_is_the_new_backbone }
+		#mutually_exclusive = { focus =  }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_return_of_the_panzer"
+		}
+		#complete_tooltip = { }
+
+		ai_will_do = { factor = 1000 }
+	}	
+	focus = {
+		id = PT_CCN_speed_is_paramount
+		icon = GFX_goal_news
+		x = 0
+		y = 1
+		relative_position_id = PT_CCN_return_of_the_panzer
+
+		available = { }
+		bypass = { }
+
+		cost = 10
+		prerequisite = { focus = PT_CCN_return_of_the_panzer }
+		#mutually_exclusive = { focus =  }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_speed_is_paramount"
+		}
+		#complete_tooltip = { }
+
+		ai_will_do = { factor = 1000 }
+	}	
+	focus = {
+		id = PT_CCN_true_special_forces
+		icon = GFX_goal_news
+		x = 0
+		y = 1
+		relative_position_id = PT_CCN_speed_is_paramount
+
+		available = { }
+		bypass = { }
+
+		cost = 10
+		prerequisite = { focus = PT_CCN_speed_is_paramount }
+		#mutually_exclusive = { focus =  }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_true_special_forces"
+		}
+		#complete_tooltip = { }
+
+		ai_will_do = { factor = 1000 }
+	}	
+	focus = {
+		id = PT_CCN_extensive_support
+		icon = GFX_goal_news
+		x = 1
+		y = 1
+		relative_position_id = PT_CCN_primacy_of_technology
+
+		available = { }
+		bypass = { }
+
+		cost = 10
+		prerequisite = { focus = PT_CCN_primacy_of_technology }
+		#mutually_exclusive = { focus =  }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_extensive_support"
+		}
+		#complete_tooltip = { }
+
+		ai_will_do = { factor = 1000 }
+	}	
+	focus = {
+		id = PT_CCN_everycreature_has_a_purpose
+		icon = GFX_goal_news
+		x = 0
+		y = 1
+		relative_position_id = PT_CCN_extensive_support
+
+		available = { }
+		bypass = { }
+
+		cost = 10
+		prerequisite = { focus = PT_CCN_extensive_support }
+		#mutually_exclusive = { focus =  }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_everycreature_has_a_purpose"
+		}
+		#complete_tooltip = { }
+
+		ai_will_do = { factor = 1000 }
+	}	
+	focus = {
+		id = PT_CCN_an_army_marches_on_its_stomach
+		icon = GFX_goal_news
+		x = 0
+		y = 1
+		relative_position_id = PT_CCN_everycreature_has_a_purpose
+
+		available = { }
+		bypass = { }
+
+		cost = 10
+		prerequisite = { focus = PT_CCN_everycreature_has_a_purpose }
+		#mutually_exclusive = { focus =  }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_an_army_marches_on_its_stomach"
+		}
+		#complete_tooltip = { }
+
+		ai_will_do = { factor = 1000 }
+	}	
+	focus = {
+		id = PT_CCN_mass_motorization
+		icon = GFX_goal_news
+		x = 0
+		y = 1
+		relative_position_id = PT_CCN_an_army_marches_on_its_stomach
+
+		available = { }
+		bypass = { }
+
+		cost = 10
+		prerequisite = { focus = PT_CCN_an_army_marches_on_its_stomach }
+		#mutually_exclusive = { focus =  }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_mass_motorization"
+		}
+		#complete_tooltip = { }
+
+		ai_will_do = { factor = 1000 }
+	}	
+	focus = {
+		id = PT_CCN_age_of_machines
+		icon = GFX_goal_news
+		x = 0
+		y = 5
+		relative_position_id = PT_CCN_primacy_of_technology
+
+		available = { }
+		bypass = { }
+
+		cost = 10
+		prerequisite = { focus = PT_CCN_true_special_forces }
+		prerequisite = { focus = PT_CCN_mass_motorization }
+		#mutually_exclusive = { focus =  }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_age_of_machines"
+		}
+		#complete_tooltip = { }
+
+		ai_will_do = { factor = 1000 }
+	}	
+	focus = {
+		id = PT_CCN_establish_academy_of_infiltration_and_espionage
+		icon = GFX_goal_news
+		x = 0
+		y = 1
+		relative_position_id = PT_CCN_the_spirit_of_the_soldier
+
+		available = { }
+		bypass = { }
+
+		cost = 10
+		prerequisite = { 
+			focus =  PT_CCN_the_spirit_of_the_soldier
+			focus =  PT_CCN_age_of_machines
+		}
+		#mutually_exclusive = { focus =  }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_establish_academy_of_infiltration_and_espionage"
+		}
+		#complete_tooltip = { }
+
+		ai_will_do = { factor = 1000 }
+	}	
+	focus = {
+		id = PT_CCN_study_magic_equipment
+		icon = GFX_goal_news
+		x = 2
+		y = 1
+		relative_position_id = PT_CCN_the_spirit_of_the_soldier
+
+		available = { }
+		bypass = { }
+
+		cost = 10
+		prerequisite = { 
+			focus =  PT_CCN_the_spirit_of_the_soldier
+			focus =  PT_CCN_age_of_machines
+		}
+		#mutually_exclusive = { focus =  }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_study_magic_equipment"
+		}
+		#complete_tooltip = { }
+
+		ai_will_do = { factor = 1000 }
+	}	
+	focus = {
+		id = PT_CCN_royal_infantry_academy
+		icon = GFX_goal_news
+		x = 4
+		y = 1
+		relative_position_id = PT_CCN_the_spirit_of_the_soldier
+
+		available = { }
+		bypass = { }
+
+		cost = 10
+		prerequisite = { 
+			focus =  PT_CCN_the_spirit_of_the_soldier
+			focus =  PT_CCN_age_of_machines
+		}
+		#mutually_exclusive = { focus =  }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_royal_infantry_academy"
+		}
+		#complete_tooltip = { }
+
+		ai_will_do = { factor = 1000 }
+	}
+	focus = {
+		id = PT_CCN_fund_the_arms_manufacturers
+		icon = GFX_goal_news
+		x = -5
+		y = 1
+		relative_position_id = PT_CCN_reform_the_changeling_army
+
+		available = { }
+		bypass = { }
+
+		cost = 10
+		prerequisite = { focus = PT_CCN_reform_the_changeling_army }
+		#mutually_exclusive = { focus =  }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_fund_the_arms_manufacturers"
+		}
+		#complete_tooltip = { }
+
+		ai_will_do = { factor = 1000 }
+	}	
+	focus = {
+		id = PT_CCN_firearms_research
+		icon = GFX_goal_news
+		x = -1
+		y = 1
+		relative_position_id = PT_CCN_fund_the_arms_manufacturers
+
+		available = { }
+		bypass = { }
+
+		cost = 10
+		prerequisite = { focus = PT_CCN_fund_the_arms_manufacturers }
+		#mutually_exclusive = { focus =  }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_firearms_research"
+		}
+		#complete_tooltip = { }
+
+		ai_will_do = { factor = 1000 }
+	}	
+	focus = {
+		id = PT_CCN_support_research
+		icon = GFX_goal_news
+		x = 1
+		y = 1
+		relative_position_id = PT_CCN_fund_the_arms_manufacturers
+
+		available = { }
+		bypass = { }
+
+		cost = 10
+		prerequisite = { focus = PT_CCN_fund_the_arms_manufacturers }
+		#mutually_exclusive = { focus =  }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_support_research"
+		}
+		#complete_tooltip = { }
+
+		ai_will_do = { factor = 1000 }
+	}		
 }
