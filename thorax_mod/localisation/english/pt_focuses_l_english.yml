@@ -170,3 +170,15 @@
  PT_CCN_send_invitation_to_olenia_desc:0 "Send Invitation To Olenia Description"
  PT_CCN_send_invitation_to_bears:0 "Send Invitation To The Bears"
  PT_CCN_send_invitation_to_bears_desc:0 "Send Invitation To The Bears Description"
+ 
+ PT_CCN_send_invitation_to_yaks:0 "Send Invitation To The Yaks"
+ PT_CCN_send_invitation_to_yaks_desc:0 "Send Invitation To The Yaks Description"
+ PT_CCN_influence_crystal_empire:0 "Influence Crystal Empire"
+ PT_CCN_influence_crystal_empire_desc:0 "Influence Crystal Empire Description"
+
+ PT_CCN_push_crystal_to_join:0 "Push Them To Join Us"
+ PT_CCN_push_crystal_to_join_desc:0 "Push Them To Join Us Description"
+ PT_CCN_keep_our_doors_open:0 "Keep Our Doors Open For Other Nations"
+ PT_CCN_keep_our_doors_open_desc:0 "Keep Our Doors Open For Other Nations Description"
+ PT_CCN_great_northern_harmony:0 "Great Northern Harmony"
+ PT_CCN_great_northern_harmony_desc:0 "Great Northern Harmony Description"

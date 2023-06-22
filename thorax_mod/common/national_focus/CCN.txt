@@ -1450,5 +1450,134 @@ focus_tree = {
 
 		ai_will_do = { factor = 1000 }
 	}
+	focus = {
+		id = PT_CCN_send_invitation_to_yaks
+		icon = GFX_goal_news
+		x = 1
+		y = 1
+		relative_position_id = PT_CCN_revise_polaris_concordat
+
+		available = { }
+		bypass = { }
+
+		cost = 10
+		prerequisite = { focus = PT_CCN_revise_polaris_concordat }
+		#mutually_exclusive = { focus =  }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_send_invitation_to_yaks"
+		}
+		#complete_tooltip = { }
+
+		ai_will_do = { factor = 1000 }
+	}
+	focus = {
+		id = PT_CCN_influence_crystal_empire
+		icon = GFX_goal_news
+		x = 3
+		y = 1
+		relative_position_id = PT_CCN_revise_polaris_concordat
+
+		available = { }
+		bypass = { }
+
+		cost = 10
+		prerequisite = { focus = PT_CCN_revise_polaris_concordat }
+		#mutually_exclusive = { focus =  }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_influence_crystal_empire"
+		}
+		#complete_tooltip = { }
+
+		ai_will_do = { factor = 1000 }
+	}
+	
+	focus = {
+		id = PT_CCN_push_crystal_to_join
+		icon = GFX_goal_news
+		x = 0
+		y = 1
+		relative_position_id = PT_CCN_influence_crystal_empire
+
+		available = { }
+		bypass = { }
+
+		cost = 10
+		prerequisite = { focus = PT_CCN_influence_crystal_empire }
+		#mutually_exclusive = { focus =  }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_push_crystal_to_join"
+		}
+		#complete_tooltip = { }
+
+		ai_will_do = { factor = 1000 }
+	}
+	focus = {
+		id = PT_CCN_keep_our_doors_open
+		icon = GFX_goal_news
+		x = -1
+		y = 3
+		relative_position_id = PT_CCN_revise_polaris_concordat
+
+		available = { }
+		bypass = { }
+
+		cost = 10
+		prerequisite = { focus = PT_CCN_send_invitation_to_olenia }
+		prerequisite = { focus = PT_CCN_send_invitation_to_bears }
+		prerequisite = { focus = PT_CCN_send_invitation_to_yaks }
+		prerequisite = { focus = PT_CCN_push_crystal_to_join }
+		#mutually_exclusive = { focus =  }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_keep_our_doors_open"
+		}
+		#complete_tooltip = { }
+
+		ai_will_do = { factor = 1000 }
+	}
+	focus = {
+		id = PT_CCN_great_northern_harmony
+		icon = GFX_goal_news
+		x = 0
+		y = 1
+		relative_position_id = PT_CCN_keep_our_doors_open
+
+		available = { }
+		bypass = { }
+
+		cost = 10
+		prerequisite = { focus = PT_CCN_keep_our_doors_open }
+		#mutually_exclusive = { focus =  }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_great_northern_harmony"
+		}
+		#complete_tooltip = { }
+
+		ai_will_do = { factor = 1000 }
+	}
 	
 }
