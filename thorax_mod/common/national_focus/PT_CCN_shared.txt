@@ -1,6 +1,6 @@
 shared_focus = { #Service Office
 	id = PT_the_hives_have_stirred
-	icon = GFX_goal_chn_hive_stirs
+	icon = GFX_goal_PT_the_hives_stir
 	cost = 3.00
 	x = 4
 	y = 0

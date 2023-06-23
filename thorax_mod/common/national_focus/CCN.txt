@@ -38,7 +38,7 @@ focus_tree = {
 		}
 	}
 	default = no
-	continuous_focus_position = { x = 0 y = 2400 }
+	continuous_focus_position = { x = 200 y = 1600 }
 
 	shared_focus = PT_the_hives_have_stirred
 	shared_focus = PT_fight_for_whats_right
@@ -286,7 +286,7 @@ focus_tree = {
 	focus = {
 		id = PT_CCN_new_age
 		icon = GFX_goal_news
-		x = 24
+		x = 37
 		y = 0
 		#relative_position_id = 
 
@@ -1615,7 +1615,7 @@ focus_tree = {
 	focus = {
 		id = PT_CCN_reform_the_military
 		icon = GFX_goal_news
-		x = 36
+		x = 35
 		y = 1
 		relative_position_id = PT_CCN_new_age
 
@@ -1865,7 +1865,7 @@ focus_tree = {
 	focus = {
 		id = PT_CCN_reform_the_changeling_army
 		icon = GFX_goal_news
-		x = -14
+		x = -13
 		y = 1
 		relative_position_id = PT_CCN_expand_the_military_reforms
 
@@ -2773,5 +2773,1741 @@ focus_tree = {
 		#complete_tooltip = { }
 
 		ai_will_do = { factor = 1000 }
-	}		
+	}
+	
+	#Air Branch
+	
+	focus = {
+		id = PT_CCN_establish_the_bhfeidhm_aer
+		icon = GFX_goal_news
+		x = 0
+		y = 1
+		relative_position_id = PT_CCN_expand_the_military_reforms
+
+		available = { }
+		bypass = { }
+
+		cost = 10
+		prerequisite = { focus = PT_CCN_expand_the_military_reforms }
+		#mutually_exclusive = { focus =  }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_establish_the_bhfeidhm_aer"
+		}
+		#complete_tooltip = { }
+
+		ai_will_do = { factor = 1000 }
+	}	
+	focus = {
+		id = PT_CCN_focus_on_the_bombs
+		icon = GFX_goal_news
+		x = -1
+		y = 1
+		relative_position_id = PT_CCN_establish_the_bhfeidhm_aer
+
+		available = { }
+		bypass = { }
+
+		cost = 10
+		prerequisite = { focus = PT_CCN_establish_the_bhfeidhm_aer }
+		mutually_exclusive = { focus = PT_CCN_focus_on_the_swarm_supremacy }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_focus_on_the_bombs"
+		}
+		#complete_tooltip = { }
+
+		ai_will_do = { factor = 1000 }
+	}	
+	focus = {
+		id = PT_CCN_focus_on_the_swarm_supremacy
+		icon = GFX_goal_news
+		x = 1
+		y = 1
+		relative_position_id = PT_CCN_establish_the_bhfeidhm_aer
+
+		available = { }
+		bypass = { }
+
+		cost = 10
+		prerequisite = { focus = PT_CCN_establish_the_bhfeidhm_aer }
+		mutually_exclusive = { focus = PT_CCN_focus_on_the_bombs }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_focus_on_the_swarm_supremacy"
+		}
+		#complete_tooltip = { }
+
+		ai_will_do = { factor = 1000 }
+	}	
+	focus = {
+		id = PT_CCN_establish_the_paratrooper_division
+		icon = GFX_goal_news
+		x = 0
+		y = 2
+		relative_position_id = PT_CCN_establish_the_bhfeidhm_aer
+
+		available = { }
+		bypass = { }
+
+		cost = 10
+		prerequisite = { 
+			focus = PT_CCN_focus_on_the_bombs 
+			focus = PT_CCN_focus_on_the_swarm_supremacy
+		}
+		#mutually_exclusive = { focus =  }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_establish_the_paratrooper_division"
+		}
+		#complete_tooltip = { }
+
+		ai_will_do = { factor = 1000 }
+	}	
+	focus = {
+		id = PT_CCN_designs_for_close_air_support
+		icon = GFX_goal_news
+		x = -4
+		y = 2
+		relative_position_id = PT_CCN_establish_the_bhfeidhm_aer
+
+		available = { }
+		bypass = { }
+
+		cost = 10
+		prerequisite = { 
+			focus = PT_CCN_focus_on_the_bombs 
+			focus = PT_CCN_focus_on_the_swarm_supremacy
+		}
+		#mutually_exclusive = { focus =  }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_designs_for_close_air_support"
+		}
+		#complete_tooltip = { }
+
+		ai_will_do = { factor = 1000 }
+	}	
+	focus = {
+		id = PT_CCN_multiple_role_bombers
+		icon = GFX_goal_news
+		x = -2
+		y = 2
+		relative_position_id = PT_CCN_establish_the_bhfeidhm_aer
+
+		available = { }
+		bypass = { }
+
+		cost = 10
+		prerequisite = { 
+			focus = PT_CCN_focus_on_the_bombs 
+			focus = PT_CCN_focus_on_the_swarm_supremacy
+		}
+		#mutually_exclusive = { focus =  }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_multiple_role_bombers"
+		}
+		#complete_tooltip = { }
+
+		ai_will_do = { factor = 1000 }
+	}	
+	focus = {
+		id = PT_CCN_larger_payload_bomber_designs
+		icon = GFX_goal_news
+		x = 1
+		y = 1
+		relative_position_id = PT_CCN_designs_for_close_air_support
+
+		available = { }
+		bypass = { }
+
+		cost = 10
+		prerequisite = { focus = PT_CCN_designs_for_close_air_support }
+		prerequisite = { focus = PT_CCN_multiple_role_bombers }
+		#mutually_exclusive = { focus =  }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_larger_payload_bomber_designs"
+		}
+		#complete_tooltip = { }
+
+		ai_will_do = { factor = 1000 }
+	}	
+	focus = {
+		id = PT_CCN_strategic_bomber_command
+		icon = GFX_goal_news
+		x = 0
+		y = 3
+		relative_position_id = PT_CCN_focus_on_the_bombs
+
+		available = { }
+		bypass = { }
+
+		cost = 10
+		prerequisite = { focus = PT_CCN_focus_on_the_bombs }
+		prerequisite = { focus = PT_CCN_larger_payload_bomber_designs }
+		#mutually_exclusive = { focus =  }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_strategic_bomber_command"
+		}
+		#complete_tooltip = { }
+
+		ai_will_do = { factor = 1000 }
+	}	
+	focus = {
+		id = PT_CCN_purchase_foreign_fighters
+		icon = GFX_goal_news
+		x = 2
+		y = 2
+		relative_position_id = PT_CCN_establish_the_bhfeidhm_aer
+
+		available = { }
+		bypass = { }
+
+		cost = 10
+		prerequisite = { 
+			focus = PT_CCN_focus_on_the_bombs 
+			focus = PT_CCN_focus_on_the_swarm_supremacy
+		}
+		#mutually_exclusive = { focus =  }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_purchase_foreign_fighters"
+		}
+		#complete_tooltip = { }
+
+		ai_will_do = { factor = 1000 }
+	}	
+	focus = {
+		id = PT_CCN_inovative_fighter_design
+		icon = GFX_goal_news
+		x = 4
+		y = 2
+		relative_position_id = PT_CCN_establish_the_bhfeidhm_aer
+
+		available = { }
+		bypass = { }
+
+		cost = 10
+		prerequisite = { 
+			focus = PT_CCN_focus_on_the_bombs 
+			focus = PT_CCN_focus_on_the_swarm_supremacy
+		}
+		#mutually_exclusive = { focus =  }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_inovative_fighter_design"
+		}
+		#complete_tooltip = { }
+
+		ai_will_do = { factor = 1000 }
+	}	
+	focus = {
+		id = PT_CCN_long_range_fighter_designs
+		icon = GFX_goal_news
+		x = 1
+		y = 1
+		relative_position_id = PT_CCN_purchase_foreign_fighters
+
+		available = { }
+		bypass = { }
+
+		cost = 10
+		prerequisite = { focus = PT_CCN_purchase_foreign_fighters }
+		prerequisite = { focus = PT_CCN_inovative_fighter_design }
+		#mutually_exclusive = { focus =  }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_long_range_fighter_designs"
+		}
+		#complete_tooltip = { }
+
+		ai_will_do = { factor = 1000 }
+	}	
+	focus = {
+		id = PT_CCN_steel_swarms_of_the_sky
+		icon = GFX_goal_news
+		x = 0
+		y = 3
+		relative_position_id = PT_CCN_focus_on_the_swarm_supremacy
+
+		available = { }
+		bypass = { }
+
+		cost = 10
+		prerequisite = { focus = PT_CCN_focus_on_the_swarm_supremacy }
+		prerequisite = { focus = PT_CCN_long_range_fighter_designs }
+		#mutually_exclusive = { focus =  }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_steel_swarms_of_the_sky"
+		}
+		#complete_tooltip = { }
+
+		ai_will_do = { factor = 1000 }
+	}	
+	focus = {
+		id = PT_CCN_establish_the_airm_iontais
+		icon = GFX_goal_news
+		x = 1
+		y = 1
+		relative_position_id = PT_CCN_strategic_bomber_command
+
+		available = { }
+		bypass = { }
+
+		cost = 10
+		prerequisite = { 
+			focus = PT_CCN_strategic_bomber_command 
+			focus = PT_CCN_steel_swarms_of_the_sky 
+		}
+		#mutually_exclusive = { focus =  }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_establish_the_airm_iontais"
+		}
+		#complete_tooltip = { }
+
+		ai_will_do = { factor = 1000 }
+	}	
+	focus = {
+		id = PT_CCN_inovative_rocket_designs
+		icon = GFX_goal_news
+		x = -1
+		y = 1
+		relative_position_id = PT_CCN_establish_the_airm_iontais
+
+		available = { }
+		bypass = { }
+
+		cost = 10
+		prerequisite = { focus = PT_CCN_establish_the_airm_iontais }
+		#mutually_exclusive = { focus =  }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_inovative_rocket_designs"
+		}
+		#complete_tooltip = { }
+
+		ai_will_do = { factor = 1000 }
+	}	
+	focus = {
+		id = PT_CCN_peer_into_chrysalian_secret_wunderwaffe
+		icon = GFX_goal_news
+		x = 1
+		y = 1
+		relative_position_id = PT_CCN_establish_the_airm_iontais
+
+		available = { }
+		bypass = { }
+
+		cost = 10
+		prerequisite = { focus = PT_CCN_establish_the_airm_iontais }
+		#mutually_exclusive = { focus =  }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_peer_into_chrysalian_secret_wunderwaffe"
+		}
+		#complete_tooltip = { }
+
+		ai_will_do = { factor = 1000 }
+	}	
+	focus = {
+		id = PT_CCN_improving_jet_engines
+		icon = GFX_goal_news
+		x = 0
+		y = 2
+		relative_position_id = PT_CCN_establish_the_airm_iontais
+
+		available = { }
+		bypass = { }
+
+		cost = 10
+		prerequisite = { focus = PT_CCN_inovative_rocket_designs }
+		prerequisite = { focus = PT_CCN_peer_into_chrysalian_secret_wunderwaffe }
+		#mutually_exclusive = { focus =  }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_improving_jet_engines"
+		}
+		#complete_tooltip = { }
+
+		ai_will_do = { factor = 1000 }
+	}	
+	focus = {
+		id = PT_CCN_jet_fighter_design
+		icon = GFX_goal_news
+		x = -2
+		y = 1
+		relative_position_id = PT_CCN_improving_jet_engines
+
+		available = { }
+		bypass = { }
+
+		cost = 10
+		prerequisite = { focus = PT_CCN_improving_jet_engines }
+		#mutually_exclusive = { focus =  }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_jet_fighter_design"
+		}
+		#complete_tooltip = { }
+
+		ai_will_do = { factor = 1000 }
+	}	
+	focus = {
+		id = PT_CCN_jet_bomber_design
+		icon = GFX_goal_news
+		x = 0
+		y = 1
+		relative_position_id = PT_CCN_improving_jet_engines
+
+		available = { }
+		bypass = { }
+
+		cost = 10
+		prerequisite = { focus = PT_CCN_improving_jet_engines }
+		#mutually_exclusive = { focus =  }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_jet_bomber_design"
+		}
+		#complete_tooltip = { }
+
+		ai_will_do = { factor = 1000 }
+	}	
+	focus = {
+		id = PT_CCN_strategic_jet_bomber_design
+		icon = GFX_goal_news
+		x = 2
+		y = 1
+		relative_position_id = PT_CCN_improving_jet_engines
+
+		available = { }
+		bypass = { }
+
+		cost = 10
+		prerequisite = { focus = PT_CCN_improving_jet_engines }
+		#mutually_exclusive = { focus =  }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_strategic_jet_bomber_design"
+		}
+		#complete_tooltip = { }
+
+		ai_will_do = { factor = 1000 }
+	}	
+	
+	#fortification branch
+	focus = {
+		id = PT_CCN_fortification_efforts
+		icon = GFX_goal_news
+		x = 7
+		y = 1
+		relative_position_id = PT_CCN_expand_the_military_reforms
+
+		available = { }
+		bypass = { }
+
+		cost = 10
+		prerequisite = { focus = PT_CCN_expand_the_military_reforms }
+		#mutually_exclusive = { focus =  }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_fortification_efforts"
+		}
+		#complete_tooltip = { }
+
+		ai_will_do = { factor = 1000 }
+	}	
+	focus = {
+		id = PT_CCN_northern_bastion
+		icon = GFX_goal_news
+		x = -2
+		y = 1
+		relative_position_id = PT_CCN_fortification_efforts
+
+		available = { }
+		bypass = { }
+
+		cost = 10
+		prerequisite = { focus = PT_CCN_fortification_efforts }
+		#mutually_exclusive = { focus =  }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_northern_bastion"
+		}
+		#complete_tooltip = { }
+
+		ai_will_do = { factor = 1000 }
+	}	
+	focus = {
+		id = PT_CCN_southern_bastion
+		icon = GFX_goal_news
+		x = 0
+		y = 1
+		relative_position_id = PT_CCN_fortification_efforts
+
+		available = { }
+		bypass = { }
+
+		cost = 10
+		prerequisite = { focus = PT_CCN_fortification_efforts }
+		#mutually_exclusive = { focus =  }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_southern_bastion"
+		}
+		#complete_tooltip = { }
+
+		ai_will_do = { factor = 1000 }
+	}	
+	focus = {
+		id = PT_CCN_central_bastion
+		icon = GFX_goal_news
+		x = 2
+		y = 1
+		relative_position_id = PT_CCN_fortification_efforts
+
+		available = { }
+		bypass = { }
+
+		cost = 10
+		prerequisite = { focus = PT_CCN_fortification_efforts }
+		#mutually_exclusive = { focus =  }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_central_bastion"
+		}
+		#complete_tooltip = { }
+
+		ai_will_do = { factor = 1000 }
+	}	
+	focus = {
+		id = PT_CCN_central_redoubt
+		icon = GFX_goal_news
+		x = 0
+		y = 1
+		relative_position_id = PT_CCN_southern_bastion
+
+		available = { }
+		bypass = { }
+
+		cost = 10
+		prerequisite = { focus = PT_CCN_northern_bastion }
+		prerequisite = { focus = PT_CCN_southern_bastion }
+		prerequisite = { focus = PT_CCN_central_bastion }
+		#mutually_exclusive = { focus =  }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_central_redoubt"
+		}
+		#complete_tooltip = { }
+
+		ai_will_do = { factor = 1000 }
+	}	
+
+	#Navy Branch
+	focus = {
+		id = PT_CCN_comprehensive_reform_of_the_navy
+		icon = GFX_goal_news
+		x = 12
+		y = 1
+		relative_position_id = PT_CCN_expand_the_military_reforms
+
+		available = { }
+		bypass = { }
+
+		cost = 10
+		prerequisite = { focus = PT_CCN_expand_the_military_reforms }
+		#mutually_exclusive = { focus =  }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_comprehensive_reform_of_the_navy"
+		}
+		#complete_tooltip = { }
+
+		ai_will_do = { factor = 1000 }
+	}	
+	focus = {
+		id = PT_CCN_pruchasing_new_warships
+		icon = GFX_goal_news
+		x = 0
+		y = 1
+		relative_position_id = PT_CCN_comprehensive_reform_of_the_navy
+
+		available = { }
+		bypass = { }
+
+		cost = 10
+		prerequisite = { focus = PT_CCN_comprehensive_reform_of_the_navy }
+		#mutually_exclusive = { focus =  }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_pruchasing_new_warships"
+		}
+		#complete_tooltip = { }
+
+		ai_will_do = { factor = 1000 }
+	}	
+	focus = {
+		id = PT_CCN_new_age_of_naval_warfare
+		icon = GFX_goal_news
+		x = -1
+		y = 1
+		relative_position_id = PT_CCN_pruchasing_new_warships
+
+		available = { }
+		bypass = { }
+
+		cost = 10
+		prerequisite = { focus = PT_CCN_pruchasing_new_warships }
+		mutually_exclusive = { focus = PT_CCN_maintain_our_strong_naval_tradition }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_new_age_of_naval_warfare"
+		}
+		#complete_tooltip = { }
+
+		ai_will_do = { factor = 1000 }
+	}	
+	focus = {
+		id = PT_CCN_maintain_our_strong_naval_tradition
+		icon = GFX_goal_news
+		x = 1
+		y = 1
+		relative_position_id = PT_CCN_pruchasing_new_warships
+
+		available = { }
+		bypass = { }
+
+		cost = 10
+		prerequisite = { focus = PT_CCN_pruchasing_new_warships }
+		mutually_exclusive = { focus = PT_CCN_new_age_of_naval_warfare }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_maintain_our_strong_naval_tradition"
+		}
+		#complete_tooltip = { }
+
+		ai_will_do = { factor = 1000 }
+	}	
+	focus = {
+		id = PT_CCN_submarine_design
+		icon = GFX_goal_news
+		x = -3
+		y = 2
+		relative_position_id = PT_CCN_pruchasing_new_warships
+
+		available = { }
+		bypass = { }
+
+		cost = 10
+		prerequisite = { 
+			focus = PT_CCN_new_age_of_naval_warfare
+			focus = PT_CCN_maintain_our_strong_naval_tradition
+		}
+		#mutually_exclusive = { focus =  }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_submarine_design"
+		}
+		#complete_tooltip = { }
+
+		ai_will_do = { factor = 1000 }
+	}	
+	focus = {
+		id = PT_CCN_perfect_the_naval_bombing_doctrine
+		icon = GFX_goal_news
+		x = -1
+		y = 2
+		relative_position_id = PT_CCN_pruchasing_new_warships
+
+		available = { }
+		bypass = { }
+
+		cost = 10
+		prerequisite = { 
+			focus = PT_CCN_new_age_of_naval_warfare
+			focus = PT_CCN_maintain_our_strong_naval_tradition
+		}
+		#mutually_exclusive = { focus =  }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_perfect_the_naval_bombing_doctrine"
+		}
+		#complete_tooltip = { }
+
+		ai_will_do = { factor = 1000 }
+	}	
+	focus = {
+		id = PT_CCN_new_carrier_designs
+		icon = GFX_goal_news
+		x = 0
+		y = 1
+		relative_position_id = PT_CCN_perfect_the_naval_bombing_doctrine
+
+		available = { }
+		bypass = { }
+
+		cost = 10
+		prerequisite = { focus = PT_CCN_perfect_the_naval_bombing_doctrine }
+		#mutually_exclusive = { focus =  }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_new_carrier_designs"
+		}
+		#complete_tooltip = { }
+
+		ai_will_do = { factor = 1000 }
+	}	
+	focus = {
+		id = PT_CCN_modern_carrier_designs
+		icon = GFX_goal_news
+		x = 0
+		y = 1
+		relative_position_id = PT_CCN_new_carrier_designs
+
+		available = { }
+		bypass = { }
+
+		cost = 10
+		prerequisite = { focus = PT_CCN_new_carrier_designs }
+		#mutually_exclusive = { focus =  }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_modern_carrier_designs"
+		}
+		#complete_tooltip = { }
+
+		ai_will_do = { factor = 1000 }
+	}	
+	focus = {
+		id = PT_CCN_naval_doctrinal_reforms
+		icon = GFX_goal_news
+		x = 1
+		y = 2
+		relative_position_id = PT_CCN_pruchasing_new_warships
+
+		available = { }
+		bypass = { }
+
+		cost = 10
+		prerequisite = { 
+			focus = PT_CCN_new_age_of_naval_warfare
+			focus = PT_CCN_maintain_our_strong_naval_tradition
+		}
+		#mutually_exclusive = { focus =  }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_naval_doctrinal_reforms"
+		}
+		#complete_tooltip = { }
+
+		ai_will_do = { factor = 1000 }
+	}	
+	focus = {
+		id = PT_CCN_new_destroyer_designs_for_new_age
+		icon = GFX_goal_news
+		x = 0
+		y = 1
+		relative_position_id = PT_CCN_naval_doctrinal_reforms
+
+		available = { }
+		bypass = { }
+
+		cost = 10
+		prerequisite = { focus = PT_CCN_naval_doctrinal_reforms }
+		#mutually_exclusive = { focus =  }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_new_destroyer_designs_for_new_age"
+		}
+		#complete_tooltip = { }
+
+		ai_will_do = { factor = 1000 }
+	}	
+	focus = {
+		id = PT_CCN_workbug_of_the_fleet
+		icon = GFX_goal_news
+		x = 0
+		y = 1
+		relative_position_id = PT_CCN_new_destroyer_designs_for_new_age
+
+		available = { }
+		bypass = { }
+
+		cost = 10
+		prerequisite = { focus = PT_CCN_new_destroyer_designs_for_new_age }
+		#mutually_exclusive = { focus =  }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_workbug_of_the_fleet"
+		}
+		#complete_tooltip = { }
+
+		ai_will_do = { factor = 1000 }
+	}	
+	focus = {
+		id = PT_CCN_heavy_cruiser_designs
+		icon = GFX_goal_news
+		x = 3
+		y = 2
+		relative_position_id = PT_CCN_pruchasing_new_warships
+
+		available = { }
+		bypass = { }
+
+		cost = 10
+		prerequisite = { 
+			focus = PT_CCN_new_age_of_naval_warfare
+			focus = PT_CCN_maintain_our_strong_naval_tradition
+		}
+		#mutually_exclusive = { focus =  }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_heavy_cruiser_designs"
+		}
+		#complete_tooltip = { }
+
+		ai_will_do = { factor = 1000 }
+	}	
+	focus = {
+		id = PT_CCN_placing_massive_guns_onto_cruisers
+		icon = GFX_goal_news
+		x = 0
+		y = 1
+		relative_position_id = PT_CCN_heavy_cruiser_designs
+
+		available = { }
+		bypass = { }
+
+		cost = 10
+		prerequisite = { focus = PT_CCN_heavy_cruiser_designs }
+		#mutually_exclusive = { focus =  }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_placing_massive_guns_onto_cruisers"
+		}
+		#complete_tooltip = { }
+
+		ai_will_do = { factor = 1000 }
+	}	
+	focus = {
+		id = PT_CCN_modern_battleship_designs
+		icon = GFX_goal_news
+		x = 0
+		y = 1
+		relative_position_id = PT_CCN_placing_massive_guns_onto_cruisers
+
+		available = { }
+		bypass = { }
+
+		cost = 10
+		prerequisite = { focus = PT_CCN_placing_massive_guns_onto_cruisers }
+		#mutually_exclusive = { focus =  }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_modern_battleship_designs"
+		}
+		#complete_tooltip = { }
+
+		ai_will_do = { factor = 1000 }
+	}	
+	#Industrial Branch
+	
+	focus = {
+		id = PT_CCN_our_economic_prospects
+		icon = GFX_goal_news
+		x = -21
+		y = 1
+		relative_position_id = PT_CCN_new_age
+
+		available = { }
+		bypass = { }
+
+		cost = 10
+		prerequisite = { focus = PT_CCN_new_age }
+		#mutually_exclusive = { focus =  }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_after_war"
+		}
+		#complete_tooltip = { }
+
+		ai_will_do = { factor = 1000 }
+	}
+	focus = {
+		id = PT_CCN_begin_revitalization_efforts
+		icon = GFX_goal_news
+		x = 0
+		y = 1
+		relative_position_id = PT_CCN_our_economic_prospects
+
+		available = { }
+		bypass = { }
+
+		cost = 10
+		prerequisite = { focus = PT_CCN_our_economic_prospects }
+		#mutually_exclusive = { focus =  }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_begin_revitalization_efforts"
+		}
+		#complete_tooltip = { }
+
+		ai_will_do = { factor = 1000 }
+	}	
+	focus = {
+		id = PT_CCN_stabilized_economy
+		icon = GFX_goal_news
+		x = 0
+		y = 1
+		relative_position_id = PT_CCN_begin_revitalization_efforts
+
+		available = { }
+		bypass = { }
+
+		cost = 10
+		prerequisite = { focus = PT_CCN_begin_revitalization_efforts }
+		#mutually_exclusive = { focus =  }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_stabilized_economy"
+		}
+		#complete_tooltip = { }
+
+		ai_will_do = { factor = 1000 }
+	}	
+	focus = {
+		id = PT_CCN_steer_the_corporations
+		icon = GFX_goal_news
+		x = -2
+		y = 1
+		relative_position_id = PT_CCN_stabilized_economy
+
+		available = { }
+		bypass = { }
+
+		cost = 10
+		prerequisite = { focus = PT_CCN_stabilized_economy }
+		mutually_exclusive = { focus = PT_CCN_let_free_market_handle_the_economy }
+		mutually_exclusive = { focus = PT_CCN_establish_changeling_economic_council }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_steer_the_corporations"
+		}
+		#complete_tooltip = { }
+
+		ai_will_do = { factor = 1000 }
+	}	
+	focus = {
+		id = PT_CCN_let_free_market_handle_the_economy
+		icon = GFX_goal_news
+		x = 0
+		y = 1
+		relative_position_id = PT_CCN_stabilized_economy
+
+		available = { }
+		bypass = { }
+
+		cost = 10
+		prerequisite = { focus = PT_CCN_stabilized_economy }
+		mutually_exclusive = { focus = PT_CCN_steer_the_corporations }
+		mutually_exclusive = { focus = PT_CCN_establish_changeling_economic_council }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_let_free_market_handle_the_economy"
+		}
+		#complete_tooltip = { }
+
+		ai_will_do = { factor = 1000 }
+	}	
+	focus = {
+		id = PT_CCN_establish_changeling_economic_council
+		icon = GFX_goal_news
+		x = 2
+		y = 1
+		relative_position_id = PT_CCN_stabilized_economy
+
+		available = { }
+		bypass = { }
+
+		cost = 10
+		prerequisite = { focus = PT_CCN_stabilized_economy }
+		mutually_exclusive = { focus = PT_CCN_steer_the_corporations }
+		mutually_exclusive = { focus = PT_CCN_let_free_market_handle_the_economy }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_establish_changeling_economic_council"
+		}
+		#complete_tooltip = { }
+
+		ai_will_do = { factor = 1000 }
+	}	
+	focus = {
+		id = PT_CCN_public_works_campain
+		icon = GFX_goal_news
+		x = 0
+		y = 1
+		relative_position_id = PT_CCN_let_free_market_handle_the_economy
+
+		available = { }
+		bypass = { }
+
+		cost = 10
+		prerequisite = { 
+			focus = PT_CCN_steer_the_corporations 
+			focus = PT_CCN_let_free_market_handle_the_economy
+			focus = PT_CCN_establish_changeling_economic_council 
+		}
+		#mutually_exclusive = { focus =  }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_public_works_campain"
+		}
+		#complete_tooltip = { }
+
+		ai_will_do = { factor = 1000 }
+	}	
+	focus = {
+		id = PT_CCN_develop_neverwarm_port_dockyards
+		icon = GFX_goal_news
+		x = 7
+		y = 1
+		relative_position_id = PT_CCN_public_works_campain
+
+		available = { }
+		bypass = { }
+
+		cost = 10
+		prerequisite = { focus = PT_CCN_public_works_campain }
+		#mutually_exclusive = { focus =  }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_develop_neverwarm_port_dockyards"
+		}
+		#complete_tooltip = { }
+
+		ai_will_do = { factor = 1000 }
+	}	
+	focus = {
+		id = PT_CCN_revitalize_gorak_dockyards
+		icon = GFX_goal_news
+		x = 5
+		y = 1
+		relative_position_id = PT_CCN_public_works_campain
+
+		available = { }
+		bypass = { }
+
+		cost = 10
+		prerequisite = { focus = PT_CCN_public_works_campain }
+		#mutually_exclusive = { focus =  }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_revitalize_gorak_dockyards"
+		}
+		#complete_tooltip = { }
+
+		ai_will_do = { factor = 1000 }
+	}	
+	focus = {
+		id = PT_CCN_mine_the_arctic_shelf
+		icon = GFX_goal_news
+		x = 0
+		y = 1
+		relative_position_id = PT_CCN_revitalize_gorak_dockyards
+
+		available = { }
+		bypass = { }
+
+		cost = 10
+		prerequisite = { focus = PT_CCN_revitalize_gorak_dockyards }
+		#mutually_exclusive = { focus =  }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_mine_the_arctic_shelf"
+		}
+		#complete_tooltip = { }
+
+		ai_will_do = { factor = 1000 }
+	}	
+	focus = {
+		id = PT_CCN_invest_in_taninaholm_mines
+		icon = GFX_goal_news
+		x = 0
+		y = 1
+		relative_position_id = PT_CCN_mine_the_arctic_shelf
+
+		available = { }
+		bypass = { }
+
+		cost = 10
+		prerequisite = { focus = PT_CCN_mine_the_arctic_shelf }
+		#mutually_exclusive = { focus =  }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_invest_in_taninaholm_mines"
+		}
+		#complete_tooltip = { }
+
+		ai_will_do = { factor = 1000 }
+	}	
+	focus = {
+		id = PT_CCN_mandatory_firendship_lessons
+		icon = GFX_goal_news
+		x = 3
+		y = 1
+		relative_position_id = PT_CCN_public_works_campain
+
+		available = { }
+		bypass = { }
+
+		cost = 10
+		prerequisite = { focus = PT_CCN_public_works_campain }
+		#mutually_exclusive = { focus =  }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_mandatory_firendship_lessons"
+		}
+		#complete_tooltip = { }
+
+		ai_will_do = { factor = 1000 }
+	}	
+	focus = {
+		id = PT_CCN_changeling_trailblazer
+		icon = GFX_goal_news
+		x = 0
+		y = 1
+		relative_position_id = PT_CCN_mandatory_firendship_lessons
+
+		available = { }
+		bypass = { }
+
+		cost = 10
+		prerequisite = { focus = PT_CCN_mandatory_firendship_lessons }
+		#mutually_exclusive = { focus =  }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_changeling_trailblazer"
+		}
+		#complete_tooltip = { }
+
+		ai_will_do = { factor = 1000 }
+	}	
+	focus = {
+		id = PT_CCN_svartforest_timber_production
+		icon = GFX_goal_news
+		x = 0
+		y = 1
+		relative_position_id = PT_CCN_changeling_trailblazer
+
+		available = { }
+		bypass = { }
+
+		cost = 10
+		prerequisite = { focus = PT_CCN_changeling_trailblazer }
+		#mutually_exclusive = { focus =  }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_svartforest_timber_production"
+		}
+		#complete_tooltip = { }
+
+		ai_will_do = { factor = 1000 }
+	}	
+	focus = {
+		id = PT_CCN_broad_support_for_smaller_hives
+		icon = GFX_goal_news
+		x = 0
+		y = 1
+		relative_position_id = PT_CCN_public_works_campain
+
+		available = { }
+		bypass = { }
+
+		cost = 10
+		prerequisite = { focus = PT_CCN_public_works_campain }
+		#mutually_exclusive = { focus =  }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_broad_support_for_smaller_hives"
+		}
+		#complete_tooltip = { }
+
+		ai_will_do = { factor = 1000 }
+	}	
+	focus = {
+		id = PT_CCN_defang_vesalipolis
+		icon = GFX_goal_news
+		x = 0
+		y = 1
+		relative_position_id = PT_CCN_broad_support_for_smaller_hives
+
+		available = { }
+		bypass = { }
+
+		cost = 10
+		prerequisite = { focus = PT_CCN_broad_support_for_smaller_hives }
+		#mutually_exclusive = { focus =  }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_defang_vesalipolis"
+		}
+		#complete_tooltip = { }
+
+		ai_will_do = { factor = 1000 }
+	}	
+	focus = {
+		id = PT_CCN_expand_lycitdan_lumber_industry
+		icon = GFX_goal_news
+		x = -1
+		y = 1
+		relative_position_id = PT_CCN_defang_vesalipolis
+
+		available = { }
+		bypass = { }
+
+		cost = 10
+		prerequisite = { focus = PT_CCN_defang_vesalipolis }
+		#mutually_exclusive = { focus =  }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_expand_lycitdan_lumber_industry"
+		}
+		#complete_tooltip = { }
+
+		ai_will_do = { factor = 1000 }
+	}	
+	focus = {
+		id = PT_CCN_expand_the_vrakkian_steel_industry
+		icon = GFX_goal_news
+		x = 1
+		y = 1
+		relative_position_id = PT_CCN_defang_vesalipolis
+
+		available = { }
+		bypass = { }
+
+		cost = 10
+		prerequisite = { focus = PT_CCN_defang_vesalipolis }
+		#mutually_exclusive = { focus =  }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_expand_the_vrakkian_steel_industry"
+		}
+		#complete_tooltip = { }
+
+		ai_will_do = { factor = 1000 }
+	}	
+	focus = {
+		id = PT_CCN_expand_ditrysium_dockyards
+		icon = GFX_goal_news
+		x = 0
+		y = 2
+		relative_position_id = PT_CCN_defang_vesalipolis
+
+		available = { }
+		bypass = { }
+
+		cost = 10
+		prerequisite = { 
+			focus = PT_CCN_expand_lycitdan_lumber_industry 
+			focus = PT_CCN_expand_the_vrakkian_steel_industry
+		}
+		#mutually_exclusive = { focus =  }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_expand_ditrysium_dockyards"
+		}
+		#complete_tooltip = { }
+
+		ai_will_do = { factor = 1000 }
+	}	
+	focus = {
+		id = PT_CCN_establish_soryth_universities
+		icon = GFX_goal_news
+		x = 0
+		y = 1
+		relative_position_id = PT_CCN_expand_ditrysium_dockyards
+
+		available = { }
+		bypass = { }
+
+		cost = 10
+		prerequisite = { focus = PT_CCN_expand_ditrysium_dockyards }
+		#mutually_exclusive = { focus =  }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_establish_soryth_universities"
+		}
+		#complete_tooltip = { }
+
+		ai_will_do = { factor = 1000 }
+	}	
+	focus = {
+		id = PT_CCN_largus_island_research_initiatives
+		icon = GFX_goal_news
+		x = -1
+		y = 1
+		relative_position_id = PT_CCN_establish_soryth_universities
+
+		available = { }
+		bypass = { }
+
+		cost = 10
+		prerequisite = { focus = PT_CCN_establish_soryth_universities }
+		#mutually_exclusive = { focus =  }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_largus_island_research_initiatives"
+		}
+		#complete_tooltip = { }
+
+		ai_will_do = { factor = 1000 }
+	}	
+	focus = {
+		id = PT_CCN_expand_eggiceland_testing_grounds
+		icon = GFX_goal_news
+		x = 1
+		y = 1
+		relative_position_id = PT_CCN_establish_soryth_universities
+
+		available = { }
+		bypass = { }
+
+		cost = 10
+		prerequisite = { focus = PT_CCN_establish_soryth_universities }
+		#mutually_exclusive = { focus =  }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_expand_eggiceland_testing_grounds"
+		}
+		#complete_tooltip = { }
+
+		ai_will_do = { factor = 1000 }
+	}	
+	focus = {
+		id = PT_CCN_continue_hive_modernization
+		icon = GFX_goal_news
+		x = 2
+		y = 1
+		relative_position_id = PT_CCN_expand_ditrysium_dockyards
+
+		available = { }
+		bypass = { }
+
+		cost = 10
+		prerequisite = { focus = PT_CCN_expand_ditrysium_dockyards }
+		#mutually_exclusive = { focus =  }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_continue_hive_modernization"
+		}
+		#complete_tooltip = { }
+
+		ai_will_do = { factor = 1000 }
+	}	
+	focus = {
+		id = PT_CCN_begin_national_infrastructure
+		icon = GFX_goal_news
+		x = -5
+		y = 1
+		relative_position_id = PT_CCN_public_works_campain
+
+		available = { }
+		bypass = { }
+
+		cost = 10
+		prerequisite = { focus = PT_CCN_public_works_campain }
+		#mutually_exclusive = { focus =  }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_begin_national_infrastructure"
+		}
+		#complete_tooltip = { }
+
+		ai_will_do = { factor = 1000 }
+	}	
+	focus = {
+		id = PT_CCN_extend_railway_system_to_the_south
+		icon = GFX_goal_news
+		x = -3
+		y = 1
+		relative_position_id = PT_CCN_begin_national_infrastructure
+
+		available = { }
+		bypass = { }
+
+		cost = 10
+		prerequisite = { focus = PT_CCN_begin_national_infrastructure }
+		#mutually_exclusive = { focus =  }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_extend_railway_system_to_the_south"
+		}
+		#complete_tooltip = { }
+
+		ai_will_do = { factor = 1000 }
+	}	
+	focus = {
+		id = PT_CCN_expand_railway_system_to_the_north
+		icon = GFX_goal_news
+		x = -1
+		y = 1
+		relative_position_id = PT_CCN_begin_national_infrastructure
+
+		available = { }
+		bypass = { }
+
+		cost = 10
+		prerequisite = { focus = PT_CCN_begin_national_infrastructure }
+		#mutually_exclusive = { focus =  }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_expand_railway_system_to_the_north"
+		}
+		#complete_tooltip = { }
+
+		ai_will_do = { factor = 1000 }
+	}	
+	focus = {
+		id = PT_CCN_funding_for_the_small_west_hives
+		icon = GFX_goal_news
+		x = 1
+		y = 1
+		relative_position_id = PT_CCN_begin_national_infrastructure
+
+		available = { }
+		bypass = { }
+
+		cost = 10
+		prerequisite = { focus = PT_CCN_begin_national_infrastructure }
+		#mutually_exclusive = { focus =  }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_funding_for_the_small_west_hives"
+		}
+		#complete_tooltip = { }
+
+		ai_will_do = { factor = 1000 }
+	}	
+	focus = {
+		id = PT_CCN_funding_for_the_small_east_hives
+		icon = GFX_goal_news
+		x = 3
+		y = 1
+		relative_position_id = PT_CCN_begin_national_infrastructure
+
+		available = { }
+		bypass = { }
+
+		cost = 10
+		prerequisite = { focus = PT_CCN_begin_national_infrastructure }
+		#mutually_exclusive = { focus =  }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_funding_for_the_small_east_hives"
+		}
+		#complete_tooltip = { }
+
+		ai_will_do = { factor = 1000 }
+	}	
+	focus = {
+		id = PT_CCN_finalize_infrastructure_for_the_hives
+		icon = GFX_goal_news
+		x = 0
+		y = 2
+		relative_position_id = PT_CCN_begin_national_infrastructure
+
+		available = { }
+		bypass = { }
+
+		cost = 10
+		prerequisite = { 
+			focus = PT_CCN_extend_railway_system_to_the_south 
+			focus = PT_CCN_extend_railway_system_to_the_north 
+			focus = PT_CCN_funding_for_the_small_west_hives 
+			focus = PT_CCN_funding_for_the_small_east_hives 
+			}
+		#mutually_exclusive = { focus =  }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = { 
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_finalize_infrastructure_for_the_hives"
+		}
+		#complete_tooltip = { }
+
+		ai_will_do = { factor = 1000 }
+	}	
 }
