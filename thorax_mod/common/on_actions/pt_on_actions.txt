@@ -1,0 +1,52 @@
+on_actions = {
+	on_declare_war = {
+		effect = {
+			if = { #civil war event if thorax declares on chtysalis or vice versa
+				limit = { 
+					OR = {
+						AND = {
+							tag = CHN
+							FROM = { tag = CCN }
+						}
+						AND = {
+							tag = CCN
+							FROM = { tag = CHN }
+						}
+					}
+				}
+				news_event = { id = PT_CHN.30 }
+				hidden_effect = {
+					play_song = "bella_ciao"
+				}
+			}
+		}
+	}
+	on_capitulation_immediate = {
+		effect = { 
+			if = { #annex chrysalis if thorax wins civil war
+				limit = {
+					tag = CHN
+					has_war_with = CCN									
+				}
+				CCN = {
+					annex_country = {
+						target = CHN
+						transfer_troops = no
+					}
+					every_enemy_country = 
+					{
+						if = {
+							limit = {
+								OR = {
+									tag = LCD
+									tag = DTR
+								}
+							}
+							white_peace = CCN
+						}
+					}
+				}
+			}
+		}
+	}
+}

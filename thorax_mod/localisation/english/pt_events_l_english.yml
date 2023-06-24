@@ -139,3 +139,21 @@ PT_CHN.31.d:0 "The flower blooms over iron helm."
 #Fuck you cunt, may you have an awful and short life.
 
 #Chrysalis tears the letter apart in anger after reading... 
+
+
+#Thorax post civil war
+PT_CCN_event.1.t:0 "Annex Lyctidan Queendom"
+PT_CCN_event.1.desc:0 "Sample Text"
+PT_CCN_event.1.a:0 "Ok"
+PT_CCN_event.2.t:0 "Annex Ditrysian Queendom"
+PT_CCN_event.2.desc:0 "Sample Text"
+PT_CCN_event.2.a:0 "Ok"
+PT_CCN_event.3.t:0 "Annex Vrakian Queendom "
+PT_CCN_event.3.desc:0 "Sample Text"
+PT_CCN_event.3.a:0 "Ok"
+PT_CCN_event.4.t:0 "Annex Sorythian Queendom"
+PT_CCN_event.4.desc:0 "Sample Text"
+PT_CCN_event.4.a:0 "Ok"
+PT_CCN_event.5.t:0 "Annex Commies"
+PT_CCN_event.5.desc:0 "Stalin fooking dies :(\n\nGood. >:3"
+PT_CCN_event.5.a:0 "Ok"

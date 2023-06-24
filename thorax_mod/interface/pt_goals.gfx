@@ -108,5 +108,38 @@ spriteTypes = {
 		name = "GFX_goal_chn_vraks_aid"
 		texturefile = "gfx/interface/goals/civil_war/goal_chn_vraks_aid.dds"
 	}
+	
+	SpriteType = {
+		name = "GFX_goal_ccn_assesment"
+		texturefile = "gfx/interface/goals/post_civil_war/goal_ccn_assessment.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_ccn_gold_muffins"
+		texturefile = "gfx/interface/goals/post_civil_war/goal_ccn_gold_muffins.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_ccn_new_monarch"
+		texturefile = "gfx/interface/goals/post_civil_war/goal_ccn_new_monarch.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_ccn_sea_queen"
+		texturefile = "gfx/interface/goals/post_civil_war/goal_ccn_sea_queen.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_ccn_snow_queen"
+		texturefile = "gfx/interface/goals/post_civil_war/goal_ccn_snow_queen.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_ccn_the_cost_of_war"
+		texturefile = "gfx/interface/goals/post_civil_war/goal_ccn_the_cost_of_war.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_ccn_warrior_queen"
+		texturefile = "gfx/interface/goals/post_civil_war/goal_ccn_warrior_queen.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_ccn_young_queen"
+		texturefile = "gfx/interface/goals/post_civil_war/goal_ccn_young_queen.dds"
+	}
 }
 

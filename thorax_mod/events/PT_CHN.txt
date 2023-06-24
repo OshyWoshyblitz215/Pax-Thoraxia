@@ -430,36 +430,36 @@ country_event = { #opening: Chrysalis meetings epilogue: free commies
 			set_politics = {
 				ruling_party = communism
 			}
-			CHN_gold_muffin = {
-				add_country_leader_role = {
-					country_leader = {
-						expire = "1965.1.1"
-						ideology = national_communism
-					}
-					promote_leader = yes
-				}
-				add_country_leader_role = {
-					country_leader = {
-						expire = "1965.1.1"
-						ideology = syndicalism
-					}
-					promote_leader = yes
-				}
-				add_country_leader_role = {
-					country_leader = {
-						expire = "1965.1.1"
-						ideology = socialism
-					}
-					promote_leader = yes
-				}
-				add_country_leader_role = {
-					country_leader = {
-						expire = "1965.1.1"
-						ideology = anarchism
-					}
-					promote_leader = yes
-				}
-			}
+#			CHN_gold_muffin = {
+#				add_country_leader_role = {
+#					country_leader = {
+#						expire = "1965.1.1"
+#						ideology = national_communism
+#					}
+#					promote_leader = yes
+#				}
+#				add_country_leader_role = {
+#					country_leader = {
+#						expire = "1965.1.1"
+#						ideology = syndicalism
+#					}
+#					promote_leader = yes
+#				}
+#				add_country_leader_role = {
+#					country_leader = {
+#						expire = "1965.1.1"
+#						ideology = socialism
+#					}
+#					promote_leader = yes
+#				}
+#				add_country_leader_role = {
+#					country_leader = {
+#						expire = "1965.1.1"
+#						ideology = anarchism
+#					}
+#					promote_leader = yes
+#				}
+#			}
 		}
 		GRK = {
 			every_owned_state = {
@@ -697,8 +697,8 @@ news_event = { # CIVIL WAR
 	title = PT_CHN.30.t
 	desc = PT_CHN.30.desc
 	picture = GFX_event_PT_buggo_cw
-	is_triggered_only = yes
 	major = yes
+	is_triggered_only = yes
 	immediate = {
 		hidden_effect = {
 			CHN = { swap_ideas = { remove_idea = PT_temporary_government add_idea = PT_bug_cw } }

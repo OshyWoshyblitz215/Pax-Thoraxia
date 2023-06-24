@@ -113,7 +113,6 @@ focus_tree = {
 			declare_war_on = { type = civil_war target = SRT }
 			if = {
 				limit = { NOT = { has_country_flag = thorax_battle } }
-				news_event = { id = PT_CHN.30 }
 			}
 			set_country_flag = thorax_battle
 		}

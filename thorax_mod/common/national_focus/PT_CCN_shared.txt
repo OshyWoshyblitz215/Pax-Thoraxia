@@ -211,8 +211,7 @@ shared_focus = {
 			target = CHN
 		}
 		if = {
-			limit = { NOT = { CHN = { has_country_flag = thorax_battle } } }
-			news_event = { id = PT_CHN.30 }
+			limit = { NOT = { CHN = { has_country_flag = thorax_battle } } }			
 		}
 		CHN = { set_country_flag = thorax_battle }
 	}
@@ -670,7 +669,7 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus PT_bittersweet_victory"
 #		set_country_flag = thorax_won_the_war
 #		news_event = { id = PT_CHN.31 }
-		activate_mission = PT_demilitarise_mission
+#		activate_mission = PT_demilitarise_mission
 		hidden_effect = {
 			add_to_array = { PT_should_demilitarise_countries = SRT }
 			add_to_array = { PT_should_demilitarise_countries = VRK }
@@ -693,120 +692,32 @@ shared_focus = {
 		}
 	}
 }
-
-shared_focus = {
-	id = PT_asses_haha_funny_focus
-	icon = GFX_goal_chn_thorax_and_harmony
-	cost = 4.40
-	x = 0
-	y = 1
-	relative_position_id = PT_bittersweet_victory
-	prerequisite = { focus = PT_bittersweet_victory }
-	ai_will_do = {
-		factor = 1000
-	}
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus PT_asses_haha_funny_focus"
-	}
-}
-shared_focus = {
-	id = PT_the_young_queens_allegiance
-	icon = GFX_goal_chn_thorax_and_harmony
-	cost = 5.00
-	x = -3
-	y = 1
-	relative_position_id = PT_asses_haha_funny_focus
-	prerequisite = { focus = PT_asses_haha_funny_focus }
-	ai_will_do = {
-		factor = 1000
-	}
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus PT_the_young_queens_allegiance"
-		country_event = { id = PT_CCN_allies.17 }
-	}
-}
-shared_focus = {
-	id = PT_the_sea_queen
-	icon = GFX_goal_chn_thorax_and_harmony
-	cost = 5.00
-	x = -1
-	y = 1
-	relative_position_id = PT_asses_haha_funny_focus
-	prerequisite = { focus = PT_asses_haha_funny_focus }
-	ai_will_do = { factor = 1000 }
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus PT_the_sea_queen"
-		country_event = { id = PT_CCN_allies.14 }
-	}
-}
-shared_focus = {
-	id = PT_the_warrior_queen
-	icon = GFX_goal_chn_thorax_and_harmony
-	cost = 5.00
-	x = 1
-	y = 1
-	relative_position_id = PT_asses_haha_funny_focus
-	prerequisite = { focus = PT_asses_haha_funny_focus }
-	ai_will_do = { factor = 1000 }
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus PT_the_warrior_queen"
-		country_event = { id = PT_CCN_allies.16 }
-	}
-}
-shared_focus = {
-	id = PT_the_ice_queen
-	icon = GFX_goal_chn_thorax_and_harmony
-	cost = 5.00
-	x = 3
-	y = 1
-	relative_position_id = PT_asses_haha_funny_focus
-	prerequisite = { focus = PT_asses_haha_funny_focus }
-	ai_will_do = { factor = 1000 }
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus PT_the_ice_queen"
-		country_event = { id = PT_CCN_allies.15 }
-	}
-}
-shared_focus = {
-	id = PT_the_red_north
-	icon = GFX_goal_chn_thorax_and_harmony
-	cost = 5.70
-	x = 0
-	y = 2
-	relative_position_id = PT_asses_haha_funny_focus
-	prerequisite = { focus = PT_asses_haha_funny_focus }
-	ai_will_do = { factor = 1000 }
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus PT_the_red_north"
-		country_event = { id = PT_CCN_allies.18 }
-	}
-}
-shared_focus = {
-	id = PT_the_changeling_king
-	icon = GFX_goal_chn_thorax_and_harmony
-	cost = 7.20
-	x = 0
-	y = 2
-	relative_position_id = PT_the_red_north
-	prerequisite = { focus = PT_the_red_north }
-	ai_will_do = { factor = 1000 }
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus PT_for_thorax_and_harmony"
-		DTR = {
-			transfer_navy = { target = CCN }
-		}
-		annex_country = { target = SRT transfer_troops = yes }
-		annex_country = { target = DTR transfer_troops = yes }
-		annex_country = { target = GRK transfer_troops = yes }
-		annex_country = { target = VRK transfer_troops = yes }
-		annex_country = { target = PHA transfer_troops = yes }
-		set_variable = { PT_CCN_SRT_relation = 5 }
-		set_variable = { PT_CCN_DTR_relation = 5 }
-		set_variable = { PT_CCN_VRK_relation = 5 }
-		set_variable = { PT_CCN_PHA_relation = 5 }
-		remove_ideas = {PT_empty_throne}
-	}
-}
+#shared_focus = {
+#	id = PT_the_changeling_king
+#	icon = GFX_goal_chn_thorax_and_harmony
+#	cost = 7.20
+#	x = 0
+#	y = 2
+#	relative_position_id = PT_the_red_north
+#	prerequisite = { focus = PT_the_red_north }
+#	ai_will_do = { factor = 1000 }
+#	completion_reward = {
+#		log = "[GetDateText]: [Root.GetName]: Focus PT_for_thorax_and_harmony"
+#		DTR = {
+#			transfer_navy = { target = CCN }
+#		}
+#		annex_country = { target = SRT transfer_troops = yes }
+#		annex_country = { target = DTR transfer_troops = yes }
+#		annex_country = { target = GRK transfer_troops = yes }
+#		annex_country = { target = VRK transfer_troops = yes }
+#		annex_country = { target = PHA transfer_troops = yes }
+#		set_variable = { PT_CCN_SRT_relation = 5 }
+#		set_variable = { PT_CCN_DTR_relation = 5 }
+#		set_variable = { PT_CCN_VRK_relation = 5 }
+#		set_variable = { PT_CCN_PHA_relation = 5 }
+#		remove_ideas = {PT_empty_throne}
+#	}
+#}
 #shared_focus = {
 #	id = PT_begin_demilitarisation
 #	icon = GFX_goal_chn_thorax_and_harmony
@@ -824,32 +735,32 @@ shared_focus = {
 #	}
 #}
 #industry!!!!
-shared_focus = {
-	id = PT_our_economic_prospects
-	icon = GFX_goal_chn_thorax_and_harmony
-	cost = 5
-	x = 0
-	y = 2
-	ai_will_do = { factor = 1000 }
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus PT_our_economic_prospects"
-		swap_ideas = {remove_idea = PT_aftermath_of_the_civil_war add_idea = PT_aftermath_of_the_civil_war_2}
-	}
-}
-shared_focus = {
-	id = PT_begin_revitalisation
-	icon = GFX_goal_chn_thorax_and_harmony
-	cost = 5
-	x = 0
-	y = 1
-	prerequisite = { focus = PT_our_economic_prospects }
-	relative_position_id = PT_our_economic_prospects
-	ai_will_do = { factor = 1000 }
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus PT_for_thorax_and_harmony"
-		swap_ideas = {remove_idea = PT_aftermath_of_the_civil_war_2 add_idea = PT_aftermath_of_the_civil_war_3}
+#shared_focus = {
+#	id = PT_our_economic_prospects
+#	icon = GFX_goal_chn_thorax_and_harmony
+#	cost = 5
+#	x = 0
+#	y = 2
+#	ai_will_do = { factor = 1000 }
+#	completion_reward = {
+#		log = "[GetDateText]: [Root.GetName]: Focus PT_our_economic_prospects"
+#		swap_ideas = {remove_idea = PT_aftermath_of_the_civil_war add_idea = PT_aftermath_of_the_civil_war_2}
+#	}
+#}
+#shared_focus = {
+#	id = PT_begin_revitalisation
+#	icon = GFX_goal_chn_thorax_and_harmony
+#	cost = 5
+#	x = 0
+#	y = 1
+#	prerequisite = { focus = PT_our_economic_prospects }
+#	relative_position_id = PT_our_economic_prospects
+#	ai_will_do = { factor = 1000 }
+#	completion_reward = {
+#		log = "[GetDateText]: [Root.GetName]: Focus PT_for_thorax_and_harmony"
+#		swap_ideas = {remove_idea = PT_aftermath_of_the_civil_war_2 add_idea = PT_aftermath_of_the_civil_war_3}
 #		add_timed_idea = {
 #			idea
 #		}
-	}
+#	}
 }

@@ -1,0 +1,134 @@
+add_namespace = PT_CCN_event
+
+#country_event = { #Event code description
+#	id = PT_CCN_event.0
+#	title = PT_CCN_event.0.t
+#	desc = PT_CCN_event.0.desc
+#	picture = GFX_event_PT_buggo_cw
+
+#	fire_only_once = yes
+#	is_triggered_only = yes
+#	
+#	#trigger = { }
+#	#immediate = { }
+#	#mean_time_to_happen = { days = 2 }
+	
+#	option = { 
+#		name = PT_CCN_event.0.a
+#		ai_chance = { factor = 1000}
+#	}
+#}
+
+country_event = { #LCD gets annexed
+	id = PT_CCN_event.1
+	title = PT_CCN_event.1.t
+	desc = PT_CCN_event.1.desc
+	picture = GFX_event_PT_buggo_cw
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	#trigger = { }
+	#immediate = { }
+	#mean_time_to_happen = { days = 2 }
+
+	option = { 
+		name = PT_CCN_event.1.a
+		ai_chance = { factor = 1000}
+		
+		annex_country = {
+			target = LCD
+			transfer_troops = yes
+		}
+	}
+}
+country_event = { #DTR gets annexed
+	id = PT_CCN_event.2
+	title = PT_CCN_event.2.t
+	desc = PT_CCN_event.2.desc
+	picture = GFX_event_PT_buggo_cw
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	#trigger = { }
+	#immediate = { }
+	#mean_time_to_happen = { days = 2 }
+
+	option = { 
+		name = PT_CCN_event.2.a
+		ai_chance = { factor = 1000}
+		
+		annex_country = {
+			target = DTR
+			transfer_troops = yes
+		}
+	}
+}
+country_event = { #VRK gets annexed
+	id = PT_CCN_event.3
+	title = PT_CCN_event.3.t
+	desc = PT_CCN_event.3.desc
+	picture = GFX_event_PT_buggo_cw
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	#trigger = { }
+	#immediate = { }
+	#mean_time_to_happen = { days = 2 }
+
+	option = { 
+		name = PT_CCN_event.3.a
+		ai_chance = { factor = 1000}
+		annex_country = {
+			target = VRK
+			transfer_troops = yes
+		}
+	}
+}
+country_event = { #SRT gets annexed
+	id = PT_CCN_event.4
+	title = PT_CCN_event.4.t
+	desc = PT_CCN_event.4.desc
+	picture = GFX_event_PT_buggo_cw
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	#trigger = { }
+	#immediate = { }
+	#mean_time_to_happen = { days = 2 }
+
+	option = { 
+		name = PT_CCN_event.4.a
+		ai_chance = { factor = 1000}
+		annex_country = {
+			target = SRT
+			transfer_troops = yes
+		}
+	}
+}
+country_event = { #GRK Gets Annexed
+	id = PT_CCN_event.5
+	title = PT_CCN_event.5.t
+	desc = PT_CCN_event.5.desc
+	picture = GFX_event_PT_buggo_cw
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	#trigger = { }
+	#immediate = { }`
+	#mean_time_to_happen = { days = 2 }
+
+	option = { 
+		name = PT_CCN_event.5.a
+		ai_chance = { factor = 1000}
+		annex_country = {
+			target = GRK
+			transfer_troops = no
+		}
+	}
+}
+

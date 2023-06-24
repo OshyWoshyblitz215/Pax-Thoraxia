@@ -1,12 +1,36 @@
 ideas = {
 	country = {
 
+##########################
+########Template##########
+##########################
+#		PT_idea_ = {
+#			#picture = PT_CCN_spying_tower
+#			
+#			allowed = { always = no	}
+#			allowed_civil_war = { always = yes }
+#			available = { }
+#			cancel = { }
+#			
+#			on_add = { }
+#			on_remove = { }
+#			
+#			removal_cost = -1
+#			
+#			targeted_modifier = { }
+#			modifier = { }
+#		}
+		
+##########################
+####Civil War Spirits#####
+##########################
+
 		PT_insight_into_the_tower = {
 			name = PT_insight_into_the_tower
+			picture = PT_CCN_spying_tower
 			allowed = { always = no	}
 			allowed_civil_war = { always = yes }
 			removal_cost = -1
-			picture = PT_CCN_spying_tower
 			
 			targeted_modifier = {
 				tag = CHN
@@ -143,7 +167,97 @@ ideas = {
 			removal_cost = -1
 			picture = CHN_political_divisions
 		}
-		PT_aftermath_of_the_civil_war = {
+		
+##########################
+##Thorax After Civil War##
+##########################
+#		PT_aftermath_of_the_civil_war = {
+#			allowed = {
+#				always = no
+#			}
+#			available = {
+#			}
+#			modifier = {
+#				stability_factor = -0.10
+#				production_factory_max_efficiency_factor = -0.3
+#				consumer_goods_factor = 0.1
+#				production_speed_buildings_factor = -0.3
+#				communism_drift = 0.06
+#				democratic_drift = 0.02
+#			}
+#			removal_cost = -1
+#			picture = CHN_political_divisions
+#		}
+#		PT_aftermath_of_the_civil_war_2 = {
+#			allowed = {
+#				always = no
+#			}
+#			available = {
+#			}
+#			modifier = {
+#				stability_factor = -0.09
+#				production_factory_max_efficiency_factor = -0.27
+#				consumer_goods_factor = 0.09
+#				production_speed_buildings_factor = -0.27
+#				communism_drift = 0.05
+#				democratic_drift = 0.02
+#			}
+#			removal_cost = -1
+#			picture = CHN_political_divisions
+#		}
+#		PT_aftermath_of_the_civil_war_3 = {
+#			allowed = {
+#				always = no
+#			}
+#			available = {
+#			}
+#			modifier = {
+#				stability_factor = -0.08
+#				production_factory_max_efficiency_factor = -0.24
+#				consumer_goods_factor = 0.08
+#				production_speed_buildings_factor = -0.24
+#				communism_drift = 0.04
+#				democratic_drift = 0.02
+#			}
+#			removal_cost = -1
+#			picture = CHN_political_divisions
+#		}
+#		PT_recovery = {
+#			allowed = {
+#				always = no
+#			}
+#			available = {
+#			}
+#			modifier = {
+#				#free_re
+#			}
+#			removal_cost = -1
+#			picture = CHN_political_divisions
+#		}
+#		PT_empty_throne = {
+#			allowed = {
+#				always = no
+#			}
+#			available = {
+#			}
+#			modifier = {
+#				stability_factor = -0.1
+#				war_support_factor = -0.2
+#			}
+#			removal_cost = -1
+#			picture = CHN_political_divisions
+#			on_add = {
+#				country_lock_all_division_template = yes
+#			}
+#			on_remove = {
+#				country_lock_all_division_template = no
+#			}
+#		}
+#
+
+
+		PT_CCN_idea_aftermath_of_the_civil_war = {
+			#picture = CHN_political_divisions
 			allowed = {
 				always = no
 			}
@@ -151,62 +265,64 @@ ideas = {
 			}
 			modifier = {
 				stability_factor = -0.10
-				production_factory_max_efficiency_factor = -0.3
+				industrial_capacity_dockyard = -0.30
+				industrial_capacity_factory = -0.30
 				consumer_goods_factor = 0.1
 				production_speed_buildings_factor = -0.3
 				communism_drift = 0.06
 				democratic_drift = 0.02
 			}
 			removal_cost = -1
-			picture = CHN_political_divisions
 		}
-		PT_aftermath_of_the_civil_war_2 = {
+		PT_CCN_idea_aftermath_of_the_civil_war_2 = {
+			#picture = CHN_political_divisions
 			allowed = {
 				always = no
 			}
 			available = {
 			}
 			modifier = {
-				stability_factor = -0.09
-				production_factory_max_efficiency_factor = -0.27
-				consumer_goods_factor = 0.09
-				production_speed_buildings_factor = -0.27
-				communism_drift = 0.05
-				democratic_drift = 0.02
-			}
-			removal_cost = -1
-			picture = CHN_political_divisions
-		}
-		PT_aftermath_of_the_civil_war_3 = {
-			allowed = {
-				always = no
-			}
-			available = {
-			}
-			modifier = {
-				stability_factor = -0.08
-				production_factory_max_efficiency_factor = -0.24
-				consumer_goods_factor = 0.08
-				production_speed_buildings_factor = -0.24
+				stability_factor = -0.05
+				industrial_capacity_dockyard = -0.2
+				industrial_capacity_factory = -0.2
+				consumer_goods_factor = 0.05
+				production_speed_buildings_factor = -0.2
 				communism_drift = 0.04
 				democratic_drift = 0.02
 			}
 			removal_cost = -1
-			picture = CHN_political_divisions
 		}
-		PT_recovery = {
+		PT_CCN_idea_aftermath_of_the_civil_war_3 = {
+			#picture = CHN_political_divisions
 			allowed = {
 				always = no
 			}
 			available = {
 			}
 			modifier = {
-#				free_re
+				industrial_capacity_dockyard = -0.1
+				industrial_capacity_factory = -0.1
+				production_speed_buildings_factor = -0.1
+				communism_drift = 0.02
+				democratic_drift = 0.02
 			}
 			removal_cost = -1
-			picture = CHN_political_divisions
 		}
-		PT_empty_throne = {
+		PT_CCN_idea_rebuilding_efforts = {
+			#picture = PT_CCN_spying_tower
+			
+			allowed = { always = no	}
+			allowed_civil_war = { always = yes }
+			
+			removal_cost = -1
+			
+			modifier = { 
+				industry_free_repair_factor = 0.75
+				industry_repair_factor = 0.75
+			}
+		}		
+		PT_CCN_idea_empty_throne = {
+			#picture = CHN_political_divisions
 			allowed = {
 				always = no
 			}
@@ -217,7 +333,6 @@ ideas = {
 				war_support_factor = -0.2
 			}
 			removal_cost = -1
-			picture = CHN_political_divisions
 			on_add = {
 				country_lock_all_division_template = yes
 			}
@@ -225,6 +340,19 @@ ideas = {
 				country_lock_all_division_template = no
 			}
 		}
-
+		PT_CCN_idea_nation_united = {
+			#picture = PT_CCN_spying_tower
+			
+			allowed = { always = no	}
+			allowed_civil_war = { always = yes }
+						
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = 0.05
+				stability_factor = 0.1
+				war_support_factor = 0.1
+			}
+		}
 	}
 }
