@@ -162,6 +162,7 @@ if = {
 }
 set_stability = 0.46
 set_war_support = 0.12
+set_country_flag = PT_changeling_lands_country
 
 #Generals and Leaders
 recruit_character = FEH_council

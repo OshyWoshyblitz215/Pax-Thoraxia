@@ -23,28 +23,34 @@ on_actions = {
 	}
 	on_capitulation_immediate = {
 		effect = { 
-			if = { #annex chrysalis if thorax wins civil war
+			if = { #peace conference for when thorax wins
 				limit = {
 					tag = CHN
 					has_war_with = CCN									
 				}
 				CCN = {
+					every_state = {
+						limit = {
+							is_core_of = CHN
+						}
+						add_core_of = CCN
+					}
 					annex_country = {
 						target = CHN
 						transfer_troops = no
 					}
-					every_enemy_country = 
-					{
-						if = {
-							limit = {
-								OR = {
-									tag = LCD
-									tag = DTR
-								}
-							}
-							white_peace = CCN
-						}
+				}	
+				PHA = {
+					annex_country = {
+						target = LCD
+						transfer_troops = no
 					}
+				}
+				DTR = {
+					white_peace = CCN
+					white_peace = VRK
+					white_peace = SRT
+					white_peace = PHA					
 				}
 			}
 		}

@@ -163,6 +163,7 @@ if = {
 }
 set_stability = 0.32
 set_war_support = 0.78
+set_country_flag = PT_changeling_lands_country
 
 #Generals and Leaders
 recruit_character = CLW_slipad_vinge

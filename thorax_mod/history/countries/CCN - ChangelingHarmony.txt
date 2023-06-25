@@ -183,6 +183,7 @@ set_politics = {
 }
 
 set_stability = 0.6
+set_country_flag = PT_changeling_lands_country
 
 recruit_character = CCN_Thorax
 recruit_character = CCN_changeling_king

@@ -164,6 +164,7 @@ if = {
 	}
 }
 set_stability = 0.6
+set_country_flag = PT_changeling_lands_country
 
 #Generals and Leaders
 

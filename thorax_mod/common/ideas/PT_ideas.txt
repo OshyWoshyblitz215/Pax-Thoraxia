@@ -354,5 +354,47 @@ ideas = {
 				war_support_factor = 0.1
 			}
 		}
+		PT_CCN_idea_recovering_economy = {
+			#picture = PT_CCN_spying_tower
+			
+			allowed = { always = no	}
+			allowed_civil_war = { always = yes }
+			
+			removal_cost = -1
+			
+			modifier = {
+
+			}
+		}
+		PT_CCN_idea_corporatist_economy = {
+			#picture = PT_CCN_spying_tower
+			
+			allowed = { always = no	}
+			allowed_civil_war = { always = yes }
+			
+			removal_cost = -1
+			
+			modifier = { }
+		}
+		PT_CCN_idea_free_market_economy = {
+			#picture = PT_CCN_spying_tower
+			
+			allowed = { always = no	}
+			allowed_civil_war = { always = yes }
+			
+			removal_cost = -1
+			
+			modifier = { }
+		}
+		PT_CCN_idea_centrally_planned_economy = {
+			#picture = PT_CCN_spying_tower
+			
+			allowed = { always = no	}
+			allowed_civil_war = { always = yes }
+			
+			removal_cost = -1
+			
+			modifier = { }
+		}
 	}
 }

@@ -34,11 +34,24 @@ country_event = { #LCD gets annexed
 
 	option = { 
 		name = PT_CCN_event.1.a
-		ai_chance = { factor = 1000}
-		
-		annex_country = {
-			target = LCD
-			transfer_troops = yes
+		ai_chance = { factor = 1000}		
+		if = {
+			limit = {
+				LCD = { exists = yes }
+			}
+			annex_country = {
+				target = LCD
+				transfer_troops = yes
+			}
+		}
+		if = {
+			limit = {
+				PHA = { exists = yes }
+			}
+			annex_country = {
+				target = PHA
+				transfer_troops = yes
+			}
 		}
 	}
 }
@@ -58,7 +71,6 @@ country_event = { #DTR gets annexed
 	option = { 
 		name = PT_CCN_event.2.a
 		ai_chance = { factor = 1000}
-		
 		annex_country = {
 			target = DTR
 			transfer_troops = yes

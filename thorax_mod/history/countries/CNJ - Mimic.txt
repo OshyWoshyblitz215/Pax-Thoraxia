@@ -162,6 +162,7 @@ if = {
 }
 set_stability = 0.49
 set_war_support = 0.56
+set_country_flag = PT_changeling_lands_country
 
 #Generals and Leaders
 
