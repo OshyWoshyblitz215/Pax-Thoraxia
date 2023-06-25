@@ -287,7 +287,7 @@ ideas = {
 				industrial_capacity_factory = -0.2
 				consumer_goods_factor = 0.05
 				production_speed_buildings_factor = -0.2
-				communism_drift = 0.04
+				communism_drift = 0.05
 				democratic_drift = 0.02
 			}
 			removal_cost = -1
@@ -303,7 +303,7 @@ ideas = {
 				industrial_capacity_dockyard = -0.1
 				industrial_capacity_factory = -0.1
 				production_speed_buildings_factor = -0.1
-				communism_drift = 0.02
+				communism_drift = 0.04
 				democratic_drift = 0.02
 			}
 			removal_cost = -1
@@ -363,7 +363,12 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-
+				stability_factor = 0.05
+				industrial_capacity_dockyard = 0.05
+				industrial_capacity_factory = 0.05
+				consumer_goods_factor = -0.05
+				communism_drift = 0.03
+				democratic_drift = 0.01
 			}
 		}
 		PT_CCN_idea_corporatist_economy = {
@@ -374,7 +379,16 @@ ideas = {
 			
 			removal_cost = -1
 			
-			modifier = { }
+			modifier = { 
+				consumer_goods_factor = -0.08
+				min_export = -0.1
+				stability_factor = 0.1
+				industrial_capacity_dockyard = 0.15
+				industrial_capacity_factory = 0.15
+				production_factory_max_efficiency_factor = 0.1
+				neutrality_drift = 0.05
+				democratic_drift = 0.02			
+			}
 		}
 		PT_CCN_idea_free_market_economy = {
 			#picture = PT_CCN_spying_tower
@@ -384,7 +398,19 @@ ideas = {
 			
 			removal_cost = -1
 			
-			modifier = { }
+			modifier = { 	
+				consumer_goods_factor = -0.05	
+				min_export = 0.1		
+				trade_opinion_factor = 0.2
+				stability_factor = 0.05
+				conversion_cost_civ_to_mil_factor = -0.25
+				production_speed_buildings_factor = 0.1				
+				industrial_capacity_dockyard = 0.10
+				industrial_capacity_factory = 0.10
+				fascism_drift = -0.02
+				democratic_drift = 0.05			
+				communism_drift = 0.01
+			}
 		}
 		PT_CCN_idea_centrally_planned_economy = {
 			#picture = PT_CCN_spying_tower
@@ -394,7 +420,60 @@ ideas = {
 			
 			removal_cost = -1
 			
-			modifier = { }
+			modifier = { 		
+				consumer_goods_factor = -0.1	
+				min_export = -0.1			
+				stability_factor = 0.05
+				industrial_capacity_dockyard = 0.15
+				industrial_capacity_factory = 0.15
+				production_speed_buildings_factor = 0.1	
+				research_speed_factor = 0.05
+				fascism_drift = 0.01	
+				democratic_drift = 0.03
+				communism_drift = 0.01
+			}
+		}
+		PT_CCN_idea_new_hives = {
+		
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+
+			removal_cost = -1
+			
+			picture = CHN_new_hives
+			
+			modifier = {
+				MONTHLY_POPULATION = 0.15
+				production_speed_buildings_factor = 0.05
+			}
+		}
+		PT_CCN_idea_public_works = {
+		
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+
+			removal_cost = -1
+			
+			picture = CHN_new_hives
+			
+			modifier = {
+				production_speed_buildings_factor = 0.1				
+			}
+		}
+		PT_CCN_idea_relocating_vesal_industry = {
+		
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+
+			removal_cost = -1
+			
+			#picture = CHN_new_hives
+			
+			modifier = {
+				political_power_gain = -0.25
+				production_speed_buildings_factor = -0.2	
+				industrial_capacity_factory = -0.2
+			}
 		}
 	}
 }

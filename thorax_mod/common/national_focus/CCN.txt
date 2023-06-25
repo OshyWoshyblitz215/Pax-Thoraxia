@@ -3784,7 +3784,9 @@ focus_tree = {
 		y = 1
 		relative_position_id = PT_CCN_our_economic_prospects
 
-		available = { }
+		available = {
+			owns_state = 251
+		}
 		bypass = { }
 
 		cost = 10
@@ -3838,8 +3840,10 @@ focus_tree = {
 
 		completion_reward = { 
 			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_stabilized_economy"
-			remove_ideas = PT_CCN_idea_aftermath_of_the_civil_war_3
-			add_ideas = PT_CCN_idea_recovering_economy
+			swap_ideas = {
+				remove_idea = PT_CCN_idea_aftermath_of_the_civil_war_3
+				add_idea = PT_CCN_idea_recovering_economy
+			}
 		}
 		#complete_tooltip = { }
 
@@ -3959,19 +3963,22 @@ focus_tree = {
 
 		completion_reward = { 
 			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_public_works_campain"
+			add_ideas = PT_CCN_idea_public_works
 		}
 		#complete_tooltip = { }
 
 		ai_will_do = { factor = 1000 }
 	}	
 	focus = {
-		id = PT_CCN_develop_neverwarm_port_dockyards
+		id = PT_CCN_develop_neverwarm_port
 		icon = GFX_goal_news
 		x = 7
 		y = 1
 		relative_position_id = PT_CCN_public_works_campain
 
-		available = { }
+		available = {
+			owns_state = 304
+		}
 		bypass = { }
 
 		cost = 10
@@ -3983,7 +3990,16 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = { 
-			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_develop_neverwarm_port_dockyards"
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_develop_neverwarm_port"
+			304 = {
+				add_building_construction = {
+					type = naval_base
+					level = 3
+					province = 1547
+					instant_build = yes
+				}
+											
+			}
 		}
 		#complete_tooltip = { }
 
@@ -3996,7 +4012,9 @@ focus_tree = {
 		y = 1
 		relative_position_id = PT_CCN_public_works_campain
 
-		available = { }
+		available = { 
+			owns_state = 312
+		}
 		bypass = { }
 
 		cost = 10
@@ -4009,6 +4027,20 @@ focus_tree = {
 
 		completion_reward = { 
 			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_revitalize_gorak_dockyards"
+			312 = {				
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}	
+				add_building_construction = {
+						type = coastal_bunker
+						level = 1
+						province = 12305
+						instant_build = yes
+				}
+			}
 		}
 		#complete_tooltip = { }
 
@@ -4034,6 +4066,39 @@ focus_tree = {
 
 		completion_reward = { 
 			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_mine_the_arctic_shelf"
+			if = {
+				limit = { owns_state = 312 }				
+				312 = {
+					add_extra_state_shared_building_slots = 4
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}	
+					add_building_construction = {
+						type = fuel_silo
+						level = 2
+						instant_build = yes
+					}	
+				}
+				add_resource = {
+					type = oil
+					amount = 15
+					state = 312
+				}
+			}
+			if = {
+				limit = { owns_state = 264 }
+				add_resource = {
+					type = oil
+					amount = 20
+					state = 264
+				}
+			}	
+			country_event = {
+				id = PT_CCN_event.6
+				days = 1
+			}
 		}
 		#complete_tooltip = { }
 
@@ -4046,7 +4111,9 @@ focus_tree = {
 		y = 1
 		relative_position_id = PT_CCN_mine_the_arctic_shelf
 
-		available = { }
+		available = { 
+			owns_state = 308
+		}
 		bypass = { }
 
 		cost = 10
@@ -4059,6 +4126,24 @@ focus_tree = {
 
 		completion_reward = { 
 			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_invest_in_taninaholm_mines"
+			308 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}	
+			}
+			add_resource = {
+				type = chromium
+				amount = 25
+				state = 308
+			}
+			add_resource = {
+				type = tungsten
+				amount = 15
+				state = 308
+			}
 		}
 		#complete_tooltip = { }
 
@@ -4084,6 +4169,13 @@ focus_tree = {
 
 		completion_reward = { 
 			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_mandatory_firendship_lessons"
+			add_tech_bonus = {
+				name = race_tech_bonus
+				bonus = 1
+				uses = 1
+				category = race_tech
+			}
+			#TODO: Unlock counter insurgency decisions???? idk
 		}
 		#complete_tooltip = { }
 
@@ -4109,6 +4201,37 @@ focus_tree = {
 
 		completion_reward = { 
 			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_changeling_trailblazer"
+			if = {
+				limit = { owns_state = 316 }
+				316 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}	
+				}
+			}
+			if = {
+				limit = { owns_state = 250 }
+				250 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}	
+				}
+			}
+			if = {
+				limit = { owns_state = 303 }
+				303 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}	
+				}
+			}
+			#TODO: Add something to decrease supply consumption of Jager and infiltrator
 		}
 		#complete_tooltip = { }
 
@@ -4134,6 +4257,18 @@ focus_tree = {
 
 		completion_reward = { 
 			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_svartforest_timber_production"
+			
+			if = {
+				limit = { owns_state = 261 }
+				261 = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}	
+				}
+			}
 		}
 		#complete_tooltip = { }
 
@@ -4159,6 +4294,8 @@ focus_tree = {
 
 		completion_reward = { 
 			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_broad_support_for_smaller_hives"
+			add_manpower = 200000
+			add_ideas = PT_CCN_idea_new_hives
 		}
 		#complete_tooltip = { }
 
@@ -4171,7 +4308,9 @@ focus_tree = {
 		y = 1
 		relative_position_id = PT_CCN_broad_support_for_smaller_hives
 
-		available = { }
+		available = { 
+			owns_state = 251
+		}
 		bypass = { }
 
 		cost = 10
@@ -4184,6 +4323,80 @@ focus_tree = {
 
 		completion_reward = { 
 			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_defang_vesalipolis"
+			add_stability = 0.05	
+			add_research_slot = 1			
+			251 = {
+				set_state_name = PT_VESAL_VICTORY_NAME
+				set_province_name = { id = 11045 name = PT_VESAL_VICTORY_NAME }
+				add_victory_points = { province = 11045 value = -20 }
+				
+			}	
+			add_timed_idea = {
+				idea = PT_CCN_idea_relocating_vesal_industry
+				days = 70
+			}
+			251 = {
+				add_manpower = -2000000
+				remove_building = {
+					type = industrial_complex
+					level = 4
+				}
+				remove_building = {
+					type = arms_factory
+					level = 3
+				}
+			}
+			252 = {
+				add_manpower = 500000
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}	
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}	
+			}
+			309 = {
+				add_manpower = 500000
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}	
+			}
+			259 = {
+				add_manpower = 500000
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}	
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}	
+			}
+			262 = {
+				add_manpower = 500000
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}	
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}	
+			}
 		}
 		#complete_tooltip = { }
 

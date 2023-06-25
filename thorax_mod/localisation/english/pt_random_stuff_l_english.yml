@@ -38,3 +38,6 @@ PT_worsens_DTR_opinion:0 "Lowers Helvias loyalty"
 PT_swayed_by_thorax:0 "Convinced of Harmony"
 PT_they_like_thorax:0 "Support Thorax"
 PT_love_vs_hate_thorax:0 "Different opinions on Thorax"
+
+#Victory Point Name
+PT_VESAL_VICTORY_NAME:0 "Vesal"
