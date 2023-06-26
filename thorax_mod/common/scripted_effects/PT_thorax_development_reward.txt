@@ -1,0 +1,19 @@
+PT_CCN_trigger_reward_based_on_development = {
+	set_temp_variable = {
+		var = states_count
+		value = 0
+	}
+	every_owned_state = {				
+		limit = { has_state_flag = PT_CCN_state_developed_flag }
+		add_to_temp_variable = { states_count = 1 }
+	}
+	set_temp_variable = {
+		var = pp_reward
+		value = PT_CCN_developed_state_count
+	}	
+	multiply_temp_variable = {
+		var = pp_reward
+		value = 10
+	}
+	add_political_power = pp_reward
+}

@@ -41,3 +41,8 @@ PT_love_vs_hate_thorax:0 "Different opinions on Thorax"
 
 #Victory Point Name
 PT_VESAL_VICTORY_NAME:0 "Vesal"
+
+#Custom Tech
+PT_CCN_tailblazer_tech:0 "Tailblazers"
+PT_CCN_tailblazer_tech_effect:0 "\nEnables §HTailblazers§!:\n    §HJagers§!: Supply Consumption: §G-20%§!\n    §HInfiltrator Company§!: Supply Consumption: §G-20%§!"
+CCN_excavation_bonus_name:0 "Excavation Technology"

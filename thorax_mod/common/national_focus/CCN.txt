@@ -4232,6 +4232,8 @@ focus_tree = {
 				}
 			}
 			#TODO: Add something to decrease supply consumption of Jager and infiltrator
+			custom_effect_tooltip = PT_CCN_tailblazer_tech_effect
+			hidden_effect = { set_technology = { popup = no PT_CCN_tailblazer_tech = 1 } }
 		}
 		#complete_tooltip = { }
 
@@ -4323,8 +4325,7 @@ focus_tree = {
 
 		completion_reward = { 
 			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_defang_vesalipolis"
-			add_stability = 0.05	
-			add_research_slot = 1			
+			add_stability = 0.05			
 			251 = {
 				set_state_name = PT_VESAL_VICTORY_NAME
 				set_province_name = { id = 11045 name = PT_VESAL_VICTORY_NAME }
@@ -4335,6 +4336,7 @@ focus_tree = {
 				idea = PT_CCN_idea_relocating_vesal_industry
 				days = 70
 			}
+			add_ideas = PT_CCN_idea_dispersed_industry
 			251 = {
 				add_manpower = -2000000
 				remove_building = {
@@ -4362,9 +4364,14 @@ focus_tree = {
 			}
 			309 = {
 				add_manpower = 500000
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}	
+				add_building_construction = {
+					type = arms_factory
 					level = 1
 					instant_build = yes
 				}	
@@ -4385,14 +4392,9 @@ focus_tree = {
 			}
 			262 = {
 				add_manpower = 500000
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}	
-				add_building_construction = {
-					type = arms_factory
 					level = 1
 					instant_build = yes
 				}	
@@ -4409,7 +4411,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = PT_CCN_defang_vesalipolis
 
-		available = { }
+		available = { owns_state = 309 }
 		bypass = { }
 
 		cost = 10
@@ -4422,6 +4424,35 @@ focus_tree = {
 
 		completion_reward = { 
 			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_expand_lycitdan_lumber_industry"
+			add_stability = 0.02	
+			309 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 4
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_resource = {
+				type = chromium
+				amount = 3
+				state = 309
+			}
+			add_tech_bonus = {
+				name = CCN_excavation_bonus_name
+				bonus = 1
+				uses = 2
+				category = excavation_tech
+			}
+			country_event = {
+				id = PT_CCN_event.8
+				days = 1
+			}
 		}
 		#complete_tooltip = { }
 
@@ -4434,7 +4465,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = PT_CCN_defang_vesalipolis
 
-		available = { }
+		available = { owns_state = 259 }
 		bypass = { }
 
 		cost = 10
@@ -4447,6 +4478,35 @@ focus_tree = {
 
 		completion_reward = { 
 			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_expand_the_vrakkian_steel_industry"
+			add_stability = 0.02
+			259 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = arms_factory
+					level = 4
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_resource = {
+				type = steel
+				amount = 12
+				state = 259
+			}
+			add_tech_bonus = {
+				name = synth_bonus
+				bonus = 1.0
+				uses = 1
+				category = synth_resources
+			}
+			country_event = {
+				id = PT_CCN_event.9
+				days = 1
+			}
 		}
 		#complete_tooltip = { }
 
@@ -4459,7 +4519,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = PT_CCN_defang_vesalipolis
 
-		available = { }
+		available = { owns_state = 252 }
 		bypass = { }
 
 		cost = 10
@@ -4475,6 +4535,34 @@ focus_tree = {
 
 		completion_reward = { 
 			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_expand_ditrysium_dockyards"
+			add_stability = 0.02
+			252 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = dockyard
+					level = 3
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure					
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_resource = {
+				type = steel
+				amount = 5
+				state = 252
+			}
+			add_resource = {
+				type = tungsten
+				amount = 4
+				state = 252
+			}
+			country_event = {
+				id = PT_CCN_event.10
+				days = 1
+			}
 		}
 		#complete_tooltip = { }
 
@@ -4487,7 +4575,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = PT_CCN_expand_ditrysium_dockyards
 
-		available = { }
+		available = { owns_state = 262 }
 		bypass = { }
 
 		cost = 10
@@ -4500,6 +4588,35 @@ focus_tree = {
 
 		completion_reward = { 
 			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_establish_soryth_universities"
+			add_stability = 0.02
+			262 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			add_resource = {
+				type = crystals
+				amount = 25
+				state = 262
+			}
+			add_tech_bonus = {
+				name = magical_tech_bonus
+				bonus = 1
+				uses = 4
+				category = race_tech
+			}
+			country_event = {
+				id = PT_CCN_event.7
+				days = 1
+			}
 		}
 		#complete_tooltip = { }
 
@@ -4525,6 +4642,7 @@ focus_tree = {
 
 		completion_reward = { 
 			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_largus_island_research_initiatives"
+			add_extra_state_shared_building_slots = 1
 		}
 		#complete_tooltip = { }
 
@@ -4550,6 +4668,7 @@ focus_tree = {
 
 		completion_reward = { 
 			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_expand_eggiceland_testing_grounds"
+			add_ideas = PT_CCN_idea_changeling_science
 		}
 		#complete_tooltip = { }
 
@@ -4575,6 +4694,10 @@ focus_tree = {
 
 		completion_reward = { 
 			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_continue_hive_modernization"
+			swap_ideas = {
+				remove_idea = PT_CCN_idea_new_hives
+				add_idea = PT_CCN_idea_new_hives_2
+			}
 		}
 		#complete_tooltip = { }
 
@@ -4600,6 +4723,12 @@ focus_tree = {
 
 		completion_reward = { 
 			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_begin_national_infrastructure"
+			add_timed_idea = {
+				idea = PT_CCN_idea_hives_inftastructure_initiative
+				days = 365
+			}
+			#TODO: Make decisions and stuff to have this more cool
+			custom_effect_tooltip = PT_CCN_begin_national_infrastructure_tt
 		}
 		#complete_tooltip = { }
 
@@ -4625,6 +4754,60 @@ focus_tree = {
 
 		completion_reward = { 
 			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_extend_railway_system_to_the_south"
+			if = {
+				limit = { owns_state = 258}
+				258 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}	
+					set_state_flag = PT_CCN_state_developed_flag	
+					add_to_variable = { PT_CCN_developed_state_count = 1 }	
+				}
+			}
+			if = {
+				limit = { owns_state = 291}
+				291 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}	
+					set_state_flag = PT_CCN_state_developed_flag
+					add_to_variable = { PT_CCN_developed_state_count = 1 }		
+				}	
+			}
+			if = {
+				limit = { owns_state = 261}
+				261 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}	
+					set_state_flag = PT_CCN_state_developed_flag
+					add_to_variable = { PT_CCN_developed_state_count = 1 }		
+				}	
+			}
+			if = {
+				limit = { owns_state = 251 owns_state = 259}
+				build_railway = {
+					level = 1
+					start_state = 251
+					target_state = 259
+					build_only_on_allied = yes
+				}
+			}
+			if = {
+				limit = { owns_state = 251 owns_state = 309}
+				build_railway = {
+					level = 1
+					start_state = 251
+					target_state = 309
+					build_only_on_allied = yes
+				}
+			}
 		}
 		#complete_tooltip = { }
 
@@ -4650,6 +4833,81 @@ focus_tree = {
 
 		completion_reward = { 
 			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_expand_railway_system_to_the_north"
+			if = {
+				limit = { owns_state = 311}
+				311 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+					set_state_flag = PT_CCN_state_developed_flag
+					add_to_variable = { PT_CCN_developed_state_count = 1 }			
+				}
+			}
+			if = {
+				limit = { owns_state = 232}
+				232 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+					set_state_flag = PT_CCN_state_developed_flag	
+					add_to_variable = { PT_CCN_developed_state_count = 1 }		
+				}
+			}
+			if = {
+				limit = { owns_state = 322}
+				322 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+					set_state_flag = PT_CCN_state_developed_flag	
+					add_to_variable = { PT_CCN_developed_state_count = 1 }		
+				}	
+			}
+			if = {
+				limit = { owns_state = 251 owns_state = 252}		
+				build_railway = {
+					level = 2
+					start_state = 251
+					target_state = 252
+					build_only_on_allied = yes
+				}
+			}
+			
+			if = {
+				limit = { owns_state = 251 owns_state = 262}
+				build_railway = {
+					level = 2
+					start_state = 251
+					target_state = 262
+					build_only_on_allied = yes
+				}
+			}
+			
+			if = {
+				limit = { owns_state = 262 owns_state = 323}
+				build_railway = {
+					level = 1
+					start_state = 262
+					target_state = 323
+					build_only_on_allied = yes
+				}
+			}
+			
+			if = {
+				limit = { owns_state = 323 owns_state = 322}
+				build_railway = {
+					level = 1
+					start_state = 323
+					target_state = 322
+					build_only_on_allied = yes
+				}
+			}
 		}
 		#complete_tooltip = { }
 
@@ -4675,6 +4933,45 @@ focus_tree = {
 
 		completion_reward = { 
 			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_funding_for_the_small_west_hives"
+			if = {
+				limit = { owns_state = 305}
+				305 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+					set_state_flag = PT_CCN_state_developed_flag
+					add_to_variable = { PT_CCN_developed_state_count = 1 }
+				}
+			}
+			if = {
+				limit = { owns_state = 303}
+				303 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+					set_state_flag = PT_CCN_state_developed_flag
+					add_to_variable = { PT_CCN_developed_state_count = 1 }
+				}
+			}
+			if = {
+				limit = { owns_state = 308}
+				308 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+					set_state_flag = PT_CCN_state_developed_flag
+					add_to_variable = { PT_CCN_developed_state_count = 1 }
+				}
+			}
 		}
 		#complete_tooltip = { }
 
@@ -4700,6 +4997,46 @@ focus_tree = {
 
 		completion_reward = { 
 			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_funding_for_the_small_east_hives"
+			if = {
+				limit = { owns_state = 320}
+				320 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+					set_state_flag = PT_CCN_state_developed_flag
+					add_to_variable = { PT_CCN_developed_state_count = 1 }
+				}				
+			}
+			
+			if = {
+				limit = { owns_state = 319}
+				319 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+					set_state_flag = PT_CCN_state_developed_flag
+					add_to_variable = { PT_CCN_developed_state_count = 1 }
+				}
+			}
+			if = {
+				limit = { owns_state = 247}
+				247 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+					set_state_flag = PT_CCN_state_developed_flag
+					add_to_variable = { PT_CCN_developed_state_count = 1 }
+				}
+			}
 		}
 		#complete_tooltip = { }
 
@@ -4713,9 +5050,13 @@ focus_tree = {
 		relative_position_id = PT_CCN_begin_national_infrastructure
 
 		available = { }
-		bypass = { }
+		bypass = { 
+			NOT = {
+				has_idea = PT_CCN_idea_hives_inftastructure_initiative
+			}
+		}
 
-		cost = 10
+		cost = 5
 		prerequisite = { 
 			focus = PT_CCN_extend_railway_system_to_the_south 
 			focus = PT_CCN_expand_railway_system_to_the_north 
@@ -4730,6 +5071,17 @@ focus_tree = {
 
 		completion_reward = { 
 			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_finalize_infrastructure_for_the_hives"
+			remove_ideas = PT_CCN_idea_hives_inftastructure_initiative
+			every_owned_state = {				
+				limit = { has_state_flag = PT_CCN_state_developed_flag }
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			custom_effect_tooltip = PT_CCN_finalize_infrastructure_for_the_hives_tt
+			#PT_CCN_trigger_reward_based_on_development = yes
 		}
 		#complete_tooltip = { }
 

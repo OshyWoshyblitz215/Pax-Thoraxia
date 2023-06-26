@@ -399,6 +399,7 @@
  PT_CCN_continue_hive_modernization_desc:0 "Continue Hive Modernization Description"
  PT_CCN_begin_national_infrastructure:0 "Begin National Infrastructure"
  PT_CCN_begin_national_infrastructure_desc:0 "Begin National Infrastructure Description"
+ PT_CCN_begin_national_infrastructure_tt:0 "\n§RWe will have §H1 Year§! to §HFinalize the Initiative!§!§!"
  PT_CCN_extend_railway_system_to_the_south:0 "Extend Railway System To The South"
  PT_CCN_extend_railway_system_to_the_south_desc:0 "Extend Railway System To The South Description"
  PT_CCN_expand_railway_system_to_the_north:0 "Expand Railway System To The North"
@@ -409,3 +410,4 @@
  PT_CCN_funding_for_the_small_east_hives_desc:0 "Funding For The Small East Hives Description"
  PT_CCN_finalize_infrastructure_for_the_hives:0 "Finalize Infrastructure For The Hives"
  PT_CCN_finalize_infrastructure_for_the_hives_desc:0 "Finalize Infrastructure For The Hives Description"
+ PT_CCN_finalize_infrastructure_for_the_hives_tt:0 "\nGains §G+10§! £pol_power §HPolitical Power§! for each developed state."

@@ -1,0 +1,20 @@
+technologies = {
+	PT_CCN_tailblazer_tech = {
+
+		research_cost = 1
+
+		# only from focus!!! #####
+		allow = {
+			always = no
+		}
+
+		#If you change these
+		#Change the custom tooltip too: PT_CCN_tailblazer_tech_effect
+		infiltrator_company = {
+			supply_consumption = -0.004 #-20% from 0.02
+		}
+		jager = {
+			supply_consumption = -0.007 #-20% from 0.035
+		}
+	}
+}
