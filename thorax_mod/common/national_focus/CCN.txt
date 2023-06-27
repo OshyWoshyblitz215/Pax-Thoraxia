@@ -123,7 +123,7 @@ focus_tree = {
 		completion_reward = { 
 			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_the_young_queen_alligence"
 			country_event = {
-				id = PT_CCN_event.1
+				id = PT_CCN_event.11
 				days = 1
 			}
 		}
@@ -152,7 +152,7 @@ focus_tree = {
 		completion_reward = { 
 			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_sea_queens_negotiations"
 			country_event = {
-				id = PT_CCN_event.2
+				id = PT_CCN_event.13
 				days = 1
 			}
 		}
@@ -181,7 +181,7 @@ focus_tree = {
 		completion_reward = { 
 			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_warrior_queens_honour"
 			country_event = {
-				id = PT_CCN_event.3
+				id = PT_CCN_event.17
 				days = 1
 			}
 		}
@@ -210,7 +210,7 @@ focus_tree = {
 		completion_reward = { 
 			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_queen_of_ices_progress"
 			country_event = {
-				id = PT_CCN_event.4
+				id = PT_CCN_event.19
 				days = 1
 			}
 		}
@@ -242,7 +242,7 @@ focus_tree = {
 		completion_reward = { 
 			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_after_war"
 			country_event = {
-				id = PT_CCN_event.5
+				id = PT_CCN_event.15
 				days = 1
 			}
 		}
@@ -273,6 +273,26 @@ focus_tree = {
 			swap_ideas = {
 				remove_idea = PT_CCN_idea_empty_throne
 				add_idea = PT_CCN_idea_nation_united
+			}
+			annex_country = {
+				target = PHA
+				transfer_troops = yes
+			}
+			annex_country = {
+				target = DTR
+				transfer_troops = yes
+			}
+			annex_country = {
+				target = GRK
+				transfer_troops = yes
+			}
+			annex_country = {
+				target = VRK
+				transfer_troops = yes
+			}
+			annex_country = {
+				target = SRT
+				transfer_troops = yes
 			}
 		}
 		#complete_tooltip = { }
@@ -4725,7 +4745,7 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_begin_national_infrastructure"
 			add_timed_idea = {
 				idea = PT_CCN_idea_hives_inftastructure_initiative
-				days = 365
+				days = 300
 			}
 			#TODO: Make decisions and stuff to have this more cool
 			custom_effect_tooltip = PT_CCN_begin_national_infrastructure_tt
@@ -5049,8 +5069,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = PT_CCN_begin_national_infrastructure
 
-		available = { }
-		bypass = { 
+		available = { 
 			NOT = {
 				has_idea = PT_CCN_idea_hives_inftastructure_initiative
 			}
@@ -5071,7 +5090,6 @@ focus_tree = {
 
 		completion_reward = { 
 			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_finalize_infrastructure_for_the_hives"
-			remove_ideas = PT_CCN_idea_hives_inftastructure_initiative
 			every_owned_state = {				
 				limit = { has_state_flag = PT_CCN_state_developed_flag }
 				add_building_construction = {

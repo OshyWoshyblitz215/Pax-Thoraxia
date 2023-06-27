@@ -3,11 +3,11 @@ changeling_civil_war = {
         cost = 25
         visible = {
             has_completed_focus = PT_hearts_and_minds
+			NOT = {			
+				set_country_flag = thorax_won_cw
+			}
         }
         fire_only_once = yes
-        available = {
-           
-        }
         icon = rifles
         days_remove = 30
         remove_effect = {
@@ -24,6 +24,9 @@ decision_improve_relation_CCN_SRT = {
 	cost = 25
 	visible = {
 		has_completed_focus = PT_hearts_and_minds
+		NOT = {			
+			set_country_flag = thorax_won_cw
+		}
 	}
 	fire_only_once = yes
 	available = {
@@ -42,6 +45,9 @@ decision_improve_relation_CCN_LCD = {
 	cost = 25
 	visible = {
 		has_completed_focus = PT_hearts_and_minds
+		NOT = {			
+			set_country_flag = thorax_won_cw
+		}
 	}
 	fire_only_once = yes
 	available = {
@@ -60,6 +66,9 @@ decision_improve_relation_CCN_DTR = {
 	cost = 25
 	visible = {
 		has_completed_focus = PT_hearts_and_minds
+		NOT = {			
+			set_country_flag = thorax_won_cw
+		}
 	}
 	fire_only_once = yes
 	available = {

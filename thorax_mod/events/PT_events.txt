@@ -1,24 +1,25 @@
 add_namespace = PT_event
 
-country_event = { #we've won the civil war
+country_event = { #Thorax won civil war flavor event
 	id = PT_event.1
-	fire_only_once = yes
-	hidden = yes
-	trigger = {
-		CHN = {
-			exists = no
-		}
-		CCN = {
-			exists = yes
-			owns_state = 251
-			
-		}
+	title = PT_event.1.t
+	desc = PT_event.1.desc
+	is_triggered_only = yes
+	#news_event = { id = PT_CHN.31 }
+	option = {
+		name = PT_event.1.a
+		
 	}
-	immediate = {
-		news_event = { id = PT_CHN.31 }
-		CHN = {
-			mark_focus_tree_layout_dirty = yes
-		}		 
+}
+country_event = { #Chrysie won civil war flavor event
+	id = PT_event.2
+	title = PT_event.2.t
+	desc = PT_event.2.desc
+	is_triggered_only = yes
+	#news_event = { id = PT_CHN.31 }
+	option = {
+		name = PT_event.2.a
+		
 	}
 }
 #country_event = {

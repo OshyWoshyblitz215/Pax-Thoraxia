@@ -129,18 +129,18 @@ add_tech_bonus = {
 	uses = 1
 	technology = CAS1
 }
-
+recruit_character = GRK_gold_muffin
 
 set_convoys = 150
 set_popularities = {
-	democratic = 6
-	fascism = 74
-	communism = 15
-	neutrality = 5
+	democratic = 0
+	neutrality = 0
+	fascism = 0
+	communism = 100
 }
 set_politics = {
 
-	ruling_party = fascism
+	ruling_party = communism
 	last_election = "1000.10.10"
 	election_frequency = 36
 	elections_allowed = no

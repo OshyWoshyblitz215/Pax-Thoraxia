@@ -18,131 +18,6 @@ add_namespace = PT_CCN_event
 #		ai_chance = { factor = 1000}
 #	}
 #}
-
-country_event = { #LCD gets annexed
-	id = PT_CCN_event.1
-	title = PT_CCN_event.1.t
-	desc = PT_CCN_event.1.desc
-	picture = GFX_event_PT_buggo_cw
-	
-	fire_only_once = yes
-	is_triggered_only = yes
-	
-	#trigger = { }
-	#immediate = { }
-	#mean_time_to_happen = { days = 2 }
-
-	option = { 
-		name = PT_CCN_event.1.a
-		ai_chance = { factor = 1000}		
-		if = {
-			limit = {
-				LCD = { exists = yes }
-			}
-			annex_country = {
-				target = LCD
-				transfer_troops = yes
-			}
-		}
-		if = {
-			limit = {
-				PHA = { exists = yes }
-			}
-			annex_country = {
-				target = PHA
-				transfer_troops = yes
-			}
-		}
-	}
-}
-country_event = { #DTR gets annexed
-	id = PT_CCN_event.2
-	title = PT_CCN_event.2.t
-	desc = PT_CCN_event.2.desc
-	picture = GFX_event_PT_buggo_cw
-	
-	fire_only_once = yes
-	is_triggered_only = yes
-	
-	#trigger = { }
-	#immediate = { }
-	#mean_time_to_happen = { days = 2 }
-
-	option = { 
-		name = PT_CCN_event.2.a
-		ai_chance = { factor = 1000}
-		annex_country = {
-			target = DTR
-			transfer_troops = yes
-		}
-	}
-}
-country_event = { #VRK gets annexed
-	id = PT_CCN_event.3
-	title = PT_CCN_event.3.t
-	desc = PT_CCN_event.3.desc
-	picture = GFX_event_PT_buggo_cw
-	
-	fire_only_once = yes
-	is_triggered_only = yes
-	
-	#trigger = { }
-	#immediate = { }
-	#mean_time_to_happen = { days = 2 }
-
-	option = { 
-		name = PT_CCN_event.3.a
-		ai_chance = { factor = 1000}
-		annex_country = {
-			target = VRK
-			transfer_troops = yes
-		}
-	}
-}
-country_event = { #SRT gets annexed
-	id = PT_CCN_event.4
-	title = PT_CCN_event.4.t
-	desc = PT_CCN_event.4.desc
-	picture = GFX_event_PT_buggo_cw
-	
-	fire_only_once = yes
-	is_triggered_only = yes
-	
-	#trigger = { }
-	#immediate = { }
-	#mean_time_to_happen = { days = 2 }
-
-	option = { 
-		name = PT_CCN_event.4.a
-		ai_chance = { factor = 1000}
-		annex_country = {
-			target = SRT
-			transfer_troops = yes
-		}
-	}
-}
-country_event = { #GRK Gets Annexed
-	id = PT_CCN_event.5
-	title = PT_CCN_event.5.t
-	desc = PT_CCN_event.5.desc
-	picture = GFX_event_PT_buggo_cw
-	
-	fire_only_once = yes
-	is_triggered_only = yes
-	
-	#trigger = { }
-	#immediate = { }`
-	#mean_time_to_happen = { days = 2 }
-
-	option = { 
-		name = PT_CCN_event.5.a
-		ai_chance = { factor = 1000}
-		annex_country = {
-			target = GRK
-			transfer_troops = no
-		}
-	}
-}
 country_event = { #Unknown Rock Event TODO: actually make this event do whatever it is meant to do
 	id = PT_CCN_event.6
 	title = PT_CCN_event.6.t
@@ -239,5 +114,218 @@ country_event = { #Gift from Ditrysium queen for development
 	option = { 
 		name = PT_CCN_event.10.a
 		ai_chance = { factor = 1000}
+	}
+}
+
+
+#	if = {
+#			limit = {
+#				LCD = { exists = yes }
+#			}
+#			annex_country = {
+#				target = LCD
+#				transfer_troops = yes
+#			}
+#		}
+#		if = {
+#			limit = {
+#				PHA = { exists = yes }
+#			}
+#			annex_country = {
+#				target = PHA
+#				transfer_troops = yes
+#			}
+#		}
+
+country_event = { #Lycidia subject PT1
+	id = PT_CCN_event.11
+	title = PT_CCN_event.11.t
+	desc = PT_CCN_event.11.desc
+	picture = GFX_event_PT_buggo_cw
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	#trigger = { }
+	#immediate = { }
+	#mean_time_to_happen = { days = 2 }
+
+	option = { 
+		name = PT_CCN_event.11.a
+		ai_chance = { factor = 1000}		
+		country_event = {
+			id = PT_CCN_event.12
+		}
+	}
+}
+country_event = { #Lycidia subject PT2
+	id = PT_CCN_event.12
+	title = PT_CCN_event.12.t
+	desc = PT_CCN_event.12.desc
+	picture = GFX_event_PT_buggo_cw
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	#trigger = { }
+	#immediate = { }
+	#mean_time_to_happen = { days = 2 }
+
+	option = { 
+		name = PT_CCN_event.12.a
+		ai_chance = { factor = 1000}
+		puppet = PHA
+	}
+}
+country_event = { #Ditrysium subject PT1
+	id = PT_CCN_event.13
+	title = PT_CCN_event.13.t
+	desc = PT_CCN_event.13.desc
+	picture = GFX_event_PT_buggo_cw
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	#trigger = { }
+	#immediate = { }
+	#mean_time_to_happen = { days = 2 }
+
+	option = { 
+		name = PT_CCN_event.13.a
+		ai_chance = { factor = 1000}					
+		country_event = {
+			id = PT_CCN_event.14
+		}
+	}
+}
+country_event = { #Ditrysium subject PT2
+	id = PT_CCN_event.14
+	title = PT_CCN_event.14.t
+	desc = PT_CCN_event.14.desc
+	picture = GFX_event_PT_buggo_cw
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	#trigger = { }
+	#immediate = { }
+	#mean_time_to_happen = { days = 2 }
+
+	option = { 
+		name = PT_CCN_event.14.a
+		ai_chance = { factor = 1000}
+		puppet = DTR
+	}
+}
+country_event = { #Commies subject PT1
+	id = PT_CCN_event.15
+	title = PT_CCN_event.15.t
+	desc = PT_CCN_event.15.desc
+	picture = GFX_event_PT_buggo_cw
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	#trigger = { }
+	#immediate = { }
+	#mean_time_to_happen = { days = 2 }
+
+	option = { 
+		name = PT_CCN_event.15.a
+		ai_chance = { factor = 1000}		
+		country_event = {
+			id = PT_CCN_event.16
+		}
+	}
+}
+country_event = { #Commies subject PT2
+	id = PT_CCN_event.16
+	title = PT_CCN_event.16.t
+	desc = PT_CCN_event.16.desc
+	picture = GFX_event_PT_buggo_cw
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	#trigger = { }
+	#immediate = { }
+	#mean_time_to_happen = { days = 2 }
+
+	option = { 
+		name = PT_CCN_event.16.a
+		ai_chance = { factor = 1000}
+		puppet = GRK
+		hidden_effect = {
+			GRK = {
+				set_popularities = {
+					democratic = 40
+					neutrality = 0
+					fascism = 0
+					communism = 60
+				}
+				set_politics = {
+					ruling_party = communism
+				}
+			}
+		}
+	}
+}
+country_event = { #Vraks subject PT1
+	id = PT_CCN_event.17
+	title = PT_CCN_event.17.t
+	desc = PT_CCN_event.17.desc
+	picture = GFX_event_PT_buggo_cw
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	#trigger = { }
+	#immediate = { }
+	#mean_time_to_happen = { days = 2 }
+
+	option = { 
+		name = PT_CCN_event.17.a
+		ai_chance = { factor = 1000}		
+		country_event = {
+			id = PT_CCN_event.18
+		}		
+	}
+}
+country_event = { #Vraks subject PT2
+	id = PT_CCN_event.18
+	title = PT_CCN_event.18.t
+	desc = PT_CCN_event.18.desc
+	picture = GFX_event_PT_buggo_cw
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	#trigger = { }
+	#immediate = { }
+	#mean_time_to_happen = { days = 2 }
+
+	option = { 
+		name = PT_CCN_event.18.a
+		ai_chance = { factor = 1000}
+		puppet = VRK
+	}
+}
+country_event = { #Soryth subject 
+	id = PT_CCN_event.19
+	title = PT_CCN_event.19.t
+	desc = PT_CCN_event.19.desc
+	picture = GFX_event_PT_buggo_cw
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	#trigger = { }
+	#immediate = { }
+	#mean_time_to_happen = { days = 2 }
+
+	option = { 
+		name = PT_CCN_event.19.a
+		ai_chance = { factor = 1000}
+		puppet = SRT
 	}
 }

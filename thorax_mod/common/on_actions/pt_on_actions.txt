@@ -39,12 +39,19 @@ on_actions = {
 						target = CHN
 						transfer_troops = no
 					}
+					mark_focus_tree_layout_dirty = yes
+					country_event = { id = PT_CCN_event.1 }
 				}	
 				PHA = {
 					annex_country = {
 						target = LCD
 						transfer_troops = no
 					}
+					308 = { add_core_of = PHA }
+					260 = { add_core_of = PHA }
+					303 = { add_core_of = PHA }
+					309 = { add_core_of = PHA }
+					304 = { add_core_of = PHA }
 				}
 				DTR = {
 					white_peace = CCN
@@ -52,6 +59,39 @@ on_actions = {
 					white_peace = SRT
 					white_peace = PHA					
 				}
+				set_country_flag = thorax_won_cw
+				news_event = { id = PT_CHN.31 days = 1 } #Thorax won event
+			}
+			if = { #Peace confrence for Chrysalis
+				limit = { tag = CCN has_war_with = CHN }
+				CHN = {
+					annex_country = {
+						target = LCD
+						transfer_troops = no
+					}
+					annex_country = {
+						target = PHA
+						transfer_troops = no
+					}
+					annex_country = {
+						target = VRK
+						transfer_troops = no
+					}
+					annex_country = {
+						target = CCN
+						transfer_troops = no
+					}
+					annex_country = {
+						target = SRT
+						transfer_troops = no
+					}
+					annex_country = {
+						target = PHA
+						transfer_troops = no
+					}
+					country_event = { id = PT_CCN_event.2 }
+				}
+				news_event = { id = PT_CHN.32 days = 1 }
 			}
 		}
 	}

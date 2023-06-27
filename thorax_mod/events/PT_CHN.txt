@@ -815,3 +815,41 @@ news_event = { # CIVIL WAR THORAX WON
 		}
 	}
 }
+
+news_event = { # CIVIL WAR Chrysie WON
+	id = PT_CHN.32
+	title = PT_CHN.32.t
+	desc = PT_CHN.32.desc
+	picture = GFX_event_PT_buggo_cw
+	is_triggered_only = yes
+	major = yes
+	option = {
+		name = PT_CHN.31.a
+		trigger = {
+			NOT = { 
+				OR = {
+					original_tag = CHN
+					original_tag = CRY
+					original_tag = EQS
+					original_tag = OLE
+				} 
+			}
+		}
+	}
+	option = {
+		name = PT_CHN.31.b
+		trigger = {
+			OR = {
+				original_tag = CRY
+				original_tag = EQS
+				original_tag = OLE
+			} 			
+		}
+	}
+	option = {
+		name = PT_CHN.31.c
+		trigger = {
+			original_tag = CHN
+		}
+	}
+}
