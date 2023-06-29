@@ -1,10 +1,10 @@
 add_namespace = PT_CCN_allies
 
 
-country_event = {
+country_event = { #offer friendship to Vraks
 	id = PT_CCN_allies.1
 	title = PT_CCN_allies.1.t
-	desc = PT_CCN_allies.1.d
+	desc = PT_CCN_allies.1.desc
 	fire_only_once = yes
 	is_triggered_only = yes
 	option = {
@@ -26,13 +26,10 @@ country_event = {
 		add_to_faction = VRK
 	}
 }
-#copies for the various other countries:
-#order =VRK SRT LCD DTR
-
-country_event = {
+country_event = { #offer friendship to Soryth
 	id = PT_CCN_allies.2
 	title = PT_CCN_allies.2.t
-	desc = PT_CCN_allies.2.d
+	desc = PT_CCN_allies.2.desc
 	fire_only_once = yes
 	is_triggered_only = yes
 	option = {
@@ -54,11 +51,10 @@ country_event = {
 		add_to_faction = SRT
 	}
 }
-
-country_event = {
+country_event = { #offer friendship to Lycidia
 	id = PT_CCN_allies.3
 	title = PT_CCN_allies.3.t
-	desc = PT_CCN_allies.3.d
+	desc = PT_CCN_allies.3.desc
 	fire_only_once = yes
 	is_triggered_only = yes
 	option = {
@@ -68,10 +64,10 @@ country_event = {
 		}
 	}
 }
-country_event = {
+country_event = { #offer friendship to Distrium
 	id = PT_CCN_allies.4
 	title = PT_CCN_allies.4.t
-	desc = PT_CCN_allies.4.d
+	desc = PT_CCN_allies.4.desc
 	fire_only_once = yes
 	is_triggered_only = yes
 	option = {
@@ -81,11 +77,10 @@ country_event = {
 		}
 	}
 }
-
-country_event = {
-	id = PT_CCN_allies.5 #get the commie
+country_event = { #Offer friendship to commies
+	id = PT_CCN_allies.5 
 	title = PT_CCN_allies.5.t
-	desc = PT_CCN_allies.5.d
+	desc = PT_CCN_allies.5.desc
 	fire_only_once = yes
 	is_triggered_only = yes
 	option = {
@@ -107,10 +102,10 @@ country_event = {
 #				value = 50
 #			}
 #			add_ai_strategy = {
- #				type = diplo_action_acceptance
+#				type = diplo_action_acceptance
 #				id = CCN
- #				value = 100
- #				target = join_allies
+#				value = 100
+#				target = join_allies
 #			}
 		}
 		add_opinion_modifier = {
@@ -135,10 +130,10 @@ country_event = {
 		}
 	}
 }
-country_event = {
+country_event = { #Wermacht Defections
 	id = PT_CCN_allies.6
 	title = PT_CCN_allies.6.t
-	desc = PT_CCN_allies.6.d
+	desc = PT_CCN_allies.6.desc
 	fire_only_once = yes
 	is_triggered_only = yes
 	option = {
@@ -161,60 +156,18 @@ country_event = {
 		}
 	}
 }
-country_event = {
-	id = PT_CCN_allies.7 #sea queen rebellion
+country_event = { #sea queen rebellion CCN
+	id = PT_CCN_allies.7 
 	title = PT_CCN_allies.7.t
-	desc = PT_CCN_allies.7.d
+	desc = PT_CCN_allies.7.desc
 	fire_only_once = yes
 	is_triggered_only = yes
+	immediate = { PT_civil_war_sea_queen_backstab = yes }
 	option = {
 		name = PT_CCN_allies.7.a
-		if = {
-			limit = {
-				CCN = {
-					is_in_faction = no
-				}
-			}
-			CCN = { create_faction = THORAX_CIVIL_WAR_ALLIANCE }
-		}
-		CHN = {
-			country_event = { id = PT_CCN_allies.10 } 
-			diplomatic_relation = {
-				country = DTR
-				relation = puppet
-				active = no
-			}
-		}
-		DTR = {
-			declare_war_on = { type = civil_war target = CHN }
-			leave_faction = yes
-			add_country_leader_trait = PT_swayed_by_thorax
-			add_opinion_modifier = { target = CCN modifier = PT_they_like_thorax }
-			set_country_flag = PT_thorax_convinced_us
-			add_ai_strategy = { type = alliance id = CCN value = 500 }
-			add_ai_strategy = { type = befriend id = CCN value = 500 }
-			add_ai_strategy = { type = diplo_action_acceptance id = CCN value = 100 target = join_allies }
-		}
-		add_opinion_modifier = {
-			target = DTR
-			modifier = PT_they_like_thorax
-		}
-		every_country = {
-			limit = {
-				OR = {
-					is_in_faction_with = CCN
-					original_tag = CCN
-				}
-			}
-			white_peace = DTR
-		}
-		CCN = {
-			add_to_faction = DTR
-		}
-		
 	}
 }
-country_event = { #CHN told aobut PHA
+country_event = { #CHN told about DTR rebellion
 	id = PT_CCN_allies.8
 	title = PT_CCN_allies.8.t
 	desc = PT_CCN_allies.8.d
@@ -222,59 +175,37 @@ country_event = { #CHN told aobut PHA
 	is_triggered_only = yes
 	option = {
 		name = PT_CCN_allies.8.a
-		
 	}
 }
-country_event = { #CCN told aobut PHA
+country_event = { #CHN told aobut PHA
 	id = PT_CCN_allies.9
 	title = PT_CCN_allies.9.t
-	desc = PT_CCN_allies.9.d
+	desc = PT_CCN_allies.9.desc
 	fire_only_once = yes
 	is_triggered_only = yes
 	option = {
 		name = PT_CCN_allies.9.a
+		
 	}
 }
-country_event = { #CHN told about DTR rebellion
+country_event = { #CCN told aobut PHA
 	id = PT_CCN_allies.10
 	title = PT_CCN_allies.10.t
-	desc = PT_CCN_allies.10.d
+	desc = PT_CCN_allies.10.desc
 	fire_only_once = yes
 	is_triggered_only = yes
 	option = {
 		name = PT_CCN_allies.10.a
 	}
 }
-country_event = {
+country_event = { #Pharynx reunion
 	id = PT_CCN_allies.11
 	title = PT_CCN_allies.11.t
-	desc = PT_CCN_allies.11.d
+	desc = PT_CCN_allies.11.desc
 	fire_only_once = yes
 	is_triggered_only = yes
 	option = {
 		name = PT_CCN_allies.11.a
-		
-	}
-}
-country_event = {
-	id = PT_CCN_allies.12
-	title = PT_CCN_allies.12.t
-	desc = PT_CCN_allies.12.d
-	fire_only_once = yes
-	is_triggered_only = yes
-	option = {
-		name = PT_CCN_allies.12.a
-		
-	}
-}
-country_event = {
-	id = PT_CCN_allies.13
-	title = PT_CCN_allies.13.t
-	desc = PT_CCN_allies.13.d
-	fire_only_once = yes
-	is_triggered_only = yes
-	option = {
-		name = PT_CCN_allies.13.a
 		CHN = { CHN_pharynx = { set_nationality = CCN } }
 		CHN_pharynx = {
 			promote_leader = yes
@@ -282,81 +213,6 @@ country_event = {
 		set_portraits = {
 			character = CHN_pharynx
 			army = { large = "gfx/leaders/CCN/PT_Pharynx.tga" } 
-		}
-	}
-}
-country_event = {
-	id = PT_CCN_allies.14
-	title = PT_CCN_allies.14.t
-	desc = PT_CCN_allies.14.d
-	fire_only_once = yes
-	is_triggered_only = yes
-	option = {
-		name = PT_CCN_allies.14.a
-		diplomatic_relation = {
-			country = DTR
-			relation = puppet
-			active = yes
-		}
-	}
-}
-country_event = {
-	id = PT_CCN_allies.15
-	title = PT_CCN_allies.15.t
-	desc = PT_CCN_allies.15.d
-	fire_only_once = yes
-	is_triggered_only = yes
-	option = {
-		name = PT_CCN_allies.15.a
-		diplomatic_relation = {
-			country = SRT
-			relation = puppet
-			active = yes
-		}
-	}
-}
-country_event = {
-	id = PT_CCN_allies.16
-	title = PT_CCN_allies.16.t
-	desc = PT_CCN_allies.16.d
-	fire_only_once = yes
-	is_triggered_only = yes
-	option = {
-		name = PT_CCN_allies.16.a
-		diplomatic_relation = {
-			country = VRK
-			relation = puppet
-			active = yes
-		}
-	}
-}
-country_event = {
-	id = PT_CCN_allies.17
-	title = PT_CCN_allies.17.t
-	desc = PT_CCN_allies.17.d
-	fire_only_once = yes
-	is_triggered_only = yes
-	option = {
-		name = PT_CCN_allies.17.a
-		diplomatic_relation = {
-			country = PHA
-			relation = puppet
-			active = yes
-		}
-	}
-}
-country_event = {
-	id = PT_CCN_allies.18
-	title = PT_CCN_allies.18.t
-	desc = PT_CCN_allies.18.d
-	fire_only_once = yes
-	is_triggered_only = yes
-	option = {
-		name = PT_CCN_allies.18.a
-		diplomatic_relation = {
-			country = GRK
-			relation = puppet
-			active = yes
 		}
 	}
 }

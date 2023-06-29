@@ -264,10 +264,30 @@ focus_tree = {
 		prerequisite = { focus = PT_CCN_red_north_conundrum }
 		#mutually_exclusive = { focus =  }
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		cancel_if_invalid = no
+		continue_if_invalid = yes
 		available_if_capitulated = no
+		cancelable = no
 
+		select_effect = {  			
+			country_event = {
+				id = PT_CCN_event.1
+				days = 10
+			}			
+			country_event = {
+				id = PT_CCN_event.2
+				days = 15
+			}			
+			country_event = {
+				id = PT_CCN_event.4
+				days = 30
+			}			
+			country_event = {
+				id = PT_CCN_event.5
+				days = 40
+			}
+		}
+		
 		completion_reward = { 
 			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_after_war"	
 			swap_ideas = {
@@ -294,6 +314,12 @@ focus_tree = {
 				target = SRT
 				transfer_troops = yes
 			}
+			hidden_effect = {
+				country_event = {
+					id = PT_CCN_event.6
+				}
+			}			
+			dismantle_faction = yes
 		}
 		#complete_tooltip = { }
 
@@ -4116,7 +4142,7 @@ focus_tree = {
 				}
 			}	
 			country_event = {
-				id = PT_CCN_event.6
+				id = PT_CCN_event.20
 				days = 1
 			}
 		}

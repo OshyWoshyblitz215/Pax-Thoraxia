@@ -1,32 +1,27 @@
 changeling_civil_war = {
-    decision_improve_relation_CCN_VRK = {
-        cost = 25
-        visible = {
-            has_completed_focus = PT_hearts_and_minds
-			NOT = {			
-				set_country_flag = thorax_won_cw
-			}
-        }
-        fire_only_once = yes
-        icon = rifles
-        days_remove = 30
-        remove_effect = {
 
-            country_event = {
-                id = PT_CCN_allies.1
-            }
+
+decision_improve_relation_CCN_VRK = {
+    cost = 25
+    visible = {
+        has_completed_focus = PT_hearts_and_minds
+		NOT = { has_global_flag = PT_changling_civil_war_finished }
+    }
+    fire_only_once = yes
+    icon = rifles
+    days_remove = 30
+    remove_effect = {
+        country_event = {
+            id = PT_CCN_allies.1
         }
     }
-    
-#copies 
+}
 
 decision_improve_relation_CCN_SRT = {
 	cost = 25
 	visible = {
 		has_completed_focus = PT_hearts_and_minds
-		NOT = {			
-			set_country_flag = thorax_won_cw
-		}
+		NOT = { has_global_flag = PT_changling_civil_war_finished }
 	}
 	fire_only_once = yes
 	available = {
@@ -45,9 +40,7 @@ decision_improve_relation_CCN_LCD = {
 	cost = 25
 	visible = {
 		has_completed_focus = PT_hearts_and_minds
-		NOT = {			
-			set_country_flag = thorax_won_cw
-		}
+		NOT = { has_global_flag = PT_changling_civil_war_finished }
 	}
 	fire_only_once = yes
 	available = {
@@ -66,9 +59,7 @@ decision_improve_relation_CCN_DTR = {
 	cost = 25
 	visible = {
 		has_completed_focus = PT_hearts_and_minds
-		NOT = {			
-			set_country_flag = thorax_won_cw
-		}
+		NOT = { has_global_flag = PT_changling_civil_war_finished }
 	}
 	fire_only_once = yes
 	available = {
@@ -149,29 +140,11 @@ PT_DTR_betrayal = {
 	icon = rifles
 	days_remove = 15
 	remove_effect = {
-		country_event = { id = PT_CCN_allies.7 }
+		PT_civil_war_sea_queen_backstab = yes
 	}
 }
 
-}#end of civil war
-
-PT_the_queens = {
-PT_befriend_queen_DTR = {
-	cost = 25
-	visible = {
-		check_variable = { PT_CCN_DTR_relation > 0 }
-	}
-	available = {
-	}
-	icon = rifles
-	days_remove = 50
-	remove_effect = {
-		add_to_variable = { PT_CCN_DTR_relation = 1 }
-	}
-}
-
-
-}#end of the queens
+#end of the queens
 #PT_demilitarise = {
 #PT_demilitarise_322_mission = {
 #	allowed = { always = no }

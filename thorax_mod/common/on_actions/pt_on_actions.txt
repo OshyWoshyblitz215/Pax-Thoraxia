@@ -2,96 +2,23 @@ on_actions = {
 	on_declare_war = {
 		effect = {
 			if = { #civil war event if thorax declares on chtysalis or vice versa
-				limit = { 
-					OR = {
-						AND = {
-							tag = CHN
-							FROM = { tag = CCN }
-						}
-						AND = {
-							tag = CCN
-							FROM = { tag = CHN }
-						}
-					}
-				}
-				news_event = { id = PT_CHN.30 }
-				hidden_effect = {
-					play_song = "bella_ciao"
-				}
+				limit = { OR = {
+						AND = { tag = CHN FROM = { tag = CCN } }
+						AND = { tag = CCN FROM = { tag = CHN } } 
+				} }
+				PT_civil_war_starts = yes 
 			}
 		}
 	}
 	on_capitulation_immediate = {
 		effect = { 
 			if = { #peace conference for when thorax wins
-				limit = {
-					tag = CHN
-					has_war_with = CCN									
-				}
-				CCN = {
-					every_state = {
-						limit = {
-							is_core_of = CHN
-						}
-						add_core_of = CCN
-					}
-					annex_country = {
-						target = CHN
-						transfer_troops = no
-					}
-					mark_focus_tree_layout_dirty = yes
-					country_event = { id = PT_CCN_event.1 }
-				}	
-				PHA = {
-					annex_country = {
-						target = LCD
-						transfer_troops = no
-					}
-					308 = { add_core_of = PHA }
-					260 = { add_core_of = PHA }
-					303 = { add_core_of = PHA }
-					309 = { add_core_of = PHA }
-					304 = { add_core_of = PHA }
-				}
-				DTR = {
-					white_peace = CCN
-					white_peace = VRK
-					white_peace = SRT
-					white_peace = PHA					
-				}
-				set_country_flag = thorax_won_cw
-				news_event = { id = PT_CHN.31 days = 1 } #Thorax won event
+				limit = { tag = CHN has_war_with = CCN has_global_flag = PT_changling_civil_war_ongoing }
+				PT_civil_war_thorax_won_peace_deal = yes
 			}
 			if = { #Peace confrence for Chrysalis
-				limit = { tag = CCN has_war_with = CHN }
-				CHN = {
-					annex_country = {
-						target = LCD
-						transfer_troops = no
-					}
-					annex_country = {
-						target = PHA
-						transfer_troops = no
-					}
-					annex_country = {
-						target = VRK
-						transfer_troops = no
-					}
-					annex_country = {
-						target = CCN
-						transfer_troops = no
-					}
-					annex_country = {
-						target = SRT
-						transfer_troops = no
-					}
-					annex_country = {
-						target = PHA
-						transfer_troops = no
-					}
-					country_event = { id = PT_CCN_event.2 }
-				}
-				news_event = { id = PT_CHN.32 days = 1 }
+				limit = { tag = CCN has_war_with = CHN has_global_flag = PT_changling_civil_war_ongoing}
+				PT_civil_war_chrysalis_won_peace_deal = yes
 			}
 		}
 	}

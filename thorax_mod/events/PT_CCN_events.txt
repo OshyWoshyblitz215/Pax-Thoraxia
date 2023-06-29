@@ -4,11 +4,11 @@ add_namespace = PT_CCN_event
 #	id = PT_CCN_event.0
 #	title = PT_CCN_event.0.t
 #	desc = PT_CCN_event.0.desc
-#	picture = GFX_event_PT_buggo_cw
+	#picture = GFX_event_PT_buggo_cw
 
 #	fire_only_once = yes
 #	is_triggered_only = yes
-#	
+	
 #	#trigger = { }
 #	#immediate = { }
 #	#mean_time_to_happen = { days = 2 }
@@ -18,30 +18,155 @@ add_namespace = PT_CCN_event
 #		ai_chance = { factor = 1000}
 #	}
 #}
-country_event = { #Unknown Rock Event TODO: actually make this event do whatever it is meant to do
-	id = PT_CCN_event.6
-	title = PT_CCN_event.6.t
-	desc = PT_CCN_event.6.desc
+country_event = { #Coronation event 1
+	id = PT_CCN_event.1
+	title = PT_CCN_event.1.t
+	desc = PT_CCN_event.1.desc
 	#picture = GFX_event_PT_buggo_cw
-	
+
 	fire_only_once = yes
 	is_triggered_only = yes
 	
-	#trigger = { }
-	#immediate = { }`
+	#immediate = { }
 	#mean_time_to_happen = { days = 2 }
-
+	
 	option = { 
-		name = PT_CCN_event.6.a
+		name = PT_CCN_event.1.a
 		ai_chance = { factor = 1000}
-		goto_state = 264
-		launch_nuke = {
-			province = 4664
+	}
+}
+country_event = { #Coronation event 2
+	id = PT_CCN_event.2
+	title = PT_CCN_event.2.t
+	desc = PT_CCN_event.2.desc
+	#picture = GFX_event_PT_buggo_cw
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	#immediate = { }
+	#mean_time_to_happen = { days = 2 }
+	
+	option = { 
+		name = PT_CCN_event.2.a
+		ai_chance = { factor = 1000}		
+		country_event = {
+			id = PT_CCN_event.3
 		}
 	}
+}
+country_event = { #Coronation event 3
+	id = PT_CCN_event.3
+	title = PT_CCN_event.3.t
+	desc = PT_CCN_event.3.desc
+	#picture = GFX_event_PT_buggo_cw
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	#immediate = { }
+	#mean_time_to_happen = { days = 2 }
+	
 	option = { 
-		name = PT_CCN_event.6.b
+		name = PT_CCN_event.3.a
 		ai_chance = { factor = 1000}
+	}
+}
+country_event = { #Coronation event 4
+	id = PT_CCN_event.4
+	title = PT_CCN_event.4.t
+	desc = PT_CCN_event.4.desc
+	#picture = GFX_event_PT_buggo_cw
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	
+	immediate = { }
+	#mean_time_to_happen = { days = 2 }
+	
+	option = { 
+		name = PT_CCN_event.4.a
+		ai_chance = { factor = 1000}
+	}
+}
+country_event = { #Coronation event 5
+	id = PT_CCN_event.5
+	title = PT_CCN_event.5.t
+	desc = PT_CCN_event.5.desc
+	#picture = GFX_event_PT_buggo_cw
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	
+	immediate = { }
+	#mean_time_to_happen = { days = 2 }
+	
+	option = { 
+		name = PT_CCN_event.5.a
+		ai_chance = { factor = 1000}
+	}
+}
+news_event = { # Thorax coronated news event
+	id = PT_CCN_event.6
+	title = PT_CCN_event.6.t
+	desc = PT_CCN_event.6.desc
+	picture = GFX_event_PT_buggo_cw
+	is_triggered_only = yes
+	major = yes
+	option = {
+		name = PT_CCN_event.6.a
+		trigger = {
+			NOT = { 
+				OR = {
+					original_tag = CRY
+					original_tag = EQS
+					original_tag = NLR
+					original_tag = SOL
+					original_tag = NCH
+					original_tag = OLE
+				} 
+			}
+		}
+	}
+	option = {
+		name = PT_CCN_event.6.b
+		trigger = {
+			OR = {
+				original_tag = CRY
+				original_tag = EQS
+			} 			
+		}
+	}
+	option = {
+		name = PT_CCN_event.6.c
+		trigger = {
+			OR = {
+				original_tag = SOL
+				original_tag = NLR
+			} 		
+		}
+	}
+	option = {
+		name = PT_CCN_event.6.d
+		trigger = {
+			original_tag = NCH
+		}
+	}
+	option = {
+		name = PT_CCN_event.6.e
+		trigger = {
+			original_tag = OLE
+			NOT = { OLE = { has_government = democratic } }
+		}
+	}
+	option = {
+		name = PT_CCN_event.6.f
+		trigger = {
+			original_tag = OLE
+			OLE = { has_government = democratic }
+		}
 	}
 }
 country_event = { #Gift from Soryth queen for development
@@ -327,5 +452,31 @@ country_event = { #Soryth subject
 		name = PT_CCN_event.19.a
 		ai_chance = { factor = 1000}
 		puppet = SRT
+	}
+}
+country_event = { #Unknown Rock Event TODO: actually make this event do whatever it is meant to do
+	id = PT_CCN_event.20
+	title = PT_CCN_event.20.t
+	desc = PT_CCN_event.20.desc
+	#picture = GFX_event_PT_buggo_cw
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	#trigger = { }
+	#immediate = { }`
+	#mean_time_to_happen = { days = 2 }
+
+	option = { 
+		name = PT_CCN_event.20.a
+		ai_chance = { factor = 1000}
+		goto_state = 264
+		launch_nuke = { #he~ he~. nuke go brrr. the rock was a nuke. AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+			province = 4664
+		}
+	}
+	option = { 
+		name = PT_CCN_event.20.b
+		ai_chance = { factor = 1000}
 	}
 }

@@ -1,0 +1,157 @@
+PT_civil_war_starts = {
+	set_global_flag = PT_changling_civil_war_ongoing	
+	news_event = { id = PT_CHN.30 days = 1}
+	hidden_effect = {
+		play_song = "bella_ciao"
+	}
+}
+PT_civil_war_thorax_won_peace_deal = {
+	clr_global_flag = PT_changling_civil_war_ongoing
+	set_global_flag = PT_changling_civil_war_finished
+	CCN = {
+		310 = { add_core_of = CCN }
+		251 = { add_core_of = CCN }
+		261 = { add_core_of = CCN }
+		311 = { add_core_of = CCN }
+		annex_country = {
+			target = CHN
+			transfer_troops = no
+		}
+		mark_focus_tree_layout_dirty = yes
+	}	
+	PHA = {
+		annex_country = {
+			target = LCD
+			transfer_troops = no
+		}
+		308 = { add_core_of = PHA }
+		260 = { add_core_of = PHA }
+		303 = { add_core_of = PHA }
+		309 = { add_core_of = PHA }
+		304 = { add_core_of = PHA }
+	}
+	DTR = {
+		white_peace = CCN
+		white_peace = VRK
+		white_peace = SRT
+		white_peace = PHA					
+	}
+	news_event = { id = PT_CHN.31 days = 1 } 
+}
+PT_civil_war_chrysalis_won_peace_deal = {
+	clr_global_flag = PT_changling_civil_war_ongoing
+	set_global_flag = PT_changling_civil_war_finished
+	CHN = {
+		annex_country = {
+			target = LCD
+			transfer_troops = no
+		}
+		annex_country = {
+			target = PHA
+			transfer_troops = no
+		}
+		annex_country = {
+			target = VRK
+			transfer_troops = no
+		}
+		annex_country = {
+			target = CCN
+			transfer_troops = no
+		}
+		annex_country = {
+			target = SRT
+			transfer_troops = no
+		}
+		annex_country = {
+			target = PHA
+			transfer_troops = no
+		}
+		country_event = { id = PT_CCN_event.2 }
+	}
+	news_event = { id = PT_CHN.32 days = 1 }
+}
+PT_civil_war_princess_revolt = {
+	CCN = {
+		PHA = {
+			division_template = { name = "Harmonist Rebels" is_locked = yes priority = 0 template_counter = 17 regiments = { infantry = { x = 0 y = 0} infantry = { x = 0 y = 1} } }
+			division_template = { name = "Rebelling Troops" is_locked = yes priority = 1 template_counter = 37 regiments = { infantry = { x = 0 y = 0} infantry = { x = 0 y = 1} infantry = { x = 0 y = 2} infantry = { x = 0 y = 3} infantry = { x = 1 y = 0} infantry = { x = 1 y = 1} infantry = { x = 1 y = 2} infantry = { x = 1 y = 3} } support = { engineer = {x = 0 y = 0} artillery = {x = 0 y = 1} } }
+		}
+		308 = {
+			add_core_of = PHA
+			transfer_state_to = PHA
+			create_unit = {	division = "name = \"Lyctidan New Army Unit I\" division_template = \"Rebelling Troops\" start_experience_factor = 0.3" owner = PHA prioritize_location = 6081 }
+			create_unit = { division = "name = \"'Aurantia II.s Claim' Division\" division_template = \"Rebelling Troops\" start_experience_factor = 0.3" owner = PHA prioritize_location = 11132 }
+			create_unit = { division = "name = \"Lyctidan New Army Unit II\" division_template = \"Rebelling Troops\" start_experience_factor = 0.3" owner = PHA prioritize_location = 6212 }
+			create_unit = { division = "name = \"Lyctidan New Army Unit III\" division_template = \"Rebelling Troops\" start_experience_factor = 0.3" owner = PHA prioritize_location = 120 }
+			create_unit = { division = "name = \"Harmonist Brigade\" division_template = \"Harmonist Rebels\" start_experience_factor = 0.1" owner = PHA prioritize_location = 13118 }
+			create_unit = { division = "name = \"Lyctidan Volunteers\" division_template = \"Harmonist Rebels\" start_experience_factor = 0.1" owner = PHA prioritize_location = 9166 }
+			create_unit = { division = "name = \"Lyctidan Harmonist Cell\" division_template = \"Harmonist Rebels\" start_experience_factor = 0.1" owner = PHA prioritize_location = 11024 }
+			create_unit = { division = "name = \"Liberators of the East\" division_template = \"Harmonist Rebels\" start_experience_factor = 0.1" owner = PHA prioritize_location = 11121 }
+			create_unit = { division = "name = \"Aurantia IIs Bodyguard\" division_template = \"Harmonist Rebels\" start_experience_factor = 0.1" owner = PHA prioritize_location = 11041 }
+			create_unit = { division = "name = \"Phantine Harmonist Brigade\" division_template = \"Harmonist Rebels\" start_experience_factor = 0.1" owner = PHA prioritize_location = 6081 }
+		}
+		if = {
+			limit = { is_in_faction = no }
+			create_faction = THORAX_CIVIL_WAR_ALLIANCE
+		}
+		PHA = {
+			add_country_leader_trait = PT_swayed_by_thorax
+			add_opinion_modifier = { target = CCN modifier = PT_they_like_thorax }
+#			PT_Aurantia_II = { }
+			set_country_leader_description = { desc = chn_queen_aurantia_ii_desc }
+#			add_ai_strategy = { type = alliance id = CCN value = 500 }
+#			add_ai_strategy = { type = befriend id = CCN value = 500 }
+#			add_ai_strategy = { type = diplo_action_acceptance id = CCN value = 100 target = join_allies }
+			declare_war_on = { type = civil_war target = LCD }
+			add_ideas = { CCN_Civil_War }
+		}
+		add_opinion_modifier = {
+			target = PHA
+			modifier = PT_they_like_thorax
+		}
+		add_to_faction = PHA
+		country_event = { id = PT_CCN_allies.10 }
+		CHN = { country_event = { id = PT_CCN_allies.9 } }
+	}
+}
+PT_civil_war_sea_queen_backstab = {
+	CCN = {
+		if = {
+			limit = {is_in_faction = no}			
+			create_faction = THORAX_CIVIL_WAR_ALLIANCE
+		}		
+		country_event = { id = PT_CCN_allies.7 }
+		CHN = {
+			country_event = { id = PT_CCN_allies.8 } 
+			diplomatic_relation = {
+				country = DTR
+				relation = puppet
+				active = no
+			}
+		}
+		DTR = {
+			leave_faction = yes
+			declare_war_on = { type = civil_war target = CHN }
+			add_country_leader_trait = PT_swayed_by_thorax
+			add_opinion_modifier = { target = CCN modifier = PT_they_like_thorax }
+			set_country_flag = PT_thorax_convinced_us
+			add_ai_strategy = { type = alliance id = CCN value = 500 }
+			add_ai_strategy = { type = befriend id = CCN value = 500 }
+			add_ai_strategy = { type = diplo_action_acceptance id = CCN value = 100 target = join_allies }
+		}
+		add_opinion_modifier = {
+			target = DTR
+			modifier = PT_they_like_thorax
+		}
+		every_country = {
+			limit = {
+				OR = {
+					is_in_faction_with = CCN
+					original_tag = CCN
+				}
+			}
+			white_peace = DTR
+		}
+		add_to_faction = DTR
+	}
+}
