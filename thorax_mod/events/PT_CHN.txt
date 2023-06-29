@@ -5,6 +5,7 @@ country_event = { #LCD bends
 	title = PT_CHN.3.t
 	desc = PT_CHN.3.d
 	is_triggered_only = yes
+	fire_only_once = yes
 	option = {
 		name = PT_CHN.3.a
 		CHN = {
@@ -22,6 +23,7 @@ country_event = { #DTR bends
 	title = PT_CHN.4.t
 	desc = PT_CHN.4.d
 	is_triggered_only = yes
+	fire_only_once = yes
 	option = {
 		name = PT_CHN.4.a
 		CHN = {
@@ -39,6 +41,7 @@ country_event = { #SRT follows thorax
 	title = PT_CHN.5.t
 	desc = PT_CHN.5.d
 	is_triggered_only = yes
+	fire_only_once = yes
 	option = {
 		name = PT_CHN.5.a
 		CHN = {
@@ -61,6 +64,7 @@ country_event = { #VRK follows thorax
 	title = PT_CHN.6.t
 	desc = PT_CHN.6.d
 	is_triggered_only = yes
+	fire_only_once = yes
 	option = {
 		name = PT_CHN.6.a
 		CHN = {
@@ -83,6 +87,7 @@ country_event = { #opening: SRT angered
 	title = PT_CHN.10.t
 	desc = PT_CHN.10.d
 	is_triggered_only = yes
+	fire_only_once = yes
 	option = {
 		name = PT_CHN.10.a
 		add_political_power = -5
@@ -103,6 +108,7 @@ country_event = { #opening: VRK angered
 	title = PT_CHN.12.t
 	desc = PT_CHN.12.d
 	is_triggered_only = yes
+	fire_only_once = yes
 	option = {
 		name = PT_CHN.12.a
 		add_political_power = -5
@@ -125,6 +131,7 @@ country_event = { #opening: Chrysalis meetings 1
 	title = PT_CHN.14.t
 	desc = PT_CHN.14.d
 	is_triggered_only = yes
+	fire_only_once = yes
 	timeout_days = 5
 	option = {
 		name = PT_CHN.14.a
@@ -136,6 +143,7 @@ country_event = { #opening: Chrysalis meetings 2
 	title = PT_CHN.15.t
 	desc = PT_CHN.15.d
 	is_triggered_only = yes
+	fire_only_once = yes
 	timeout_days = 5
 	option = {
 		name = PT_CHN.15.a
@@ -147,6 +155,7 @@ country_event = { #opening: Chrysalis meetings 3
 	title = PT_CHN.16.t
 	desc = PT_CHN.16.d
 	is_triggered_only = yes
+	fire_only_once = yes
 	timeout_days = 2
 	option = {
 		name = PT_CHN.16.a
@@ -158,238 +167,13 @@ country_event = { #opening: Chrysalis meetings end?
 	title = PT_CHN.17.t
 	desc = PT_CHN.17.d
 	is_triggered_only = yes
+	fire_only_once = yes
 	timeout_days = 2
 	option = {
 		name = PT_CHN.17.a
-		every_owned_state = {
-			teleport_armies = {	} #Defaults to capital of country
-		}
-		transfer_navy = {
-			target = LCD
-		}
-		CHN_queen_yaria = {
-			set_nationality = SRT
-		}
-		SRT = {
-			transfer_state = 262
-			transfer_state = 315
-			set_capital = {state = 262}
-			CHN_queen_yaria = {
-				add_country_leader_role = {
-					country_leader = {
-						expire = "1965.1.1"
-						ideology = nazism
-						desc = chn_queen_yaria_desc
-					}
-					promote_leader = yes
-				}
-				add_country_leader_role = {
-					country_leader = {
-						expire = "1965.1.1"
-						ideology = juche
-						desc = chn_queen_yaria_desc
-					}
-					promote_leader = yes
-				}
-				add_country_leader_role = {
-					country_leader = {
-						expire = "1965.1.1"
-						ideology = conservatism
-						desc = chn_queen_yaria_desc
-					}
-					promote_leader = yes
-				}
-				add_country_leader_role = {
-					country_leader = {
-						expire = "1965.1.1"
-						ideology = despotism
-						desc = chn_queen_yaria_desc
-					}
-					promote_leader = yes
-				}
-				set_portraits = { civilian = { large ="gfx/leaders/CHN/Yaria.tga" } }
-			}
-		}
-		CHN_queen_helvia = {
-			set_nationality = DTR
-		}
-		DTR = {
-			transfer_state = 252
-			transfer_state = 305
-			transfer_state = 306
-			set_capital = {state = 252}
-			CHN_queen_helvia = {
-				add_country_leader_role = {
-					country_leader = {
-						expire = "1965.1.1"
-						ideology = nazism
-						desc = chn_queen_helvia_desc
-					}
-					promote_leader = yes
-				}
-				add_country_leader_role = {
-					country_leader = {
-						expire = "1965.1.1"
-						ideology = juche
-						desc = chn_queen_helvia_desc
-					}
-					promote_leader = yes
-				}
-				add_country_leader_role = {
-					country_leader = {
-						expire = "1965.1.1"
-						ideology = conservatism
-						desc = chn_queen_helvia_desc
-					}
-					promote_leader = yes
-				}
-				add_country_leader_role = {
-					country_leader = {
-						expire = "1965.1.1"
-						ideology = despotism
-						desc = chn_queen_helvia_desc
-					}
-					promote_leader = yes
-				}
-				set_portraits = { civilian = { large ="gfx/leaders/CHN/Helvia.tga" } }
-			}
-		}
-		CHN_queen_aurantia = {
-			set_nationality = LCD
-		}
-		LCD = {
-			transfer_state = 303
-			transfer_state = 304
-			transfer_state = 309
-			transfer_state = 260
-			transfer_state = 308
-			set_capital = {state = 309}
-			CHN_queen_aurantia = {
-				add_country_leader_role = {
-					country_leader = {
-						expire = "1965.1.1"
-						ideology = nazism
-						desc = chn_queen_aurantia_desc
-					}
-					promote_leader = yes
-				}
-				add_country_leader_role = {
-					country_leader = {
-						expire = "1965.1.1"
-						ideology = juche
-						desc = chn_queen_aurantia_desc
-					}
-					promote_leader = yes
-				}
-				add_country_leader_role = {
-					country_leader = {
-						expire = "1965.1.1"
-						ideology = conservatism
-						desc = chn_queen_aurantia_desc
-					}
-					promote_leader = yes
-				}
-				add_country_leader_role = {
-					country_leader = {
-						expire = "1965.1.1"
-						ideology = despotism
-						desc = chn_queen_aurantia_desc
-					}
-					promote_leader = yes
-				}
-				set_portraits = { civilian = { large ="gfx/leaders/CHN/Aurantia.tga" } }
-			}
-		}
-		CHN_queen_argynnis = {
-			set_nationality = VRK
-		}
-		VRK = {
-			transfer_state = 307
-			transfer_state = 291
-			transfer_state = 258
-			transfer_state = 259
-			transfer_state = 250
-			transfer_state = 246
-			transfer_state = 247
-			transfer_state = 248
-			transfer_state = 249
-			transfer_state = 321
-			transfer_state = 320
-			transfer_state = 323
-			transfer_state = 322
-			transfer_state = 319
-			transfer_state = 316
-			set_capital = {state = 259}
-			CHN_queen_argynnis = {
-				add_country_leader_role = {
-					country_leader = {
-						expire = "1965.1.1"
-						ideology = nazism
-						desc = chn_queen_argynnis_desc
-					}
-					promote_leader = yes
-				}
-				add_country_leader_role = {
-					country_leader = {
-						expire = "1965.1.1"
-						ideology = juche
-						desc = chn_queen_argynnis_desc
-					}
-					promote_leader = yes
-				}
-				add_country_leader_role = {
-					country_leader = {
-						expire = "1965.1.1"
-						ideology = conservatism
-						desc = chn_queen_argynnis_desc
-					}
-					promote_leader = yes
-				}
-				add_country_leader_role = {
-					country_leader = {
-						expire = "1965.1.1"
-						ideology = despotism
-						desc = chn_queen_argynnis_desc
-					}
-					promote_leader = yes
-				}
-				set_portraits = { civilian = { large ="gfx/leaders/CHN/Argynnis.tga" } }
-			}
-		}
-		add_to_array = { tag_array = SRT }
-		add_to_array = { tag_array = DTR }
-		add_to_array = { tag_array = LCD }
-		add_to_array = { tag_array = VRK }
-		for_each_scope_loop = {
-			array = tag_array
-			set_popularities = {
-				democratic = 0
-				neutrality = 0
-				fascism = 100
-				communism = 0
-			}
-			set_politics = {
-				ruling_party = fascism
-			}
-		}
-		for_each_scope_loop = {
-			array = tag_array
-			every_owned_state = {
-				add_core_of = PREV
-			}
-			add_ideas = { PT_temporary_government }
-		}
-		add_ideas = {
-			proper_science_base
-			modern_society
-			no_lack_of_scientists
-			no_poverty
-			PT_temporary_government
-		}
-		country_lock_all_division_template = no
-		add_war_support = 0.25
-		add_stability = 0.25
-		remove_ideas = { political_divisions }
+		PT_queens_breakaway_effect = yes
+		
+		country_event = { id = PT_CHN.20  days = 15} #thorax
 	}
 }
 #country_event = { #opening: Chrysalis meetings 4
@@ -408,67 +192,11 @@ country_event = { #opening: Chrysalis meetings epilogue: free commies
 	title = PT_CHN.19.t
 	desc = PT_CHN.19.d
 	is_triggered_only = yes
+	fire_only_once = yes
 	timeout_days = 5
 	option = {
 		name = PT_CHN.19.a
-#		country_event = { id = PT_CHN.20  days = 4}
-		CHN_gold_muffin = {
-			set_nationality = GRK
-		}
-		GRK = {
-			transfer_state = 264
-			transfer_state = 314
-			transfer_state = 312
-			transfer_state = 313
-			set_capital = {state = 312}
-			set_popularities = {
-				democratic = 0
-				neutrality = 0
-				fascism = 0
-				communism = 100
-			}
-			set_politics = {
-				ruling_party = communism
-			}
-#			CHN_gold_muffin = {
-#				add_country_leader_role = {
-#					country_leader = {
-#						expire = "1965.1.1"
-#						ideology = national_communism
-#					}
-#					promote_leader = yes
-#				}
-#				add_country_leader_role = {
-#					country_leader = {
-#						expire = "1965.1.1"
-#						ideology = syndicalism
-#					}
-#					promote_leader = yes
-#				}
-#				add_country_leader_role = {
-#					country_leader = {
-#						expire = "1965.1.1"
-#						ideology = socialism
-#					}
-#					promote_leader = yes
-#				}
-#				add_country_leader_role = {
-#					country_leader = {
-#						expire = "1965.1.1"
-#						ideology = anarchism
-#					}
-#					promote_leader = yes
-#				}
-#			}
-		}
-		GRK = {
-			every_owned_state = {
-				add_core_of = PREV
-			}
-			add_ideas = {
-				PT_temporary_government
-			}
-		}
+		PT_commies_breakaway_effect = yes
 	}
 }
 country_event = { #opening: Chrysalis meetings epilogue: free thorax
@@ -476,6 +204,7 @@ country_event = { #opening: Chrysalis meetings epilogue: free thorax
 	title = PT_CHN.20.t
 	desc = PT_CHN.20.d
 	is_triggered_only = yes
+	fire_only_once = yes
 	timeout_days = 5
 	option = {
 		name = PT_CHN.20.a
@@ -500,6 +229,7 @@ country_event = { #opening: Chrysalis meetings epilogue: free thorax
 		}
 		CCN = {
 			change_tag_from = CHN
+			
 		}
 		hidden_effect = { country_event = { id = PT_CHN.23 hours = 1 }} #we will wget rid of this once that event is unneded
 	}
@@ -532,6 +262,7 @@ country_event = { #chrysalis demands communists surrender
 	title = PT_CHN.21.t
 	desc = PT_CHN.21.d
 	is_triggered_only = yes
+	fire_only_once = yes
 	option = {
 		name = PT_CHN.21.a
 		ai_chance = {
@@ -557,6 +288,7 @@ country_event = { #communists refuse surrender
 	title = PT_CHN.22.t
 	desc = PT_CHN.22.d
 	is_triggered_only = yes
+	fire_only_once = yes
 	option = {
 		name = PT_CHN.22.a
 		create_wargoal = {
@@ -570,6 +302,7 @@ country_event = { #does things that we will later outsource to the queens n comm
 	title = PT_CHN.23.t
 	desc = PT_CHN.23.d
 	is_triggered_only = yes
+	fire_only_once = yes
 	hidden = yes
 	immediate = {
 		name = PT_CHN.23.a
@@ -628,6 +361,7 @@ country_event = { # LCD bends chrys gets told
 	title = PT_CHN.24.t
 	desc = PT_CHN.24.d
 	is_triggered_only = yes
+	fire_only_once = yes
 	option = {
 		name = PT_CHN.24.a
 	}
@@ -637,6 +371,7 @@ country_event = { # DTR bends chrys gets told
 	title = PT_CHN.25.t
 	desc = PT_CHN.25.d
 	is_triggered_only = yes
+	fire_only_once = yes
 	option = {
 		name = PT_CHN.25.a
 	}
@@ -646,6 +381,7 @@ country_event = { # SRT loves thorax chrys gets told
 	title = PT_CHN.26.t
 	desc = PT_CHN.26.d
 	is_triggered_only = yes
+	fire_only_once = yes
 	option = {
 		name = PT_CHN.26.a
 	}
@@ -655,6 +391,7 @@ country_event = { # VRK loves thorax chrys gets told
 	title = PT_CHN.27.t
 	desc = PT_CHN.27.d
 	is_triggered_only = yes
+	fire_only_once = yes
 	option = {
 		name = PT_CHN.27.a
 	}
@@ -664,6 +401,7 @@ country_event = { # sabotage, CCN does
 	title = PT_CHN.28.t
 	desc = PT_CHN.28.d
 	is_triggered_only = yes
+	fire_only_once = yes
 	option = {
 		name = PT_CHN.28.a
 		CHN = {
@@ -688,6 +426,7 @@ country_event = { # sabotage, CHN told
 	title = PT_CHN.29.t
 	desc = PT_CHN.29.d
 	is_triggered_only = yes
+	fire_only_once = yes
 	option = {
 		name = PT_CHN.29.a
 	}
@@ -699,6 +438,7 @@ news_event = { # CIVIL WAR
 	picture = GFX_event_PT_buggo_cw
 	major = yes
 	is_triggered_only = yes
+	fire_only_once = yes
 	immediate = {
 		hidden_effect = {
 			CHN = { swap_ideas = { remove_idea = PT_temporary_government add_idea = PT_bug_cw } }
@@ -767,6 +507,7 @@ news_event = { # CIVIL WAR THORAX WON
 	desc = PT_CHN.31.desc
 	picture = GFX_event_PT_buggo_cw
 	is_triggered_only = yes
+	fire_only_once = yes
 	major = yes
 	immediate = { hidden_effect = {
 		CCN = {
@@ -822,6 +563,7 @@ news_event = { # CIVIL WAR Chrysie WON
 	desc = PT_CHN.32.desc
 	picture = GFX_event_PT_buggo_cw
 	is_triggered_only = yes
+	fire_only_once = yes
 	major = yes
 	option = {
 		name = PT_CHN.31.a

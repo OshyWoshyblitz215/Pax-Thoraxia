@@ -31,12 +31,14 @@ focus_tree = {
 			country_event = { id = PT_CHN.12 days = 21 } #VRK angered
 			country_event = { id = PT_CHN.13 days = 28 } #LCD angered
 			country_event = { id = PT_CHN.14 days = 35 } #meeting will happen 30 days after this event
-			if = { limit = { LCD = {exists = no} } country_event = { id = PT_CHN.15 days = 65} }# meeting
+			country_event = { id = PT_CHN.14 days = 35 } #meeting will happen 30 days after this event
+			if = { limit = { LCD = {exists = no} } country_event = { id = PT_CHN.15 days = 60} }# meeting
 			
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus PT_the_hives_stir"
-			country_event = { id = PT_CHN.19 } #communists rise up
+			hidden_effect { country_event = { id = PT_CHN.17 } }#queens break away force
+			country_event = { id = PT_CHN.19} #communists rise up
 			country_event = { id = PT_CHN.20  days = 4} #thorax
 		}
 	}
