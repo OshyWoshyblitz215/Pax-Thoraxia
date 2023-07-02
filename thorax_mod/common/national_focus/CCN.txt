@@ -14,7 +14,26 @@ focus_tree = {
 
 	shared_focus = PT_the_hives_have_stirred
 	shared_focus = PT_fight_for_whats_right
-
+	initial_show_position = {
+		x = 0
+		y = 0
+		offset = {
+			x = 10
+			y = 0
+			trigger = {
+				CHN = { exists = no } 
+				NOT = { has_completed_focus = PT_CCN_new_age }
+			}
+		}
+		offset = {
+			x = 37
+			y = 0
+			trigger = {
+				CHN = { exists = no } 
+				has_completed_focus = PT_CCN_new_age
+			}
+		}
+	}
 ##########################
 ########Template##########
 ##########################

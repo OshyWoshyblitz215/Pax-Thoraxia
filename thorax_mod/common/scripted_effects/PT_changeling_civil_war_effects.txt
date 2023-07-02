@@ -293,14 +293,26 @@ PT_queens_breakaway_effect = {
 }
 PT_civil_war_starts = {
 	set_global_flag = PT_changling_civil_war_ongoing	
-	news_event = { id = PT_CHN.30 days = 1}
+	CHN = { set_country_flag = thorax_battle }
+	news_event = { id = PT_CHN.30}
 	hidden_effect = {
 		play_song = "bella_ciao"
 	}
 }
 PT_civil_war_thorax_won_peace_deal = {
 	clr_global_flag = PT_changling_civil_war_ongoing
-	set_global_flag = PT_changling_civil_war_finished
+	set_global_flag = PT_changling_civil_war_finished	
+	GRK = {
+		white_peace = DTR
+		set_state_owner = 312
+		set_state_owner = 314
+		set_state_owner = 264
+		set_state_owner = 313
+		set_state_controller = 312
+		set_state_controller = 314
+		set_state_controller = 264
+		set_state_controller = 313
+	}
 	CCN = {
 		310 = { add_core_of = CCN }
 		251 = { add_core_of = CCN }
@@ -330,10 +342,7 @@ PT_civil_war_thorax_won_peace_deal = {
 		white_peace = SRT
 		white_peace = PHA					
 	}
-	GRK = {
-		white_peace = DTR
-	}
-	news_event = { id = PT_CHN.31 days = 1 } 
+	news_event = { id = PT_CHN.31} 
 }
 PT_civil_war_chrysalis_won_peace_deal = {
 	clr_global_flag = PT_changling_civil_war_ongoing
@@ -365,7 +374,7 @@ PT_civil_war_chrysalis_won_peace_deal = {
 		}
 		country_event = { id = PT_CCN_event.2 }
 	}
-	news_event = { id = PT_CHN.32 days = 1 }
+	news_event = { id = PT_CHN.32 }
 }
 PT_civil_war_princess_revolt = {
 	CCN = {

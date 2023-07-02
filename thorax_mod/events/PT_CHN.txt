@@ -438,7 +438,7 @@ news_event = { # CIVIL WAR
 	picture = GFX_event_PT_buggo_cw
 	major = yes
 	is_triggered_only = yes
-	fire_only_once = yes
+	mean_time_to_happen = { days = 1 }
 	immediate = {
 		hidden_effect = {
 			CHN = { swap_ideas = { remove_idea = PT_temporary_government add_idea = PT_bug_cw } }
@@ -507,8 +507,8 @@ news_event = { # CIVIL WAR THORAX WON
 	desc = PT_CHN.31.desc
 	picture = GFX_event_PT_buggo_cw
 	is_triggered_only = yes
-	fire_only_once = yes
 	major = yes
+	mean_time_to_happen = { days = 1 }
 	immediate = { hidden_effect = {
 		CCN = {
 			set_country_flag = won_th_cw
@@ -563,8 +563,8 @@ news_event = { # CIVIL WAR Chrysie WON
 	desc = PT_CHN.32.desc
 	picture = GFX_event_PT_buggo_cw
 	is_triggered_only = yes
-	fire_only_once = yes
 	major = yes
+	mean_time_to_happen = { days = 1 }
 	option = {
 		name = PT_CHN.31.a
 		trigger = {

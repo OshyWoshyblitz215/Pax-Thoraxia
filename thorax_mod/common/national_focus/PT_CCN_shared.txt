@@ -7,12 +7,7 @@ shared_focus = { #Service Office
 	available = {
 	}
 	bypass = {
-		OR = {
-			CHN = {
-				exists = no
-			}
-			has_war_with = CHN
-		}
+		always = yes
 	}
 	ai_will_do = {
 		factor = 200
@@ -210,10 +205,6 @@ shared_focus = {
 			type = civil_war
 			target = CHN
 		}
-		if = {
-			limit = { NOT = { CHN = { has_country_flag = thorax_battle } } }			
-		}
-		CHN = { set_country_flag = thorax_battle }
 	}
 }
 #the civil war
