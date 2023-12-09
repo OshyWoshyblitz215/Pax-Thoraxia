@@ -1,0 +1,597 @@
+add_namespace = PT_CHN
+
+country_event = { #LCD bends
+	id = PT_CHN.3
+	title = PT_CHN.3.t
+	desc = PT_CHN.3.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = PT_CHN.3.a
+		CHN = {
+			puppet = LCD
+			set_autonomy = {
+				target = LCD
+				autonomy_state = autonomy_nominal_vassal_hive
+			}
+			country_event = { id = PT_CHN.24 }
+		}
+	}
+}
+country_event = { #DTR bends
+	id = PT_CHN.4
+	title = PT_CHN.4.t
+	desc = PT_CHN.4.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = PT_CHN.4.a
+		CHN = {
+			puppet = DTR
+			set_autonomy = {
+				target = DTR
+				autonomy_state = autonomy_nominal_vassal_hive
+			}
+			country_event = { id = PT_CHN.25 }
+		}
+	}
+}
+country_event = { #SRT follows thorax
+	id = PT_CHN.5
+	title = PT_CHN.5.t
+	desc = PT_CHN.5.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = PT_CHN.5.a
+		CHN = {
+			add_opinion_modifier = {
+				target = SRT
+				modifier = PT_love_vs_hate_thorax
+			}
+			country_event = { id = PT_CHN.26 }
+		}
+		SRT = {
+			add_opinion_modifier = {
+				target = CHN
+				modifier = PT_love_vs_hate_thorax
+			}
+		}
+	}
+}
+country_event = { #VRK follows thorax
+	id = PT_CHN.6
+	title = PT_CHN.6.t
+	desc = PT_CHN.6.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = PT_CHN.6.a
+		CHN = {
+			add_opinion_modifier = {
+				target = VRK
+				modifier = PT_love_vs_hate_thorax
+			}
+			country_event = { id = PT_CHN.27 }
+		}
+		VRK = {
+			add_opinion_modifier = {
+				target = CHN
+				modifier = PT_love_vs_hate_thorax
+			}
+		}
+	}
+}
+country_event = { #opening: SRT angered
+	id = PT_CHN.10
+	title = PT_CHN.10.t
+	desc = PT_CHN.10.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = PT_CHN.10.a
+		add_political_power = -5
+	}
+}
+country_event = { #opening: DTR angered
+	id = PT_CHN.11
+	title = PT_CHN.11.t
+	desc = PT_CHN.11.d
+	is_triggered_only = yes
+	option = {
+		name = PT_CHN.11.a
+		252 = { add_manpower = -2000 }
+	}
+}
+country_event = { #opening: VRK angered
+	id = PT_CHN.12
+	title = PT_CHN.12.t
+	desc = PT_CHN.12.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = PT_CHN.12.a
+		add_political_power = -5
+	}
+}
+country_event = { #opening: LCD angered
+	id = PT_CHN.13
+	title = PT_CHN.13.t
+	desc = PT_CHN.13.d
+	is_triggered_only = yes
+	option = {
+		name = PT_CHN.13.a
+		309 = {
+			add_manpower = -1
+		}
+	}
+}
+country_event = { #opening: Chrysalis meetings 1
+	id = PT_CHN.14
+	title = PT_CHN.14.t
+	desc = PT_CHN.14.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	timeout_days = 5
+	option = {
+		name = PT_CHN.14.a
+#		country_event = { id = PT_CHN.15 days = 30}
+	}
+}
+country_event = { #opening: Chrysalis meetings 2
+	id = PT_CHN.15
+	title = PT_CHN.15.t
+	desc = PT_CHN.15.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	timeout_days = 5
+	option = {
+		name = PT_CHN.15.a
+		country_event = { id = PT_CHN.16 }
+	}
+}
+country_event = { #opening: Chrysalis meetings 3
+	id = PT_CHN.16
+	title = PT_CHN.16.t
+	desc = PT_CHN.16.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	timeout_days = 2
+	option = {
+		name = PT_CHN.16.a
+		country_event = { id = PT_CHN.17  hours = 1}
+	}
+}
+country_event = { #opening: Chrysalis meetings end?
+	id = PT_CHN.17
+	title = PT_CHN.17.t
+	desc = PT_CHN.17.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	timeout_days = 2
+	option = {
+		name = PT_CHN.17.a
+		PT_queens_breakaway_effect = yes
+		
+		country_event = { id = PT_CHN.20  days = 15} #thorax
+	}
+}
+#country_event = { #opening: Chrysalis meetings 4
+#	id = PT_CHN.18
+#	title = PT_CHN.18.t
+#	desc = PT_CHN.18.d
+#	is_triggered_only = yes
+#	option = {
+#		name = PT_CHN.18.a
+#		add_political_power = -5
+#		country_event = { id = PT_CHN.17 hours = 1}
+#	}
+#}
+country_event = { #opening: Chrysalis meetings epilogue: free commies
+	id = PT_CHN.19
+	title = PT_CHN.19.t
+	desc = PT_CHN.19.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	timeout_days = 5
+	option = {
+		name = PT_CHN.19.a
+		PT_commies_breakaway_effect = yes
+	}
+}
+country_event = { #opening: Chrysalis meetings epilogue: free thorax
+	id = PT_CHN.20
+	title = PT_CHN.20.t
+	desc = PT_CHN.20.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	timeout_days = 5
+	option = {
+		name = PT_CHN.20.a
+		add_popularity = {
+		    ideology = democratic
+		    popularity = -1
+		}
+		CCN = {
+			transfer_state = 321
+			transfer_state = 320
+			transfer_state = 323
+			transfer_state = 322
+			transfer_state = 319
+			set_capital = {state = 323}
+			every_owned_state = {
+				add_core_of = PREV
+				remove_core_of = VRK
+			}
+			load_focus_tree = { tree = PT_thorax_focus_tree keep_completed = yes }
+			remove_ideas = { CCN_Civil_War }
+			add_ideas = { PT_temporary_government_for_thorax}
+		}
+		CCN = {
+			change_tag_from = CHN
+			
+		}
+		hidden_effect = { country_event = { id = PT_CHN.23 hours = 1 }} #we will wget rid of this once that event is unneded
+	}
+	option = {
+		name=Bruh
+		add_popularity = {
+		    ideology = democratic
+		    popularity = -1
+		}
+		CCN = {
+			transfer_state = 321
+			transfer_state = 320
+			transfer_state = 323
+			transfer_state = 322
+			transfer_state = 319
+			set_capital = {state = 323}
+			every_owned_state = {
+				add_core_of = PREV
+				remove_core_of = VRK
+			}
+			load_focus_tree = { tree = PT_thorax_focus_tree keep_completed = yes }
+			remove_ideas = { CCN_Civil_War PT_bug_cw_for_thorax }
+			add_ideas = { PT_temporary_government_for_thorax }
+		}
+		hidden_effect = { country_event = { id = PT_CHN.23 hours = 1 }} #we will wget rid of this once that event is unneded
+	}
+}
+country_event = { #chrysalis demands communists surrender
+	id = PT_CHN.21
+	title = PT_CHN.21.t
+	desc = PT_CHN.21.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = PT_CHN.21.a
+		ai_chance = {
+			base = 0
+		}
+		CHN = {
+			annex_country = {
+				target = ROOT
+				transfer_troops = no
+			}
+		}
+	}
+	option = {
+		name=PT_CHN.21.b
+		CHN = { country_event = { id = PT_CHN.22 days = 1 } }
+		ai_chance = {
+			base = 100
+		}
+	}
+}
+country_event = { #communists refuse surrender
+	id = PT_CHN.22
+	title = PT_CHN.22.t
+	desc = PT_CHN.22.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = PT_CHN.22.a
+		create_wargoal = {
+			type = annex_everything
+			target = GRK
+		}
+	}
+}
+country_event = { #does things that we will later outsource to the queens n commies focus trees
+	id = PT_CHN.23
+	title = PT_CHN.23.t
+	desc = PT_CHN.23.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	hidden = yes
+	immediate = {
+		name = PT_CHN.23.a
+		add_to_array = { contris_that_get_chn_cw_help = SRT }
+		add_to_array = { contris_that_get_chn_cw_help = DTR }
+		add_to_array = { contris_that_get_chn_cw_help = LCD }
+		add_to_array = { contris_that_get_chn_cw_help = VRK }
+		add_to_array = { contris_that_get_chn_cw_help = GRK }
+		add_to_array = { contris_that_get_chn_cw_help = CCN }
+		for_each_scope_loop = {
+			array = contris_that_get_chn_cw_help
+			division_template = { name = "Civil War Brigade" is_locked = yes priority = 0 template_counter = 24 regiments = { infantry = { x = 0 y = 0} infantry = { x = 0 y = 1} infantry = { x = 0 y = 2} infantry = { x = 0 y = 3} } }
+			capital_scope = {
+				create_unit = { division = "name = \"Local Volunteers\" division_template = \"Civil War Brigade\" start_experience_factor = 0.3" owner = PREV }
+				create_unit = { division = "name = \"Local Volunteers\" division_template = \"Civil War Brigade\" start_experience_factor = 0.3" owner = PREV }
+				create_unit = { division = "name = \"Local Volunteers\" division_template = \"Civil War Brigade\" start_experience_factor = 0.3" owner = PREV }
+				create_unit = { division = "name = \"Local Volunteers\" division_template = \"Civil War Brigade\" start_experience_factor = 0.3" owner = PREV }
+				create_unit = { division = "name = \"Local Volunteers\" division_template = \"Civil War Brigade\" start_experience_factor = 0.3" owner = PREV }
+				create_unit = { division = "name = \"Local Volunteers\" division_template = \"Civil War Brigade\" start_experience_factor = 0.3" owner = PREV }
+				create_unit = { division = "name = \"Local Volunteers\" division_template = \"Civil War Brigade\" start_experience_factor = 0.3" owner = PREV }
+				create_unit = { division = "name = \"Local Volunteers\" division_template = \"Civil War Brigade\" start_experience_factor = 0.3" owner = PREV }
+				create_unit = { division = "name = \"Local Volunteers\" division_template = \"Civil War Brigade\" start_experience_factor = 0.3" owner = PREV }
+				create_unit = { division = "name = \"Local Volunteers\" division_template = \"Civil War Brigade\" start_experience_factor = 0.3" owner = PREV }
+			}
+			add_equipment_to_stockpile = {
+				type = train_equipment
+				amount = 10
+			}
+		}
+		VRK = {
+			division_template = { name = "Vraksian Levy" is_locked = yes priority = 0 template_counter = 14 regiments = { infantry = { x = 0 y = 0} infantry = { x = 0 y = 1} } }
+			capital_scope = { create_unit = { division = "name = \"Levy\" division_template = \"Vraksian Levy\" start_experience_factor = 0.3" owner = VRK }
+			create_unit = { division = "name = \"Levy\" division_template = \"Vraksian Levy\" start_experience_factor = 0.3" owner = VRK }
+			create_unit = { division = "name = \"Levy\" division_template = \"Vraksian Levy\" start_experience_factor = 0.3" owner = VRK }
+			create_unit = { division = "name = \"Levy\" division_template = \"Vraksian Levy\" start_experience_factor = 0.3" owner = VRK }
+			create_unit = { division = "name = \"Levy\" division_template = \"Vraksian Levy\" start_experience_factor = 0.3" owner = VRK }
+			create_unit = { division = "name = \"Levy\" division_template = \"Vraksian Levy\" start_experience_factor = 0.3" owner = VRK }
+			create_unit = { division = "name = \"Levy\" division_template = \"Vraksian Levy\" start_experience_factor = 0.3" owner = VRK }
+			create_unit = { division = "name = \"Levy\" division_template = \"Vraksian Levy\" start_experience_factor = 0.3" owner = VRK }
+			create_unit = { division = "name = \"Levy\" division_template = \"Vraksian Levy\" start_experience_factor = 0.3" owner = VRK }
+			create_unit = { division = "name = \"Levy\" division_template = \"Vraksian Levy\" start_experience_factor = 0.3" owner = VRK }
+			create_unit = { division = "name = \"Levy\" division_template = \"Vraksian Levy\" start_experience_factor = 0.3" owner = VRK }
+			create_unit = { division = "name = \"Levy\" division_template = \"Vraksian Levy\" start_experience_factor = 0.3" owner = VRK }
+			create_unit = { division = "name = \"Levy\" division_template = \"Vraksian Levy\" start_experience_factor = 0.3" owner = VRK }
+			create_unit = { division = "name = \"Levy\" division_template = \"Vraksian Levy\" start_experience_factor = 0.3" owner = VRK }
+			create_unit = { division = "name = \"Levy\" division_template = \"Vraksian Levy\" start_experience_factor = 0.3" owner = VRK }
+		} }
+		GRK = {
+			add_ideas = { PT_communist_holdout }
+		}
+	}
+	option = {}
+}
+country_event = { # LCD bends chrys gets told
+	id = PT_CHN.24
+	title = PT_CHN.24.t
+	desc = PT_CHN.24.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = PT_CHN.24.a
+	}
+}
+country_event = { # DTR bends chrys gets told
+	id = PT_CHN.25
+	title = PT_CHN.25.t
+	desc = PT_CHN.25.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = PT_CHN.25.a
+	}
+}
+country_event = { # SRT loves thorax chrys gets told
+	id = PT_CHN.26
+	title = PT_CHN.26.t
+	desc = PT_CHN.26.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = PT_CHN.26.a
+	}
+}
+country_event = { # VRK loves thorax chrys gets told
+	id = PT_CHN.27
+	title = PT_CHN.27.t
+	desc = PT_CHN.27.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = PT_CHN.27.a
+	}
+}
+country_event = { # sabotage, CCN does
+	id = PT_CHN.28
+	title = PT_CHN.28.t
+	desc = PT_CHN.28.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = PT_CHN.28.a
+		CHN = {
+			every_owned_state = {
+				damage_building = {
+					type = infrastructure damage = 0.5
+				}
+			}
+		}
+		251 = {
+			damage_building = { type = industrial_complex damage = 3 }
+			damage_building = { type = arms_factory damage = 2 }
+			damage_building = { type = rail_way damage = 2 province = 6128 }
+			damage_building = { type = rail_way damage = 2 province = 6134 }
+			damage_building = { type = rail_way damage = 2 province = 36 }
+			damage_building = { type = rail_way damage = 2 province = 9678 }
+		}
+	}
+}
+country_event = { # sabotage, CHN told
+	id = PT_CHN.29
+	title = PT_CHN.29.t
+	desc = PT_CHN.29.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = PT_CHN.29.a
+	}
+}
+news_event = { # CIVIL WAR
+	id = PT_CHN.30
+	title = PT_CHN.30.t
+	desc = PT_CHN.30.desc
+	picture = GFX_event_PT_buggo_cw
+	major = yes
+	is_triggered_only = yes
+	mean_time_to_happen = { days = 1 }
+	immediate = {
+		hidden_effect = {
+			CHN = { swap_ideas = { remove_idea = PT_temporary_government add_idea = PT_bug_cw } }
+			CCN = { swap_ideas = { remove_idea = PT_temporary_government_for_thorax add_idea = PT_bug_cw_for_thorax } }
+			DTR = { swap_ideas = { remove_idea = PT_temporary_government add_idea = PT_bug_cw } }
+			SRT = { swap_ideas = { remove_idea = PT_temporary_government add_idea = PT_bug_cw } }
+			VRK = { swap_ideas = { remove_idea = PT_temporary_government add_idea = PT_bug_cw } }
+			LCD = { swap_ideas = { remove_idea = PT_temporary_government add_idea = PT_bug_cw } }
+			add_named_threat = {
+				threat = 4
+				name = PT_CHN.30.t
+			}
+		}
+	}
+	option = {
+		name = PT_CHN.30.a
+		trigger = {
+			NOT = {
+				OR = {
+					original_tag = DTR
+					original_tag = VRK
+					original_tag = LCD
+					original_tag = SRT
+					original_tag = CHN
+					original_tag = CCN
+					original_tag = CRY
+					original_tag = EQS
+					original_tag = OLE
+				}
+			}
+		}
+	}
+	option = {
+		name = PT_CHN.30.b
+		trigger = {
+			OR = {
+				original_tag = DTR
+				original_tag = VRK
+				original_tag = LCD
+				original_tag = SRT
+			}
+		}
+	}
+	option = {
+		name = PT_CHN.30.c
+		trigger = { original_tag = CHN }
+	}
+	option = {
+		name = PT_CHN.30.d
+		trigger = { original_tag = CCN }
+	}
+	option = {
+		name = PT_CHN.30.e
+		trigger = {
+			OR = {
+				original_tag = CRY
+				original_tag = EQS
+				original_tag = OLE
+			}
+		}
+	}
+}
+news_event = { # CIVIL WAR THORAX WON
+	id = PT_CHN.31
+	title = PT_CHN.31.t
+	desc = PT_CHN.31.desc
+	picture = GFX_event_PT_buggo_cw
+	is_triggered_only = yes
+	major = yes
+	mean_time_to_happen = { days = 1 }
+	immediate = { hidden_effect = {
+		CCN = {
+			set_country_flag = won_th_cw
+		}
+		add_threat = -4
+	} }
+	option = {
+		name = PT_CHN.31.a
+		trigger = {
+			NOT = { OR = {
+				original_tag = DTR
+				original_tag = VRK
+				original_tag = LCD
+				original_tag = SRT
+				original_tag = CCN
+				original_tag = CRY
+				original_tag = EQS
+				original_tag = OLE
+			} }
+		}
+	}
+	option = {
+		name = PT_CHN.31.b
+		trigger = {
+			OR = {
+				original_tag = DTR
+				original_tag = VRK
+				original_tag = LCD
+				original_tag = SRT
+			}
+		}
+	}
+	option = {
+		name = PT_CHN.31.c
+		trigger = { original_tag = CCN }
+	}
+	option = {
+		name = PT_CHN.31.d
+		trigger = {
+			OR = {
+				original_tag = CRY
+				original_tag = EQS
+				original_tag = OLE
+			}
+		}
+	}
+}
+
+news_event = { # CIVIL WAR Chrysie WON
+	id = PT_CHN.32
+	title = PT_CHN.32.t
+	desc = PT_CHN.32.desc
+	picture = GFX_event_PT_buggo_cw
+	is_triggered_only = yes
+	major = yes
+	mean_time_to_happen = { days = 1 }
+	option = {
+		name = PT_CHN.31.a
+		trigger = {
+			NOT = { 
+				OR = {
+					original_tag = CHN
+					original_tag = CRY
+					original_tag = EQS
+					original_tag = OLE
+				} 
+			}
+		}
+	}
+	option = {
+		name = PT_CHN.31.b
+		trigger = {
+			OR = {
+				original_tag = CRY
+				original_tag = EQS
+				original_tag = OLE
+			} 			
+		}
+	}
+	option = {
+		name = PT_CHN.31.c
+		trigger = {
+			original_tag = CHN
+		}
+	}
+}
