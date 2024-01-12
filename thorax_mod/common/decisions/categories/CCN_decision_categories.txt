@@ -1,0 +1,14 @@
+PT_CCN_queens_deccat = {
+	icon = gre_investment_decisions
+	allowed = {
+		original_tag = CCN
+	}
+	visible = {
+		has_country_flag = PT_CCN_queen_gui_enabled
+	}
+	priority = {
+		base = 100
+	}
+	visible_when_empty = yes
+	scripted_gui = PT_CCN_queen_alignment
+}

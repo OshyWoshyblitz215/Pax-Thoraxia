@@ -1,0 +1,252 @@
+PT_CCN_Start_Civil_War = {
+	CHN = {
+		if = {
+			limit = {
+				any_country_with_original_tag = {
+					original_tag_to_check = CHN
+					has_government = fascism
+					NOT = {	has_army_manpower = { size > 140000 } }
+				}
+			}
+			load_oob = CHN_1007
+			load_oob = CHN_1007
+		}
+		CCN = {
+			transfer_technology = yes
+			transfer_state = 322
+			transfer_state = 320 
+			transfer_state = 319
+			transfer_state = 323
+			transfer_state = 315
+			transfer_state = 311
+			transfer_state = 310
+			transfer_state = 321
+			transfer_state = 319
+			transfer_state = 247
+			transfer_state = 262
+			transfer_state = 308
+			transfer_state = 249
+			transfer_state = 316
+		}
+		transfer_units_fraction = {
+			target = CCN
+			target_organization = 1
+			source_organization = 1
+			keep_unit_leaders_trigger = { always = yes }
+			size = 0.10
+			navy_ratio = 0
+		}
+		CCN = {
+			load_oob = CCN_Civil_War
+			add_ideas = CCN_Civil_War
+			declare_war_on = { target = CHN type = civil_war }
+		}
+		CHN = {
+			add_ideas = CCN_Civil_War
+			CHN_vect = {
+				set_nationality = CCN
+			}
+			CHN_azure_lore = {
+				set_nationality = CCN
+			}
+		}
+		every_state = {
+			if = {
+				limit = { is_core_of = CHN }
+				add_core_of = CCN
+			}
+			if = {
+				limit = { is_claimed_by = CHN }
+				add_claim_by = CCN
+			}
+		}		
+	}
+	CCN = {
+		PT_CCN_activate_queen_alignment = yes
+	}
+	log = "[GetDateText]: Thoraxian Civil War Started!!"
+}
+
+
+
+
+
+PT_CCN_activate_queen_alignment = {	
+	set_country_flag = PT_CCN_queen_gui_enabled
+	
+	# Mid section setup
+	clear_array = TRO_drugs_dummy_midsection
+	add_to_array = { TRO_drugs_dummy_midsection = 0 }
+	
+	clear_array = TRO_drugs_friendly_power_status
+	clear_array = TRO_drugs_friendly_relations_status
+	resize_array = {
+		array = TRO_drugs_friendly_power_status
+		value = 0
+		size = 5
+	}
+	resize_array = {
+		array = TRO_drugs_friendly_relations_status
+		value = 0
+		size = 5
+	}
+	
+	clear_array = TRO_drugs_enemy_influence_status
+	clear_array = TRO_drugs_enemy_control_status
+	clear_array = TRO_drugs_enemy_aggression_status
+	resize_array = {
+		array = TRO_drugs_enemy_influence_status
+		value = 0
+		size = 5
+	}
+	resize_array = {
+		array = TRO_drugs_enemy_control_status
+		value = 0
+		size = 5
+	}
+	resize_array = {
+		array = TRO_drugs_enemy_aggression_status
+		value = 0
+		size = 5
+	}
+	
+	# Map gui setup
+	#clear_array = TRO_drugs_map_array
+	#clear_array = TRO_drugs_map_x
+	#clear_array = TRO_drugs_map_y
+	#
+	#add_to_array = { TRO_drugs_map_array = 699 }
+	#add_to_array = { TRO_drugs_map_array = 852 }
+	#add_to_array = { TRO_drugs_map_array = 875 }
+	#add_to_array = { TRO_drugs_map_array = 877 }
+	#add_to_array = { TRO_drugs_map_array = 700 }
+	#add_to_array = { TRO_drugs_map_array = 701 }
+	#add_to_array = { TRO_drugs_map_array = 702 }
+	#add_to_array = { TRO_drugs_map_array = 876 }
+	#add_to_array = { TRO_drugs_map_array = 703 }
+	#add_to_array = { TRO_drugs_map_array = 704 }
+	#add_to_array = { TRO_drugs_map_array = 705 }
+	#add_to_array = { TRO_drugs_map_array = 706 }
+	#add_to_array = { TRO_drugs_map_array = 709 }
+	#add_to_array = { TRO_drugs_map_array = 714 }
+	#add_to_array = { TRO_drugs_map_array = 1093 }
+	#add_to_array = { TRO_drugs_map_array = 1094 }
+	#add_to_array = { TRO_drugs_map_array = 1095 }
+	#
+	#add_to_array = { TRO_drugs_map_x = 6 } # 699 
+	#add_to_array = { TRO_drugs_map_y = 69 }
+	#
+	#add_to_array = { TRO_drugs_map_x = 60 } # 852
+	#add_to_array = { TRO_drugs_map_y = 35 }
+	#
+	#add_to_array = { TRO_drugs_map_x = 183 } # 875
+	#add_to_array = { TRO_drugs_map_y = 92 }
+	#
+	#add_to_array = { TRO_drugs_map_x = 35 } # 877
+	#add_to_array = { TRO_drugs_map_y = 77 }
+	#
+	#add_to_array = { TRO_drugs_map_x = 123 } # 700
+	#add_to_array = { TRO_drugs_map_y = 60 }
+	#
+	#add_to_array = { TRO_drugs_map_x = 153 } # 701
+	#add_to_array = { TRO_drugs_map_y = 43 }
+	#
+	#add_to_array = { TRO_drugs_map_x = 138 } # 702
+	#add_to_array = { TRO_drugs_map_y = 104 }
+	#
+	#add_to_array = { TRO_drugs_map_x = 124 } # 876
+	#add_to_array = { TRO_drugs_map_y = 129 }
+	#
+	#add_to_array = { TRO_drugs_map_x = 225 } # 703
+	#add_to_array = { TRO_drugs_map_y = 19 }
+	#
+	#add_to_array = { TRO_drugs_map_x = 252 } # 704
+	#add_to_array = { TRO_drugs_map_y = 48 }
+	#
+	#add_to_array = { TRO_drugs_map_x = 303 } # 705
+	#add_to_array = { TRO_drugs_map_y = 23 }
+	#
+	#add_to_array = { TRO_drugs_map_x = 305 } # 706
+	#add_to_array = { TRO_drugs_map_y = 50 }
+	#
+	#add_to_array = { TRO_drugs_map_x = 77 } # 709
+	#add_to_array = { TRO_drugs_map_y = 98 }
+	#
+	#add_to_array = { TRO_drugs_map_x = 300 } # 714
+	#add_to_array = { TRO_drugs_map_y = 5 }
+	#
+	#add_to_array = { TRO_drugs_map_x = 366 } # 1093
+	#add_to_array = { TRO_drugs_map_y = 30 }
+	#
+	#add_to_array = { TRO_drugs_map_x = 394 } # 1094
+	#add_to_array = { TRO_drugs_map_y = 58 }
+	#
+	#add_to_array = { TRO_drugs_map_x = 455 } # 1095
+	#add_to_array = { TRO_drugs_map_y = 23 }
+	#
+	## States control setup
+	#set_variable = { 699.TRO_drugs_ruling_cartel = 1 }
+	#set_variable = { 700.TRO_drugs_ruling_cartel = 2 }
+	#set_variable = { 701.TRO_drugs_ruling_cartel = 0 }
+	#set_variable = { 702.TRO_drugs_ruling_cartel = 3 }
+	#set_variable = { 703.TRO_drugs_ruling_cartel = 1 }
+	#set_variable = { 704.TRO_drugs_ruling_cartel = 4 }
+	#set_variable = { 705.TRO_drugs_ruling_cartel = 0 }
+	#set_variable = { 706.TRO_drugs_ruling_cartel = 4 }
+	#set_variable = { 709.TRO_drugs_ruling_cartel = 2 }
+	#set_variable = { 714.TRO_drugs_ruling_cartel = 1 }
+	#set_variable = { 852.TRO_drugs_ruling_cartel = 2 }
+	#set_variable = { 875.TRO_drugs_ruling_cartel = 5 }
+	#set_variable = { 876.TRO_drugs_ruling_cartel = 3 }
+	#set_variable = { 877.TRO_drugs_ruling_cartel = 0 }
+	#set_variable = { 1093.TRO_drugs_ruling_cartel = 0 }
+	#set_variable = { 1094.TRO_drugs_ruling_cartel = 4 }
+	#set_variable = { 1095.TRO_drugs_ruling_cartel = 0 }
+	#
+	#add_to_variable = { TRO_drugs_dirty_bit = 0.001 }
+	
+	
+	add_to_array = { TRO_cartel_action_option = 2 }
+	set_variable = { selected_cartel_action_option = 2 }
+	set_variable = { TRO_drugs_enemy_influence_status^0 = 65 }
+	set_variable = { TRO_drugs_enemy_control_status^0 = 85 }
+	set_variable = { TRO_drugs_enemy_aggression_status^0 = 25 }
+	
+	add_to_array = { TRO_cartel_array = 0 }
+	set_variable = { selected_cartel = 0 }
+	add_to_variable = { TRO_drugs_dirty_bit = 0.001 }
+	
+	
+	add_to_array = { TRO_cartel_action_option = 2 }
+	set_variable = { selected_cartel_action_option = 2 }
+	set_variable = { TRO_drugs_enemy_influence_status^1 = 85 }
+	set_variable = { TRO_drugs_enemy_control_status^1 = 70 }
+	set_variable = { TRO_drugs_enemy_aggression_status^1 = 20 }
+	
+	add_to_array = { TRO_cartel_array = 1 }
+	set_variable = { selected_cartel = 1 }
+	add_to_variable = { TRO_drugs_dirty_bit = 0.001 }
+	
+	
+	add_to_array = { TRO_cartel_action_option = 1 }
+	set_variable = { selected_cartel_action_option = 1 }
+	set_variable = { selected_cartel_action_option = 1 }
+	set_variable = { TRO_drugs_friendly_power_status^2 = 45 }
+	set_variable = { TRO_drugs_friendly_relations_status^2 = 40 }
+	
+	add_to_array = { TRO_cartel_array = 2 }
+	set_variable = { selected_cartel = 2 }
+	add_to_variable = { TRO_drugs_dirty_bit = 0.001 }
+	
+	
+	add_to_array = { TRO_cartel_action_option = 1 }
+	set_variable = { selected_cartel_action_option = 1 }
+	set_variable = { TRO_drugs_friendly_power_status^3 = 65 }
+	set_variable = { TRO_drugs_friendly_relations_status^3 = 25 }
+	
+	add_to_array = { TRO_cartel_array = 3 }
+	set_variable = { selected_cartel = 3 }
+
+	TRO_drugs_reassign_state_dynmods = yes
+	TRO_drugs_recalculate_national_dynmod_values = yes
+}

@@ -1,0 +1,249 @@
+defined_text = { #Selected queendom main text
+	name = PT_CCN_selected_queendom
+	text = {
+		trigger = {
+			check_variable = { selected_cartel = 0 }
+		}
+		localization_key = PT_CCN_queendom_distryum_name
+	}
+	text = {
+		trigger = {
+			check_variable = { selected_cartel = 1 }
+		}
+		localization_key = PT_CCN_queendom_lyctida_name
+	}
+	text = {
+		trigger = {
+			check_variable = { selected_cartel = 2 }
+		}
+		localization_key = PT_CCN_queendom_vraks_name
+	}
+	text = {
+		trigger = {
+			check_variable = { selected_cartel = 3 }
+		}
+		localization_key = PT_CCN_queendom_soryth_name
+	}
+	#text = {
+	#	trigger = {
+	#		check_variable = { selected_cartel = 4 }
+	#	}
+	#	localization_key = TRO_CTH_abizaal_syndicate
+	#}
+}
+
+defined_text = { #Selected Queendom Description
+	name = PT_CCN_selected_queendom_desc
+	text = {
+		trigger = {
+			check_variable = { selected_cartel = 0 }
+		}
+		localization_key = PT_CCN_queendom_distryum_desc
+	}
+	text = {
+		trigger = {
+			check_variable = { selected_cartel = 1 }
+		}
+		localization_key = PT_CCN_queendom_lyctida_desc
+	}
+	text = {
+		trigger = {
+			check_variable = { selected_cartel = 2 }
+		}
+		localization_key = PT_CCN_queendom_vraks_desc
+	}
+	text = {
+		trigger = {
+			check_variable = { selected_cartel = 3 }
+		}
+		localization_key = PT_CCN_queendom_soryth_desc
+	}
+	#text = {
+	#	trigger = {
+	#		check_variable = { selected_cartel = 4 }
+	#	}
+	#	localization_key = TRO_CTH_abizaal_syndicate_desc
+	#}
+}
+
+defined_text = { #Select queendom button tooltip
+	name = PT_CCN_queens_folder_tt
+	text = {
+		trigger = {
+			check_variable = { cartel_id = 0 }
+		}
+		localization_key = PT_CCN_queen_helvia_full
+	}
+	text = {
+		trigger = {
+			check_variable = { cartel_id = 1 }
+		}
+		localization_key = PT_CCN_queen_aurantia_full
+	}
+	text = {
+		trigger = {
+			check_variable = { cartel_id = 2 }
+		}
+		localization_key = PT_CCN_queen_argynnis_full
+	}
+	text = {
+		trigger = {
+			check_variable = { cartel_id = 3 }
+		}
+		localization_key = PT_CCN_queen_yaria_full
+	}
+	#text = {
+	#	trigger = {
+	#		check_variable = { cartel_id = 4 }
+	#	}
+	#	localization_key = TRO_CTH_abizaal_syndicate
+	#}
+}
+
+defined_text = { #Queen profile name
+	name = PT_CCN_selected_queen_name
+	text = {
+		trigger = {
+			check_variable = { selected_cartel = 0 }
+		}
+		localization_key = PT_CCN_queen_helvia_name
+	}
+	text = {
+		trigger = {
+			check_variable = { selected_cartel = 1 }
+		}
+		localization_key = PT_CCN_queen_aurantia_name
+	}
+	text = {
+		trigger = {
+			check_variable = { selected_cartel = 2 }
+		}
+		localization_key = PT_CCN_queen_argynnis_name
+	}
+	text = {
+		trigger = {
+			check_variable = { selected_cartel = 3 }
+		}
+		localization_key = PT_CCN_queen_yaria_name
+	}
+	#text = {
+	#	trigger = {
+	#		check_variable = { selected_cartel = 4 }
+	#	}
+	#	localization_key = TRO_CTH_zuan_abizaal
+	#}
+}
+
+defined_text = { #Queen bio
+	name = PT_CCN_selected_queen_bio
+	text = {
+		trigger = {
+			check_variable = { selected_cartel = 0 }
+		}
+		localization_key = PT_CCN_queen_helvia_bio
+	}
+	text = {
+		trigger = {
+			check_variable = { selected_cartel = 1 }
+		}
+		localization_key = PT_CCN_queen_aurantia_bio
+	}
+	text = {
+		trigger = {
+			check_variable = { selected_cartel = 2 }
+		}
+		localization_key = PT_CCN_queen_argynnis_bio
+	}
+	text = {
+		trigger = {
+			check_variable = { selected_cartel = 3 }
+		}
+		localization_key = PT_CCN_queen_yaria_bio
+	}
+	#text = {
+	#	trigger = {
+	#		check_variable = { selected_cartel = 4 }
+	#	}
+	#	localization_key = TRO_CTH_zuan_abizaal_bio
+	#}
+}
+
+#defined_text = {
+#	name = TRO_drugs_map_entry_cartel_tt
+#	text = {
+#		trigger = {
+#			check_variable = { map_id:TRO_drugs_ruling_cartel = 0 }
+#		}
+#		localization_key = TRO_CTH_tiger_syndicate
+#	}
+#	text = {
+#		trigger = {
+#			check_variable = { map_id:TRO_drugs_ruling_cartel = 1 }
+#		}
+#		localization_key = TRO_CTH_zaga_brothers
+#	}
+#	text = {
+#		trigger = {
+#			check_variable = { map_id:TRO_drugs_ruling_cartel = 2 }
+#		}
+#		localization_key = TRO_CTH_zapsa_syndicate
+#	}
+#	text = {
+#		trigger = {
+#			check_variable = { map_id:TRO_drugs_ruling_cartel = 3 }
+#		}
+#		localization_key = TRO_CTH_zurumilki
+#	}
+#	text = {
+#		trigger = {
+#			check_variable = { map_id:TRO_drugs_ruling_cartel = 4 }
+#		}
+#		localization_key = TRO_CTH_abizaal_syndicate
+#	}
+#	text = {
+#		trigger = {
+#			check_variable = { map_id:TRO_drugs_ruling_cartel = 5 }
+#		}
+#		localization_key = TRO_CTH_government_long
+#	}
+#}
+#
+#defined_text = {
+#	name = TRO_drugs_CET
+#	text = {
+#		trigger = {
+#			check_variable = { temp_idx = 0 }
+#		}
+#		localization_key = TRO_CTH_tiger_syndicate
+#	}
+#	text = {
+#		trigger = {
+#			check_variable = { temp_idx = 1 }
+#		}
+#		localization_key = TRO_CTH_zaga_brothers
+#	}
+#	text = {
+#		trigger = {
+#			check_variable = { temp_idx = 2 }
+#		}
+#		localization_key = TRO_CTH_zapsa_syndicate
+#	}
+#	text = {
+#		trigger = {
+#			check_variable = { temp_idx = 3 }
+#		}
+#		localization_key = TRO_CTH_zurumilki
+#	}
+#	text = {
+#		trigger = {
+#			check_variable = { temp_idx = 4 }
+#		}
+#		localization_key = TRO_CTH_abizaal_syndicate
+#	}
+#	text = {
+#		trigger = {
+#			check_variable = { temp_idx = 5 }
+#		}
+#		localization_key = TRO_CTH_government
+#	}
+#}
