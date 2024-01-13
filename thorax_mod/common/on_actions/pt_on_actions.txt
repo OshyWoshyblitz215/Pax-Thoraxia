@@ -1,0 +1,20 @@
+on_actions = {
+	on_capitulation = {
+		effect = {
+			if = {
+				limit = {
+					ROOT = { tag = CCN }
+					FROM = { tag = CHN }
+				}
+				PT_civil_war_chrisie_victory = yes
+			}
+			if = {
+				limit = {
+					ROOT = { tag = CHN }
+					FROM = { tag = CCN }
+				}
+				PT_civil_war_thorax_victory = yes
+			}
+		}
+	}
+}

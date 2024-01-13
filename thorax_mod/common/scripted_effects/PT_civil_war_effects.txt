@@ -1,0 +1,224 @@
+PT_CCN_Start_Civil_War = {
+	CHN = {
+		if = {
+			limit = {
+				any_country_with_original_tag = {
+					original_tag_to_check = CHN
+					has_government = fascism
+					NOT = {	has_army_manpower = { size > 150000 } }
+					NOT = {	has_army_manpower = { size < 200000 } }
+				}
+			}
+			load_oob = CHN_1007
+			load_oob = CHN_1007
+		}
+		CCN = {
+			transfer_technology = yes
+			transfer_state = 322
+			transfer_state = 320 
+			transfer_state = 319
+			transfer_state = 323
+		}
+		transfer_units_fraction = {
+			target = CCN
+			target_organization = 1
+			source_organization = 1
+			keep_unit_leaders_trigger = { always = yes }
+			size = 0.1
+			navy_ratio = 0
+		}
+		CCN = {
+			load_oob = CCN_Civil_War
+			add_ideas = CCN_Civil_War
+			declare_war_on = { target = CHN type = civil_war }
+		}
+		CHN = {
+			add_ideas = CCN_Civil_War
+			CHN_vect = {
+				set_nationality = CCN
+			}
+			CHN_azure_lore = {
+				set_nationality = CCN
+			}
+		}
+		every_state = {
+			if = {
+				limit = { is_core_of = CHN }
+				add_core_of = CCN
+			}
+			if = {
+				limit = { is_claimed_by = CHN }
+				add_claim_by = CCN
+			}
+		}		
+		activate_mission = PT_civil_war_escalation_0
+	}
+	set_global_flag = PT_changeling_civil_war
+	CCN = {
+		activate_mission = PT_civil_war_escalation_0
+	}
+	log = "[GetDateText]: Thoraxian Civil War Started!!"
+}
+
+#Independence declarations
+PT_civil_war_vraks_independence = {	
+	CHN = {
+		VRK = {
+			transfer_technology = yes
+			transfer_state = 259
+			transfer_state = 250 
+		}
+		259 = {
+			add_core_of = VRK
+		}
+		250 = {
+			add_core_of = VRK
+		}
+		end_puppet = VRK
+		log = "[GetDateText]: Vraks broke away!"
+	}
+	CCN = {
+		PT_CCN_activate_queen_alignment = yes
+		add_to_array = { TRO_cartel_action_option = 2 }
+		set_variable = { selected_cartel_action_option = 2 }
+		set_variable = { TRO_drugs_enemy_influence_status^0 = 65 }
+		set_variable = { TRO_drugs_enemy_control_status^0 = 85 }
+		set_variable = { TRO_drugs_enemy_aggression_status^0 = 25 }
+		
+		add_to_array = { TRO_cartel_array = 0 }
+		set_variable = { selected_cartel = 0 }
+		add_to_variable = { TRO_drugs_dirty_bit = 0.001 }
+	}
+}
+PT_civil_war_soryth_independence = {
+	CHN = {
+		SRT = {
+			transfer_technology = yes
+			transfer_state = 262
+			transfer_state = 315
+		}
+		262 = {
+			add_core_of = SRT
+		}
+		315 = {
+			add_core_of = SRT
+		}
+		end_puppet = SRT
+		log = "[GetDateText]: Soryth broke away!"
+	}
+	CCN = {
+		add_to_array = { TRO_cartel_action_option = 2 }
+		set_variable = { selected_cartel_action_option = 2 }
+		set_variable = { TRO_drugs_enemy_influence_status^1 = 85 }
+		set_variable = { TRO_drugs_enemy_control_status^1 = 70 }
+		set_variable = { TRO_drugs_enemy_aggression_status^1 = 20 }
+		
+		add_to_array = { TRO_cartel_array = 1 }
+		set_variable = { selected_cartel = 1 }
+		add_to_variable = { TRO_drugs_dirty_bit = 0.001 }	
+	}
+}
+PT_civil_war_lyctida_independence = {	
+	CHN = {
+		LCD = {
+			transfer_technology = yes
+			transfer_state = 260
+			transfer_state = 309 
+		}
+		260 = {
+			add_core_of = LCD
+		}
+		309 = {
+			add_core_of = LCD
+		}
+		end_puppet = LCD
+		log = "[GetDateText]: Lyctida broke away!"
+	}
+	CCN = {	
+		add_to_array = { TRO_cartel_action_option = 2 }
+		set_variable = { selected_cartel_action_option = 2 }
+		set_variable = { TRO_drugs_enemy_influence_status^2 = 30 }
+		set_variable = { TRO_drugs_enemy_control_status^2 = 20 }
+		set_variable = { TRO_drugs_enemy_aggression_status^2 = 40 }
+		
+		add_to_array = { TRO_cartel_array = 2 }
+		set_variable = { selected_cartel = 2 }
+		add_to_variable = { TRO_drugs_dirty_bit = 0.001 }
+	}
+}
+PT_civil_war_ditrysium_independence = {	
+	CHN = {
+		DTR = {
+			transfer_technology = yes
+			transfer_state = 252
+		}
+		252 = {
+			add_core_of = DTR
+		}
+		end_puppet = DTR		
+		log = "[GetDateText]: Ditrysium broke away!"
+		transfer_navy = {
+			target = DTR
+		}
+	}
+	CCN = {
+		add_to_array = { TRO_cartel_action_option = 2 }
+		set_variable = { selected_cartel_action_option = 2 }
+		set_variable = { TRO_drugs_enemy_influence_status^3 = 60 }
+		set_variable = { TRO_drugs_enemy_control_status^3 = 20 }
+		set_variable = { TRO_drugs_enemy_aggression_status^3 = 70 }
+		
+		add_to_array = { TRO_cartel_array = 3 }
+		set_variable = { selected_cartel = 3 }
+		add_to_variable = { TRO_drugs_dirty_bit = 0.001 }
+	}
+}
+
+#Civil war endings
+PT_civil_war_thorax_victory = {	
+	CCN = {
+		clr_country_flag = PT_changeling_civil_war
+		annex_country = {
+			target = CHN
+			transfer_troops = no
+		}
+		PT_civil_war_change_queen_mode = yes
+	}
+	CHN = {
+		clr_country_flag = PT_changeling_civil_war
+		log = "[GetDateText]: Thorax civil war victory!"
+	}
+}
+PT_civil_war_chrisie_victory = {	
+	CCN = {
+		clr_country_flag = PT_changeling_civil_war
+	}
+	CHN = {
+		clr_country_flag = PT_changeling_civil_war
+		log = "[GetDateText]: Thorax civil war victory!"
+		annex_country = {
+			target = CCN
+			transfer_troops = no
+		}
+	}
+}
+PT_civil_war_change_queen_mode = {		
+	set_variable = { TRO_cartel_action_option^0 = 1 }
+	set_variable = { TRO_drugs_friendly_power_status^0 = var:TRO_drugs_enemy_control_status^0 }
+	set_variable = { TRO_drugs_friendly_relations_status^0 = var:TRO_drugs_enemy_influence_status^0 }	
+	
+	set_variable = { TRO_cartel_action_option^1 = 1 }
+	set_variable = { TRO_drugs_friendly_power_status^1 = var:TRO_drugs_enemy_control_status^1 }
+	set_variable = { TRO_drugs_friendly_relations_status^1 = var:TRO_drugs_enemy_influence_status^1 }
+	
+	set_variable = { TRO_cartel_action_option^2 = 1 }
+	set_variable = { TRO_drugs_friendly_power_status^2 = var:TRO_drugs_enemy_control_status^2 }
+	set_variable = { TRO_drugs_friendly_relations_status^2 = var:TRO_drugs_enemy_influence_status^2 }
+	
+	set_variable = { TRO_cartel_action_option^3 = 1 }
+	set_variable = { TRO_drugs_friendly_power_status^3 = var:TRO_drugs_enemy_control_status^3 }
+	set_variable = { TRO_drugs_friendly_relations_status^3 = var:TRO_drugs_enemy_influence_status^3 }		
+	
+	set_variable = { selected_cartel_action_option = 1 }
+	add_to_variable = { TRO_drugs_dirty_bit = 0.001 }	
+}

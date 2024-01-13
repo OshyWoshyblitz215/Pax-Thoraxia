@@ -14,12 +14,12 @@ scripted_gui = {
 				entry_container = "eaw_TRO_drugs_midsection_[?selected_cartel_action_option]"
 				array = TRO_drugs_dummy_midsection
 			}
-			map_grid = {
-				entry_container = eaw_TRO_drugs_map_entry
-				array = TRO_drugs_map_array
-				index = l
-				value = map_id
-			}
+			#map_grid = {
+			#	entry_container = eaw_TRO_drugs_map_entry
+			#	array = TRO_drugs_map_array
+			#	index = l
+			#	value = map_id
+			#}
 		}
 		
 		## cartel_folders gridbox ##
@@ -90,7 +90,7 @@ scripted_gui = {
 			}
 		}
 		properties = {
-			cartel_portrait = { image = "GFX_PT_CCN_queens_portrait_[?selected_cartel]" }
+			queen_portrait = { image = "GFX_PT_CCN_queens_portrait_[?selected_cartel]" }
 			
 			# Friendly
 			power_bar = {

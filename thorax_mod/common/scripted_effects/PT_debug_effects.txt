@@ -1,0 +1,19 @@
+PT_debug_play_thorax_civil = {
+	CHN = {
+		remove_ideas = political_divisions
+		PT_CCN_Start_Civil_War = yes
+	}		
+	CCN = {
+		change_tag_from = CHN
+	}
+}
+PT_debug_play_thorax_civil_ez = {
+	PT_debug_play_thorax_civil = yes
+	CHN = {
+		delete_unit = {}
+		add_ideas = PT_debug_quick_capitulation 
+	}
+	CCN = {
+		add_political_power = 200
+	}
+}

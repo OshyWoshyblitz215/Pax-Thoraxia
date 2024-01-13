@@ -1,0 +1,30 @@
+characters={
+	PT_CCN_queen_helvia = {
+		name = PT_CCN_queen_helvia
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/CHN/Helvia.tga"
+			}
+		}
+		country_leader = {
+			expire = "1965.1.1"
+			ideology = nazism
+			desc = PT_CCN_queen_helvia_bio
+		}		
+		country_leader = {
+			expire = "1965.1.1"
+			ideology = juche
+			desc = PT_CCN_queen_helvia_bio
+		}
+		country_leader = {
+			expire = "1965.1.1"
+			ideology = conservatism
+			desc = PT_CCN_queen_helvia_bio
+		}
+		country_leader = {
+			expire = "1965.1.1"
+			ideology = despotism
+			desc = PT_CCN_queen_helvia_bio
+		}			
+	}
+}

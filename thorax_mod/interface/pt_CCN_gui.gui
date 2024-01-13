@@ -16,12 +16,12 @@ guiTypes = {
 			slotsize = { width = 100 height = 66 }
 		}
 		containerwindowtype = {
-			name = "cartel_portrait_container"
+			name = "queen_portrait_container"
 			position = { x = -8 y = 37 }
 			icontype = {
-				name = "cartel_portrait"
+				name = "queen_portrait"
 				position = { x = 8 y = 13 }
-				spritetype = "GFX_TRO_cartel_portrait_0"
+				spritetype = "GFX_PT_CCN_queens_portrait_0"
 				pdx_tooltip = PT_CCN_queens_name
 				pdx_tooltip_delayed = PT_CCN_queens_leader_bio
 			}

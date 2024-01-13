@@ -1,0 +1,4 @@
+VRK = "countries/VRK.txt"
+LCD = "countries/LCD.txt"
+SRT = "countries/SRT.txt"
+DTR = "countries/DTR.txt"
