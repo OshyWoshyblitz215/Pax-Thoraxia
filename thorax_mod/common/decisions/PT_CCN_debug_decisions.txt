@@ -1,0 +1,129 @@
+#Reference
+# Vraks - Argynnis 		0
+# Soryth - Yaria 		1
+# Lyctida - Aurantia	2
+# Dytrisium - Helvia	3
+
+
+PT_CCN_civil_war_deccat = {	
+	PT_CCN_debug_end_civil_war = {
+		cost = 0
+		allowed = {
+			OR = {
+				original_tag = CCN		
+			}
+		}
+		visible = {
+			has_global_flag = PT_changeling_civil_war_ongoing
+			has_global_flag = PT_debug_decisions_enabled
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision PT_CCN_debug_end_civil_war"	
+			PT_civil_war_thorax_victory = yes
+		}
+		fire_only_once = yes
+	}
+}
+
+
+PT_CCN_queens_deccat = {
+	PT_CCN_debug_add_power_10 = {
+		allowed = { original_tag = CCN }
+		visible = {
+			has_global_flag = PT_debug_decisions_enabled
+		}
+		available = {
+		}
+		cost = 0
+		complete_effect = {
+			add_to_variable = {
+				var = PT_CCN_queen_power_status^PT_selected_queen
+				value = 10
+			}
+			PT_CCN_queen_values_changed = yes
+		}
+	}
+	PT_CCN_debug_take_power_10 = {
+		allowed = { original_tag = CCN }
+		visible = {
+			has_global_flag = PT_debug_decisions_enabled
+		}
+		available = {
+		}
+		cost = 0
+		complete_effect = {
+			subtract_from_variable = {
+				var = PT_CCN_queen_power_status^PT_selected_queen
+				value = 10
+			}
+			PT_CCN_queen_values_changed = yes
+		}
+	}
+	PT_CCN_debug_add_relation_10 = {
+		allowed = { original_tag = CCN }
+		visible = {
+			has_global_flag = PT_debug_decisions_enabled
+		}
+		available = {
+		}
+		cost = 0
+		complete_effect = {
+			add_to_variable = {
+				var = PT_CCN_queen_relation_status^PT_selected_queen
+				value = 10
+			}
+			PT_CCN_queen_values_changed = yes
+		}
+	}
+	PT_CCN_debug_take_relation_10 = {
+		allowed = { original_tag = CCN }
+		visible = {
+			has_global_flag = PT_debug_decisions_enabled
+		}
+		available = {
+		}
+		cost = 0
+		complete_effect = {
+			subtract_from_variable = {
+				var = PT_CCN_queen_relation_status^PT_selected_queen
+				value = 10
+			}
+			PT_CCN_queen_values_changed = yes
+		}
+	}
+	PT_CCN_debug_add_alignment_10 = {
+		allowed = { original_tag = CCN }
+		visible = {
+			has_global_flag = PT_debug_decisions_enabled
+		}
+		available = {
+		}
+		cost = 0
+		complete_effect = {
+			add_to_variable = {
+				var = PT_CCN_queen_alignment_status^PT_selected_queen
+				value = 10
+			}
+			PT_CCN_queen_values_changed = yes
+		}
+	}
+	PT_CCN_debug_take_alignment_10 = {
+		allowed = { original_tag = CCN }
+		visible = {
+			has_global_flag = PT_debug_decisions_enabled
+		}
+		available = {
+		}
+		cost = 0
+		complete_effect = {
+			subtract_from_variable = {
+				var = PT_CCN_queen_alignment_status^PT_selected_queen
+				value = 10
+			}
+			PT_CCN_queen_values_changed = yes
+		}
+	}
+}

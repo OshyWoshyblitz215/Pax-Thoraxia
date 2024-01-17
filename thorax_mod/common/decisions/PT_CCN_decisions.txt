@@ -1,17 +1,16 @@
-
-# References
-@distrium = 0
-@lyctida = 1
-@vraks = 2
-@soryth = 3
+#Reference
+# Vraks - Argynnis 		0
+# Soryth - Yaria 		1
+# Lyctida - Aurantia	2
+# Dytrisium - Helvia	3
 
 PT_CCN_queens_deccat = {
 	PT_CCN_operation_show_of_force_0 = {
 		icon = GFX_decision_rifles
 		allowed = { original_tag = CCN }
 		visible = {
-			check_variable = { TRO_cartel_action_option^selected_cartel = 2 }
-			check_variable = { selected_cartel = 0 }
+			check_variable = { PT_queen_stage_option^PT_selected_queen = 2 }
+			check_variable = { PT_selected_queen = 0 }
 		}
 		available = {
 		}
@@ -20,171 +19,16 @@ PT_CCN_queens_deccat = {
 			
 		}
 	}
-	PT_CCN_add_power_10_0 = {
-		icon = GFX_decision_rifles
-		allowed = { original_tag = CCN }
-		visible = {
-			#check_variable = { TRO_cartel_action_option^selected_cartel = 2 }
-			check_variable = { selected_cartel = 0 }
-		}
-		available = {
-		}
-		cost = 0
-		complete_effect = {
-			add_to_variable = {
-				var = PT_CCN_queen_power_status^0
-				value = 10
-			}
-		}
-	}
-	PT_CCN_add_power_10_1 = {
-		icon = GFX_decision_rifles
-		allowed = { original_tag = CCN }
-		visible = {
-			#check_variable = { TRO_cartel_action_option^selected_cartel = 2 }
-			check_variable = { selected_cartel = 1 }
-		}
-		available = {
-		}
-		cost = 0
-		complete_effect = {
-			add_to_variable = {
-				var = PT_CCN_queen_power_status^1
-				value = 10
-			}
-		}
-	}
-	PT_CCN_add_power_10_2 = {
-		icon = GFX_decision_rifles
-		allowed = { original_tag = CCN }
-		visible = {
-			#check_variable = { TRO_cartel_action_option^selected_cartel = 2 }
-			check_variable = { selected_cartel = 2 }
-		}
-		available = {
-		}
-		cost = 0
-		complete_effect = {
-			add_to_variable = {
-				var = PT_CCN_queen_power_status^2
-				value = 10
-			}
-		}
-	}
-	PT_CCN_add_power_10_3 = {
-		icon = GFX_decision_rifles
-		allowed = { original_tag = CCN }
-		visible = {
-			#check_variable = { TRO_cartel_action_option^selected_cartel = 2 }
-			check_variable = { selected_cartel = 3 }
-		}
-		available = {
-		}
-		cost = 0
-		complete_effect = {
-			add_to_variable = {
-				var = PT_CCN_queen_power_status^3
-				value = 10
-			}
-		}
-	}
-	PT_CCN_remove_power_10_0 = {
-		icon = GFX_decision_rifles
-		allowed = { original_tag = CCN }
-		visible = {
-			#check_variable = { TRO_cartel_action_option^selected_cartel = 2 }
-			check_variable = { selected_cartel = 0 }
-		}
-		available = {
-		}
-		cost = 0
-		complete_effect = {
-			subtract_from_variable = {
-				var = PT_CCN_queen_power_status^0
-				value = 10
-			}
-		}
-	}
-	PT_CCN_remove_power_10_1 = {
-		icon = GFX_decision_rifles
-		allowed = { original_tag = CCN }
-		visible = {
-			#check_variable = { TRO_cartel_action_option^selected_cartel = 2 }
-			check_variable = { selected_cartel = 1 }
-		}
-		available = {
-		}
-		cost = 0
-		complete_effect = {
-			subtract_from_variable = {
-				var = PT_CCN_queen_power_status^1
-				value = 10
-			}
-		}
-	}
-	PT_CCN_remove_power_10_2 = {
-		icon = GFX_decision_rifles
-		allowed = { original_tag = CCN }
-		visible = {
-			#check_variable = { TRO_cartel_action_option^selected_cartel = 2 }
-			check_variable = { selected_cartel = 2 }
-		}
-		available = {
-		}
-		cost = 0
-		complete_effect = {
-			subtract_from_variable = {
-				var = PT_CCN_queen_power_status^2
-				value = 10
-			}
-		}
-	}
-	PT_CCN_remove_power_10_3 = {
-		icon = GFX_decision_rifles
-		allowed = { original_tag = CCN }
-		visible = {
-			#check_variable = { TRO_cartel_action_option^selected_cartel = 2 }
-			check_variable = { selected_cartel = 3 }
-		}
-		available = {
-		}
-		cost = 0
-		complete_effect = {
-			subtract_from_variable = {
-				var = PT_CCN_queen_power_status^3
-				value = 10
-			}
-		}
-	}
 }
 
 PT_CCN_civil_war_deccat = {	
-	PT_CCN_debug_end_civil_war = {
-		icon = generic_nationalism
-		allowed = {
-			OR = {
-				original_tag = CCN		
-			}
-		}
-		visible = {
-			has_global_flag = PT_changeling_civil_war
-		}
-		cost = 50
-		ai_will_do = {
-			factor = 1
-		}
-		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision PT_CCN_debug_end_civil_war"	
-			PT_civil_war_thorax_victory = yes
-		}
-	}
 	PT_civil_war_escalation_0 = {
 		priority = 10
 		icon = generic_ignite_civil_war
 		available = {
 			hidden_trigger = { always = no }
 		}
-		days_mission_timeout = 30
+		days_mission_timeout = 10
 		fire_only_once = yes
 		activation = {
 			hidden_trigger = { always = no }
@@ -193,16 +37,7 @@ PT_CCN_civil_war_deccat = {
 		is_good = yes
 		cancel_trigger = {
 			hidden_trigger = {
-				OR = {
-					AND = {
-						NOT = { has_war_with = CHN }
-						tag = CCN
-					}
-					AND = {
-						NOT = { has_war_with = CCN }
-						tag = CHN
-					}
-				}
+				NOT = { has_global_flag = PT_changeling_civil_war_ongoing }
 			}
 		}
 		timeout_effect = {
@@ -236,16 +71,7 @@ PT_CCN_civil_war_deccat = {
 		is_good = yes
 		cancel_trigger = {
 			hidden_trigger = {
-				OR = {
-					AND = {
-						NOT = { has_war_with = CHN }
-						tag = CCN
-					}
-					AND = {
-						NOT = { has_war_with = CCN }
-						tag = CHN
-					}
-				}
+				NOT = { has_global_flag = PT_changeling_civil_war_ongoing }
 			}
 		}
 		timeout_effect = {
@@ -268,15 +94,16 @@ PT_CCN_civil_war_deccat = {
 		available = {
 			hidden_trigger = { always = no }
 		}
-		days_mission_timeout = 15
+		days_mission_timeout = 7
 		fire_only_once = yes
 		activation = {
 			hidden_trigger = { always = no }
 		}
 		highlight_states = {
-			highlight_state_targets = {		
+			highlight_state_targets = {	
+				state = 258	
 				state = 259
-				state = 258
+				state = 291
 				state = 307
 			}			
 			highlight_color_while_active = 2
@@ -285,16 +112,7 @@ PT_CCN_civil_war_deccat = {
 		is_good = yes
 		cancel_trigger = {
 			hidden_trigger = {
-				OR = {
-					AND = {
-						NOT = { has_war_with = CHN }
-						tag = CCN
-					}
-					AND = {
-						NOT = { has_war_with = CCN }
-						tag = CHN
-					}
-				}
+				NOT = { has_global_flag = PT_changeling_civil_war_ongoing }
 			}
 		}
 		timeout_effect = {
@@ -330,6 +148,7 @@ PT_CCN_civil_war_deccat = {
 		highlight_states = {
 			highlight_state_targets = {
 				state = 262
+				state = 264
 				state = 315
 			}
 			highlight_color_while_active = 2
@@ -338,18 +157,9 @@ PT_CCN_civil_war_deccat = {
 		is_good = yes
 		cancel_trigger = {
 			hidden_trigger = {
-				OR = {
-					AND = {
-						NOT = { has_war_with = CHN }
-						tag = CCN
-					}
-					AND = {
-						NOT = { has_war_with = CCN }
-						tag = CHN
-					}
-				}
+				NOT = { has_global_flag = PT_changeling_civil_war_ongoing }
 			}
-		}
+		}		
 		timeout_effect = {
 			if = {
 				limit = { tag = CCN }
@@ -393,16 +203,7 @@ PT_CCN_civil_war_deccat = {
 		is_good = yes
 		cancel_trigger = {
 			hidden_trigger = {
-				OR = {
-					AND = {
-						NOT = { has_war_with = CHN }
-						tag = CCN
-					}
-					AND = {
-						NOT = { has_war_with = CCN }
-						tag = CHN
-					}
-				}
+				NOT = { has_global_flag = PT_changeling_civil_war_ongoing }
 			}
 		}
 		timeout_effect = {
@@ -446,16 +247,7 @@ PT_CCN_civil_war_deccat = {
 		is_good = yes
 		cancel_trigger = {
 			hidden_trigger = {
-				OR = {
-					AND = {
-						NOT = { has_war_with = CHN }
-						tag = CCN
-					}
-					AND = {
-						NOT = { has_war_with = CCN }
-						tag = CHN
-					}
-				}
+				NOT = { has_global_flag = PT_changeling_civil_war_ongoing }
 			}
 		}
 		timeout_effect = {
@@ -473,7 +265,105 @@ PT_CCN_civil_war_deccat = {
 			custom_effect_tooltip = PT_civil_war_breakaway_ditrysium_tt
 			log = "[GetDateText]: [Root.GetName]: Decision PT_civil_war_breakaway_ditrysium"
 			hidden_effect = {
+				activate_mission = PT_civil_war_breakaway_commies
+			}
+		}
+	}
+	PT_civil_war_breakaway_commies = {
+		priority = 55
+		icon = GFX_clock_decision
+		available = {
+			hidden_trigger = { always = no }
+		}
+		days_mission_timeout = 15
+		fire_only_once = yes
+		activation = {
+			hidden_trigger = { always = no }
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 305
+				state = 306
+				state = 312
+				state = 313
+				state = 314
+			}
+			highlight_color_while_active = 2
+		}
+		cancel_if_not_visible = yes
+		is_good = yes
+		cancel_trigger = {
+			hidden_trigger = {
+				NOT = { has_global_flag = PT_changeling_civil_war_ongoing }
+			}
+		}
+		timeout_effect = {
+			if = {
+				limit = { tag = CCN }
+				country_event = ptcivilwar.11
+				hidden_effect = {
+					PT_civil_war_commies_independence = yes
+				}
+			}
+			if = {
+				limit = { tag = CHN }
+				country_event = ptcivilwar.12
+			}	
+			custom_effect_tooltip = PT_civil_war_breakaway_commies_tt
+			log = "[GetDateText]: [Root.GetName]: Decision PT_civil_war_breakaway_commies"
+			hidden_effect = {
 				activate_mission = PT_civil_war_escalation_1
+			}
+		}
+	}
+	PT_civil_war_support_commie_uprising = {		
+		icon = GFX_decision_rifles
+		allowed = { original_tag = CCN }
+		visible = {
+			has_active_mission = PT_civil_war_breakaway_commies
+		}
+		fire_only_once = yes
+		cost = 50
+		complete_effect = {
+			add_days_mission_timeout = {
+				mission = PT_civil_war_breakaway_commies
+				days = -10
+			}
+			custom_effect_tooltip = PT_civil_war_support_commie_uprising_tt
+			hidden_effect = {			
+				subtract_from_variable = {
+					var = PT_CCN_queen_relation_status^0
+					value = 20
+				}				
+				subtract_from_variable = {
+					var = PT_CCN_queen_alignment_status^0
+					value = 20
+				}				
+				subtract_from_variable = {
+					var = PT_CCN_queen_relation_status^1
+					value = 20
+				}				
+				subtract_from_variable = {
+					var = PT_CCN_queen_alignment_status^1
+					value = 20
+				}				
+				subtract_from_variable = {
+					var = PT_CCN_queen_relation_status^2
+					value = 20
+				}				
+				subtract_from_variable = {
+					var = PT_CCN_queen_alignment_status^2
+					value = 20
+				}			
+				subtract_from_variable = {
+					var = PT_CCN_queen_relation_status^3
+					value = 20
+				}				
+				subtract_from_variable = {
+					var = PT_CCN_queen_alignment_status^3
+					value = 20
+				}	
+				PT_CCN_queen_values_changed = yes
 			}
 		}
 	}

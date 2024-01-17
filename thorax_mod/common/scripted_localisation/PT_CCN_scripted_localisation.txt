@@ -2,31 +2,31 @@ defined_text = { #Selected queendom main text
 	name = PT_CCN_selected_queendom
 	text = {
 		trigger = {
-			check_variable = { selected_cartel = 0 }
+			check_variable = { PT_selected_queen = 0 }
 		}
 		localization_key = PT_CCN_queendom_vraks_name
 	}
 	text = {
 		trigger = {
-			check_variable = { selected_cartel = 1 }
+			check_variable = { PT_selected_queen = 1 }
 		}
 		localization_key = PT_CCN_queendom_soryth_name
 	}
 	text = {
 		trigger = {
-			check_variable = { selected_cartel = 2 }
+			check_variable = { PT_selected_queen = 2 }
 		}
 		localization_key = PT_CCN_queendom_lyctida_name
 	}
 	text = {
 		trigger = {
-			check_variable = { selected_cartel = 3 }
+			check_variable = { PT_selected_queen = 3 }
 		}
 		localization_key = PT_CCN_queendom_distryum_name
 	}
 	#text = {
 	#	trigger = {
-	#		check_variable = { selected_cartel = 4 }
+	#		check_variable = { PT_selected_queen = 4 }
 	#	}
 	#	localization_key = TRO_CTH_abizaal_syndicate
 	#}
@@ -36,31 +36,31 @@ defined_text = { #Selected Queendom Description
 	name = PT_CCN_selected_queendom_desc
 	text = {
 		trigger = {
-			check_variable = { selected_cartel = 0 }
+			check_variable = { PT_selected_queen = 0 }
 		}
 		localization_key = PT_CCN_queendom_vraks_desc
 	}
 	text = {
 		trigger = {
-			check_variable = { selected_cartel = 1 }
+			check_variable = { PT_selected_queen = 1 }
 		}
 		localization_key = PT_CCN_queendom_soryth_desc
 	}
 	text = {
 		trigger = {
-			check_variable = { selected_cartel = 2 }
+			check_variable = { PT_selected_queen = 2 }
 		}
 		localization_key = PT_CCN_queendom_lyctida_desc
 	}
 	text = {
 		trigger = {
-			check_variable = { selected_cartel = 3 }
+			check_variable = { PT_selected_queen = 3 }
 		}
 		localization_key = PT_CCN_queendom_distryum_desc
 	}
 	#text = {
 	#	trigger = {
-	#		check_variable = { selected_cartel = 4 }
+	#		check_variable = { PT_selected_queen = 4 }
 	#	}
 	#	localization_key = TRO_CTH_abizaal_syndicate_desc
 	#}
@@ -104,31 +104,31 @@ defined_text = { #Queen profile name
 	name = PT_CCN_selected_queen_name
 	text = {
 		trigger = {
-			check_variable = { selected_cartel = 0 }
+			check_variable = { PT_selected_queen = 0 }
 		}
 		localization_key = PT_CCN_queen_argynnis_name
 	}
 	text = {
 		trigger = {
-			check_variable = { selected_cartel = 1 }
+			check_variable = { PT_selected_queen = 1 }
 		}
 		localization_key = PT_CCN_queen_yaria_name
 	}
 	text = {
 		trigger = {
-			check_variable = { selected_cartel = 2 }
+			check_variable = { PT_selected_queen = 2 }
 		}
 		localization_key = PT_CCN_queen_aurantia_name
 	}
 	text = {
 		trigger = {
-			check_variable = { selected_cartel = 3 }
+			check_variable = { PT_selected_queen = 3 }
 		}
 		localization_key = PT_CCN_queen_helvia_name
 	}
 	#text = {
 	#	trigger = {
-	#		check_variable = { selected_cartel = 4 }
+	#		check_variable = { PT_selected_queen = 4 }
 	#	}
 	#	localization_key = TRO_CTH_zuan_abizaal
 	#}
@@ -138,31 +138,31 @@ defined_text = { #Queen bio
 	name = PT_CCN_selected_queen_bio
 	text = {
 		trigger = {
-			check_variable = { selected_cartel = 0 }
+			check_variable = { PT_selected_queen = 0 }
 		}
 		localization_key = PT_CCN_queen_argynnis_bio
 	}
 	text = {
 		trigger = {
-			check_variable = { selected_cartel = 1 }
+			check_variable = { PT_selected_queen = 1 }
 		}
 		localization_key = PT_CCN_queen_yaria_bio
 	}
 	text = {
 		trigger = {
-			check_variable = { selected_cartel = 2 }
+			check_variable = { PT_selected_queen = 2 }
 		}
 		localization_key = PT_CCN_queen_aurantia_bio
 	}
 	text = {
 		trigger = {
-			check_variable = { selected_cartel = 3 }
+			check_variable = { PT_selected_queen = 3 }
 		}
 		localization_key = PT_CCN_queen_helvia_bio
 	}
 	#text = {
 	#	trigger = {
-	#		check_variable = { selected_cartel = 4 }
+	#		check_variable = { PT_selected_queen = 4 }
 	#	}
 	#	localization_key = TRO_CTH_zuan_abizaal_bio
 	#}

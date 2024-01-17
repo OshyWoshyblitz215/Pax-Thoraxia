@@ -127,3 +127,27 @@ country_event = { #Ditrysium breakaway CHN
 		name = ptcivilwar.10.a
 	}
 }
+country_event = { #Commies breakaway CCN
+	id = ptcivilwar.11
+	immediate = {log = "[GetDateText]: [Root.GetName]: event ptcivilwar.11"}
+	title = ptcivilwar.11.t
+	desc = ptcivilwar.11.desc
+	picture = GFX_event_swarm
+    is_triggered_only = yes
+
+	option = { #Ok
+		name = ptcivilwar.11.a
+	}
+}
+country_event = { #Commies breakaway CHN
+	id = ptcivilwar.12
+	immediate = {log = "[GetDateText]: [Root.GetName]: event ptcivilwar.12"}
+	title = ptcivilwar.12.t
+	desc = ptcivilwar.12.desc
+	picture = GFX_event_swarm
+    is_triggered_only = yes
+
+	option = { #Ok
+		name = ptcivilwar.12.a
+	}
+}

@@ -24,7 +24,7 @@ PT_CCN_civil_war_deccat = {
 		}
 	}
 	visible = {
-		has_global_flag = PT_changeling_civil_war
+		has_global_flag = PT_changeling_civil_war_ongoing
 	}
 	priority = {
 		base = 160
