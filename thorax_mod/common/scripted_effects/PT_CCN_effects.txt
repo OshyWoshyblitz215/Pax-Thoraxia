@@ -5,13 +5,7 @@ PT_CCN_activate_queen_alignment = {
 	clear_array = TRO_drugs_dummy_midsection
 	add_to_array = { TRO_drugs_dummy_midsection = 0 }
 	
-	clear_array = TRO_drugs_friendly_power_status
 	clear_array = TRO_drugs_friendly_relations_status
-	resize_array = {
-		array = TRO_drugs_friendly_power_status
-		value = 0
-		size = 5
-	}
 	resize_array = {
 		array = TRO_drugs_friendly_relations_status
 		value = 0
@@ -19,7 +13,7 @@ PT_CCN_activate_queen_alignment = {
 	}
 	
 	clear_array = TRO_drugs_enemy_influence_status
-	clear_array = TRO_drugs_enemy_control_status
+	clear_array = PT_CCN_queen_power_status
 	clear_array = TRO_drugs_enemy_aggression_status
 	resize_array = {
 		array = TRO_drugs_enemy_influence_status
@@ -27,7 +21,7 @@ PT_CCN_activate_queen_alignment = {
 		size = 5
 	}
 	resize_array = {
-		array = TRO_drugs_enemy_control_status
+		array = PT_CCN_queen_power_status
 		value = 0
 		size = 5
 	}

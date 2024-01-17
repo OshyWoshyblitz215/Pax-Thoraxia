@@ -64,17 +64,16 @@ focus_tree = {
 				}
 			}
 		}
-		select_effect = {			
-			322 = {
-				set_demilitarized_zone = yes
-			}
-			320 = {
-				set_demilitarized_zone = yes
-			} 
-			319 = {
-				set_demilitarized_zone = yes
-			}
-			323 = {
+		select_effect = {	
+			every_state = {
+				limit = {
+					OR = {
+						state = 323
+						state = 322
+						state = 320
+						state = 319
+					}
+				}
 				set_demilitarized_zone = yes
 			}
 		}

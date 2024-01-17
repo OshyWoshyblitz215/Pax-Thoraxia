@@ -29,7 +29,6 @@ spriteTypes = {
 		texturefile2 = "gfx/interface/blank.dds"
 		size = { x = 404 y = 36 }
 		effectfile = "gfx/FX/progress.lua"
-		steps = 360
 	}
 	progressbartype = {		
 		name = "GFX_PT_CCN_queens_bar_power_0"

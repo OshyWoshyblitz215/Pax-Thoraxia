@@ -14,10 +14,27 @@ PT_CCN_Start_Civil_War = {
 		}
 		CCN = {
 			transfer_technology = yes
-			transfer_state = 322
-			transfer_state = 320 
-			transfer_state = 319
-			transfer_state = 323
+			every_state = {
+				if = {
+					limit = { has_state_flag = PT_thorax_rebel_state }
+					transfer_state_to = CCN 
+				}
+			}
+			#transfer_state = 322
+			#transfer_state = 320 
+			#transfer_state = 319
+			#transfer_state = 323				
+			every_state = {
+				limit = {
+					OR = {
+						state = 323
+						state = 322
+						state = 320
+						state = 319
+					}
+				}
+				transfer_state_to = CCN
+			}
 		}
 		transfer_units_fraction = {
 			target = CCN
@@ -65,16 +82,18 @@ PT_civil_war_vraks_independence = {
 	CHN = {
 		VRK = {
 			transfer_technology = yes
-			transfer_state = 259
-			transfer_state = 250 
 		}
-		259 = {
+		every_state = {
+			limit = {
+				OR = {
+					state = 259
+					state = 258
+					state = 307
+				}
+			}
+			transfer_state_to = VRK
 			add_core_of = VRK
 		}
-		250 = {
-			add_core_of = VRK
-		}
-		end_puppet = VRK
 		log = "[GetDateText]: Vraks broke away!"
 	}
 	CCN = {
@@ -82,7 +101,7 @@ PT_civil_war_vraks_independence = {
 		add_to_array = { TRO_cartel_action_option = 2 }
 		set_variable = { selected_cartel_action_option = 2 }
 		set_variable = { TRO_drugs_enemy_influence_status^0 = 65 }
-		set_variable = { TRO_drugs_enemy_control_status^0 = 85 }
+		set_variable = { PT_CCN_queen_power_status^0 = 80 }
 		set_variable = { TRO_drugs_enemy_aggression_status^0 = 25 }
 		
 		add_to_array = { TRO_cartel_array = 0 }
@@ -94,23 +113,24 @@ PT_civil_war_soryth_independence = {
 	CHN = {
 		SRT = {
 			transfer_technology = yes
-			transfer_state = 262
-			transfer_state = 315
 		}
-		262 = {
+		every_state = {
+			limit = {
+				OR = { 
+					state = 262
+					state = 315
+				}
+			}
+			transfer_state_to = SRT
 			add_core_of = SRT
 		}
-		315 = {
-			add_core_of = SRT
-		}
-		end_puppet = SRT
 		log = "[GetDateText]: Soryth broke away!"
 	}
 	CCN = {
 		add_to_array = { TRO_cartel_action_option = 2 }
 		set_variable = { selected_cartel_action_option = 2 }
 		set_variable = { TRO_drugs_enemy_influence_status^1 = 85 }
-		set_variable = { TRO_drugs_enemy_control_status^1 = 70 }
+		set_variable = { PT_CCN_queen_power_status^1 = 70 }
 		set_variable = { TRO_drugs_enemy_aggression_status^1 = 20 }
 		
 		add_to_array = { TRO_cartel_array = 1 }
@@ -122,23 +142,26 @@ PT_civil_war_lyctida_independence = {
 	CHN = {
 		LCD = {
 			transfer_technology = yes
-			transfer_state = 260
-			transfer_state = 309 
 		}
-		260 = {
+		every_state = {
+			limit = {
+				OR = {
+					state = 309
+					state = 260
+					state = 308
+					state = 303
+				}
+			}
+			transfer_state_to = LCD
 			add_core_of = LCD
 		}
-		309 = {
-			add_core_of = LCD
-		}
-		end_puppet = LCD
 		log = "[GetDateText]: Lyctida broke away!"
 	}
 	CCN = {	
 		add_to_array = { TRO_cartel_action_option = 2 }
 		set_variable = { selected_cartel_action_option = 2 }
 		set_variable = { TRO_drugs_enemy_influence_status^2 = 30 }
-		set_variable = { TRO_drugs_enemy_control_status^2 = 20 }
+		set_variable = { PT_CCN_queen_power_status^2 = 60 }
 		set_variable = { TRO_drugs_enemy_aggression_status^2 = 40 }
 		
 		add_to_array = { TRO_cartel_array = 2 }
@@ -150,12 +173,17 @@ PT_civil_war_ditrysium_independence = {
 	CHN = {
 		DTR = {
 			transfer_technology = yes
-			transfer_state = 252
 		}
-		252 = {
+		every_state = {
+			limit = {
+				OR = {
+					state = 252
+					state = 304
+				}
+			}
+			transfer_state_to = DTR
 			add_core_of = DTR
 		}
-		end_puppet = DTR		
 		log = "[GetDateText]: Ditrysium broke away!"
 		transfer_navy = {
 			target = DTR
@@ -165,7 +193,7 @@ PT_civil_war_ditrysium_independence = {
 		add_to_array = { TRO_cartel_action_option = 2 }
 		set_variable = { selected_cartel_action_option = 2 }
 		set_variable = { TRO_drugs_enemy_influence_status^3 = 60 }
-		set_variable = { TRO_drugs_enemy_control_status^3 = 20 }
+		set_variable = { PT_CCN_queen_power_status^3 = 50 }
 		set_variable = { TRO_drugs_enemy_aggression_status^3 = 70 }
 		
 		add_to_array = { TRO_cartel_array = 3 }
@@ -204,19 +232,15 @@ PT_civil_war_chrisie_victory = {
 }
 PT_civil_war_change_queen_mode = {		
 	set_variable = { TRO_cartel_action_option^0 = 1 }
-	set_variable = { TRO_drugs_friendly_power_status^0 = var:TRO_drugs_enemy_control_status^0 }
 	set_variable = { TRO_drugs_friendly_relations_status^0 = var:TRO_drugs_enemy_influence_status^0 }	
 	
 	set_variable = { TRO_cartel_action_option^1 = 1 }
-	set_variable = { TRO_drugs_friendly_power_status^1 = var:TRO_drugs_enemy_control_status^1 }
 	set_variable = { TRO_drugs_friendly_relations_status^1 = var:TRO_drugs_enemy_influence_status^1 }
 	
 	set_variable = { TRO_cartel_action_option^2 = 1 }
-	set_variable = { TRO_drugs_friendly_power_status^2 = var:TRO_drugs_enemy_control_status^2 }
 	set_variable = { TRO_drugs_friendly_relations_status^2 = var:TRO_drugs_enemy_influence_status^2 }
 	
 	set_variable = { TRO_cartel_action_option^3 = 1 }
-	set_variable = { TRO_drugs_friendly_power_status^3 = var:TRO_drugs_enemy_control_status^3 }
 	set_variable = { TRO_drugs_friendly_relations_status^3 = var:TRO_drugs_enemy_influence_status^3 }		
 	
 	set_variable = { selected_cartel_action_option = 1 }

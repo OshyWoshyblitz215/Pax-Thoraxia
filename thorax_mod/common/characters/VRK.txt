@@ -10,21 +10,25 @@ characters={
 			expire = "1965.1.1"
 			ideology = nazism
 			desc = PT_CCN_queen_argynnis_bio
+			id=-1
 		}		
 		country_leader = {
 			expire = "1965.1.1"
 			ideology = juche
 			desc = PT_CCN_queen_argynnis_bio
+			id=-1
 		}
 		country_leader = {
 			expire = "1965.1.1"
 			ideology = conservatism
 			desc = PT_CCN_queen_argynnis_bio
+			id=-1
 		}
 		country_leader = {
 			expire = "1965.1.1"
 			ideology = despotism
 			desc = PT_CCN_queen_argynnis_bio
+			id=-1
 		}			
 	}
 }

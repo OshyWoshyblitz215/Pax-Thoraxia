@@ -393,14 +393,14 @@ PT_CCN_queens_button_entry_disabled_tt: "[PT_CCN_queens_folder_tt] has already b
 PT_CCN_queens_name: "§Y[PT_CCN_selected_queen_name]§!\nLeader of the [PT_CCN_selected_queendom]"
 PT_CCN_queens_leader_bio: "[PT_CCN_selected_queen_bio]"
 
-PT_CCN_queens_friendly_header_1: "[PT_CCN_selected_queendom] Power: [?TRO_drugs_friendly_power_status^selected_cartel|Y2]"
+PT_CCN_queens_friendly_header_1: "[PT_CCN_selected_queendom] Power: [?PT_CCN_queen_power_status^selected_cartel|Y2]"
 PT_CCN_queens_friendly_header_1_tt: "§YCartel Power§!\nThis value indicates how much the [PT_CCN_selected_queendom] can project their power and influence across their controlled territories. §RHaving terrible relations with a powerful cartel will not end well for us.§!"
 PT_CCN_queens_friendly_header_2: "Relations: [?TRO_drugs_friendly_relations_status^selected_cartel|Y2]"
 PT_CCN_queens_friendly_header_2_tt: "§YRelations§!\nThis value indicates how much the [PT_CCN_selected_queendom] put their trust in §YGerza§! in managing good relations with them. §RHaving good relations with a weak cartel will not yield a good return.§!"
 
 PT_CCN_queens_enemy_text_left: "Rel.\n[?TRO_drugs_enemy_influence_status^selected_cartel|Y2]"
 PT_CCN_queens_enemy_text_left_tt: "§Relation§!\nThis value indicates how much sway the [PT_CCN_selected_queendom] has on dealings with the national government. With our standing against this cartel, they will certainly use it against us."
-PT_CCN_queens_enemy_text_right: "Power\n[?TRO_drugs_enemy_control_status^selected_cartel|Y2]"
+PT_CCN_queens_enemy_text_right: "Power\n[?PT_CCN_queen_power_status^selected_cartel|Y2]"
 PT_CCN_queens_enemy_text_right_tt: "§Power§!\nThis value determines how much power they are able to exert on a local level, usually with provincial authorities and governors."
 PT_CCN_queens_enemy_text_aggression: "Alignment: [?TRO_drugs_enemy_aggression_status^selected_cartel|Y2]"
 PT_CCN_queens_enemy_text_aggression_tt: "§RAlignment§!\nThis value is indicative of a cartel's willingness to carry out open attacks against our assets, as well as how bold they are at doing them."

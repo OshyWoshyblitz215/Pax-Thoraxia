@@ -127,7 +127,7 @@ guiTypes = {
 			name = "power_bar_container"
 			position = { x = 44 y = 30 }
 			iconType = {
-				name = "power_bar"
+				name = "power_bar_fix"
 				quadtexturesprite = "GFX_PT_CCN_queens_bar_power_0"
 				position = { x = 6 y = 5 }
 				alwaystransparent = yes

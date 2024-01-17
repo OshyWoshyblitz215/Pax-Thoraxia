@@ -83,7 +83,7 @@ scripted_gui = {
 					
 					# Right curve, "Control" | c_frame = -1.2x + 150 | where x is 0-100 value, I_frame is 150-30 value (reversed)
 					
-					set_temp_variable = { c_frame = TRO_drugs_enemy_control_status^selected_cartel }
+					set_temp_variable = { c_frame = PT_CCN_queen_power_status^selected_cartel }
 					multiply_temp_variable = { c_frame = -1.2 }
 					add_to_temp_variable = { c_frame = 150 }
 				}
@@ -93,9 +93,9 @@ scripted_gui = {
 			queen_portrait = { image = "GFX_PT_CCN_queens_portrait_[?selected_cartel]" }
 			
 			# Friendly
-			power_bar = {
+			power_bar_fix = {
 				image = "GFX_PT_CCN_queens_bar_power_[?selected_cartel]"
-				frame = TRO_drugs_friendly_power_status^selected_cartel
+				frame = PT_CCN_queen_power_status^selected_cartel
 			}
 			relations_bar = {
 				frame = TRO_drugs_friendly_relations_status^selected_cartel

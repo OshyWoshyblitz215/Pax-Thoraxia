@@ -20,6 +20,142 @@ PT_CCN_queens_deccat = {
 			
 		}
 	}
+	PT_CCN_add_power_10_0 = {
+		icon = GFX_decision_rifles
+		allowed = { original_tag = CCN }
+		visible = {
+			#check_variable = { TRO_cartel_action_option^selected_cartel = 2 }
+			check_variable = { selected_cartel = 0 }
+		}
+		available = {
+		}
+		cost = 0
+		complete_effect = {
+			add_to_variable = {
+				var = PT_CCN_queen_power_status^0
+				value = 10
+			}
+		}
+	}
+	PT_CCN_add_power_10_1 = {
+		icon = GFX_decision_rifles
+		allowed = { original_tag = CCN }
+		visible = {
+			#check_variable = { TRO_cartel_action_option^selected_cartel = 2 }
+			check_variable = { selected_cartel = 1 }
+		}
+		available = {
+		}
+		cost = 0
+		complete_effect = {
+			add_to_variable = {
+				var = PT_CCN_queen_power_status^1
+				value = 10
+			}
+		}
+	}
+	PT_CCN_add_power_10_2 = {
+		icon = GFX_decision_rifles
+		allowed = { original_tag = CCN }
+		visible = {
+			#check_variable = { TRO_cartel_action_option^selected_cartel = 2 }
+			check_variable = { selected_cartel = 2 }
+		}
+		available = {
+		}
+		cost = 0
+		complete_effect = {
+			add_to_variable = {
+				var = PT_CCN_queen_power_status^2
+				value = 10
+			}
+		}
+	}
+	PT_CCN_add_power_10_3 = {
+		icon = GFX_decision_rifles
+		allowed = { original_tag = CCN }
+		visible = {
+			#check_variable = { TRO_cartel_action_option^selected_cartel = 2 }
+			check_variable = { selected_cartel = 3 }
+		}
+		available = {
+		}
+		cost = 0
+		complete_effect = {
+			add_to_variable = {
+				var = PT_CCN_queen_power_status^3
+				value = 10
+			}
+		}
+	}
+	PT_CCN_remove_power_10_0 = {
+		icon = GFX_decision_rifles
+		allowed = { original_tag = CCN }
+		visible = {
+			#check_variable = { TRO_cartel_action_option^selected_cartel = 2 }
+			check_variable = { selected_cartel = 0 }
+		}
+		available = {
+		}
+		cost = 0
+		complete_effect = {
+			subtract_from_variable = {
+				var = PT_CCN_queen_power_status^0
+				value = 10
+			}
+		}
+	}
+	PT_CCN_remove_power_10_1 = {
+		icon = GFX_decision_rifles
+		allowed = { original_tag = CCN }
+		visible = {
+			#check_variable = { TRO_cartel_action_option^selected_cartel = 2 }
+			check_variable = { selected_cartel = 1 }
+		}
+		available = {
+		}
+		cost = 0
+		complete_effect = {
+			subtract_from_variable = {
+				var = PT_CCN_queen_power_status^1
+				value = 10
+			}
+		}
+	}
+	PT_CCN_remove_power_10_2 = {
+		icon = GFX_decision_rifles
+		allowed = { original_tag = CCN }
+		visible = {
+			#check_variable = { TRO_cartel_action_option^selected_cartel = 2 }
+			check_variable = { selected_cartel = 2 }
+		}
+		available = {
+		}
+		cost = 0
+		complete_effect = {
+			subtract_from_variable = {
+				var = PT_CCN_queen_power_status^2
+				value = 10
+			}
+		}
+	}
+	PT_CCN_remove_power_10_3 = {
+		icon = GFX_decision_rifles
+		allowed = { original_tag = CCN }
+		visible = {
+			#check_variable = { TRO_cartel_action_option^selected_cartel = 2 }
+			check_variable = { selected_cartel = 3 }
+		}
+		available = {
+		}
+		cost = 0
+		complete_effect = {
+			subtract_from_variable = {
+				var = PT_CCN_queen_power_status^3
+				value = 10
+			}
+		}
+	}
 }
 
 PT_CCN_civil_war_deccat = {	
@@ -138,10 +274,11 @@ PT_CCN_civil_war_deccat = {
 			hidden_trigger = { always = no }
 		}
 		highlight_states = {
-			highlight_state_targets = {
+			highlight_state_targets = {		
 				state = 259
-				state = 250
-			}
+				state = 258
+				state = 307
+			}			
 			highlight_color_while_active = 2
 		}
 		cancel_if_not_visible = yes
@@ -247,6 +384,8 @@ PT_CCN_civil_war_deccat = {
 			highlight_state_targets = {
 				state = 260
 				state = 309
+				state = 308
+				state = 303
 			}
 			highlight_color_while_active = 2
 		}
@@ -299,6 +438,7 @@ PT_CCN_civil_war_deccat = {
 		highlight_states = {
 			highlight_state_targets = {
 				state = 252
+				state = 304
 			}
 			highlight_color_while_active = 2
 		}
