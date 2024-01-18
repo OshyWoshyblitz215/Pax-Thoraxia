@@ -129,6 +129,7 @@ add_tech_bonus = {
 	technology = CAS1
 }
 
+recruit_character = PT_CCN_queen_argynnis
 
 set_convoys = 0
 set_popularities = {
@@ -164,7 +165,6 @@ set_stability = 0.6
 set_country_flag = PT_changeling_lands_country
 #Generals and Leaders
 
-recruit_character = PT_CCN_queen_argynnis
 set_rule = {
 	can_generate_female_aces = yes
 }

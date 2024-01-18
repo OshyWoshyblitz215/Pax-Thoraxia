@@ -24,12 +24,12 @@ defined_text = { #Selected queendom main text
 		}
 		localization_key = PT_CCN_queendom_distryum_name
 	}
-	#text = {
-	#	trigger = {
-	#		check_variable = { PT_selected_queen = 4 }
-	#	}
-	#	localization_key = TRO_CTH_abizaal_syndicate
-	#}
+	text = {
+		trigger = {
+			check_variable = { PT_selected_queen = 4 }
+		}
+		localization_key = PT_CCN_queendom_commies_name
+	}
 }
 
 defined_text = { #Selected Queendom Description
@@ -58,46 +58,46 @@ defined_text = { #Selected Queendom Description
 		}
 		localization_key = PT_CCN_queendom_distryum_desc
 	}
-	#text = {
-	#	trigger = {
-	#		check_variable = { PT_selected_queen = 4 }
-	#	}
-	#	localization_key = TRO_CTH_abizaal_syndicate_desc
-	#}
+	text = {
+		trigger = {
+			check_variable = { PT_selected_queen = 4 }
+		}
+		localization_key = PT_CCN_queendom_commies_desc
+	}
 }
 
 defined_text = { #Select queendom button tooltip
 	name = PT_CCN_queens_folder_tt
 	text = {
 		trigger = {
-			check_variable = { cartel_id = 0 }
+			check_variable = { PT_selected_queen = 0 }
 		}
 		localization_key = PT_CCN_queen_argynnis_full
 	}
 	text = {
 		trigger = {
-			check_variable = { cartel_id = 1 }
+			check_variable = { PT_selected_queen = 1 }
 		}
 		localization_key = PT_CCN_queen_yaria_full
 	}
 	text = {
 		trigger = {
-			check_variable = { cartel_id = 2 }
+			check_variable = { PT_selected_queen = 2 }
 		}
 		localization_key = PT_CCN_queen_aurantia_full
 	}
 	text = {
 		trigger = {
-			check_variable = { cartel_id = 3 }
+			check_variable = { PT_selected_queen = 3 }
 		}
 		localization_key = PT_CCN_queen_helvia_full
 	}
-	#text = {
-	#	trigger = {
-	#		check_variable = { cartel_id = 4 }
-	#	}
-	#	localization_key = TRO_CTH_abizaal_syndicate
-	#}
+	text = {
+		trigger = {
+			check_variable = { PT_selected_queen = 4 }
+		}
+		localization_key = PT_CCN_queen_muffin_full
+	}
 }
 
 defined_text = { #Queen profile name
@@ -126,12 +126,12 @@ defined_text = { #Queen profile name
 		}
 		localization_key = PT_CCN_queen_helvia_name
 	}
-	#text = {
-	#	trigger = {
-	#		check_variable = { PT_selected_queen = 4 }
-	#	}
-	#	localization_key = TRO_CTH_zuan_abizaal
-	#}
+	text = {
+		trigger = {
+			check_variable = { PT_selected_queen = 4 }
+		}
+		localization_key = PT_CCN_queen_muffin_name
+	}
 }
 
 defined_text = { #Queen bio
@@ -160,90 +160,10 @@ defined_text = { #Queen bio
 		}
 		localization_key = PT_CCN_queen_helvia_bio
 	}
-	#text = {
-	#	trigger = {
-	#		check_variable = { PT_selected_queen = 4 }
-	#	}
-	#	localization_key = TRO_CTH_zuan_abizaal_bio
-	#}
+	text = {
+		trigger = {
+			check_variable = { PT_selected_queen = 4 }
+		}
+		localization_key = PT_CCN_queen_muffin_bio
+	}
 }
-
-#defined_text = {
-#	name = TRO_drugs_map_entry_cartel_tt
-#	text = {
-#		trigger = {
-#			check_variable = { map_id:TRO_drugs_ruling_cartel = 0 }
-#		}
-#		localization_key = TRO_CTH_tiger_syndicate
-#	}
-#	text = {
-#		trigger = {
-#			check_variable = { map_id:TRO_drugs_ruling_cartel = 1 }
-#		}
-#		localization_key = TRO_CTH_zaga_brothers
-#	}
-#	text = {
-#		trigger = {
-#			check_variable = { map_id:TRO_drugs_ruling_cartel = 2 }
-#		}
-#		localization_key = TRO_CTH_zapsa_syndicate
-#	}
-#	text = {
-#		trigger = {
-#			check_variable = { map_id:TRO_drugs_ruling_cartel = 3 }
-#		}
-#		localization_key = TRO_CTH_zurumilki
-#	}
-#	text = {
-#		trigger = {
-#			check_variable = { map_id:TRO_drugs_ruling_cartel = 4 }
-#		}
-#		localization_key = TRO_CTH_abizaal_syndicate
-#	}
-#	text = {
-#		trigger = {
-#			check_variable = { map_id:TRO_drugs_ruling_cartel = 5 }
-#		}
-#		localization_key = TRO_CTH_government_long
-#	}
-#}
-#
-#defined_text = {
-#	name = TRO_drugs_CET
-#	text = {
-#		trigger = {
-#			check_variable = { temp_idx = 0 }
-#		}
-#		localization_key = TRO_CTH_tiger_syndicate
-#	}
-#	text = {
-#		trigger = {
-#			check_variable = { temp_idx = 1 }
-#		}
-#		localization_key = TRO_CTH_zaga_brothers
-#	}
-#	text = {
-#		trigger = {
-#			check_variable = { temp_idx = 2 }
-#		}
-#		localization_key = TRO_CTH_zapsa_syndicate
-#	}
-#	text = {
-#		trigger = {
-#			check_variable = { temp_idx = 3 }
-#		}
-#		localization_key = TRO_CTH_zurumilki
-#	}
-#	text = {
-#		trigger = {
-#			check_variable = { temp_idx = 4 }
-#		}
-#		localization_key = TRO_CTH_abizaal_syndicate
-#	}
-#	text = {
-#		trigger = {
-#			check_variable = { temp_idx = 5 }
-#		}
-#		localization_key = TRO_CTH_government
-#	}
-#}

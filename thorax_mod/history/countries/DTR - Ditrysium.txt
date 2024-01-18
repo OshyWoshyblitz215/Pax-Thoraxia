@@ -129,6 +129,7 @@ add_tech_bonus = {
 	technology = CAS1
 }
 
+recruit_character = PT_CCN_queen_helvia
 
 set_convoys = 20
 set_popularities = {
@@ -166,7 +167,6 @@ set_country_flag = PT_changeling_lands_country
 
 #Generals and Leaders
 
-recruit_character = PT_CCN_queen_helvia
 set_rule = {
 	can_generate_female_aces = yes
 }

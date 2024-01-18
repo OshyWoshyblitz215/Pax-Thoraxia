@@ -248,15 +248,15 @@ PT_civil_war_commies_independence = {
 		log = "[GetDateText]: North Changeling commies broke away!"
 	}
 	CCN = {
-		#add_to_array = { PT_queen_stage_option = 2 }
-		#set_variable = { PT_selected_queen_action_option = 2 }
-		#set_variable = { PT_CCN_queen_relation_status^3 = 60 }
-		#set_variable = { PT_CCN_queen_power_status^3 = 50 }
-		#set_variable = { PT_CCN_queen_alignment_status^3 = 70 }
-		#
-		#add_to_array = { PT_CCN_queen_array = 3 }
-		#set_variable = { PT_selected_queen = 3 }
-		#add_to_variable = { PT_CCN_queen_dirty_bit = 0.001 }
+		add_to_array = { PT_queen_stage_option = 2 }
+		set_variable = { PT_selected_queen_action_option = 2 }
+		set_variable = { PT_CCN_queen_relation_status^4 = 40 }
+		set_variable = { PT_CCN_queen_power_status^4 = 60 }
+		set_variable = { PT_CCN_queen_alignment_status^4 = 70 }
+		
+		add_to_array = { PT_CCN_queen_array = 4 }
+		set_variable = { PT_selected_queen = 4 }
+		add_to_variable = { PT_CCN_queen_dirty_bit = 0.001 }
 	}
 }
 
