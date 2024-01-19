@@ -70,10 +70,11 @@ PT_CCN_Start_Civil_War = {
 		}		
 		activate_mission = PT_civil_war_escalation_0
 	}
-	set_global_flag = PT_changeling_civil_war_ongoing
 	CCN = {
 		activate_mission = PT_civil_war_escalation_0
 	}
+	set_global_flag = PT_changeling_civil_war_ongoing	
+	news_event = { id = ptnews.1 days = 1 }
 	log = "[GetDateText]: Thoraxian Civil War Started!!"
 }
 

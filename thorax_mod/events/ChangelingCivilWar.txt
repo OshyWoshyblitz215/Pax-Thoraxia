@@ -1,5 +1,38 @@
 add_namespace = ptcivilwar
+add_namespace = ptnews
 
+news_event = { # Civil war news
+	id = ptnews.1
+	immediate = {log = "[GetDateText]: [Root.GetName]: event ptnews.1"}
+	title = ptnews.1.t
+	desc = ptnews.1.desc
+	picture = GFX_news_pt_civil_war_black_and_white
+
+	major = yes
+	is_triggered_only = yes
+	option = {
+		name = ptnews.1.a
+		trigger = {
+			NOT = { 
+				original_tag = CCN
+				original_tag = CHN
+			}
+		}
+	}
+	option = {
+		name = ptnews.1.b
+		trigger = {
+			original_tag = CHN
+			
+		}
+	}
+	option = {
+		name = ptnews.1.c
+		trigger = {
+			original_tag = CCN
+		}
+	}
+}
 country_event = { #Civil war escalation 0 CCN
 	id = ptcivilwar.1
 	immediate = {log = "[GetDateText]: [Root.GetName]: event ptcivilwar.1"}
