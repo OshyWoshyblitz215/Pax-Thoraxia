@@ -14,8 +14,11 @@ news_event = { # Civil war news
 		name = ptnews.1.a
 		trigger = {
 			NOT = { 
-				original_tag = CCN
-				original_tag = CHN
+				OR = {
+					original_tag = CCN
+					original_tag = CHN
+					has_government = democracy
+				}
 			}
 		}
 	}
@@ -30,6 +33,18 @@ news_event = { # Civil war news
 		name = ptnews.1.c
 		trigger = {
 			original_tag = CCN
+		}
+	}
+	option = {
+		name = ptnews.1.d
+		trigger = {
+			NOT = { 
+				OR = {
+					original_tag = CCN
+					original_tag = CHN
+				}
+			}
+			has_government = democracy
 		}
 	}
 }
