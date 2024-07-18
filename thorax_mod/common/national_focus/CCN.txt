@@ -8,7 +8,7 @@ focus_tree = {
 		}
 	}
 	default = no
-	continuous_focus_position = { x = 1900 y = 0 }
+	continuous_focus_position = { x = 2700 y = 0 }
 	#focus = {
 	#	id = PT_CCN_
 	#	icon = GFX_focus_generic_support_the_left_right
@@ -30,461 +30,554 @@ focus_tree = {
 	###################
 	#####CIVIL WAR#####
 	###################
-	focus = {
-		id = PT_CCN_unplanned_rising
-		icon = GFX_goal_news
-		x = 2
+    focus = {
+		id = PT_CCN_war_for_liberation
+		icon = GFX_goal_chn_harmony
+		cost = 3
+		x = 10
 		y = 0
-		#relative_position_id = 
-
-		available = { }
-		bypass = { }
-
-		cost = 10
-		#prerequisite = { focus =  }
-		#mutually_exclusive = { focus =  }
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		bypass = yes
+		#relative_position_id = PT_CCN_
+		ai_will_do = { factor = 100 }
 		available_if_capitulated = no
+		#prerequisite = { focus = PT_CCN_ }
 
-		completion_reward = { 
-			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_unplanned_rising"
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_war_for_liberation"
 		}
-		#complete_tooltip = { }
-
-		ai_will_do = { factor = 1000 }
-	}	
-	focus = {
-		id = PT_CCN_news_from_phantine
-		icon = GFX_goal_news
+	}
+    focus = {
+		id = PT_CCN_fight_for_whats_right
+		icon = GFX_goal_chn_harmony
+		cost = 3
 		x = 0
 		y = 1
-		relative_position_id = PT_CCN_unplanned_rising
-
-		available = { }
-		bypass = { }
-
-		cost = 10
-		prerequisite = { focus = PT_CCN_unplanned_rising }
-		#mutually_exclusive = { focus =  }
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		relative_position_id = PT_CCN_war_for_liberation
+		ai_will_do = { factor = 100 }
 		available_if_capitulated = no
+		prerequisite = { focus = PT_CCN_war_for_liberation }
 
-		completion_reward = { 
-			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_news_from_phantine"
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_fight_for_whats_right"
 		}
-		#complete_tooltip = { }
+	}
+    focus = {
+		id = PT_CCN_establish_new_workshops
+		icon = GFX_goal_chn_harmony
+		cost = 3
+		x = -9
+		y = 1
+		relative_position_id = PT_CCN_fight_for_whats_right
+		ai_will_do = { factor = 100 }
+		available_if_capitulated = no
+		prerequisite = { focus = PT_CCN_fight_for_whats_right }
 
-		ai_will_do = { factor = 1000 }
-	}	
-	
-	focus = {
-		id = PT_CCN_we_must_fight
-		icon = GFX_goal_news
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_establish_new_workshops"
+		}
+	}
+    focus = {
+		id = PT_CCN_revitalize_antax_factories
+		icon = GFX_goal_chn_harmony
+		cost = 7
 		x = -1
 		y = 1
-		relative_position_id = PT_CCN_news_from_phantine
-
-		available = { }
-		bypass = { }
-
-		cost = 10
-		prerequisite = { focus = PT_CCN_news_from_phantine }
-		#mutually_exclusive = { focus =  }
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		relative_position_id = PT_CCN_establish_new_workshops
+		ai_will_do = { factor = 100 }
 		available_if_capitulated = no
+		prerequisite = { focus = PT_CCN_establish_new_workshops }
 
-		completion_reward = { 
-			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_we_must_fight"
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_revitalize_antax_factories"
 		}
-		#complete_tooltip = { }
-
-		ai_will_do = { factor = 1000 }
-	}	
-	focus = {
-		id = PT_CCN_true_friends_help_those_in_need
-		icon = GFX_goal_news
+	}
+    focus = {
+		id = PT_CCN_clean_rust_from_machines
+		icon = GFX_goal_chn_harmony
+		cost = 2
 		x = 1
 		y = 1
-		relative_position_id = PT_CCN_news_from_phantine
-
-		available = { }
-		bypass = { }
-
-		cost = 10
-		prerequisite = { focus = PT_CCN_news_from_phantine }
-		#mutually_exclusive = { focus =  }
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		relative_position_id = PT_CCN_establish_new_workshops
+		ai_will_do = { factor = 100 }
 		available_if_capitulated = no
+		prerequisite = { focus = PT_CCN_establish_new_workshops }
 
-		completion_reward = { 
-			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_true_friends_help_those_in_need"
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_clean_rust_from_machines"
 		}
-		#complete_tooltip = { }
-
-		ai_will_do = { factor = 1000 }
-	}	
-	focus = {
-		id = PT_CCN_mobilize_the_united_hives
-		icon = GFX_goal_news
-		x = -2
-		y = 2
-		relative_position_id = PT_CCN_news_from_phantine
-
-		available = { }
-		bypass = { }
-
-		cost = 10
-		prerequisite = { focus = PT_CCN_we_must_fight
-						 focus = PT_CCN_true_friends_help_those_in_need }
-		#mutually_exclusive = { focus =  }
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		completion_reward = { 
-			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_mobilize_the_united_hives"
-		}
-		#complete_tooltip = { }
-
-		ai_will_do = { factor = 1000 }
-	}	
-	focus = {
-		id = PT_CCN_occupy_old_forts
-		icon = GFX_goal_news
+	}
+    focus = {
+		id = PT_CCN_seek_aid_from_para_and_corps
+		icon = GFX_goal_chn_harmony
+		cost = 7
 		x = 0
 		y = 2
-		relative_position_id = PT_CCN_news_from_phantine
-
-		available = { }
-		bypass = { }
-
-		cost = 10
-		prerequisite = { focus = PT_CCN_we_must_fight
-						 focus = PT_CCN_true_friends_help_those_in_need }
-		#mutually_exclusive = { focus =  }
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		relative_position_id = PT_CCN_establish_new_workshops
+		ai_will_do = { factor = 100 }
 		available_if_capitulated = no
+		prerequisite = { focus = PT_CCN_revitalize_antax_factories }
+		prerequisite = { focus = PT_CCN_clean_rust_from_machines }
 
-		completion_reward = { 
-			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_occupy_old_forts"
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_seek_aid_from_para_and_corps"
 		}
-		#complete_tooltip = { }
+	}
+    focus = {
+		id = PT_CCN_reoccupy_old_forts
+		icon = GFX_goal_chn_harmony
+		cost = 3
+		x = -5
+		y = 1
+		relative_position_id = PT_CCN_fight_for_whats_right
+		ai_will_do = { factor = 100 }
+		available_if_capitulated = no
+		prerequisite = { focus = PT_CCN_fight_for_whats_right }
 
-		ai_will_do = { factor = 1000 }
-	}	
-	focus = {
-		id = PT_CCN_return_of_the_exiles
-		icon = GFX_goal_news
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_reoccupy_old_forts"
+		}
+	}
+    focus = {
+		id = PT_CCN_dig_up_new_fortifications
+		icon = GFX_goal_chn_harmony
+		cost = 7
+		x = -1
+		y = 1
+		relative_position_id = PT_CCN_reoccupy_old_forts
+		ai_will_do = { factor = 100 }
+		available_if_capitulated = no
+		prerequisite = { focus = PT_CCN_reoccupy_old_forts }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_dig_up_new_fortifications"
+		}
+	}
+    focus = {
+		id = PT_CCN_hidden_airfields
+		icon = GFX_goal_chn_harmony
+		cost = 7
+		x = -1
+		y = 1
+		relative_position_id = PT_CCN_dig_up_new_fortifications
+		ai_will_do = { factor = 100 }
+		available_if_capitulated = no
+		prerequisite = { focus = PT_CCN_dig_up_new_fortifications }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_hidden_airfields"
+		}
+	}
+    focus = {
+		id = PT_CCN_hidden_paths
+		icon = GFX_goal_chn_harmony
+		cost = 2
+		x = 0
+		y = 2
+		relative_position_id = PT_CCN_dig_up_new_fortifications
+		ai_will_do = { factor = 100 }
+		available_if_capitulated = no
+		prerequisite = { focus = PT_CCN_dig_up_new_fortifications }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_hidden_paths"
+		}
+	}
+    focus = {
+		id = PT_CCN_border_raids_into_queens_territory
+		icon = GFX_goal_chn_harmony
+		cost = 7
+		x = 1
+		y = 1
+		relative_position_id = PT_CCN_reoccupy_old_forts
+		ai_will_do = { factor = 100 }
+		available_if_capitulated = no
+		prerequisite = { focus = PT_CCN_reoccupy_old_forts }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_border_raids_into_queens_territory"
+		}
+	}
+    focus = {
+		id = PT_CCN_borrow_equipment_from_bears
+		icon = GFX_goal_chn_harmony
+		cost = 7
+		x = 0
+		y = 1
+		relative_position_id = PT_CCN_border_raids_into_queens_territory
+		ai_will_do = { factor = 100 }
+		available_if_capitulated = no
+		prerequisite = { focus = PT_CCN_border_raids_into_queens_territory }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_borrow_equipment_from_bears"
+		}
+	}
+    focus = {
+		id = PT_CCN_mobilize_hive_militia
+		icon = GFX_goal_chn_harmony
+		cost = 3
 		x = 2
-		y = 2
-		relative_position_id = PT_CCN_news_from_phantine
-
-		available = { }
-		bypass = { }
-
-		cost = 10
-		prerequisite = { focus = PT_CCN_we_must_fight
-						 focus = PT_CCN_true_friends_help_those_in_need }
-		#mutually_exclusive = { focus =  }
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		y = 1
+		relative_position_id = PT_CCN_fight_for_whats_right
+		ai_will_do = { factor = 100 }
 		available_if_capitulated = no
+		prerequisite = { focus = PT_CCN_fight_for_whats_right }
 
-		completion_reward = { 
-			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_return_of_the_exiles"
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_mobilize_hive_militia"
 		}
-		#complete_tooltip = { }
+	}
+    focus = {
+		id = PT_CCN_formulate_actual_army
+		icon = GFX_goal_chn_harmony
+		cost = 5
+		x = -3
+		y = 1
+		relative_position_id = PT_CCN_mobilize_hive_militia
+		ai_will_do = { factor = 100 }
+		available_if_capitulated = no
+		prerequisite = { focus = PT_CCN_mobilize_hive_militia }
+		mutually_exclusive = { focus = PT_CCN_maintain_militia_system }
 
-		ai_will_do = { factor = 1000 }
-	}	
-	focus = {
-		id = PT_CCN_it_is_now_or_never
-		icon = GFX_goal_news
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_formulate_actual_army"
+		}
+	}
+    focus = {
+		id = PT_CCN_convince_generals_to_join_our_side
+		icon = GFX_goal_chn_harmony
+		cost = 5
+		x = -1
+		y = 1
+		relative_position_id = PT_CCN_formulate_actual_army
+		ai_will_do = { factor = 100 }
+		available_if_capitulated = no
+		prerequisite = { focus = PT_CCN_formulate_actual_army }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_convince_generals_to_join_our_side"
+		}
+	}
+    focus = {
+		id = PT_CCN_aquire_arms_from_across_world
+		icon = GFX_goal_chn_harmony
+		cost = 5
+		x = 1
+		y = 1
+		relative_position_id = PT_CCN_formulate_actual_army
+		ai_will_do = { factor = 100 }
+		available_if_capitulated = no
+		prerequisite = { focus = PT_CCN_formulate_actual_army }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_aquire_arms_from_across_world"
+		}
+	}
+    focus = {
+		id = PT_CCN_aquire_heavy_equipment_and_attaches
+		icon = GFX_goal_chn_harmony
+		cost = 5
+		x = -1
+		y = 2
+		relative_position_id = PT_CCN_formulate_actual_army
+		ai_will_do = { factor = 100 }
+		available_if_capitulated = no
+		prerequisite = { focus = PT_CCN_convince_generals_to_join_our_side }
+		prerequisite = { focus = PT_CCN_aquire_arms_from_across_world }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_aquire_heavy_equipment_and_attaches"
+		}
+	}
+    focus = {
+		id = PT_CCN_establish_forest_hunters
+		icon = GFX_goal_chn_harmony
+		cost = 5
 		x = 0
+		y = 1
+		relative_position_id = PT_CCN_aquire_arms_from_across_world
+		ai_will_do = { factor = 100 }
+		available_if_capitulated = no
+		prerequisite = { focus = PT_CCN_aquire_arms_from_across_world }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_establish_forest_hunters"
+		}
+	}
+    focus = {
+		id = PT_CCN_convince_pharynx_to_join
+		icon = GFX_goal_chn_harmony
+		cost = 5
+		x = 0
+		y = 2
+		relative_position_id = PT_CCN_mobilize_hive_militia
+		ai_will_do = { factor = 100 }
+		available_if_capitulated = no
+		prerequisite = {
+			focus = PT_CCN_formulate_actual_army
+			focus = PT_CCN_maintain_militia_system
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_convince_pharynx_to_join"
+		}
+	}
+    focus = {
+		id = PT_CCN_maintain_militia_system
+		icon = GFX_goal_chn_harmony
+		cost = 5
+		x = 3
+		y = 1
+		relative_position_id = PT_CCN_mobilize_hive_militia
+		mutually_exclusive = { focus = PT_CCN_formulate_actual_army }
+		ai_will_do = { factor = 100 }
+		available_if_capitulated = no
+		prerequisite = { focus = PT_CCN_mobilize_hive_militia }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_maintain_militia_system"
+		}
+	}
+    focus = {
+		id = PT_CCN_sharpshooter_field_training
+		icon = GFX_goal_chn_harmony
+		cost = 5
+		x = -1
+		y = 1
+		relative_position_id = PT_CCN_maintain_militia_system
+		ai_will_do = { factor = 100 }
+		available_if_capitulated = no
+		prerequisite = { focus = PT_CCN_maintain_militia_system }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_sharpshooter_field_training"
+		}
+	}
+    focus = {
+		id = PT_CCN_establish_rebel_cells
+		icon = GFX_goal_chn_harmony
+		cost = 5
+		x = 0
+		y = 1
+		relative_position_id = PT_CCN_sharpshooter_field_training
+		ai_will_do = { factor = 100 }
+		available_if_capitulated = no
+		prerequisite = { focus = PT_CCN_sharpshooter_field_training }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_establish_rebel_cells"
+		}
+	}
+    focus = {
+		id = PT_CCN_promote_new_officers
+		icon = GFX_goal_chn_harmony
+		cost = 5
+		x = 1
+		y = 1
+		relative_position_id = PT_CCN_maintain_militia_system
+		ai_will_do = { factor = 100 }
+		available_if_capitulated = no
+		prerequisite = { focus = PT_CCN_maintain_militia_system }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_promote_new_officers"
+		}
+	}
+    focus = {
+		id = PT_CCN_secure_their_loyalty
+		icon = GFX_goal_chn_harmony
+		cost = 5
+		x = 0
+		y = 1
+		relative_position_id = PT_CCN_promote_new_officers
+		ai_will_do = { factor = 100 }
+		available_if_capitulated = no
+		prerequisite = { focus = PT_CCN_promote_new_officers }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_secure_their_loyalty"
+		}
+	}
+    focus = {
+		id = PT_CCN_scrounge_up_any_weapons
+		icon = GFX_goal_chn_harmony
+		cost = 5
+		x = 3
+		y = 1
+		relative_position_id = PT_CCN_maintain_militia_system
+		ai_will_do = { factor = 100 }
+		available_if_capitulated = no
+		prerequisite = { focus = PT_CCN_maintain_militia_system }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_scrounge_up_any_weapons"
+		}
+	}
+    focus = {
+		id = PT_CCN_gain_assistance_from_neighbours
+		icon = GFX_goal_chn_harmony
+		cost = 3
+		x = 12
+		y = 1
+		relative_position_id = PT_CCN_fight_for_whats_right
+		ai_will_do = { factor = 100 }
+		available_if_capitulated = no
+		prerequisite = { focus = PT_CCN_fight_for_whats_right }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_gain_assistance_from_neighbours"
+		}
+	}
+    focus = {
+		id = PT_CCN_visiting_queens
+		icon = GFX_goal_chn_harmony
+		cost = 5
+		x = -1
+		y = 1
+		relative_position_id = PT_CCN_gain_assistance_from_neighbours
+		ai_will_do = { factor = 100 }
+		available_if_capitulated = no
+		prerequisite = { focus = PT_CCN_gain_assistance_from_neighbours }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_visiting_queens"
+		}
+	}
+    focus = {
+		id = PT_CCN_gaining_favors
+		icon = GFX_goal_chn_harmony
+		cost = 5
+		x = -1
+		y = 1
+		relative_position_id = PT_CCN_visiting_queens
+		ai_will_do = { factor = 100 }
+		available_if_capitulated = no
+		prerequisite = { focus = PT_CCN_visiting_queens }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_gaining_favors"
+		}
+	}
+    focus = {
+		id = PT_CCN_informal_trade
+		icon = GFX_goal_chn_harmony
+		cost = 5
+		x = 1
+		y = 1
+		relative_position_id = PT_CCN_visiting_queens
+		ai_will_do = { factor = 100 }
+		available_if_capitulated = no
+		prerequisite = { focus = PT_CCN_visiting_queens }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_informal_trade"
+		}
+	}
+    focus = {
+		id = PT_CCN_red_question
+		icon = GFX_goal_chn_harmony
+		cost = 5
+		x = 1
 		y = 3
-		relative_position_id = PT_CCN_news_from_phantine
-
-		available = { }
-		bypass = { }
-
-		cost = 10
-		prerequisite = { focus = PT_CCN_mobilize_the_united_hives }
-		prerequisite = { focus = PT_CCN_return_of_the_exiles }
-		#mutually_exclusive = { focus =  }
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		relative_position_id = PT_CCN_gain_assistance_from_neighbours
+		ai_will_do = { factor = 100 }
 		available_if_capitulated = no
+		prerequisite = { focus = PT_CCN_gain_assistance_from_neighbours }
 
-		completion_reward = { 
-			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_it_is_now_or_never"
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_red_question"
 		}
-		#complete_tooltip = { }
-
-		ai_will_do = { factor = 1000 }
-	}	
-	focus = {
-		id = PT_CCN_desparate_defence
-		icon = GFX_goal_news
-		x = -2
+	}
+    focus = {
+		id = PT_CCN_form_united_front
+		icon = GFX_goal_chn_harmony
+		cost = 5
+		x = -1
 		y = 1
-		relative_position_id = PT_CCN_it_is_now_or_never
-
-		available = { }
-		bypass = { }
-
-		cost = 10
-		prerequisite = { focus = PT_CCN_it_is_now_or_never }
-		#mutually_exclusive = { focus =  }
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		relative_position_id = PT_CCN_red_question
+		ai_will_do = { factor = 100 }
 		available_if_capitulated = no
+		prerequisite = { focus = PT_CCN_red_question }
+		mutually_exclusive = { focus = PT_CCN_they_must_be_eliminated }
 
-		completion_reward = { 
-			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_desparate_defence"
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_form_united_front"
 		}
-		#complete_tooltip = { }
+	}
+    focus = {
+		id = PT_CCN_they_must_be_eliminated
+		icon = GFX_goal_chn_harmony
+		cost = 5
+		x = 1
+		y = 1
+		relative_position_id = PT_CCN_red_question
+		ai_will_do = { factor = 100 }
+		available_if_capitulated = no
+		prerequisite = { focus = PT_CCN_red_question }
+		mutually_exclusive = { focus = PT_CCN_form_united_front }
 
-		ai_will_do = { factor = 1000 }
-	}	
-	focus = {
-		id = PT_CCN_expertise_of_the_forest_lings
-		icon = GFX_goal_news
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_they_must_be_eliminated"
+		}
+	}
+    focus = {
+		id = PT_CCN_friends_in_high_places
+		icon = GFX_goal_chn_harmony
+		cost = 5
+		x = 3
+		y = 1
+		relative_position_id = PT_CCN_gain_assistance_from_neighbours
+		ai_will_do = { factor = 100 }
+		available_if_capitulated = no
+		prerequisite = { focus = PT_CCN_gain_assistance_from_neighbours }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_friends_in_high_places"
+		}
+	}
+    focus = {
+		id = PT_CCN_gather_aid_from_crystal_empire
+		icon = GFX_goal_chn_harmony
+		cost = 5
 		x = 0
 		y = 1
-		relative_position_id = PT_CCN_desparate_defence
-
-		available = { }
-		bypass = { }
-
-		cost = 10
-		prerequisite = { focus = PT_CCN_desparate_defence }
-		#mutually_exclusive = { focus =  }
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		relative_position_id = PT_CCN_friends_in_high_places
+		ai_will_do = { factor = 100 }
 		available_if_capitulated = no
+		prerequisite = { focus = PT_CCN_friends_in_high_places }
 
-		completion_reward = { 
-			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_expertise_of_the_forest_lings"
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_gather_aid_from_crystal_empire"
 		}
-		#complete_tooltip = { }
-
-		ai_will_do = { factor = 1000 }
-	}	
-	focus = {
-		id = PT_CCN_they_will_not_win_until_every_drone_is_dead
-		icon = GFX_goal_news
+	}
+    focus = {
+		id = PT_CCN_gain_favor_from_sun_and_moon
+		icon = GFX_goal_chn_harmony
+		cost = 5
 		x = 0
 		y = 1
-		relative_position_id = PT_CCN_expertise_of_the_forest_lings
-
-		available = { }
-		bypass = { }
-
-		cost = 10
-		prerequisite = { focus = PT_CCN_expertise_of_the_forest_lings }
-		#mutually_exclusive = { focus =  }
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		relative_position_id = PT_CCN_gather_aid_from_crystal_empire
+		ai_will_do = { factor = 100 }
 		available_if_capitulated = no
+		prerequisite = { focus = PT_CCN_gather_aid_from_crystal_empire }
 
-		completion_reward = { 
-			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_they_will_not_win_until_every_drone_is_dead"
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_gain_favor_from_sun_and_moon"
 		}
-		#complete_tooltip = { }
-
-		ai_will_do = { factor = 1000 }
-	}	
-	focus = {
-		id = PT_CCN_call_upon_allied_hives
-		icon = GFX_goal_news
-		x = 0
-		y = 1
-		relative_position_id = PT_CCN_it_is_now_or_never
-
-		available = { }
-		bypass = { }
-
-		cost = 10
-		prerequisite = { focus = PT_CCN_it_is_now_or_never }
-		#mutually_exclusive = { focus =  }
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		completion_reward = { 
-			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_call_upon_allied_hives"
-		}
-		#complete_tooltip = { }
-
-		ai_will_do = { factor = 1000 }
-	}	
-	focus = {
-		id = PT_CCN_anonymous_donations_from_afar
-		icon = GFX_goal_news
-		x = 0
-		y = 1
-		relative_position_id = PT_CCN_call_upon_allied_hives
-
-		available = { }
-		bypass = { }
-
-		cost = 10
-		prerequisite = { focus = PT_CCN_call_upon_allied_hives }
-		#mutually_exclusive = { focus =  }
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		completion_reward = { 
-			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_anonymous_donations_from_afar"
-		}
-		#complete_tooltip = { }
-
-		ai_will_do = { factor = 1000 }
-	}	
-	focus = {
-		id = PT_CCN_welcome_deserters
-		icon = GFX_goal_news
-		x = 0
-		y = 1
-		relative_position_id = PT_CCN_anonymous_donations_from_afar
-
-		available = { }
-		bypass = { }
-
-		cost = 10
-		prerequisite = { focus = PT_CCN_anonymous_donations_from_afar }
-		#mutually_exclusive = { focus =  }
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		completion_reward = { 
-			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_welcome_deserters"
-		}
-		#complete_tooltip = { }
-
-		ai_will_do = { factor = 1000 }
-	}	
-	focus = {
-		id = PT_CCN_decry_herzlandization
-		icon = GFX_goal_news
+	}
+    focus = {
+		id = PT_CCN_aquire_volunteers_division
+		icon = GFX_goal_chn_harmony
+		cost = 5
 		x = 2
 		y = 1
-		relative_position_id = PT_CCN_it_is_now_or_never
-
-		available = { }
-		bypass = { }
-
-		cost = 10
-		prerequisite = { focus = PT_CCN_it_is_now_or_never }
-		#mutually_exclusive = { focus =  }
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
+		relative_position_id = PT_CCN_friends_in_high_places
+		ai_will_do = { factor = 100 }
 		available_if_capitulated = no
+		prerequisite = { focus = PT_CCN_friends_in_high_places }
 
-		completion_reward = { 
-			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_decry_herzlandization"
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_aquire_volunteers_division"
 		}
-		#complete_tooltip = { }
-
-		ai_will_do = { factor = 1000 }
-	}	
-	focus = {
-		id = PT_CCN_radio_channels_in_the_native_tongue
-		icon = GFX_goal_news
-		x = 0
-		y = 1
-		relative_position_id = PT_CCN_decry_herzlandization
-
-		available = { }
-		bypass = { }
-
-		cost = 10
-		prerequisite = { focus = PT_CCN_decry_herzlandization }
-		#mutually_exclusive = { focus =  }
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		completion_reward = { 
-			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_radio_channels_in_the_native_tongue"
-		}
-		#complete_tooltip = { }
-
-		ai_will_do = { factor = 1000 }
-	}	
-	focus = {
-		id = PT_CCN_investigate_oddities
-		icon = GFX_goal_news
-		x = 0
-		y = 1
-		relative_position_id = PT_CCN_radio_channels_in_the_native_tongue
-
-		available = { }
-		bypass = { }
-
-		cost = 10
-		prerequisite = { focus = PT_CCN_radio_channels_in_the_native_tongue }
-		#mutually_exclusive = { focus =  }
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		completion_reward = { 
-			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_investigate_oddities"
-		}
-		#complete_tooltip = { }
-
-		ai_will_do = { factor = 1000 }
-	}	
-	focus = {
-		id = PT_CCN_officers_revolt
-		icon = GFX_goal_news
-		x = 0
-		y = 1
-		relative_position_id = PT_CCN_welcome_deserters
-
-		available = { }
-		bypass = { }
-
-		cost = 10
-		prerequisite = { focus = PT_CCN_welcome_deserters }
-		prerequisite = { focus = PT_CCN_investigate_oddities }
-		prerequisite = { focus = PT_CCN_they_will_not_win_until_every_drone_is_dead }
-		#mutually_exclusive = { focus =  }
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		completion_reward = { 
-			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_officers_revolt"
-		}
-		#complete_tooltip = { }
-
-		ai_will_do = { factor = 1000 }
-	}	
+	}
 }

@@ -72,6 +72,7 @@ PT_CCN_Start_Civil_War = {
 	}
 	CCN = {
 		activate_mission = PT_civil_war_escalation_0
+		complete_national_focus = PT_CCN_war_for_liberation
 	}
 	set_global_flag = PT_changeling_civil_war_ongoing	
 	news_event = { id = ptnews.1 days = 1 }
