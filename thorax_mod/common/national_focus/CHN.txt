@@ -31,6 +31,9 @@ focus_tree = {
 			add_war_support = 0.05
 			country_event = { id = changelings.59 days = 3 }
 		}
+		bypass = {
+			has_war_with = CCN
+		}
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
 		cancelable = no
 	}
@@ -60,7 +63,7 @@ focus_tree = {
 			remove_ideas = political_divisions
 			hidden_effect = {
 			    country_event = { 
-					id = thoraxian.1
+					id = PT_thoraxian.1
 				}
 			}
 		}

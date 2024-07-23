@@ -1,0 +1,20 @@
+ideas = {
+	country = {
+        PT_CHN_civil_war = {
+			allowed = { always = no }
+			available = {
+				country_exists = CHN
+				country_exists = CCN
+			}
+			modifier = {
+				ai_focus_aggressive_factor = 1
+			}
+			rule = {
+				can_join_factions = no
+				can_not_declare_war = yes
+			}
+			removal_cost = -1
+			picture = CHN_political_divisions
+		}
+	}
+}

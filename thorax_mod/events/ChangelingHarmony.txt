@@ -1,13 +1,21 @@
-﻿add_namespace = thoraxian
+﻿add_namespace = PT_thoraxian
 
 country_event = {   ######### CREATE CCN / START CIVIL WAR ######
+	id = PT_thoraxian.1
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event PT_thoraxian.1"
+		if = {
+			limit = {
+				NOT = { has_completed_focus = thoraxian_betrayal }
+				original_tag = CHN
+			}
+			complete_national_focus = thoraxian_betrayal
+		}
+	}
 
-	id = thoraxian.1
-	immediate = {log = "[GetDateText]: [Root.GetName]: event thoraxian.1"}
+	title = PT_thoraxian.1.t
 
-	title = thoraxian.1.t
-
-	desc = thoraxian.1.d
+	desc = PT_thoraxian.1.d
 
 	picture = GFX_event_swarm
 
@@ -16,14 +24,14 @@ country_event = {   ######### CREATE CCN / START CIVIL WAR ######
 
 	option = { #Traitors
 
-		name = thoraxian.1.a
+		name = PT_thoraxian.1.a
 
 		effect_tooltip = {
 			start_civil_war = {
 				ruling_party = democratic
 				ideology = fascism
 				size = 0.1
-				states = { 323 320 319 322 315 311 310 321 319 247 262 308 249 316 }
+				states = { 319 320 322 323 }
 			}
 		}
 
@@ -33,12 +41,11 @@ country_event = {   ######### CREATE CCN / START CIVIL WAR ######
 				change_tag_from = CHN
 			}
 		}
-
 	}
 
 	option = { #Loyalist
 
-		name = thoraxian.1.b
+		name = PT_thoraxian.1.b
 
 		ai_chance = {
 			base = 100
@@ -48,11 +55,59 @@ country_event = {   ######### CREATE CCN / START CIVIL WAR ######
 			start_civil_war = {
 				ideology = democratic
 				size = 0.1
-				states = { 323 320 319 322 315 311 310 321 319 247 262 308 249 316 }
+				states = { 319 320 322 323 }
 			}
 		}
 		hidden_effect = {		
 			PT_CCN_Start_Civil_War = yes		
+		}
+	}
+}
+
+news_event = { # Civil war news
+	id = PT_thoraxian.2
+	immediate = {log = "[GetDateText]: [Root.GetName]: event PT_thoraxian.1"}
+	title = PT_thoraxian.2.t
+	desc = PT_thoraxian.2.desc
+	picture = GFX_news_pt_civil_war_black_and_white
+
+	major = yes
+	is_triggered_only = yes
+	option = {
+		name = PT_thoraxian.2.a
+		trigger = {
+			NOT = {
+				OR = {
+					original_tag = CCN
+					original_tag = CHN
+					has_government = democracy
+				}
+			}
+		}
+	}
+	option = {
+		name = PT_thoraxian.2.b
+		trigger = {
+			original_tag = CHN
+
+		}
+	}
+	option = {
+		name = PT_thoraxian.2.c
+		trigger = {
+			original_tag = CCN
+		}
+	}
+	option = {
+		name = PT_thoraxian.2.d
+		trigger = {
+			NOT = {
+				OR = {
+					original_tag = CCN
+					original_tag = CHN
+				}
+			}
+			has_government = democracy
 		}
 	}
 }

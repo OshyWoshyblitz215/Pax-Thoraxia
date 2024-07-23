@@ -1,4 +1,22 @@
 PT_CCN_Start_Civil_War = {
+	CCN = {
+		transfer_technology = yes
+		every_state = {
+			limit = {
+				OR = {
+					state = 323
+					state = 322
+					state = 320
+					state = 319
+				}
+			}
+			transfer_state_to = CCN
+		}
+		load_oob = CCN_Civil_War
+		declare_war_on = { target = CHN type = civil_war }
+		complete_national_focus = PT_CCN_war_for_liberation
+		activate_mission = PT_CCN_civil_war_timer_0
+	}
 	CHN = {
 		if = {
 			limit = {
@@ -12,51 +30,11 @@ PT_CCN_Start_Civil_War = {
 			load_oob = CHN_1007
 			load_oob = CHN_1007
 		}
-		CCN = {
-			transfer_technology = yes
-			every_state = {
-				if = {
-					limit = { has_state_flag = PT_thorax_rebel_state }
-					transfer_state_to = CCN 
-				}
-			}
-			#transfer_state = 322
-			#transfer_state = 320 
-			#transfer_state = 319
-			#transfer_state = 323				
-			every_state = {
-				limit = {
-					OR = {
-						state = 323
-						state = 322
-						state = 320
-						state = 319
-					}
-				}
-				transfer_state_to = CCN
-			}
+		CHN_vect = {
+			set_nationality = CCN
 		}
-		transfer_units_fraction = {
-			target = CCN
-			target_organization = 1
-			source_organization = 1
-			keep_unit_leaders_trigger = { always = yes }
-			size = 0.1
-			navy_ratio = 0
-		}
-		CCN = {
-			load_oob = CCN_Civil_War
-			add_ideas = CCN_Civil_War
-			declare_war_on = { target = CHN type = civil_war }
-		}
-		CHN = {
-			add_ideas = CCN_Civil_War
-			CHN_vect = {
-				set_nationality = CCN
-			}
-			CHN_azure_lore = {
-				set_nationality = CCN
-			}
+		CHN_azure_lore = {
+			set_nationality = CCN
 		}
 		every_state = {
 			if = {
@@ -67,238 +45,41 @@ PT_CCN_Start_Civil_War = {
 				limit = { is_claimed_by = CHN }
 				add_claim_by = CCN
 			}
-		}		
-		activate_mission = PT_civil_war_escalation_0
-	}
-	CCN = {
-		activate_mission = PT_civil_war_escalation_0
-		complete_national_focus = PT_CCN_war_for_liberation
+		}
+		add_ideas = { PT_CHN_civil_war }
 	}
 	set_global_flag = PT_changeling_civil_war_ongoing	
-	news_event = { id = ptnews.1 days = 1 }
+	#news_event = { id = ptnews.1 days = 1 }
 	log = "[GetDateText]: Thoraxian Civil War Started!!"
 }
-
-#Independence declarations
-PT_civil_war_vraks_independence = {	
-	CHN = {
-		VRK = {
-			transfer_technology = yes
-		}
-		every_state = {
-			limit = {
-				OR = {
-					state = 258
-					state = 259
-					state = 291
-					state = 307
-				}
-			}
-			transfer_state_to = VRK
-			add_core_of = VRK
-		}
-		log = "[GetDateText]: Vraks broke away!"
-	}
+PT_civil_war_thorax_victory = {
+	clr_global_flag = PT_changeling_civil_war_ongoing
+	set_global_flag = PT_changeling_civil_war_finished
 	CCN = {
-		PT_CCN_activate_queen_alignment = yes
-		add_to_array = { PT_queen_stage_option = 2 }
-		set_variable = { PT_selected_queen_action_option = 2 }
-		set_variable = { PT_CCN_queen_relation_status^0 = 50 }
-		set_variable = { PT_CCN_queen_power_status^0 = 70 }
-		set_variable = { PT_CCN_queen_alignment_status^0 = 55 }
-		
-		add_to_array = { PT_CCN_queen_array = 0 }
-		set_variable = { PT_selected_queen = 0 }
-		add_to_variable = { PT_CCN_queen_dirty_bit = 0.001 }
-	}
-	VRK = {
-		set_capital = {
-		  state = 259
-		  remember_old_capital = no
-		}
-	}
-}
-PT_civil_war_soryth_independence = {
-	CHN = {
-		SRT = {
-			transfer_technology = yes
-		}
-		every_state = {
-			limit = {
-				OR = { 
-					state = 262
-					state = 264
-					state = 315
-				}
-			}
-			transfer_state_to = SRT
-			add_core_of = SRT
-		}
-		log = "[GetDateText]: Soryth broke away!"
-	}
-	CCN = {
-		add_to_array = { PT_queen_stage_option = 2 }
-		set_variable = { PT_selected_queen_action_option = 2 }
-		set_variable = { PT_CCN_queen_relation_status^1 = 70 }
-		set_variable = { PT_CCN_queen_power_status^1 = 40 }
-		set_variable = { PT_CCN_queen_alignment_status^1 = 50 }
-		
-		add_to_array = { PT_CCN_queen_array = 1 }
-		set_variable = { PT_selected_queen = 1 }
-		add_to_variable = { PT_CCN_queen_dirty_bit = 0.001 }	
-	}
-	SRT = {
-		set_capital = {
-		  state = 262
-		  remember_old_capital = no
-		}
-	}
-}
-PT_civil_war_lyctida_independence = {	
-	CHN = {
-		LCD = {
-			transfer_technology = yes
-		}
-		every_state = {
-			limit = {
-				OR = {
-					state = 309
-					state = 260
-					state = 308
-					state = 303
-				}
-			}
-			transfer_state_to = LCD
-			add_core_of = LCD
-		}
-		log = "[GetDateText]: Lyctida broke away!"
-	}
-	CCN = {	
-		add_to_array = { PT_queen_stage_option = 2 }
-		set_variable = { PT_selected_queen_action_option = 2 }
-		set_variable = { PT_CCN_queen_relation_status^2 = 30 }
-		set_variable = { PT_CCN_queen_power_status^2 = 50 }
-		set_variable = { PT_CCN_queen_alignment_status^2 = 40 }
-		
-		add_to_array = { PT_CCN_queen_array = 2 }
-		set_variable = { PT_selected_queen = 2 }
-		add_to_variable = { PT_CCN_queen_dirty_bit = 0.001 }
-	}
-	LCD = {
-		set_capital = {
-		  state = 309
-		  remember_old_capital = no
-		}
-	}
-}
-PT_civil_war_ditrysium_independence = {	
-	CHN = {
-		DTR = {
-			transfer_technology = yes
-		}
-		every_state = {
-			limit = {
-				OR = {
-					state = 252
-					state = 304
-				}
-			}
-			transfer_state_to = DTR
-			add_core_of = DTR
-		}
-		log = "[GetDateText]: Ditrysium broke away!"
-		transfer_navy = {
-			target = DTR
-		}
-	}
-	CCN = {
-		add_to_array = { PT_queen_stage_option = 2 }
-		set_variable = { PT_selected_queen_action_option = 2 }
-		set_variable = { PT_CCN_queen_relation_status^3 = 35 }
-		set_variable = { PT_CCN_queen_power_status^3 = 50 }
-		set_variable = { PT_CCN_queen_alignment_status^3 = 45 }
-		
-		add_to_array = { PT_CCN_queen_array = 3 }
-		set_variable = { PT_selected_queen = 3 }
-		add_to_variable = { PT_CCN_queen_dirty_bit = 0.001 }
-	}
-	GRK = {
-		set_capital = {
-		  state = 312
-		  remember_old_capital = no
-		}
-	}
-}
-PT_civil_war_commies_independence = {	
-	CHN = {
-		GRK = {
-			transfer_technology = yes
-		}
-		every_state = {
-			limit = {
-				OR = {
-					state = 305
-					state = 306
-					state = 312
-					state = 313
-					state = 314
-				}
-			}
-			transfer_state_to = GRK
-			add_core_of = GRK
-		}
-		log = "[GetDateText]: North Changeling commies broke away!"
-	}
-	CCN = {
-		add_to_array = { PT_queen_stage_option = 2 }
-		set_variable = { PT_selected_queen_action_option = 2 }
-		set_variable = { PT_CCN_queen_relation_status^4 = 40 }
-		set_variable = { PT_CCN_queen_power_status^4 = 60 }
-		set_variable = { PT_CCN_queen_alignment_status^4 = 70 }
-		
-		add_to_array = { PT_CCN_queen_array = 4 }
-		set_variable = { PT_selected_queen = 4 }
-		add_to_variable = { PT_CCN_queen_dirty_bit = 0.001 }
-	}
-}
-
-#Civil war endings
-PT_civil_war_thorax_victory = {	
-	CCN = {
-		clr_country_flag = PT_changeling_civil_war
+		log = "[GetDateText]: Thorax civil war victory!"
 		annex_country = {
 			target = CHN
 			transfer_troops = no
 		}
-		PT_civil_war_change_queen_mode = yes		
+		#PT_civil_war_change_queen_mode = yes
 		set_capital = {
 		  state = 251
 		  remember_old_capital = no
-		}	
+		}
 	}
-	CHN = {
-		clr_country_flag = PT_changeling_civil_war
-		log = "[GetDateText]: Thorax civil war victory!"
-	}
+}
+PT_civil_war_chrisie_victory = {
 	clr_global_flag = PT_changeling_civil_war_ongoing
 	set_global_flag = PT_changeling_civil_war_finished
-}
-PT_civil_war_chrisie_victory = {	
-	CCN = {
-		clr_country_flag = PT_changeling_civil_war
-	}
 	CHN = {
-		clr_country_flag = PT_changeling_civil_war
 		log = "[GetDateText]: Chrysalis civil war victory!"
 		annex_country = {
 			target = CCN
 			transfer_troops = no
 		}
 	}
-	clr_global_flag = PT_changeling_civil_war_ongoing
-	set_global_flag = PT_changeling_civil_war_finished
 }
-PT_civil_war_change_queen_mode = {	
+PT_civil_war_change_queen_mode = {
 	CCN = {
 		for_loop_effect = {
 			end = 5
@@ -315,10 +96,11 @@ PT_civil_war_change_queen_mode = {
 				set_variable = { loop_break = 1 }
 			}
 			else = {
-				set_variable = { PT_queen_stage_option^temp = 1 }	
+				set_variable = { PT_queen_stage_option^temp = 1 }
 			}
-		}	
+		}
 		set_variable = { PT_selected_queen_action_option = 1 }
-		add_to_variable = { PT_CCN_queen_dirty_bit = 0.001 }	
+		add_to_variable = { PT_CCN_queen_dirty_bit = 0.001 }
 	}
 }
+

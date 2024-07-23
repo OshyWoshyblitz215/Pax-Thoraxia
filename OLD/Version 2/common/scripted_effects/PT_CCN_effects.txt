@@ -1,0 +1,64 @@
+PT_CCN_activate_queen_alignment = {	
+	set_country_flag = PT_CCN_queen_gui_enabled
+	
+	# Mid section setup
+	clear_array = PT_CCN_queen_dummy_midsection
+	add_to_array = { PT_CCN_queen_dummy_midsection = 0 }
+	
+	clear_array = PT_CCN_queen_relation_status
+	clear_array = PT_CCN_queen_power_status
+	clear_array = PT_CCN_queen_alignment_status
+	resize_array = {
+		array = PT_CCN_queen_relation_status
+		value = 0
+		size = 5
+	}
+	resize_array = {
+		array = PT_CCN_queen_power_status
+		value = 0
+		size = 5
+	}
+	resize_array = {
+		array = PT_CCN_queen_alignment_status
+		value = 0
+		size = 5
+	}
+}
+
+PT_CCN_queen_values_changed = {
+	CCN = {
+		for_loop_effect = {
+			end = 5
+			value = temp
+			break = loop_break
+			if = {
+				limit = {
+					check_variable = {
+						var = PT_queen_stage_option
+						value = 0
+						compare = equals
+					}
+				}
+				set_variable = { loop_break = 1 }
+			}
+			else = {
+				clamp_variable = {
+					var = PT_CCN_queen_power_status^temp
+					min = 0
+					max = 100
+				}
+				clamp_variable = {
+					var = PT_CCN_queen_relation_status^temp
+					min = 0
+					max = 100
+				}
+				clamp_variable = {
+					var = PT_CCN_queen_alignment_status^temp
+					min = 0
+					max = 100
+				}
+			}
+		}
+		add_to_variable = { PT_CCN_queen_dirty_bit = 0.001 }
+	}
+}

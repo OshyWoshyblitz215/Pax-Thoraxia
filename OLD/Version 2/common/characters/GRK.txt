@@ -1,0 +1,17 @@
+characters={
+	GRK_gold_muffin={
+		name=CHN_gold_muffin
+		portraits={
+			civilian={
+				large="gfx/leaders/CHN/GoldMuffin.tga"
+				#small = "GFX_idea_gold_muffin"
+			}
+		}
+
+		country_leader={
+			ideology=anarchist_communism
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+}

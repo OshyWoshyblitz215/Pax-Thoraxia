@@ -1,0 +1,4 @@
+PT_enable_debug =
+{
+	set_global_flag = PT_debug_active
+}

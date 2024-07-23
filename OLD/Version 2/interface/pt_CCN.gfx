@@ -1,0 +1,149 @@
+spriteTypes = {	
+	spriteType = {		
+		name = "GFX_news_pt_civil_war_black_and_white"
+		texturefile = "gfx/event_pictures/news_pt_civil_war_news_blacknwhite.dds"
+	}
+	spriteType = {		
+		name = "GFX_news_pt_civil_war_colored"
+		texturefile = "gfx/event_pictures/news_pt_civil_war_news_colored.dds"
+	}
+	#Queens stuff
+	spriteType = {		
+		name = "GFX_PT_CCN_queens_portrait_0"
+		texturefile = "gfx/leaders/CHN/Argynnis.tga"
+	}
+	spriteType = {		
+		name = "GFX_PT_CCN_queens_portrait_1"
+		texturefile = "gfx/leaders/CHN/Yaria.tga"
+	}
+	spriteType = {		
+		name = "GFX_PT_CCN_queens_portrait_2"
+		texturefile = "gfx/leaders/CHN/Aurantia.tga"
+	}
+	spriteType = {		
+		name = "GFX_PT_CCN_queens_portrait_3"
+		texturefile = "gfx/leaders/CHN/Helvia.tga"
+	}
+	spriteType = {		
+		name = "GFX_PT_CCN_queens_portrait_4"
+		texturefile = "gfx/leaders/CHN/GoldMuffin.tga"
+	}
+	
+	progressbartype = {		
+		name = "GFX_PT_CCN_queens_bar_power_3"
+		texturefile1 = "gfx/interface/ccn_gui/bar_power_0.dds"
+		texturefile2 = "gfx/interface/blank.dds"
+		size = { x = 404 y = 36 }
+		effectfile = "gfx/FX/progress.lua"
+	}
+	progressbartype = {		
+		name = "GFX_PT_CCN_queens_bar_power_2"
+		texturefile1 = "gfx/interface/ccn_gui/bar_power_1.dds"
+		texturefile2 = "gfx/interface/blank.dds"
+		size = { x = 404 y = 36 }
+		effectfile = "gfx/FX/progress.lua"
+	}
+	progressbartype = {		
+		name = "GFX_PT_CCN_queens_bar_power_0"
+		texturefile1 = "gfx/interface/ccn_gui/bar_power_2.dds"
+		texturefile2 = "gfx/interface/blank.dds"
+		size = { x = 404 y = 36 }
+		effectfile = "gfx/FX/progress.lua"
+	}
+	progressbartype = {		
+		name = "GFX_PT_CCN_queens_bar_power_1"
+		texturefile1 = "gfx/interface/ccn_gui/bar_power_3.dds"
+		texturefile2 = "gfx/interface/blank.dds"
+		size = { x = 404 y = 36 }
+		effectfile = "gfx/FX/progress.lua"
+	}
+	progressbartype = {		
+		name = "GFX_PT_CCN_queens_bar_power_3"
+		texturefile1 = "gfx/interface/ccn_gui/bar_power_4.dds"
+		texturefile2 = "gfx/interface/blank.dds"
+		size = { x = 404 y = 36 }
+		effectfile = "gfx/FX/progress.lua"
+	}
+	
+	progressbartype = {		
+		name = "GFX_PT_CCN_queens_left_bar_3"
+		texturefile1 = "gfx/interface/ccn_gui/curve_left_bar_0.dds"
+		texturefile2 = "gfx/interface/tro_gui/drugs/curve_bar_empty.dds"
+		size = { x = 206 y = 206 }
+		effectfile = "gfx/FX/progress_radial.lua"
+		steps = 360
+	}
+	progressbartype = {		
+		name = "GFX_PT_CCN_queens_left_bar_2"
+		texturefile1 = "gfx/interface/ccn_gui/curve_left_bar_1.dds"
+		texturefile2 = "gfx/interface/tro_gui/drugs/curve_bar_empty.dds"
+		size = { x = 206 y = 206 }
+		effectfile = "gfx/FX/progress_radial.lua"
+		steps = 360
+	}
+	progressbartype = {		
+		name = "GFX_PT_CCN_queens_left_bar_0"
+		texturefile1 = "gfx/interface/ccn_gui/curve_left_bar_2.dds"
+		texturefile2 = "gfx/interface/tro_gui/drugs/curve_bar_empty.dds"
+		size = { x = 206 y = 206 }
+		effectfile = "gfx/FX/progress_radial.lua"
+		steps = 360
+	}
+	progressbartype = {		
+		name = "GFX_PT_CCN_queens_left_bar_1"
+		texturefile1 = "gfx/interface/ccn_gui/curve_left_bar_3.dds"
+		texturefile2 = "gfx/interface/tro_gui/drugs/curve_bar_empty.dds"
+		size = { x = 206 y = 206 }
+		effectfile = "gfx/FX/progress_radial.lua"
+		steps = 360
+	}
+	progressbartype = {		
+		name = "GFX_PT_CCN_queens_left_bar_4"
+		texturefile1 = "gfx/interface/ccn_gui/curve_left_bar_4.dds"
+		texturefile2 = "gfx/interface/tro_gui/drugs/curve_bar_empty.dds"
+		size = { x = 206 y = 206 }
+		effectfile = "gfx/FX/progress_radial.lua"
+		steps = 360
+	}
+	
+	progressbartype = {		
+		name = "GFX_PT_CCN_queens_right_bar_3"
+		texturefile1 = "gfx/interface/tro_gui/drugs/curve_bar_empty.dds"
+		texturefile2 = "gfx/interface/ccn_gui/curve_right_bar_0.dds"
+		size = { x = 206 y = 206 }
+		effectfile = "gfx/FX/progress_radial.lua"
+		steps = 360
+	}
+	progressbartype = {		
+		name = "GFX_PT_CCN_queens_right_bar_2"
+		texturefile1 = "gfx/interface/tro_gui/drugs/curve_bar_empty.dds"
+		texturefile2 = "gfx/interface/ccn_gui/curve_right_bar_1.dds"
+		size = { x = 206 y = 206 }
+		effectfile = "gfx/FX/progress_radial.lua"
+		steps = 360
+	}
+	progressbartype = {		
+		name = "GFX_PT_CCN_queens_right_bar_0"
+		texturefile1 = "gfx/interface/tro_gui/drugs/curve_bar_empty.dds"
+		texturefile2 = "gfx/interface/ccn_gui/curve_right_bar_2.dds"
+		size = { x = 206 y = 206 }
+		effectfile = "gfx/FX/progress_radial.lua"
+		steps = 360
+	}
+	progressbartype = {		
+		name = "GFX_PT_CCN_queens_right_bar_1"
+		texturefile1 = "gfx/interface/tro_gui/drugs/curve_bar_empty.dds"
+		texturefile2 = "gfx/interface/ccn_gui/curve_right_bar_3.dds"
+		size = { x = 206 y = 206 }
+		effectfile = "gfx/FX/progress_radial.lua"
+		steps = 360
+	}
+	progressbartype = {		
+		name = "GFX_PT_CCN_queens_right_bar_4"
+		texturefile1 = "gfx/interface/tro_gui/drugs/curve_bar_empty.dds"
+		texturefile2 = "gfx/interface/ccn_gui/curve_right_bar_4.dds"
+		size = { x = 206 y = 206 }
+		effectfile = "gfx/FX/progress_radial.lua"
+		steps = 360
+	}
+}

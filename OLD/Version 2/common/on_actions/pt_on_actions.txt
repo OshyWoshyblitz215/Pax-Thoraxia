@@ -1,0 +1,22 @@
+on_actions = {
+	on_capitulation = {
+		effect = {
+			if = {
+				limit = {
+					ROOT = { tag = CCN }
+					FROM = { tag = CHN }
+					has_global_flag = PT_changeling_civil_war
+				}
+				PT_civil_war_chrisie_victory = yes
+			}
+			if = {
+				limit = {
+					ROOT = { tag = CHN }
+					FROM = { tag = CCN }
+					has_global_flag = PT_changeling_civil_war
+				}
+				PT_civil_war_thorax_victory = yes
+			}
+		}
+	}
+}

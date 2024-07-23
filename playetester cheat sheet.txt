@@ -1,0 +1,9 @@
+Cheatsheet Pax Thoraxia
+
+Commands:
+Start CW:
+event PT_thoraxian.1
+gives the event to start CW
+
+effect PT_enable_debug
+enables developer and debug decisions/tools for the mod. Does not activate 'debug' mode.
