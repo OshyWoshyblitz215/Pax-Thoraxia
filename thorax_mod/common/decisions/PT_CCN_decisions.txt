@@ -52,4 +52,76 @@ PT_CCN_civil_war_deccat = {
 		}
 		fire_only_once = yes
 	}
+	PT_CCN_civil_war_secure_volistad = {
+		cancel_trigger = {
+			NOT = { controls_state = 316 }
+		}
+		cancel_effect = {
+			add_war_support = -0.05
+			add_political_power = -25
+			hidden_effect = { set_country_flag = PT_CCN_failed_to_secure_volistad }
+		}
+		highlight_states = {
+			highlight_state_targets = {
+				state = 316
+			}
+		}
+		cancel_if_not_visible = yes
+		is_good = yes
+		days_mission_timeout = 30
+		timeout_effect = {
+			add_war_support = 0.05
+			custom_effect_tooltip = PT_CCN_civil_war_secure_volistad_tt
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_1
+				amount = 500
+				producer = CHN
+			}
+			hidden_effect = { load_oob = "PT_CCN_Civil_War_Volistad" }
+		}
+		icon = generic_ignite_civil_war
+		available = {
+			hidden_trigger = { always = no }
+		}
+		activation = {
+			hidden_trigger = { always = no }
+		}
+		fire_only_once = yes
+	}
+	PT_CCN_civil_war_secure_antax = {
+		cancel_trigger = {
+			NOT = { controls_state = 323 }
+		}
+		cancel_effect = {
+			add_war_support = -0.05
+			add_political_power = -25
+			hidden_effect = { set_country_flag = PT_CCN_failed_to_secure_antax }
+		}
+		cancel_if_not_visible = yes
+		is_good = yes
+		days_mission_timeout = 25
+		highlight_states = {
+			highlight_state_targets = {
+				state = 323
+			}
+		}
+		timeout_effect = {
+			add_war_support = 0.05
+			custom_effect_tooltip = PT_CCN_civil_war_secure_antax_tt
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_1
+				amount = 500
+				producer = CHN
+			}
+			hidden_effect = { load_oob = "PT_CCN_Civil_War_Antax" }
+		}
+		icon = generic_ignite_civil_war
+		available = {
+			hidden_trigger = { always = no }
+		}
+		activation = {
+			hidden_trigger = { always = no }
+		}
+		fire_only_once = yes
+	}
 }

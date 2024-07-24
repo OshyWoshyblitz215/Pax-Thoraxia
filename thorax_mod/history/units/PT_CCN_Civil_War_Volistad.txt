@@ -1,0 +1,28 @@
+﻿division_template = {
+	name = "Hive Militia"			#Infantry Division - kek
+	division_names_group = CHN_GAR_01
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+	}
+	priority = 0
+}
+units = {
+	division = {
+		name = "Volistad Militia"
+		location = 11690
+		division_template = "Hive Militia"
+		start_experience_factor = 0.0 }
+	division = {
+		name = "Volistad Militia"
+		location = 11690
+		division_template = "Hive Militia"
+		start_experience_factor = 0.0 }
+	division = {
+		name = "Volistad Militia"
+		location = 11690
+		division_template = "Hive Militia"
+		start_experience_factor = 0.0 }
+}

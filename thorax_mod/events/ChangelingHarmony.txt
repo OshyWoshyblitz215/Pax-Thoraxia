@@ -15,7 +15,7 @@ country_event = {   ######### CREATE CCN / START CIVIL WAR ######
 
 	title = PT_thoraxian.1.t
 
-	desc = PT_thoraxian.1.d
+	desc = PT_thoraxian.1.desc
 
 	picture = GFX_event_swarm
 
@@ -66,7 +66,7 @@ country_event = {   ######### CREATE CCN / START CIVIL WAR ######
 
 news_event = { # Civil war news
 	id = PT_thoraxian.2
-	immediate = {log = "[GetDateText]: [Root.GetName]: event PT_thoraxian.1"}
+	immediate = {log = "[GetDateText]: [Root.GetName]: event PT_thoraxian.2"}
 	title = PT_thoraxian.2.t
 	desc = PT_thoraxian.2.desc
 	picture = GFX_news_pt_civil_war_black_and_white
@@ -110,4 +110,40 @@ news_event = { # Civil war news
 			has_government = democracy
 		}
 	}
+}
+country_event = { #Timer for commie unrest, starts it earlier based on if antax and volistad were held
+    id = PT_thoraxian.3
+	immediate = { log = "[GetDateText]: [Root.GetName]: event PT_thoraxian.3" }
+    is_triggered_only = yes
+    hidden = yes
+
+    option = {
+		if = {
+			limit = {
+				OR = {
+					has_country_flag = PT_CCN_failed_to_secure_volistad
+					has_country_flag = PT_CCN_failed_to_secure_antax
+				}
+			}
+			country_event = { id = PT_thoraxian.4 days = 20 }
+		}
+		else = {
+			country_event = { id = PT_thoraxian.4 days = 10 }
+		}
+    }
+}
+country_event = {
+    id = PT_thoraxian.4
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event PT_thoraxian.4"
+		hidden_effect = { PT_civil_war_commie_unrest = yes }
+	}
+    title = PT_thoraxian.4.t
+    desc = PT_thoraxian.4.desc
+
+    is_triggered_only = yes
+
+    option = {
+        name = PT_thoraxian.4.a
+    }
 }

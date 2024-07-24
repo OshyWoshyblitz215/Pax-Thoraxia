@@ -60,7 +60,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus thoraxian_betrayal"
 			custom_effect_tooltip = thoraxian_betrayal_tt
-			remove_ideas = political_divisions
+			effect_tooltip = { remove_ideas = political_divisions }
 			hidden_effect = {
 			    country_event = { 
 					id = PT_thoraxian.1
@@ -71,10 +71,13 @@ focus_tree = {
 			every_state = {
 				limit = {
 					OR = {
-						state = 323
-						state = 322
-						state = 320
+						state = 247
+						state = 249
+						state = 316
 						state = 319
+						state = 320
+						state = 322
+						state = 323
 					}
 				}
 				set_demilitarized_zone = yes

@@ -1,50 +1,57 @@
 PT_CCN_Start_Civil_War = {
+	CHN = {
+		load_oob = CHN_1007
+		remove_ideas = political_divisions
+	}
 	CCN = {
 		transfer_technology = yes
 		every_state = {
 			limit = {
 				OR = {
-					state = 323
-					state = 322
-					state = 320
+					state = 247
+					state = 249
+					state = 316
 					state = 319
+					state = 320
+					state = 322
+					state = 323
 				}
 			}
 			transfer_state_to = CCN
+			add_core_of = CCN
 		}
+		#every_state = {
+		#	if = {
+		#		limit = { is_core_of = CHN }
+		#		add_core_of = CCN
+		#	}
+		#	if = {
+		#		limit = { is_claimed_by = CHN }
+		#		add_claim_by = CCN
+		#	}
+		#}
 		load_oob = CCN_Civil_War
 		declare_war_on = { target = CHN type = civil_war }
 		complete_national_focus = PT_CCN_war_for_liberation
-		activate_mission = PT_CCN_civil_war_timer_0
+		#activate_mission = PT_CCN_civil_war_timer_0
+		activate_mission = PT_CCN_civil_war_secure_volistad
+		activate_mission = PT_CCN_civil_war_secure_antax
+		country_event = { id = PT_thoraxian.3 days = 35 }
 	}
 	CHN = {
-		if = {
-			limit = {
-				any_country_with_original_tag = {
-					original_tag_to_check = CHN
-					has_government = fascism
-					NOT = {	has_army_manpower = { size > 150000 } }
-					NOT = {	has_army_manpower = { size < 200000 } }
-				}
-			}
-			load_oob = CHN_1007
-			load_oob = CHN_1007
-		}
 		CHN_vect = {
 			set_nationality = CCN
 		}
 		CHN_azure_lore = {
 			set_nationality = CCN
 		}
-		every_state = {
-			if = {
-				limit = { is_core_of = CHN }
-				add_core_of = CCN
-			}
-			if = {
-				limit = { is_claimed_by = CHN }
-				add_claim_by = CCN
-			}
+		transfer_units_fraction= {
+			target = CCN
+			size = 0.1
+			stockpile_ratio = 0.2
+			army_ratio = 0.1
+			air_ratio = 0
+			navy_ratio = 0
 		}
 		add_ideas = { PT_CHN_civil_war }
 	}
@@ -52,6 +59,27 @@ PT_CCN_Start_Civil_War = {
 	#news_event = { id = ptnews.1 days = 1 }
 	log = "[GetDateText]: Thoraxian Civil War Started!!"
 }
+
+PT_civil_war_commie_unrest = {
+	CHN = {
+		every_state = {
+			limit = {
+				OR = {
+					state = 252
+					state = 304
+					state = 305
+					state = 306
+					state = 312
+					state = 313
+					state = 314
+				}
+			}
+			set_demilitarized_zone = yes
+		}
+	}
+}
+
+
 PT_civil_war_thorax_victory = {
 	clr_global_flag = PT_changeling_civil_war_ongoing
 	set_global_flag = PT_changeling_civil_war_finished

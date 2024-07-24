@@ -283,10 +283,16 @@ PT_CCN_civil_war_deccat_desc: "Thorax uprising is an emberassment to the queen a
 PT_CCN_civil_war_timer_0: "Civil War Escalation"
 PT_CCN_civil_war_timer_0_tt: "§RCivil War Escalation§!"
 PT_CCN_civil_war_persistent: "Civil War"
+PT_CCN_civil_war_secure_volistad: "Secure Volistad"
+PT_CCN_civil_war_secure_volistad_desc: "Volistad's Hive Queen declared support for our rebellion. But Chrysalises guard present in the city has resisted the takeover. We must prevent Chrysalis from reinforcing it long enough if we wish it fully mobilized to support our cause."
+PT_CCN_civil_war_secure_volistad_tt: "Spawns §YThree Hive Militia Divisions§! in §YVolistad§!\n"
+PT_CCN_civil_war_secure_antax: "Secure Antax"
+PT_CCN_civil_war_secure_antax_desc: "Antax's Hive Queen declared support for our rebellion. But Chrysalises guard present in the city has resisted the takeover. We must prevent Chrysalis from reinforcing it long enough if we wish it fully mobilized to support our cause."
+PT_CCN_civil_war_secure_antax_tt: "Spawns §YThree Hive Militia Divisions§! in §YAntax§!\n"
 
 #Events
 PT_thoraxian.1.t: "The Thoraxian Betrayal"
-PT_thoraxian.1.d: "With supporters for harmony and friendship growing larger and larger within the hives scattered across changeling lands, it was only time before those upstarts thought themselves too good for the strength and unity of the Queen. Thorax and his supporters, as well as numerous detractors of Chrysalis, have all united under the banner of 'harmony'.\n\nThe rebels took control of the forests around Antax in the east of country."
+PT_thoraxian.1.desc: "With supporters for harmony and friendship growing larger and larger within the hives scattered across changeling lands, it was only time before those upstarts thought themselves too good for the strength and unity of the Queen. Thorax and his supporters, as well as numerous detractors of Chrysalis, have all united under the banner of 'harmony'.\n\nThe rebels took control of the forests around Antax in the east of country."
 PT_thoraxian.1.a: "We shall embrace harmony!"
 PT_thoraxian.1.b: "We will come for you soon enough, traitors."
 PT_thoraxian.2.t: "Thoraxians rebel!"
@@ -295,7 +301,9 @@ PT_thoraxian.2.a: "Let us see where this goes."
 PT_thoraxian.2.b: "The rebels will be crushed!"
 PT_thoraxian.2.c: "For our freedom!"
 PT_thoraxian.2.d: "Let us hope that balance is restored."
-
+PT_thoraxian.4.t: "Unrest in the north"
+PT_thoraxian.4.desc: "News has reached us that there are riots in the northern hives, mutinies in the navy, basically communists are doing some fucky wucky shit."
+PT_thoraxian.4.a: "This could be useful"
 #LEADERS
 
 #GENERALS
