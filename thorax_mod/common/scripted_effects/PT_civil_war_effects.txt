@@ -17,8 +17,8 @@ PT_CCN_Start_Civil_War = {
 					state = 323
 				}
 			}
-			transfer_state_to = CCN
 			add_core_of = CCN
+			transfer_state_to = CCN
 		}
 		load_oob = CCN_Civil_War
 		declare_war_on = { target = CHN type = civil_war }
@@ -26,6 +26,7 @@ PT_CCN_Start_Civil_War = {
 		activate_mission = PT_CCN_civil_war_secure_volistad
 		activate_mission = PT_CCN_civil_war_secure_antax
 		country_event = { id = PT_thoraxian.3 days = 35 }
+		set_cosmetic_tag = CCN_CWCT
 	}
 	CHN = {
 		CHN_vect = {
@@ -54,7 +55,6 @@ PT_civil_war_commie_unrest = {
 			limit = {
 				OR = {
 					state = 252
-					state = 261
 					state = 304
 					state = 305
 					state = 306
@@ -72,7 +72,6 @@ PT_civil_war_distrium_breakaway = {
 		limit = {
 			OR = {
 				state = 252
-				state = 261
 				state = 304
 				state = 305
 				state = 306
@@ -80,12 +79,16 @@ PT_civil_war_distrium_breakaway = {
 				state = 313
 			}
 		}
-		transfer_state_to = DTR
 		add_core_of = DTR
+		transfer_state_to = DTR
 	}
 	CHN = {
 		DTR = {
 			transfer_technology = yes
+			set_capital = {
+				state = 252
+				remember_old_capital = no
+			}
 		}
 		transfer_navy = {
 			target = DTR
@@ -95,7 +98,6 @@ PT_civil_war_distrium_breakaway = {
 		limit = {
 			OR = {
 				state = 252
-				state = 261
 				state = 304
 			}
 		}
@@ -126,11 +128,17 @@ PT_commie_unrest_start_uprising = {
 			}
 		}
 		set_demilitarized_zone = no
-		transfer_state_to = GRK
 		add_core_of = GRK
+		transfer_state_to = GRK
 	}
 	DTR = {
-		GRK = { transfer_technology = yes }
+		GRK = {
+			transfer_technology = yes
+			set_capital = {
+				state = 312
+				remember_old_capital = no
+			}
+		}
 	}
 	every_country = {
 		limit = {
@@ -142,9 +150,10 @@ PT_commie_unrest_start_uprising = {
 		}
 		remove_mission = PT_CCN_commie_unrest_crackdown_timer
 		country_event = { id = PT_thoraxian.6 days = 1 }
+		country_event = { id = PT_thoraxian.8 days = 10 }
 	}
 	clr_global_flag = PT_communist_unrest_north
-
+	set_global_flag = PT_commies_have_risen_up
 	log = "[GetDateText]: Changeling Commie Uprising Succeeds!"
 }
 PT_commie_unrest_prevent_uprising = {
@@ -169,9 +178,108 @@ PT_commie_unrest_prevent_uprising = {
 		}
 		remove_mission = PT_CCN_commie_unrest_uprising_timer
 		country_event = { id = PT_thoraxian.7 days = 1 }
+		country_event = { id = PT_thoraxian.8 days = 20 }
 	}
 	clr_global_flag = PT_communist_unrest_north
+	set_global_flag = PT_commies_rising_was_prevented
 	log = "[GetDateText]: Changeling Commie Uprising Fails!"
+}
+PT_civil_war_soryth_vraks_breakaway =
+{
+	every_state = {
+		limit = {
+			OR = {
+				state = 259
+				state = 258
+				state = 307
+				state = 291
+				state = 248
+				state = 246
+				state = 250
+			}
+		}
+		add_core_of = VRK
+		transfer_state_to = VRK
+	}
+	every_state = {
+		limit = {
+			OR = {
+				state = 262
+				state = 315
+				state = 264
+				state = 314
+			}
+		}
+		add_core_of = SRT
+		transfer_state_to = SRT
+	}
+	CHN = {
+		VRK = {
+			transfer_technology = yes
+			set_capital = {
+				state = 259
+				remember_old_capital = no
+			}
+		}
+		SRT = {
+			transfer_technology = yes
+			set_capital = {
+				state = 262
+				remember_old_capital = no
+			}
+		}
+	}
+	every_country = {
+		limit = {
+			OR = {
+				tag = CHN
+				tag = CCN
+				tag = DTR
+				tag = VRK
+				tag = SRT
+			}
+		}
+		country_event = { id = PT_thoraxian.9 days = 7 }
+	}
+	log = "[GetDateText]: Vraks and Soryth broke away!"
+}
+PT_civil_war_lyctida_breakaway =
+{
+	every_state = {
+		limit = {
+			OR = {
+				state = 309
+				state = 303
+				state = 260
+				state = 308
+			}
+		}
+		add_core_of = LCD
+		transfer_state_to = LCD
+	}
+	CHN = {
+		LCD = {
+			transfer_technology = yes
+			set_capital = {
+				state = 309
+				remember_old_capital = no
+			}
+		}
+	}
+	every_country = {
+		limit = {
+			OR = {
+				tag = CHN
+				tag = CCN
+				tag = DTR
+				tag = VRK
+				tag = SRT
+				tag = LCD
+			}
+		}
+		country_event = { id = PT_thoraxian.10 days = 5 }
+	}
+	log = "[GetDateText]: Lyctida broke away!"
 }
 ###########################
 ###Civil War Resolutions###
@@ -190,6 +298,7 @@ PT_civil_war_thorax_victory = {
 		  state = 251
 		  remember_old_capital = no
 		}
+		drop_cosmetic_tag = yes
 	}
 }
 PT_civil_war_chrisie_victory = {
@@ -201,6 +310,27 @@ PT_civil_war_chrisie_victory = {
 			target = CCN
 			transfer_troops = no
 		}
+		annex_country = {
+			target = DTR
+			transfer_troops = yes
+		}
+		annex_country = {
+			target = SRT
+			transfer_troops = yes
+		}
+		annex_country = {
+			target = VRK
+			transfer_troops = yes
+		}
+		annex_country = {
+			target = LCD
+			transfer_troops = yes
+		}
+		declare_war_on = {
+			target = GRK
+			type = annex_everything
+		}
+		drop_cosmetic_tag = yes
 	}
 }
 PT_civil_war_change_queen_mode = {

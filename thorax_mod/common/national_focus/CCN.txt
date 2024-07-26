@@ -57,6 +57,7 @@ focus_tree = {
 		available = {
 			has_global_flag = PT_communist_unrest_north
 		}
+		mutually_exclusive = { focus = PT_CCN_sabotage_communist_uprising }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_support_communist_uprising"
@@ -95,6 +96,7 @@ focus_tree = {
 		available = {
 			has_global_flag = PT_communist_unrest_north
 		}
+		mutually_exclusive = { focus = PT_CCN_support_communist_uprising }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_sabotage_communist_uprising"

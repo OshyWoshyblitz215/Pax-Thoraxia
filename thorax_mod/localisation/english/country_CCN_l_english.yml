@@ -320,6 +320,17 @@ PT_thoraxian.6.a: "Somewhere in the distance, you hear a frenchmen yelling."
 PT_thoraxian.7.t: "Commie Uprising Fails"
 PT_thoraxian.7.desc: "Queen Helvia Sucessfully put down the riots in the north, likely thanks to your support."
 PT_thoraxian.7.a: "What you do when Anarchia Mama is the Queen?"
+PT_thoraxian.8.t: "Vraks-Soryth Declaration"
+PT_thoraxian.8.desc: "Early this morning a joint declaration by the Queens of Vraks and Soryth along with surrounding hives have annouced their sucession from the Changeling hegemony. Declaring neutrality in the civil war, local hive militias were mobilized and escorted the Heer and Harmonists out of the hives territories.\n\nQueen Yaria had justified her sucession by saying she wished to spare her realm burdens of civil war. Going off stage she was heard saying off mic to Argynnis \"If any of those fuckers touch my research I swear I will test my hypothesis on them how long they can stay alive having their chitin peeled off!\"\n\n[PT_thoraxian_8_speech]"
+PT_thoraxian.8.a: "Argynnis speech is scripted localization based on if the commies rose up or not"
+PT_thoraxian_8_uprising: "Queen of Vraks, Argynnis justified her sucession with the threat posed by communist uprising in the north, using terms such as \"Bruh\", \"It's Joever\" and \"Better dead than red\" \nAfter delivering the speech she refused to elaborate further and left the stage."
+PT_thoraxian_8_crackdown: "Queen of Vraks, Argynnis justified her sucession with the sucessfull crackdown performed by Helvia compared to Chrysalises Guard, using terms such as \"Skill issue\" \"Commie Bussy Rapefest\" and \"Big Chrissie L\"\nAfter delivering the speech she refused to elaborate further and left the stage."
+PT_thoraxian.9.t: "Lyctida"
+PT_thoraxian.9.desc: "Following the urging of the surrounding hive queens and her love addicted daughter, the old Queen of Lyctida, Aurantia gave a speech proclaiming her sucession from the hegemony. Going up to the speech podium she tripped twice on the stairs, and while giving the speech was blabbering incoherently. The speech ended when she fell asleep behind the mic and her daughter escorted her away. \n\nLater that day it was annouced she would be dropping out of the \"Queen of Badass\" contest due to health issues, putting her daughter to end the race for her. Current polls show that Argynnis is on her way to win, following a failed asassinaition attempt earlier that week which grazed her right ear."
+PT_thoraxian.9.a: "Why do I feel a sense of deja vu?"
+PT_thoraxian.10.t: "End of Hegemony"
+PT_thoraxian.10.desc: "Since all queens used their \"fuck it we ball\" rights to GTFO Chrissies wild ride, the hegemony was officially desolved and renamed to \"Vesalipoilis Queendom\", undoing most of her lifes work unifying the changeling lands. Experts debate if this move will help her win the war or if it was done meerly to show off the scripters abilities."
+PT_thoraxian.10.a: "Balkanization of Changeling Lands."
 #LEADERS
 
 #GENERALS

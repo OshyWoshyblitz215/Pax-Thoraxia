@@ -80,7 +80,7 @@ news_event = { # Civil war news
 				OR = {
 					original_tag = CCN
 					original_tag = CHN
-					has_government = democracy
+					has_government = democratic
 				}
 			}
 		}
@@ -107,7 +107,7 @@ news_event = { # Civil war news
 					original_tag = CHN
 				}
 			}
-			has_government = democracy
+			has_government = democratic
 		}
 	}
 }
@@ -183,9 +183,72 @@ country_event = {
 	}
     title = PT_thoraxian.7.t
     desc = PT_thoraxian.7.desc
-    is_triggered_only = yes
+	is_triggered_only = yes
 
     option = {
         name = PT_thoraxian.7.a
+    }
+}
+country_event = {
+    id = PT_thoraxian.8
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event PT_thoraxian.8"
+		hidden_effect = {
+			if = {
+				limit = {
+					TAG = CHN
+				}
+				PT_civil_war_soryth_vraks_breakaway = yes
+			}
+		}
+	}
+    title = PT_thoraxian.8.t
+    desc = PT_thoraxian.8.desc
+    is_triggered_only = yes
+
+    option = {
+        name = PT_thoraxian.8.a
+    }
+}
+country_event = {
+    id = PT_thoraxian.9
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event PT_thoraxian.9"
+		hidden_effect = {
+			if = {
+				limit = {
+					TAG = CHN
+				}
+				PT_civil_war_lyctida_breakaway = yes
+			}
+		}
+	}
+    title = PT_thoraxian.9.t
+    desc = PT_thoraxian.9.desc
+    is_triggered_only = yes
+
+    option = {
+        name = PT_thoraxian.9.a
+    }
+}
+country_event = {
+    id = PT_thoraxian.10
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event PT_thoraxian.10"
+		hidden_effect = {
+			if = {
+				limit = {
+					TAG = CHN
+				}
+				set_cosmetic_tag = CHN_Vesalipolis
+			}
+		}
+	}
+    title = PT_thoraxian.10.t
+    desc = PT_thoraxian.10.desc
+    is_triggered_only = yes
+
+    option = {
+        name = PT_thoraxian.10.a
     }
 }

@@ -1,3 +1,21 @@
+defined_text = { #Vraks Queen Sucession Speech
+	name = PT_thoraxian_8_speech
+	text = {
+		trigger = {
+			has_global_flag = PT_commies_have_risen_up
+		}
+		localization_key = PT_thoraxian_8_uprising
+	}
+	text = {
+		trigger = {
+			has_global_flag = PT_commies_rising_was_prevented
+		}
+		localization_key = PT_thoraxian_8_crackdown
+	}
+}
+################
+####Queen UI####
+################
 defined_text = { #Selected queendom main text
 	name = PT_CCN_selected_queendom
 	text = {
