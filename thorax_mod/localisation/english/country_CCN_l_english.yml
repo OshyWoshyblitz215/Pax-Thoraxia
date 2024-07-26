@@ -290,6 +290,13 @@ PT_CCN_civil_war_secure_antax: "Secure Antax"
 PT_CCN_civil_war_secure_antax_desc: "Antax's Hive Queen declared support for our rebellion. But Chrysalises guard present in the city has resisted the takeover. We must prevent Chrysalis from reinforcing it long enough if we wish it fully mobilized to support our cause."
 PT_CCN_civil_war_secure_antax_tt: "Spawns §YThree Hive Militia Divisions§! in §YAntax§!\n"
 
+PT_CCN_civil_war_commie_unrest_deccat: "Riots in the north"
+PT_CCN_civil_war_commie_unrest_deccat_desc: "Northern Hives rioting, something something we can either help em along or help prevent an uprising. Staying neutral is also an option."
+PT_CCN_commie_unrest_uprising_timer: "Communist Uprising"
+PT_CCN_commie_unrest_uprising_timer_tt: "§RCommunists§! will take control of §YGorak§! and §YAglossata§!\n"
+PT_CCN_commie_unrest_crackdown_timer: "Distryum Crackdown"
+PT_CCN_commie_unrest_crackdown_timer_tt: "§YHelvia§! will supress §Rcommunist riots§! and reestablish control\n"
+
 #Events
 PT_thoraxian.1.t: "The Thoraxian Betrayal"
 PT_thoraxian.1.desc: "With supporters for harmony and friendship growing larger and larger within the hives scattered across changeling lands, it was only time before those upstarts thought themselves too good for the strength and unity of the Queen. Thorax and his supporters, as well as numerous detractors of Chrysalis, have all united under the banner of 'harmony'.\n\nThe rebels took control of the forests around Antax in the east of country."
@@ -302,8 +309,17 @@ PT_thoraxian.2.b: "The rebels will be crushed!"
 PT_thoraxian.2.c: "For our freedom!"
 PT_thoraxian.2.d: "Let us hope that balance is restored."
 PT_thoraxian.4.t: "Unrest in the north"
-PT_thoraxian.4.desc: "News has reached us that there are riots in the northern hives, mutinies in the navy, basically communists are doing some fucky wucky shit."
+PT_thoraxian.4.desc: "News has reached us that there are riots in the northern hives, mutinies in the navy, basically communists are doing some fucky wucky shit. Chrysalises guard is already trying to supress it."
 PT_thoraxian.4.a: "This could be useful"
+PT_thoraxian.5.t: "Ditrysium leaves hegemony"
+PT_thoraxian.5.desc: "Due to Chrysalis sending in troops to get rid of the riots in north and her guards being... overly eager to restore order, queen Helvia has chosen to expell all Chrysalises troops and seek to deal with the unrest herself.\n\nOr something like that, idk.\n\nConsider making a save file here cuz you got a choice to support them or not."
+PT_thoraxian.5.a: "This could be useful"
+PT_thoraxian.6.t: "Commie Uprising Suceeds"
+PT_thoraxian.6.desc: "Commies have sucessfully instigated a full scale revolt and killed the Queen of Gorak hive."
+PT_thoraxian.6.a: "Somewhere in the distance, you hear a frenchmen yelling."
+PT_thoraxian.7.t: "Commie Uprising Fails"
+PT_thoraxian.7.desc: "Queen Helvia Sucessfully put down the riots in the north, likely thanks to your support."
+PT_thoraxian.7.a: "What you do when Anarchia Mama is the Queen?"
 #LEADERS
 
 #GENERALS

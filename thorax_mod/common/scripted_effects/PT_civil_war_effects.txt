@@ -20,20 +20,9 @@ PT_CCN_Start_Civil_War = {
 			transfer_state_to = CCN
 			add_core_of = CCN
 		}
-		#every_state = {
-		#	if = {
-		#		limit = { is_core_of = CHN }
-		#		add_core_of = CCN
-		#	}
-		#	if = {
-		#		limit = { is_claimed_by = CHN }
-		#		add_claim_by = CCN
-		#	}
-		#}
 		load_oob = CCN_Civil_War
 		declare_war_on = { target = CHN type = civil_war }
 		complete_national_focus = PT_CCN_war_for_liberation
-		#activate_mission = PT_CCN_civil_war_timer_0
 		activate_mission = PT_CCN_civil_war_secure_volistad
 		activate_mission = PT_CCN_civil_war_secure_antax
 		country_event = { id = PT_thoraxian.3 days = 35 }
@@ -59,13 +48,13 @@ PT_CCN_Start_Civil_War = {
 	#news_event = { id = ptnews.1 days = 1 }
 	log = "[GetDateText]: Thoraxian Civil War Started!!"
 }
-
 PT_civil_war_commie_unrest = {
 	CHN = {
 		every_state = {
 			limit = {
 				OR = {
 					state = 252
+					state = 261
 					state = 304
 					state = 305
 					state = 306
@@ -78,8 +67,115 @@ PT_civil_war_commie_unrest = {
 		}
 	}
 }
+PT_civil_war_distrium_breakaway = {
+	every_state = {
+		limit = {
+			OR = {
+				state = 252
+				state = 261
+				state = 304
+				state = 305
+				state = 306
+				state = 312
+				state = 313
+			}
+		}
+		transfer_state_to = DTR
+		add_core_of = DTR
+	}
+	CHN = {
+		DTR = {
+			transfer_technology = yes
+		}
+		transfer_navy = {
+			target = DTR
+		}
+	}
+	every_state = {
+		limit = {
+			OR = {
+				state = 252
+				state = 261
+				state = 304
+			}
+		}
+		set_demilitarized_zone = no
+	}
+	set_global_flag = PT_communist_unrest_north
+	every_country = {
+		limit = {
+			OR = {
+				tag = CHN
+				tag = CCN
+				tag = DTR
+			}
+		}
+		activate_mission = PT_CCN_commie_unrest_uprising_timer
+		activate_mission = PT_CCN_commie_unrest_crackdown_timer
+	}
+	log = "[GetDateText]: Ditrysium broke away!"
+}
+PT_commie_unrest_start_uprising = {
+	every_state = {
+		limit = {
+			OR = {
+				state = 305
+				state = 306
+				state = 312
+				state = 313
+			}
+		}
+		set_demilitarized_zone = no
+		transfer_state_to = GRK
+		add_core_of = GRK
+	}
+	DTR = {
+		GRK = { transfer_technology = yes }
+	}
+	every_country = {
+		limit = {
+			OR = {
+				tag = CHN
+				tag = CCN
+				tag = DTR
+			}
+		}
+		remove_mission = PT_CCN_commie_unrest_crackdown_timer
+		country_event = { id = PT_thoraxian.6 days = 1 }
+	}
+	clr_global_flag = PT_communist_unrest_north
 
-
+	log = "[GetDateText]: Changeling Commie Uprising Succeeds!"
+}
+PT_commie_unrest_prevent_uprising = {
+	every_state = {
+		limit = {
+			OR = {
+				state = 305
+				state = 306
+				state = 312
+				state = 313
+			}
+		}
+		set_demilitarized_zone = no
+	}
+	every_country = {
+		limit = {
+			OR = {
+				tag = CHN
+				tag = CCN
+				tag = DTR
+			}
+		}
+		remove_mission = PT_CCN_commie_unrest_uprising_timer
+		country_event = { id = PT_thoraxian.7 days = 1 }
+	}
+	clr_global_flag = PT_communist_unrest_north
+	log = "[GetDateText]: Changeling Commie Uprising Fails!"
+}
+###########################
+###Civil War Resolutions###
+###########################
 PT_civil_war_thorax_victory = {
 	clr_global_flag = PT_changeling_civil_war_ongoing
 	set_global_flag = PT_changeling_civil_war_finished
@@ -131,4 +227,3 @@ PT_civil_war_change_queen_mode = {
 		add_to_variable = { PT_CCN_queen_dirty_bit = 0.001 }
 	}
 }
-

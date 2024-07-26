@@ -31,27 +31,6 @@ PT_CCN_civil_war_deccat = {
 			always = no
 		}
     }
-	PT_CCN_civil_war_timer_0 = {
-		cancel_trigger = {
-			hidden_trigger = {
-				NOT = { has_global_flag = PT_changeling_civil_war_ongoing }
-			}
-		}
-		cancel_if_not_visible = yes
-		is_good = yes
-		days_mission_timeout = 100
-		timeout_effect = {
-			custom_effect_tooltip = PT_CCN_civil_war_timer_0_tt
-		}
-		icon = generic_ignite_civil_war
-		available = {
-			hidden_trigger = { always = no }
-		}
-		activation = {
-			hidden_trigger = { always = no }
-		}
-		fire_only_once = yes
-	}
 	PT_CCN_civil_war_secure_volistad = {
 		cancel_trigger = {
 			NOT = { controls_state = 316 }
@@ -120,6 +99,54 @@ PT_CCN_civil_war_deccat = {
 			hidden_trigger = { always = no }
 		}
 		activation = {
+			hidden_trigger = { always = no }
+		}
+		fire_only_once = yes
+	}
+}
+PT_CCN_civil_war_commie_unrest_deccat = {
+	PT_CCN_commie_unrest_uprising_timer = {
+		highlight_states = {
+			highlight_state_targets = {
+				state = 305
+				state = 306
+				state = 312
+				state = 313
+			}
+		}
+		cancel_if_not_visible = yes
+		is_good = yes
+		days_mission_timeout = 60
+		timeout_effect = {
+			hidden_effect = {
+				if = {
+					limit = { tag = CCN }
+					PT_commie_unrest_start_uprising = yes
+				}
+			}
+			custom_effect_tooltip = PT_CCN_commie_unrest_uprising_timer_tt
+		}
+		icon = generic_ignite_civil_war
+		available = {
+			hidden_trigger = { always = no }
+		}
+		fire_only_once = yes
+	}
+	PT_CCN_commie_unrest_crackdown_timer = {
+		cancel_if_not_visible = yes
+		is_good = yes
+		days_mission_timeout = 85
+		timeout_effect = {
+			hidden_effect = {
+				if = {
+					limit = { tag = CCN }
+					PT_commie_unrest_prevent_uprising = yes
+				}
+			}
+			custom_effect_tooltip = PT_CCN_commie_unrest_crackdown_timer_tt
+		}
+		icon = generic_ignite_civil_war
+		available = {
 			hidden_trigger = { always = no }
 		}
 		fire_only_once = yes

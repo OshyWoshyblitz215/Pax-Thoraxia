@@ -136,14 +136,56 @@ country_event = {
     id = PT_thoraxian.4
 	immediate = {
 		log = "[GetDateText]: [Root.GetName]: event PT_thoraxian.4"
-		hidden_effect = { PT_civil_war_commie_unrest = yes }
+		hidden_effect = {
+			PT_civil_war_commie_unrest = yes
+			country_event = { id = PT_thoraxian.5 days = 20 }
+		}
 	}
     title = PT_thoraxian.4.t
     desc = PT_thoraxian.4.desc
-
     is_triggered_only = yes
 
     option = {
         name = PT_thoraxian.4.a
+    }
+}
+country_event = {
+    id = PT_thoraxian.5
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event PT_thoraxian.5"
+		hidden_effect = { PT_civil_war_distrium_breakaway = yes }
+	}
+    title = PT_thoraxian.5.t
+    desc = PT_thoraxian.5.desc
+    is_triggered_only = yes
+
+    option = {
+        name = PT_thoraxian.5.a
+    }
+}
+country_event = {
+    id = PT_thoraxian.6
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event PT_thoraxian.6"
+	}
+    title = PT_thoraxian.6.t
+    desc = PT_thoraxian.6.desc
+    is_triggered_only = yes
+
+    option = {
+        name = PT_thoraxian.6.a
+    }
+}
+country_event = {
+    id = PT_thoraxian.7
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event PT_thoraxian.7"
+	}
+    title = PT_thoraxian.7.t
+    desc = PT_thoraxian.7.desc
+    is_triggered_only = yes
+
+    option = {
+        name = PT_thoraxian.7.a
     }
 }

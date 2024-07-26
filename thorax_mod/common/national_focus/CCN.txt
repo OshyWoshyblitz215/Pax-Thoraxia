@@ -34,16 +34,90 @@ focus_tree = {
 		id = PT_CCN_war_for_liberation
 		icon = GFX_goal_chn_harmony
 		cost = 3
-		x = 0
+		x = 2
 		y = 0
 		bypass = { always = yes }
-		#relative_position_id = PT_CCN_
 		ai_will_do = { factor = 100 }
 		available_if_capitulated = no
-		#prerequisite = { focus = PT_CCN_ }
 
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_war_for_liberation"
+		}
+	}
+	focus = {
+		id = PT_CCN_support_communist_uprising
+		icon = GFX_goal_chn_harmony
+		cost = 3
+		x = -1
+		y = 1
+		relative_position_id = PT_CCN_war_for_liberation
+		prerequisite = { focus = PT_CCN_war_for_liberation }
+		ai_will_do = { factor = 100 }
+		available_if_capitulated = no
+		available = {
+			has_global_flag = PT_communist_unrest_north
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_support_communist_uprising"
+			add_political_power = -50
+			set_country_flag = PT_CCN_supported_communists
+			add_days_mission_timeout = {
+				mission = PT_CCN_commie_unrest_uprising_timer
+				days = -10
+			}
+			hidden_effect = {
+				every_country = {
+					limit = {
+						OR = {
+							tag = CHN
+							tag = DTR
+						}
+					}
+					add_days_mission_timeout = {
+						mission = PT_CCN_commie_unrest_uprising_timer
+						days = -10
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = PT_CCN_sabotage_communist_uprising
+		icon = GFX_goal_chn_harmony
+		cost = 3
+		x = 1
+		y = 1
+		relative_position_id = PT_CCN_war_for_liberation
+		prerequisite = { focus = PT_CCN_war_for_liberation }
+		ai_will_do = { factor = 100 }
+		available_if_capitulated = no
+		available = {
+			has_global_flag = PT_communist_unrest_north
+		}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_sabotage_communist_uprising"
+			add_political_power = -50
+			set_country_flag = PT_CCN_opposed_communists
+			add_days_mission_timeout = {
+				mission = PT_CCN_commie_unrest_crackdown_timer
+				days = -30
+			}
+			hidden_effect = {
+				every_country = {
+					limit = {
+						OR = {
+							tag = CHN
+							tag = DTR
+						}
+					}
+					add_days_mission_timeout = {
+						mission = PT_CCN_commie_unrest_crackdown_timer
+						days = -30
+					}
+				}
+			}
 		}
 	}
 }
