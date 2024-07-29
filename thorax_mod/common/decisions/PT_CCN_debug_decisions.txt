@@ -15,7 +15,7 @@ PT_CCN_civil_war_deccat = {
 		}
 		visible = {
 			has_global_flag = PT_changeling_civil_war_ongoing
-			has_global_flag = PT_debug_decisions_enabled
+			has_global_flag = PT_debug_active
 		}
 		ai_will_do = {
 			factor = 1
@@ -33,7 +33,7 @@ PT_CCN_queens_deccat = {
 	PT_CCN_debug_add_power_10 = {
 		allowed = { original_tag = CCN }
 		visible = {
-			has_global_flag = PT_debug_decisions_enabled
+			has_global_flag = PT_debug_active
 		}
 		available = {
 		}
@@ -49,7 +49,7 @@ PT_CCN_queens_deccat = {
 	PT_CCN_debug_take_power_10 = {
 		allowed = { original_tag = CCN }
 		visible = {
-			has_global_flag = PT_debug_decisions_enabled
+			has_global_flag = PT_debug_active
 		}
 		available = {
 		}
@@ -65,7 +65,7 @@ PT_CCN_queens_deccat = {
 	PT_CCN_debug_add_relation_10 = {
 		allowed = { original_tag = CCN }
 		visible = {
-			has_global_flag = PT_debug_decisions_enabled
+			has_global_flag = PT_debug_active
 		}
 		available = {
 		}
@@ -81,7 +81,7 @@ PT_CCN_queens_deccat = {
 	PT_CCN_debug_take_relation_10 = {
 		allowed = { original_tag = CCN }
 		visible = {
-			has_global_flag = PT_debug_decisions_enabled
+			has_global_flag = PT_debug_active
 		}
 		available = {
 		}
@@ -97,7 +97,7 @@ PT_CCN_queens_deccat = {
 	PT_CCN_debug_add_alignment_10 = {
 		allowed = { original_tag = CCN }
 		visible = {
-			has_global_flag = PT_debug_decisions_enabled
+			has_global_flag = PT_debug_active
 		}
 		available = {
 		}
@@ -113,7 +113,7 @@ PT_CCN_queens_deccat = {
 	PT_CCN_debug_take_alignment_10 = {
 		allowed = { original_tag = CCN }
 		visible = {
-			has_global_flag = PT_debug_decisions_enabled
+			has_global_flag = PT_debug_active
 		}
 		available = {
 		}

@@ -8,10 +8,11 @@ characters={
 			}
 		}
 
-		country_leader={
-			ideology=anarchist_communism
-			expire="1965.1.1.1"
-			id=-1
+		country_leader = {
+			ideology = anarchist_communism
+			expire = "1965.1.1.1"
+			desc = PT_CCN_queen_muffin_bio
+			id = -1
 		}
 	}
 }

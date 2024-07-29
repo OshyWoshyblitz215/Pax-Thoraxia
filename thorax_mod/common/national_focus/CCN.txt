@@ -11,7 +11,7 @@ focus_tree = {
 	continuous_focus_position = { x = 2700 y = 0 }
 	#focus = {
 	#	id = PT_CCN_
-	#	icon = GFX_focus_generic_support_the_left_right
+	#	icon = GFX_goal_chn_harmony
 	#	cost = 10
 	#	x = 0
 	#	y = 0
@@ -120,6 +120,279 @@ focus_tree = {
 					}
 				}
 			}
+		}
+	}
+	focus = {
+		id = PT_CCN_get_gunz
+		icon = GFX_goal_chn_harmony
+		cost = 3
+		x = 3
+		y = 1
+		ai_will_do = {
+			factor = 100
+		}
+		available_if_capitulated = yes
+		relative_position_id = PT_CCN_war_for_liberation
+		prerequisite = { focus = PT_CCN_war_for_liberation }
+
+		select_effect = {
+			hidden_effect = {
+				if = {
+					limit = {
+						has_country_flag = {
+							flag = PT_CCN_extreme_measures_remaining
+							value > 0
+						}
+					}
+					complete_national_focus = PT_CCN_get_gunz
+					modify_country_flag = {
+						flag = PT_CCN_extreme_measures_remaining
+						value = -1
+					}
+				}
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_get_gunz"
+			if = {
+				limit = {
+					has_country_flag = {
+						flag = PT_CCN_extreme_measures_remaining
+						value > 0
+					}
+				}
+				custom_effect_tooltip = PT_CCN_civil_war_extreme_measures_focus_tt
+			}
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 500
+			}
+		}
+	}
+	focus = {
+		id = PT_CCN_get_gunz_2
+		icon = GFX_goal_chn_harmony
+		cost = 4
+		x = 0
+		y = 1
+		ai_will_do = {
+			factor = 100
+		}
+		available_if_capitulated = yes
+		relative_position_id = PT_CCN_get_gunz
+		prerequisite = { focus = PT_CCN_get_gunz }
+
+		select_effect = {
+			hidden_effect = {
+				if = {
+					limit = {
+						has_country_flag = {
+							flag = PT_CCN_extreme_measures_remaining
+							value > 0
+						}
+					}
+					complete_national_focus = PT_CCN_get_gunz_2
+					modify_country_flag = {
+						flag = PT_CCN_extreme_measures_remaining
+						value = -1
+					}
+				}
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_get_gunz_2"
+			if = {
+				limit = {
+					has_country_flag = {
+						flag = PT_CCN_extreme_measures_remaining
+						value > 0
+					}
+				}
+				custom_effect_tooltip = PT_CCN_civil_war_extreme_measures_focus_tt
+			}
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 1000
+			}
+		}
+	}
+	focus = {
+		id = PT_CCN_get_gunz_3
+		icon = GFX_goal_chn_harmony
+		cost = 5
+		x = 0
+		y = 1
+		ai_will_do = {
+			factor = 100
+		}
+		available_if_capitulated = yes
+		relative_position_id = PT_CCN_get_gunz_2
+		prerequisite = { focus = PT_CCN_get_gunz_2 }
+
+		select_effect = {
+			hidden_effect = {
+				if = {
+					limit = {
+						has_country_flag = {
+							flag = PT_CCN_extreme_measures_remaining
+							value > 0
+						}
+					}
+					complete_national_focus = PT_CCN_get_gunz_3
+					modify_country_flag = {
+						flag = PT_CCN_extreme_measures_remaining
+						value = -1
+					}
+				}
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_get_gunz_3"
+			if = {
+				limit = {
+					has_country_flag = {
+						flag = PT_CCN_extreme_measures_remaining
+						value > 0
+					}
+				}
+				custom_effect_tooltip = PT_CCN_civil_war_extreme_measures_focus_tt
+			}
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 1500
+			}
+		}
+	}
+	focus = {
+		id = PT_CCN_get_peep
+		icon = GFX_goal_chn_harmony
+		cost = 3
+		x = 5
+		y = 1
+		ai_will_do = {
+			factor = 100
+		}
+		available_if_capitulated = yes
+		relative_position_id = PT_CCN_war_for_liberation
+		prerequisite = { focus = PT_CCN_war_for_liberation }
+
+		select_effect = {
+			hidden_effect = {
+				if = {
+					limit = {
+						has_country_flag = {
+							flag = PT_CCN_extreme_measures_remaining
+							value > 0
+						}
+					}
+					complete_national_focus = PT_CCN_get_peep
+					modify_country_flag = {
+						flag = PT_CCN_extreme_measures_remaining
+						value = -1
+					}
+				}
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_get_peep"
+			if = {
+				limit = {
+					has_country_flag = {
+						flag = PT_CCN_extreme_measures_remaining
+						value > 0
+					}
+				}
+				custom_effect_tooltip = PT_CCN_civil_war_extreme_measures_focus_tt
+			}
+			add_manpower = 5000
+		}
+	}
+	focus = {
+		id = PT_CCN_get_peep_2
+		icon = GFX_goal_chn_harmony
+		cost = 4
+		x = 0
+		y = 1
+		ai_will_do = {
+			factor = 100
+		}
+		available_if_capitulated = yes
+		relative_position_id = PT_CCN_get_peep
+		prerequisite = { focus = PT_CCN_get_peep }
+
+		select_effect = {
+			hidden_effect = {
+				if = {
+					limit = {
+						has_country_flag = {
+							flag = PT_CCN_extreme_measures_remaining
+							value > 0
+						}
+					}
+					complete_national_focus = PT_CCN_get_peep_2
+					modify_country_flag = {
+						flag = PT_CCN_extreme_measures_remaining
+						value = -1
+					}
+				}
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_get_peep_2"
+			if = {
+				limit = {
+					has_country_flag = {
+						flag = PT_CCN_extreme_measures_remaining
+						value > 0
+					}
+				}
+				custom_effect_tooltip = PT_CCN_civil_war_extreme_measures_focus_tt
+			}
+			add_manpower = 10000
+		}
+	}
+	focus = {
+		id = PT_CCN_get_peep_3
+		icon = GFX_goal_chn_harmony
+		cost = 5
+		x = 0
+		y = 1
+		ai_will_do = {
+			factor = 100
+		}
+		available_if_capitulated = yes
+		relative_position_id = PT_CCN_get_peep_2
+		prerequisite = { focus = PT_CCN_get_peep_2 }
+
+		select_effect = {
+			hidden_effect = {
+				if = {
+					limit = {
+						has_country_flag = {
+							flag = PT_CCN_extreme_measures_remaining
+							value > 0
+						}
+					}
+					complete_national_focus = PT_CCN_get_peep_3
+					modify_country_flag = {
+						flag = PT_CCN_extreme_measures_remaining
+						value = -1
+					}
+				}
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_get_peep_3"
+			if = {
+				limit = {
+					has_country_flag = {
+						flag = PT_CCN_extreme_measures_remaining
+						value > 0
+					}
+				}
+				custom_effect_tooltip = PT_CCN_civil_war_extreme_measures_focus_tt
+			}
+			add_manpower = 15000
 		}
 	}
 }

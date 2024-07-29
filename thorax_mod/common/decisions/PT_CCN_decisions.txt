@@ -12,23 +12,32 @@ PT_CCN_queens_deccat = {
 			check_variable = { PT_queen_stage_option^PT_selected_queen = 2 }
 			check_variable = { PT_selected_queen = 0 }
 		}
-		available = {
-		}
 		cost = 10
-		complete_effect = {
-			
-		}
 	}
 }
 
 PT_CCN_civil_war_deccat = {
 	PT_CCN_civil_war_persistent = {
-		visible = {
-			always = yes
-		}
 		icon = generic_ignite_civil_war
-		available = {
-			always = no
+		available = { always = no }
+    }
+    PT_CCN_civil_war_extreme_measures_decision = {
+		icon = generic_ignite_civil_war
+		visible = { original_tag = CCN }
+		fire_only_once = yes
+		complete_effect = {
+			add_political_power = -50
+			add_popularity = {
+				ideology = democratic
+				popularity = -0.1
+			}
+			hidden_effect = {
+				set_country_flag = {
+					flag = PT_CCN_extreme_measures_remaining
+					value = 3
+				}
+			}
+			custom_effect_tooltip = PT_CCN_civil_war_extreme_measures_decision_tt
 		}
     }
 	PT_CCN_civil_war_secure_volistad = {

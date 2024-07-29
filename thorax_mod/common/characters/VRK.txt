@@ -14,7 +14,7 @@ characters={
 		}		
 		country_leader = {
 			expire = "1965.1.1"
-			ideology = juche
+			ideology = socialist_monarchism
 			desc = PT_CCN_queen_argynnis_bio
 			id=-1
 		}

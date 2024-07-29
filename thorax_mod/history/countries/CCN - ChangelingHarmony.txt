@@ -165,16 +165,15 @@ add_ideas = {
 	proper_science_base
 	no_lack_of_scientists
 	no_poverty
-	CCN_Civil_War
 }
 
 
 set_convoys = 69
 set_popularities = {
-	democratic = 75
+	democratic = 71
 	fascism = 3
 	communism = 17
-	neutrality = 5
+	neutrality = 9
 }
 set_politics = {
 	ruling_party = democratic

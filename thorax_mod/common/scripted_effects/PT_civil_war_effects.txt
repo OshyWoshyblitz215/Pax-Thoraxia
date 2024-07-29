@@ -20,6 +20,10 @@ PT_CCN_Start_Civil_War = {
 			add_core_of = CCN
 			transfer_state_to = CCN
 		}
+		set_capital = {
+			state = 323
+			remember_old_capital = no
+		}
 		load_oob = CCN_Civil_War
 		declare_war_on = { target = CHN type = civil_war }
 		complete_national_focus = PT_CCN_war_for_liberation
