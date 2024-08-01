@@ -1,5 +1,43 @@
 ﻿add_namespace = PT_thoraxian
 
+country_event = { #Force CW
+    id = PT_thoraxian.0
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event PT_thoraxian.0"
+	}
+	trigger = {
+		date > 1007.6.1
+		original_tag = CHN
+		NOT = {
+			OR = {
+				has_completed_focus = destroy_thoraxian_opposition
+				has_completed_focus = thoraxian_betrayal
+				focus_progress = {
+					focus = destroy_thoraxian_opposition
+					progress > 0.01
+				}
+				focus_progress = {
+					focus = thoraxian_betrayal
+					progress > 0.01
+				}
+			}
+		}
+	}
+    title = PT_thoraxian.0.t
+    desc = PT_thoraxian.0.desc
+	fire_only_once = yes
+
+    option = {
+        name = PT_thoraxian.0.a
+        add_political_power = -77
+        complete_national_focus = thoraxian_betrayal
+    }
+    option = {
+        name = PT_thoraxian.0.b
+        add_political_power = -70
+        complete_national_focus = destroy_thoraxian_opposition
+    }
+}
 country_event = {   ######### CREATE CCN / START CIVIL WAR ######
 	id = PT_thoraxian.1
 	immediate = {
@@ -132,7 +170,7 @@ country_event = { #Timer for commie unrest, starts it earlier based on if antax 
 		}
     }
 }
-country_event = {
+country_event = { #Commie unrest start
     id = PT_thoraxian.4
 	immediate = {
 		log = "[GetDateText]: [Root.GetName]: event PT_thoraxian.4"
@@ -149,7 +187,7 @@ country_event = {
         name = PT_thoraxian.4.a
     }
 }
-country_event = {
+country_event = { #Distirum breakaway
     id = PT_thoraxian.5
 	immediate = {
 		log = "[GetDateText]: [Root.GetName]: event PT_thoraxian.5"
@@ -163,7 +201,7 @@ country_event = {
         name = PT_thoraxian.5.a
     }
 }
-country_event = {
+country_event = { #commie uprising
     id = PT_thoraxian.6
 	immediate = {
 		log = "[GetDateText]: [Root.GetName]: event PT_thoraxian.6"
@@ -176,7 +214,7 @@ country_event = {
         name = PT_thoraxian.6.a
     }
 }
-country_event = {
+country_event = { #Commies crushed
     id = PT_thoraxian.7
 	immediate = {
 		log = "[GetDateText]: [Root.GetName]: event PT_thoraxian.7"
@@ -191,7 +229,7 @@ country_event = {
 }
 country_event = {
     id = PT_thoraxian.8
-	immediate = {
+	immediate = { #Soryth Vraks breakaway
 		log = "[GetDateText]: [Root.GetName]: event PT_thoraxian.8"
 		hidden_effect = {
 			if = {
@@ -210,7 +248,7 @@ country_event = {
         name = PT_thoraxian.8.a
     }
 }
-country_event = {
+country_event = { #Lyctida breakaway
     id = PT_thoraxian.9
 	immediate = {
 		log = "[GetDateText]: [Root.GetName]: event PT_thoraxian.9"
@@ -231,7 +269,7 @@ country_event = {
         name = PT_thoraxian.9.a
     }
 }
-country_event = {
+country_event = { #Hegemony disbanded
     id = PT_thoraxian.10
 	immediate = {
 		log = "[GetDateText]: [Root.GetName]: event PT_thoraxian.10"

@@ -300,6 +300,10 @@ PT_CCN_commie_unrest_crackdown_timer: "Distryum Crackdown"
 PT_CCN_commie_unrest_crackdown_timer_tt: "§YHelvia§! will supress §Rcommunist riots§! and reestablish control\n"
 
 #Events
+PT_thoraxian.0.t: "The Harmonist Question"
+PT_thoraxian.0.desc: "Harmonist cells have infiltrated many hives in the east. It seems a rising is iminent. This issue can no longer be ignored."
+PT_thoraxian.0.a: "There is nothing that can be done..."
+PT_thoraxian.0.b: "Destroy these traitors at once!"
 PT_thoraxian.1.t: "The Thoraxian Betrayal"
 PT_thoraxian.1.desc: "With supporters for harmony and friendship growing larger and larger within the hives scattered across changeling lands, it was only time before those upstarts thought themselves too good for the strength and unity of the Queen. Thorax and his supporters, as well as numerous detractors of Chrysalis, have all united under the banner of 'harmony'.\n\nThe rebels took control of the forests around Antax in the east of country."
 PT_thoraxian.1.a: "We shall embrace harmony!"
@@ -336,5 +340,12 @@ PT_thoraxian.10.a: "Balkanization of Changeling Lands."
 #LEADERS
 
 #GENERALS
+CCN_vikar: "Vikar"
+CCN_aphididae: "Aphididae"
+CCN_ersatz: "Larx Ersatz"
+CCN_PT_dutchess: "Dutchess"
+CCN_PT_thovaxe: "Thovaxe"
 
 #IDEAS
+PT_CCN_volistadt_forward_operating_base_0: "Volistadt forward operating base"
+PT_CCN_antax_forward_operating_base_0: "Antax forward operating base"

@@ -123,6 +123,74 @@ focus_tree = {
 		}
 	}
 	focus = {
+		id = PT_CCN_volistad_base_of_operations
+		icon = GFX_goal_chn_harmony
+		cost = 4
+		x = 7
+		y = 1
+		ai_will_do = {
+			factor = 100
+		}
+		available = { owns_state = 316 }
+		relative_position_id = PT_CCN_war_for_liberation
+		prerequisite = { focus = PT_CCN_war_for_liberation }
+		mutually_exclusive = { focus = PT_CCN_antax_base_of_operations }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_volistad_base_of_operations"
+			set_capital = {
+				state = 316
+				remember_old_capital = yes
+			}
+			316 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_ideas = PT_CCN_volistadt_forward_operating_base_0
+		}
+	}
+	focus = {
+		id = PT_CCN_antax_base_of_operations
+		icon = GFX_goal_chn_harmony
+		cost = 4
+		x = 9
+		y = 1
+		relative_position_id = PT_CCN_war_for_liberation
+		prerequisite = { focus = PT_CCN_war_for_liberation }
+		mutually_exclusive = { focus = PT_CCN_volistad_base_of_operations }
+		ai_will_do = {
+			factor = 100
+		}
+		available = { owns_state = 323 }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_volistad_base_of_operations"
+			set_capital = {
+				state = 323
+				remember_old_capital = yes
+			}
+			323 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_ideas = PT_CCN_antax_forward_operating_base_0
+		}
+	}
+	#Support focuses placeholder
+	focus = {
 		id = PT_CCN_get_gunz
 		icon = GFX_goal_chn_harmony
 		cost = 3

@@ -7,6 +7,23 @@ spriteTypes = {
 		name = "GFX_news_pt_civil_war_colored"
 		texturefile = "gfx/event_pictures/news_pt_civil_war_news_colored.dds"
 	}
+	spriteType = {
+		name = "GFX_PT_CCN_vikar"
+		texturefile = "gfx/leaders/CCN/Vikar.tga"
+	}
+	spriteType = {
+		name = "GFX_PT_CCN_aphididae"
+		texturefile = "gfx/leaders/CCN/Aphididae.tga"
+	}
+	spriteType = {
+		name = "GFX_PT_CCN_thovaxe"
+		texturefile = "gfx/leaders/CCN/Thovaxe.tga"
+	}
+	spriteType = {
+		name = "GFX_PT_CCN_dutchess"
+		texturefile = "gfx/leaders/CCN/Dutchess.tga"
+	}
+
 	#Queens stuff
 	spriteType = {		
 		name = "GFX_PT_CCN_queens_portrait_0"

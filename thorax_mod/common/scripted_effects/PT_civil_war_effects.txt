@@ -1,8 +1,4 @@
 PT_CCN_Start_Civil_War = {
-	CHN = {
-		load_oob = CHN_1007
-		remove_ideas = political_divisions
-	}
 	CCN = {
 		transfer_technology = yes
 		every_state = {
@@ -21,7 +17,7 @@ PT_CCN_Start_Civil_War = {
 			transfer_state_to = CCN
 		}
 		set_capital = {
-			state = 323
+			state = 322
 			remember_old_capital = no
 		}
 		load_oob = CCN_Civil_War
@@ -39,7 +35,7 @@ PT_CCN_Start_Civil_War = {
 		CHN_azure_lore = {
 			set_nationality = CCN
 		}
-		transfer_units_fraction= {
+		transfer_units_fraction = {
 			target = CCN
 			size = 0.1
 			stockpile_ratio = 0.2
@@ -47,10 +43,12 @@ PT_CCN_Start_Civil_War = {
 			air_ratio = 0
 			navy_ratio = 0
 		}
+		load_oob = CHN_1007
+		remove_ideas = political_divisions
 		add_ideas = { PT_CHN_civil_war }
 	}
 	set_global_flag = PT_changeling_civil_war_ongoing	
-	#news_event = { id = ptnews.1 days = 1 }
+	news_event = { id = PT_thoraxian.2 days = 1 }
 	log = "[GetDateText]: Thoraxian Civil War Started!!"
 }
 PT_civil_war_commie_unrest = {

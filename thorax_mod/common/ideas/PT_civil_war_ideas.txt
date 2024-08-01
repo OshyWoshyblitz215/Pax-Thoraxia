@@ -2,6 +2,7 @@ ideas = {
 	country = {
         PT_CHN_civil_war = {
 			allowed = { always = no }
+			picture = GFX_idea_unknown
 			available = {
 				country_exists = CHN
 				country_exists = CCN
@@ -13,8 +14,20 @@ ideas = {
 				can_join_factions = no
 				can_not_declare_war = yes
 			}
-			removal_cost = -1
-			picture = CHN_political_divisions
+		}
+        PT_CCN_volistadt_forward_operating_base_0 = {
+			allowed = { original_tag = CCN }
+			picture = GFX_idea_unknown
+			modifier = {
+				offence = 0.1
+			}
+		}
+        PT_CCN_antax_forward_operating_base_0 = {
+			allowed = { original_tag = CCN }
+			picture = GFX_idea_unknown
+			modifier = {
+				defence = 0.1
+			}
 		}
 	}
 }

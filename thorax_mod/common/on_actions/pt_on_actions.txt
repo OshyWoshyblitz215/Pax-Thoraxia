@@ -39,4 +39,66 @@ on_actions = {
 			}
 		}
 	}
+	on_state_control_changed = {
+		effect = {
+			if = {
+				limit = {
+					FROM.FROM =  { state = 316 }
+					has_global_flag = PT_changeling_civil_war_ongoing
+				}
+				if = {
+					limit = {
+						FROM = {
+							tag = CCN
+							has_idea = PT_CCN_volistadt_forward_operating_base_0
+						}
+					}
+					FROM = {
+						remove_ideas = PT_CCN_volistadt_forward_operating_base_0
+					}
+				}
+				if = {
+					limit = {
+						tag = CCN
+						NOT = { has_idea = PT_CCN_volistadt_forward_operating_base_0 }
+						has_completed_focus = PT_CCN_volistad_base_of_operations
+					}
+					add_ideas = PT_CCN_volistadt_forward_operating_base_0
+					set_capital = {
+						state = 316
+						remember_old_capital = no
+					}
+				}
+			}
+			if = {
+				limit = {
+					FROM.FROM =  { state = 323 }
+					has_global_flag = PT_changeling_civil_war_ongoing
+				}
+				if = {
+					limit = {
+						FROM = {
+							tag = CCN
+							has_idea = PT_CCN_antax_forward_operating_base_0
+						}
+					}
+					FROM = {
+						remove_ideas = PT_CCN_antax_forward_operating_base_0
+					}
+				}
+				if = {
+					limit = {
+						tag = CCN
+						NOT = { has_idea = PT_CCN_antax_forward_operating_base_0 }
+						has_completed_focus = PT_CCN_antax_base_of_operations
+					}
+					add_ideas = PT_CCN_antax_forward_operating_base_0
+					set_capital = {
+						state = 323
+						remember_old_capital = no
+					}
+				}
+			}
+		}
+	}
 }
