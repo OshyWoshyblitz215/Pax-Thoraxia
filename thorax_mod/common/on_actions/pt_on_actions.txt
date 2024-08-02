@@ -101,4 +101,38 @@ on_actions = {
 			}
 		}
 	}
+	on_weekly_CCN = {
+		effect = {
+			if = {
+				limit = {
+					has_global_flag = PT_changeling_civil_war_ongoing
+					has_country_flag = {
+						flag = PT_CCN_civil_war_authoritarianism_score
+						value = 0
+					}
+					democratic < 0.5
+				}
+				set_country_flag = {
+					flag = PT_CCN_civil_war_authoritarianism_score
+					value = 1
+				}
+				add_ideas = PT_CCN_authoritarianism_slip_0
+			}
+			if = {
+				limit = {
+					has_global_flag = PT_changeling_civil_war_ongoing
+					has_country_flag = {
+						flag = PT_CCN_civil_war_authoritarianism_score
+						value = 1
+					}
+					democratic > 0.55
+				}
+				set_country_flag = {
+					flag = PT_CCN_civil_war_authoritarianism_score
+					value = 0
+				}
+				remove_ideas = PT_CCN_authoritarianism_slip_0
+			}
+		}
+	}
 }

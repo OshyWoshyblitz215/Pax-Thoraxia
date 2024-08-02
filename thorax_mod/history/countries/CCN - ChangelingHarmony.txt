@@ -168,11 +168,11 @@ add_ideas = {
 }
 
 
-set_convoys = 69
+set_convoys = 30
 set_popularities = {
-	democratic = 71
-	fascism = 3
-	communism = 17
+	democratic = 86
+	fascism = 0
+	communism = 5
 	neutrality = 9
 }
 set_politics = {

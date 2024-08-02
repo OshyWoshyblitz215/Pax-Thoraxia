@@ -1,4 +1,5 @@
 PT_CCN_Start_Civil_War = {
+	CHN = { load_oob = CHN_1007 }
 	CCN = {
 		transfer_technology = yes
 		every_state = {
@@ -19,6 +20,10 @@ PT_CCN_Start_Civil_War = {
 		set_capital = {
 			state = 322
 			remember_old_capital = no
+		}
+		set_country_flag = {
+			flag = PT_CCN_civil_war_authoritarianism_score
+			value = 0
 		}
 		load_oob = CCN_Civil_War
 		declare_war_on = { target = CHN type = civil_war }
@@ -43,7 +48,6 @@ PT_CCN_Start_Civil_War = {
 			air_ratio = 0
 			navy_ratio = 0
 		}
-		load_oob = CHN_1007
 		remove_ideas = political_divisions
 		add_ideas = { PT_CHN_civil_war }
 	}

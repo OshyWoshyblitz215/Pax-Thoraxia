@@ -29,5 +29,12 @@ ideas = {
 				defence = 0.1
 			}
 		}
+        PT_CCN_authoritarianism_slip_0 = {
+			allowed = { original_tag = CCN }
+			picture = GFX_idea_unknown
+			modifier = {
+				political_power_cost = 0.25
+			}
+		}
 	}
 }

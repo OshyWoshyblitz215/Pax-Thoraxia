@@ -67,7 +67,7 @@ country_event = {   ######### CREATE CCN / START CIVIL WAR ######
 		effect_tooltip = {
 			start_civil_war = {
 				ruling_party = democratic
-				ideology = fascism
+				ideology = democratic
 				size = 0.1
 				states = { 319 320 322 323 }
 			}
@@ -91,7 +91,7 @@ country_event = {   ######### CREATE CCN / START CIVIL WAR ######
 
 		effect_tooltip = {
 			start_civil_war = {
-				ideology = democratic
+				ideology = fascism
 				size = 0.1
 				states = { 319 320 322 323 }
 			}
