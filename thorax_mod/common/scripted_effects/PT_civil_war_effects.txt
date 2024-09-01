@@ -1,37 +1,34 @@
+######################
+###CW Start/Endings###
+######################
 PT_CCN_Start_Civil_War = {
-	CHN = { load_oob = CHN_1007 }
+	CHN = {
+		every_core_state = {
+			add_core_of = CCN
+		}
+	}
 	CCN = {
 		transfer_technology = yes
-		every_state = {
-			limit = {
-				OR = {
-					state = 247
-					state = 249
-					state = 316
-					state = 319
-					state = 320
-					state = 322
-					state = 323
-				}
-			}
-			add_core_of = CCN
-			transfer_state_to = CCN
-		}
+		247 = { transfer_state_to = CCN }
+		249 = { transfer_state_to = CCN }
+		316 = { transfer_state_to = CCN }
+		319 = { transfer_state_to = CCN }
+		320 = { transfer_state_to = CCN }
+		322 = { transfer_state_to = CCN }
+		323 = { transfer_state_to = CCN }
 		set_capital = {
 			state = 322
 			remember_old_capital = no
 		}
+		load_oob = CCN_Civil_War
+		set_cosmetic_tag = CCN_CWCT
+		declare_war_on = { target = CHN type = civil_war }
+		#country_event = { id = PT_thoraxian.3 days = 35 }
 		set_country_flag = {
 			flag = PT_CCN_civil_war_authoritarianism_score
 			value = 0
 		}
-		load_oob = CCN_Civil_War
-		declare_war_on = { target = CHN type = civil_war }
-		complete_national_focus = PT_CCN_war_for_liberation
-		activate_mission = PT_CCN_civil_war_secure_volistad
-		activate_mission = PT_CCN_civil_war_secure_antax
-		country_event = { id = PT_thoraxian.3 days = 35 }
-		set_cosmetic_tag = CCN_CWCT
+		PT_civil_war_initial_uprising_start = yes
 	}
 	CHN = {
 		CHN_vect = {
@@ -51,10 +48,173 @@ PT_CCN_Start_Civil_War = {
 		remove_ideas = political_divisions
 		add_ideas = { PT_CHN_civil_war }
 	}
-	set_global_flag = PT_changeling_civil_war_ongoing	
+	set_global_flag = PT_changeling_civil_war_ongoing
 	news_event = { id = PT_thoraxian.2 days = 1 }
 	log = "[GetDateText]: Thoraxian Civil War Started!!"
 }
+PT_civil_war_thorax_victory = {
+	clr_global_flag = PT_changeling_civil_war_ongoing
+	set_global_flag = PT_changeling_civil_war_finished
+	CCN = {
+		log = "[GetDateText]: Thorax civil war victory!"
+		annex_country = {
+			target = CHN
+			transfer_troops = no
+		}
+		#PT_civil_war_change_queen_mode = yes
+		set_capital = {
+		  state = 251
+		  remember_old_capital = no
+		}
+		drop_cosmetic_tag = yes
+	}
+}
+PT_civil_war_chrisie_victory = {
+	clr_global_flag = PT_changeling_civil_war_ongoing
+	set_global_flag = PT_changeling_civil_war_finished
+	CHN = {
+		log = "[GetDateText]: Chrysalis civil war victory!"
+		annex_country = {
+			target = CCN
+			transfer_troops = no
+		}
+		annex_country = {
+			target = DTR
+			transfer_troops = yes
+		}
+		annex_country = {
+			target = SRT
+			transfer_troops = yes
+		}
+		annex_country = {
+			target = VRK
+			transfer_troops = yes
+		}
+		annex_country = {
+			target = LCD
+			transfer_troops = yes
+		}
+		declare_war_on = {
+			target = GRK
+			type = annex_everything
+		}
+		drop_cosmetic_tag = yes
+	}
+}
+
+###########################
+#####Initial Uprising######
+###########################
+PT_civil_war_initial_uprising_start = {
+	set_global_flag = PT_civil_war_initial_uprising_ongoing
+	CCN = {
+		activate_mission = PT_CCN_civil_war_initial_uprising_mission
+		complete_national_focus = PT_CCN_initial_uprising
+		set_variable = {
+			var = PT_CCN_initial_uprising_dynamic_modifier_operative_slot
+			value = 0
+		}
+		set_variable = {
+			var = PT_CCN_initial_uprising_dynamic_modifier_own_operative_detection_chance_factor
+			value = 0
+		}
+		set_variable = {
+			var = PT_CCN_initial_uprising_dynamic_modifier_enemy_operative_detection_chance_factor
+			value = 0
+		}
+		set_variable = {
+			var = PT_CCN_initial_uprising_dynamic_modifier_intel_from_operatives_factor
+			value = 0
+		}
+		set_variable = {
+			var = PT_CCN_initial_uprising_dynamic_modifier_agency_upgrade_time
+			value = 0
+		}
+		set_variable = {
+			var = PT_CCN_initial_uprising_dynamic_modifier_army_speed_factor
+			value = -0.2
+		}
+		set_variable = {
+			var = PT_CCN_initial_uprising_dynamic_modifier_army_org_factor
+			value = -0.1
+		}
+		set_variable = {
+			var = PT_CCN_initial_uprising_dynamic_modifier_supply_consumption_factor
+			value = 0
+		}
+		set_variable = {
+			var = PT_CCN_initial_uprising_dynamic_modifier_stability_factor
+			value = 0
+		}
+		set_variable = {
+			var = PT_CCN_initial_uprising_dynamic_modifier_democratic_drift
+			value = 0
+		}
+	}
+	CHN = {
+		add_dynamic_modifier = {
+			modifier = PT_CHN_initial_uprising_dynamic_modifier
+		}
+	}
+}
+PT_civil_war_initial_uprising_end = {
+	clr_global_flag = PT_civil_war_initial_uprising_ongoing
+	set_global_flag = PT_civil_war_initial_uprising_finished
+	CHN = {
+		every_controlled_state = {
+			remove_dynamic_modifier = { modifier = PT_CHN_uprising_redeployment_block }
+		}
+	}
+	CCN = {
+		every_controlled_state = {
+			remove_dynamic_modifier = { modifier = PT_CHN_uprising_redeployment_block }
+		}
+		set_variable = {
+			var = PT_CCN_initial_uprising_dynamic_modifier_operative_slot
+			value = 0
+		}
+		divide_variable = {
+			var = PT_CCN_initial_uprising_dynamic_modifier_own_operative_detection_chance_factor
+			value = 2
+		}
+		divide_variable = {
+			var = PT_CCN_initial_uprising_dynamic_modifier_enemy_operative_detection_chance_factor
+			value = 2
+		}
+		divide_variable = {
+			var = PT_CCN_initial_uprising_dynamic_modifier_intel_from_operatives_factor
+			value = 2
+		}
+		divide_variable = {
+			var = PT_CCN_initial_uprising_dynamic_modifier_agency_upgrade_time
+			value = 2
+		}
+		divide_variable = {
+			var = PT_CCN_initial_uprising_dynamic_modifier_army_speed_factor
+			value = 2
+		}
+		divide_variable = {
+			var = PT_CCN_initial_uprising_dynamic_modifier_army_org_factor
+			value = 2
+		}
+		divide_variable = {
+			var = PT_CCN_initial_uprising_dynamic_modifier_supply_consumption_factor
+			value = 2
+		}
+		divide_variable = {
+			var = PT_CCN_initial_uprising_dynamic_modifier_stability_factor
+			value = 2
+		}
+		divide_variable = {
+			var = PT_CCN_initial_uprising_dynamic_modifier_democratic_drift
+			value = 2
+		}
+	}
+}
+
+###########################
+#######Unused Stuff########
+###########################
 PT_civil_war_commie_unrest = {
 	CHN = {
 		every_state = {
@@ -286,58 +446,6 @@ PT_civil_war_lyctida_breakaway =
 		country_event = { id = PT_thoraxian.10 days = 5 }
 	}
 	log = "[GetDateText]: Lyctida broke away!"
-}
-###########################
-###Civil War Resolutions###
-###########################
-PT_civil_war_thorax_victory = {
-	clr_global_flag = PT_changeling_civil_war_ongoing
-	set_global_flag = PT_changeling_civil_war_finished
-	CCN = {
-		log = "[GetDateText]: Thorax civil war victory!"
-		annex_country = {
-			target = CHN
-			transfer_troops = no
-		}
-		#PT_civil_war_change_queen_mode = yes
-		set_capital = {
-		  state = 251
-		  remember_old_capital = no
-		}
-		drop_cosmetic_tag = yes
-	}
-}
-PT_civil_war_chrisie_victory = {
-	clr_global_flag = PT_changeling_civil_war_ongoing
-	set_global_flag = PT_changeling_civil_war_finished
-	CHN = {
-		log = "[GetDateText]: Chrysalis civil war victory!"
-		annex_country = {
-			target = CCN
-			transfer_troops = no
-		}
-		annex_country = {
-			target = DTR
-			transfer_troops = yes
-		}
-		annex_country = {
-			target = SRT
-			transfer_troops = yes
-		}
-		annex_country = {
-			target = VRK
-			transfer_troops = yes
-		}
-		annex_country = {
-			target = LCD
-			transfer_troops = yes
-		}
-		declare_war_on = {
-			target = GRK
-			type = annex_everything
-		}
-		drop_cosmetic_tag = yes
-	}
 }
 PT_civil_war_change_queen_mode = {
 	CCN = {

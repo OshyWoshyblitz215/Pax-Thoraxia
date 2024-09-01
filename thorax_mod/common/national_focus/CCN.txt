@@ -31,12 +31,322 @@ focus_tree = {
 	#####CIVIL WAR#####
 	###################
     focus = {
+		id = PT_CCN_initial_uprising
+		icon = GFX_goal_chn_harmony
+		cost = 1
+		x = 5
+		y = 0
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = PT_civil_war_initial_uprising_ongoing_tt
+				has_global_flag = PT_civil_war_initial_uprising_ongoing
+			}
+		}
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = PT_civil_war_initial_uprising_ongoing_tt
+				has_global_flag = PT_civil_war_initial_uprising_ongoing
+			}
+		}
+		ai_will_do = { factor = 100 }
+		available_if_capitulated = no
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_initial_uprising"
+		}
+	}
+    focus = {
+		id = PT_CCN_initial_uprising_cut_phone_lines
+		icon = GFX_goal_chn_harmony
+		cost = 1
+		x = -4
+		y = 1
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = PT_civil_war_initial_uprising_ongoing_tt
+				has_global_flag = PT_civil_war_initial_uprising_ongoing
+			}
+		}
+		ai_will_do = { factor = 100 }
+		available_if_capitulated = no
+		relative_position_id = PT_CCN_initial_uprising
+		prerequisite = { focus = PT_CCN_initial_uprising }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_initial_uprising_cut_phone_lines"
+			add_days_mission_timeout = {
+				mission = PT_CCN_civil_war_initial_uprising_mission
+				days = 7
+			}
+		}
+	}
+    focus = {
+		id = PT_CCN_initial_uprising_blow_up_railways
+		icon = GFX_goal_chn_harmony
+		cost = 1
+		x = -3
+		y = 2
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = PT_civil_war_initial_uprising_ongoing_tt
+				has_global_flag = PT_civil_war_initial_uprising_ongoing
+			}
+		}
+		ai_will_do = { factor = 100 }
+		available_if_capitulated = no
+		relative_position_id = PT_CCN_initial_uprising
+		prerequisite = { focus = PT_CCN_initial_uprising }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_initial_uprising_blow_up_railways"
+			hidden_effect = {
+				CHN = {
+					every_controlled_state = {
+						add_dynamic_modifier = { modifier = PT_CHN_uprising_redeployment_block }
+					}
+				}
+				subtract_from_variable = {
+					var = PT_CCN_initial_uprising_dynamic_modifier_army_speed_factor
+					value = 0.1
+				}
+			}
+			effect_tooltip = {
+				CHN = {
+					add_dynamic_modifier = { modifier = PT_CHN_uprising_redeployment_block }
+				}
+			}
+			#Damage Key Railways Points
+		}
+	}
+    focus = {
+		id = PT_CCN_initial_uprising_sabotage_vops
+		icon = GFX_goal_chn_harmony
+		cost = 1
+		x = -2
+		y = 1
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = PT_civil_war_initial_uprising_ongoing_tt
+				has_global_flag = PT_civil_war_initial_uprising_ongoing
+			}
+		}
+		ai_will_do = { factor = 100 }
+		available_if_capitulated = no
+		relative_position_id = PT_CCN_initial_uprising
+		prerequisite = { focus = PT_CCN_initial_uprising }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_initial_uprising_sabotage_vops"
+			hidden_effect = {
+				subtract_from_variable = {
+					var = PT_CCN_initial_uprising_dynamic_modifier_operative_slot
+					value = 1
+				}
+				add_to_variable = {
+					var = PT_CCN_initial_uprising_dynamic_modifier_own_operative_detection_chance_factor
+					value = 0.25
+				}
+				subtract_from_variable = {
+					var = PT_CCN_initial_uprising_dynamic_modifier_enemy_operative_detection_chance_factor
+					value = 0.25
+				}
+				subtract_from_variable = {
+					var = PT_CCN_initial_uprising_dynamic_modifier_intel_from_operatives_factor
+					value = 0.3
+				}
+				add_to_variable = {
+					var = PT_CCN_initial_uprising_dynamic_modifier_agency_upgrade_time
+					value = 1
+				}
+			}
+			custom_effect_tooltip = PT_CCN_initial_uprising_sabotage_vops_tt
+		}
+	}
+    focus = {
+		id = PT_CCN_initial_uprising_raid_supplies
+		icon = GFX_goal_chn_harmony
+		cost = 1
+		x = -1
+		y = 2
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = PT_civil_war_initial_uprising_ongoing_tt
+				has_global_flag = PT_civil_war_initial_uprising_ongoing
+			}
+		}
+		ai_will_do = { factor = 100 }
+		available_if_capitulated = no
+		relative_position_id = PT_CCN_initial_uprising
+		prerequisite = { focus = PT_CCN_initial_uprising }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_initial_uprising_raid_supplies"
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 200
+				producer = CHN
+			}
+			hidden_effect = {
+				add_to_variable = {
+					var = PT_CCN_initial_uprising_dynamic_modifier_supply_consumption_factor
+					value = 0.25
+				}
+			}
+		}
+	}
+    focus = {
+		id = PT_CCN_initial_uprising_gather_volunteers
+		icon = GFX_goal_chn_harmony
+		cost = 1
+		x = 0
+		y = 1
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = PT_civil_war_initial_uprising_ongoing_tt
+				has_global_flag = PT_civil_war_initial_uprising_ongoing
+			}
+		}
+		ai_will_do = { factor = 100 }
+		available_if_capitulated = no
+		relative_position_id = PT_CCN_initial_uprising
+		prerequisite = { focus = PT_CCN_initial_uprising }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_initial_uprising_gather_volunteers"
+			CHN = { add_manpower = -35000 }
+			add_manpower = 35000
+		}
+	}
+    focus = {
+		id = PT_CCN_initial_uprising_spread_leaflets
+		icon = GFX_goal_chn_harmony
+		cost = 1
+		x = 1
+		y = 2
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = PT_civil_war_initial_uprising_ongoing_tt
+				has_global_flag = PT_civil_war_initial_uprising_ongoing
+			}
+		}
+		ai_will_do = { factor = 100 }
+		available_if_capitulated = no
+		relative_position_id = PT_CCN_initial_uprising
+		prerequisite = { focus = PT_CCN_initial_uprising }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_initial_uprising_spread_leaflets"
+			hidden_effect = {
+				subtract_from_variable = {
+					var = PT_CCN_initial_uprising_dynamic_modifier_stability_factor
+					value = 0.2
+				}
+				add_to_variable = {
+					var = PT_CCN_initial_uprising_dynamic_modifier_democratic_drift
+					value = 0.05
+				}
+			}
+		}
+	}
+    focus = {
+		id = PT_CCN_initial_uprising_organize_sleeper_cells
+		icon = GFX_goal_chn_harmony
+		cost = 1
+		x = 2
+		y = 1
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = PT_civil_war_initial_uprising_ongoing_tt
+				has_global_flag = PT_civil_war_initial_uprising_ongoing
+			}
+		}
+		ai_will_do = { factor = 100 }
+		available_if_capitulated = no
+		relative_position_id = PT_CCN_initial_uprising
+		prerequisite = { focus = PT_CCN_initial_uprising }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_initial_uprising_organize_sleeper_cells"
+			hidden_effect = {
+				set_country_flag = PT_CCN_organized_sleeper_cells
+			}
+			add_command_power = 50
+			custom_effect_tooltip = PT_CCN_initial_uprising_organize_sleeper_cells_tt
+		}
+	}
+    focus = {
+		id = PT_CCN_initial_uprising_sieze_weapon_caches
+		icon = GFX_goal_chn_harmony
+		cost = 1
+		x = 3
+		y = 2
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = PT_civil_war_initial_uprising_ongoing_tt
+				has_global_flag = PT_civil_war_initial_uprising_ongoing
+			}
+		}
+		ai_will_do = { factor = 100 }
+		available_if_capitulated = no
+		relative_position_id = PT_CCN_initial_uprising
+		prerequisite = { focus = PT_CCN_initial_uprising }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_initial_uprising_sieze_weapon_caches"
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 2000
+				producer = CHN
+			}
+		}
+	}
+    focus = {
+		id = PT_CCN_initial_uprising_sway_commanders
+		icon = GFX_goal_chn_harmony
+		cost = 1
+		x = 4
+		y = 1
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = PT_civil_war_initial_uprising_ongoing_tt
+				has_global_flag = PT_civil_war_initial_uprising_ongoing
+			}
+		}
+		ai_will_do = { factor = 100 }
+		available_if_capitulated = no
+		relative_position_id = PT_CCN_initial_uprising
+		prerequisite = { focus = PT_CCN_initial_uprising }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus PT_CCN_initial_uprising_sway_commanders"
+			CHN = { add_manpower = -5000}
+			add_manpower = 5000
+			army_experience = 35
+			hidden_effect = {
+				set_country_flag = PT_CCN_swayed_commanders
+				subtract_from_variable = {
+					var = PT_CCN_initial_uprising_dynamic_modifier_army_org_factor
+					value = 0.1
+				}
+			}
+			custom_effect_tooltip = PPT_CCN_initial_uprising_sway_commanders_tt
+		}
+	}
+
+
+
+
+
+	####################
+	#####Test Stuff#####
+	####################
+    focus = {
 		id = PT_CCN_war_for_liberation
 		icon = GFX_goal_chn_harmony
 		cost = 3
-		x = 2
+		x = 15
 		y = 0
-		bypass = { always = yes }
+		available = { has_global_flag = PT_civil_war_initial_uprising_finished }
+		bypass = { has_global_flag = PT_civil_war_initial_uprising_finished }
 		ai_will_do = { factor = 100 }
 		available_if_capitulated = no
 

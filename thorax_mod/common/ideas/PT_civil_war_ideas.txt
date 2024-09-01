@@ -1,6 +1,6 @@
 ideas = {
 	country = {
-        PT_CHN_civil_war = {
+		PT_CHN_civil_war = {
 			allowed = { always = no }
 			picture = GFX_idea_unknown
 			available = {
@@ -9,6 +9,7 @@ ideas = {
 			}
 			modifier = {
 				ai_focus_aggressive_factor = 1
+				surrender_limit = 0.5
 			}
 			rule = {
 				can_join_factions = no

@@ -1,0 +1,28 @@
+PT_CHN_initial_uprising_dynamic_modifier = {
+	enable = { }
+	remove_trigger = {
+        has_global_flag = {
+            flag = PT_civil_war_initial_uprising_finished
+            days > 35
+        }
+    }
+	icon = GFX_idea_unknown
+    operative_slot = CCN.PT_CCN_initial_uprising_dynamic_modifier_operative_slot
+    own_operative_detection_chance_factor = CCN.PT_CCN_initial_uprising_dynamic_modifier_own_operative_detection_chance_factor
+    enemy_operative_detection_chance_factor = CCN.PT_CCN_initial_uprising_dynamic_modifier_enemy_operative_detection_chance_factor
+    intel_from_operatives_factor = CCN.PT_CCN_initial_uprising_dynamic_modifier_intel_from_operatives_factor
+    agency_upgrade_time = CCN.PT_CCN_initial_uprising_dynamic_modifier_agency_upgrade_time
+    army_speed_factor = CCN.PT_CCN_initial_uprising_dynamic_modifier_army_speed_factor
+    army_org_factor = CCN.PT_CCN_initial_uprising_dynamic_modifier_army_org_factor
+    supply_consumption_factor = CCN.PT_CCN_initial_uprising_dynamic_modifier_supply_consumption_factor
+    stability_factor = CCN.PT_CCN_initial_uprising_dynamic_modifier_stability_factor
+    democratic_drift = CCN.PT_CCN_initial_uprising_dynamic_modifier_democratic_drift
+}
+PT_CHN_uprising_redeployment_block = {
+	enable = { }
+	icon = GFX_idea_unknown
+	remove_trigger = {
+        has_global_flag = PT_civil_war_initial_uprising_finished
+    }
+    disable_strategic_redeployment = 1
+}

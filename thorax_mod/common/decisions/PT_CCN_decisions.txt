@@ -21,6 +21,33 @@ PT_CCN_civil_war_deccat = {
 		icon = generic_ignite_civil_war
 		available = { always = no }
     }
+	PT_CCN_civil_war_initial_uprising_mission = {
+		cancel_trigger = {
+			always = no
+		}
+		cancel_effect = {
+		}
+		cancel_if_not_visible = yes
+		is_good = yes
+		days_mission_timeout = 28
+		timeout_effect = {
+			custom_effect_tooltip =  PT_CCN_civil_war_initial_uprising_mission_tt
+			hidden_effect = {
+				if = {
+					limit = { has_global_flag = PT_civil_war_initial_uprising_ongoing }
+					PT_civil_war_initial_uprising_end = yes
+				}
+			}
+		}
+		icon = generic_ignite_civil_war
+		available = {
+			hidden_trigger = { always = no }
+		}
+		activation = {
+			hidden_trigger = { always = no }
+		}
+		fire_only_once = yes
+	}
     PT_CCN_civil_war_extreme_measures_decision = {
 		icon = generic_ignite_civil_war
 		visible = { original_tag = CCN }
